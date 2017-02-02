@@ -1,6 +1,6 @@
 .btn {
-    background-color: #fff;
-    color: #222;
+    // background-color: #fff;
+    color: #fff;
     display: inline-block;
     justify-content: center;
     line-height: 1;
@@ -8,12 +8,11 @@
     text-align: center;
     text-decoration: none;
     &:hover {
-        background-color: #222;
         color: #fff;
     }
 
     @include respond-to(small) {
-        height: 50%;
+        // height: 50%;
     }
 }
 
