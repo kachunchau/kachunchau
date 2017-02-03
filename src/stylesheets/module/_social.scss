@@ -15,22 +15,16 @@
 }
 
 .social-text {
-    // @extend %uppercase;
-
     display: none;
-    // font-size: 14px;
-    // font-weight: 700;
 
     @include respond-to(small) {
-        // display: block;
         margin-left: 10px;
     }
 }
 
 .yolo {
-    // @extend %uppercase;
+    @extend %uppercase;
 
     color: #222;
-    font-weight: 700;
-    text-decoration: none;
+    font-weight: 600;
 }

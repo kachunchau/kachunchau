@@ -26,12 +26,14 @@
     max-width: inherit;
     position: fixed;
     top: 27px;
-    // right: 27px;
-    // left: 27px;
     width: 90%;
     z-index: 200;
 
     @include respond-to(small) {
+        background-color: #fff;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        top: 0;
         width: 95%;
     }
 }

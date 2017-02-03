@@ -20,12 +20,12 @@ h6 {
 .giga,
 .mega {
     color: #222;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .giga {
     font-size: 40px;
-    line-height: 1.35;
+    line-height: 1.45;
 
     @include respond-to(small) {
         font-size: 60px;
@@ -34,7 +34,7 @@ h6 {
 
 .mega {
     font-size: 30px;
-    line-height: 1.35;
+    line-height: 1.45;
 
     @include respond-to(small) {
         font-size: 40px;
@@ -52,7 +52,7 @@ h1,
 
 h2,
 .beta {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 h3,
@@ -91,7 +91,6 @@ html {
     // font-family: $serif;
     font-family: $sans-serif;
     // font-family: $monospace;
-    -webkit-font-smoothing: antialiased;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
 
