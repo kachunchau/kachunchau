@@ -32,8 +32,12 @@
     @include respond-to(small) {
         background-color: #fff;
         padding-top: 27px;
+        padding-right: 2.5%;
         padding-bottom: 27px;
+        padding-left: 2.5%;
         top: 0;
+        right: 0;
+        left: 0;
         width: 95%;
     }
 }
@@ -42,13 +46,10 @@
 .l-constrained-tight {
     margin-right: auto;
     margin-left: auto;
-    max-width: 1400px;
-
+    max-width: 1440px;
 }
 
 .l-constrained {
-    // width: 90%;
-
     @include respond-to(small) {
         width: 95%;
     }
