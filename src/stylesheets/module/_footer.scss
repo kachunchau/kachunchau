@@ -1,17 +1,26 @@
 .footer {
-    padding-top: (27px * 1.5);
-    padding-bottom: (27px * 1.5);
-    // text-align: center;
-
-    @include respond-to(small) {
-        // border-top: 1px solid #f5f5f5;
-        // margin-top: (27px * 2);
-        padding-top: (27px * 2);
-        padding-bottom: (27px * 2);
-    }
+    text-align: center;
 
     small {
         color: #b0abab;
         display: block;
+        padding-top: (27px);
+        padding-bottom: (27px);
     }
+}
+
+.footer-unit {
+    border-bottom: 1px solid #f5f5f5;
+    padding-top: (27px * 1.5);
+    padding-bottom: (27px * 1.5);
+
+    @include respond-to(small) {
+        padding-top: (27px * 4);
+        padding-bottom: (27px * 4);
+    }
+}
+
+.footer-title {
+    color: #222;
+    // margin-bottom: 0;
 }
