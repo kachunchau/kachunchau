@@ -23,23 +23,8 @@
 }
 
 .l-header {
-    max-width: inherit;
-    position: fixed;
-    top: 27px;
-    width: 90%;
-    z-index: 200;
-
-    @include respond-to(small) {
-        background-color: #fff;
-        padding-top: 27px;
-        padding-right: 2.5%;
-        padding-bottom: 27px;
-        padding-left: 2.5%;
-        top: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-    }
+    padding-top: 27px;
+    padding-bottom: 27px;
 }
 
 .l-constrained,
