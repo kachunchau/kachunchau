@@ -23,8 +23,13 @@
 }
 
 .l-header {
-    padding-top: 27px;
-    padding-bottom: 27px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    @include respond-to(small) {
+        padding-top: 27px;
+        padding-bottom: 27px;
+    }
 }
 
 .l-constrained,
