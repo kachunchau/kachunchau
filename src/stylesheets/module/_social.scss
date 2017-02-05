@@ -14,6 +14,12 @@
     }
 }
 
+.social-icon {
+    &:hover {
+        transform: scale(1.25);
+    }
+}
+
 .social-text {
     display: none;
 
