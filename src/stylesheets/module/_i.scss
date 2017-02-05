@@ -14,6 +14,14 @@
     }
 }
 
+.i--secondary {
+    @include respond-to(small) {
+        background-size: (27px * 1);
+        height: (27px * 1);
+        width: (27px * 1);
+    }
+}
+
 
 .i--twitter {
     background-image: url(../images/twitter.svg);
