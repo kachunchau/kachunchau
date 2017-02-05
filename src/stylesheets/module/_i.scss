@@ -14,18 +14,6 @@
     }
 }
 
-.i--secondary {
-    // background-size: (20px * 1);
-    // height: (20px * 1);
-    // width: (20px * 1);
-
-    @include respond-to(small) {
-        background-size: (27px * 1);
-        height: (27px * 1);
-        width: (27px * 1);
-    }
-}
-
 .i--twitter {
     background-image: url(../images/twitter.svg);
 }

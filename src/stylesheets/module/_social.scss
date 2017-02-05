@@ -1,10 +1,6 @@
 .social {
     line-height: 1;
     margin-bottom: 0;
-}
-
-.social--primary {
-    margin-left: auto;
 
     > li {
         &:not(:last-child) {
@@ -17,16 +13,8 @@
     }
 }
 
-.social--secondary {
-    > li {
-        &:not(:last-child) {
-            margin-right: 6px;
-
-            @include respond-to(small) {
-                margin-right: 10px;
-            }
-        }
-    }
+.social--primary {
+    margin-left: auto;
 }
 
 .social-icon {
