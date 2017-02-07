@@ -5,7 +5,9 @@
     @include respond-to(small) {
         padding-top: (27px * 5);
         padding-bottom: (27px * 5);
+    }
+
+    @include respond-to(medium) {
         width: 66%;
-        // width: 50%;
     }
 }
