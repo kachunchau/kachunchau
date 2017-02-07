@@ -36,16 +36,18 @@
 .l-constrained-tight {
     margin-right: auto;
     margin-left: auto;
-    max-width: 1440px;
+    max-width: 1300px;
 }
 
 .l-constrained {
     @include respond-to(small) {
-        width: 95%;
+        // width: 95%;
     }
 }
 
 .l-constrained-tight {
+    // padding-right: 37px;
+    // padding-left: 37px;
     width: 90%;
 
     @include respond-to(small) {
