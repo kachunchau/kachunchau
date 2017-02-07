@@ -6,15 +6,6 @@
     flex-grow: 1;
     overflow: hidden;
     position: relative;
-
-    @include respond-to(small) {
-        &:hover {
-            .btn {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-    }
 }
 
 .project-card--a,
@@ -31,11 +22,6 @@
 .project-card--a {
     background-color: #00aba2;
     color: #fff;
-    &:hover {
-        &:before {
-            // background-color: rgba(#00aba2,.75);
-        }
-    }
 }
 
 .project-card--b {
@@ -102,8 +88,6 @@
 }
 
 .project-title {
-    // @extend %uppercase;
-
     font-weight: 600;
     margin-bottom: 0;
 }
