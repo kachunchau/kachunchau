@@ -40,11 +40,17 @@
     border-radius: 3px;
     box-shadow: 0 5px 10px rgba(#000,.5);
     &:not(:last-child) {
-        margin-right: 5px;
+        margin-right: 8px;
     }
 
     img {
         border-radius: 3px;
+    }
+}
+
+.browser-secondary--half {
+    @include respond-to(small) {
+        width: 40%;
     }
 }
 

@@ -8,9 +8,9 @@
     position: relative;
 }
 
-.project-card--a,
-.project-card--b,
-.project-card--c {
+.project-card--routeone,
+.project-card--teapigs,
+.project-card--tptoys {
     height: 650px;
 
     @include respond-to(small) {
@@ -19,23 +19,27 @@
     }
 }
 
-.project-card--a {
+.project-card--routeone {
     background-color: #00aba2;
     color: #fff;
 }
 
-.project-card--b {
+.project-card--teapigs {
     background-color: #bed22f;
     color: #fff;
 }
 
-.project-card--c {
+.project-card--tptoys {
     background-color: #b2c5bc;
     color: #fff;
-    margin-right: 0;
 }
 
-.project-card--d {
+.project-card--deckstorm {
+    background-color: #040a18;
+    color: #fff;
+}
+
+.project-card--dena {
     background-color: #252526;
     color: #fff;
     height: 450px;
