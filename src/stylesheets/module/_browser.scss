@@ -1,3 +1,43 @@
+.browser-grid {
+    justify-content: center;
+    height: 75%;
+    padding-right: (27px * .75);
+    padding-left: (27px * .75);
+
+    @include respond-to(small) {
+        height: auto;
+        padding-right: (27px * 1.5);
+        padding-left: (27px * 1.5);
+    }
+}
+
+.browser-half,
+.browser-third {
+    &:not(:last-child) {
+        margin-right: (27px / 2);
+    }
+}
+
+.browser-half {
+    @include respond-to(small) {
+        width: 50%;
+    }
+
+    + .browser-half {
+        display: none;
+
+        @include respond-to(small) {
+            display: block;
+        }
+    }
+}
+
+.browser-third {
+    @include respond-to(small) {
+        width: 30%;
+    }
+}
+
 .browser-primary {
     background-image: linear-gradient(#f5f5f5, darken(#f5f5f5, 15%) 40px);
     border-radius: 6px 6px 0 0;
@@ -10,47 +50,30 @@
     @include respond-to(small) {
         margin-right: 0;
         margin-left: 0;
-        left: (27px * 1.5);
     }
 
     img {
         border-top: 1px solid darken(#ccc,10%);
 
         @include respond-to(small) {
-            max-width: 500px;
+            // max-width: 500px;
         }
     }
 }
 
-.browser-grid {
-    justify-content: center;
-    height: 75%;
-    padding-right: (27px * .75);
-    padding-left: (27px * .75);
-
+.browser-primary--bleed {
     @include respond-to(small) {
-        height: auto;
-        // padding-right: 0;
-        // padding-left: 0;
+        left: (27px * 1.5);
     }
 }
 
 .browser-secondary {
     background-clip: padding-box;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0 5px 10px rgba(#000,.5);
-    &:not(:last-child) {
-        margin-right: 8px;
-    }
 
     img {
-        border-radius: 3px;
-    }
-}
-
-.browser-secondary--half {
-    @include respond-to(small) {
-        width: 40%;
+        border-radius: 5px;
     }
 }
 
