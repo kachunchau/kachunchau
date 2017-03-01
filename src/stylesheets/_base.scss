@@ -39,7 +39,7 @@ h6 {
 
 h1,
 .alpha {
-    font-size: 22px;
+    font-size: 20px;
 
     @include respond-to(small) {
         font-size: 27px;
@@ -48,7 +48,7 @@ h1,
 
 h2,
 .beta {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 h3,

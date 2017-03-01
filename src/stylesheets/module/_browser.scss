@@ -1,24 +1,33 @@
 .browser-grid {
     justify-content: center;
-    height: 75%;
-    padding-right: (27px * .75);
-    padding-left: (27px * .75);
+    // height: 75%;
+    margin-right: 5%;
+    margin-left: 5%;
 
     @include respond-to(small) {
-        height: auto;
-        padding-right: (27px * 1.5);
-        padding-left: (27px * 1.5);
+        // height: auto;
+        margin-right: (27px * 1.5);
+        margin-left: (27px * 1.5);
     }
 }
 
-.browser-half,
-.browser-third {
-    &:not(:last-child) {
-        margin-right: (27px / 2);
+.browser-single {
+    margin-right: 5%;
+    margin-left: 5%;
+
+    @include respond-to(small) {
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 
 .browser-half {
+    &:not(:last-child) {
+        @include respond-to(small) {
+            margin-right: (27px / 1);
+        }
+    }
+
     @include respond-to(small) {
         width: 50%;
     }
@@ -33,6 +42,14 @@
 }
 
 .browser-third {
+    &:not(:last-child) {
+        margin-right: (27px / 4);
+
+        @include respond-to(small) {
+            margin-right: (27px / 1);
+        }
+    }
+
     @include respond-to(small) {
         width: 30%;
     }
@@ -42,22 +59,11 @@
     background-image: linear-gradient(#f5f5f5, darken(#f5f5f5, 15%) 40px);
     border-radius: 6px 6px 0 0;
     box-shadow: 0 10px 30px rgba(#000,.2);
-    margin-right: 5%;
-    margin-left: 5%;
     padding-top: 20px;
     position: relative;
 
-    @include respond-to(small) {
-        margin-right: 0;
-        margin-left: 0;
-    }
-
     img {
         border-top: 1px solid darken(#ccc,10%);
-
-        @include respond-to(small) {
-            // max-width: 500px;
-        }
     }
 }
 
