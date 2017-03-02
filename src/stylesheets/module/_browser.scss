@@ -42,8 +42,6 @@
 
 .browser-third {
     &:not(:last-child) {
-        margin-right: (27px / 4);
-
         @include respond-to(small) {
             margin-right: (27px / 1.5);
         }

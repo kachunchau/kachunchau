@@ -5,6 +5,7 @@ var
     browserSync = require('browser-sync'),
     imagemin    = require('gulp-imagemin');
     del         = require('del'),
+    px2rem      = require('gulp-px2rem'),
     reload      = browserSync.reload
 ;
 
@@ -30,6 +31,7 @@ gulp.task('stylesheets', function() {
           browsers: ['last 2 versions'],
           cascade: false
         }))
+        .pipe(px2rem())
         .pipe(gulp.dest('dist/stylesheets'))
         .pipe(browserSync.stream());
 });

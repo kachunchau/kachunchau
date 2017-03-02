@@ -90,10 +90,6 @@ html {
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
-
-    @include respond-to(small) {
-        font-size: 18px;
-    }
 }
 
 ::-moz-selection {
