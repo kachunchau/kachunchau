@@ -93,13 +93,13 @@ html {
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #11bb92;
     color: #fff;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #11bb92;
     color: #fff;
     text-shadow: none;
 }
@@ -113,11 +113,10 @@ img {
 a {
     color: inherit;
     display: inline-block;
-    text-decoration: none;
     text-decoration: underline;
     transition-property: all;
     transition-duration: .25s;
-    transition-timing-funtion: ease-in-out;
+    transition-timing-function: ease-in-out;
     &:hover {
         color: #11bb92;
     }
