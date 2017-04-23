@@ -8,6 +8,7 @@
     }
 
     @include respond-to(medium) {
-        width: 66%;
+        // width: 66%;
+        width: 50%;
     }
 }
