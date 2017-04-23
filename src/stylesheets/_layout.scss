@@ -40,9 +40,9 @@
 }
 
 .l-constrained-tight {
-    width: 95%;
+    width: 90%;
 
     @include respond-to(small) {
-        // width: auto;
+        width: 95%;
     }
 }
