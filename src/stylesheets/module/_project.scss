@@ -8,14 +8,23 @@
     position: relative;
 }
 
+.project-card--half,
 .project-card--routeone,
 .project-card--teapigs,
 .project-card--tptoys {
-    height: 650px;
+    height: 800px;
 
     @include respond-to(small) {
-        height: 675px;
-        width: (100% / 3);
+        height: 1000px;
+        width: (100% / 2);
+    }
+}
+
+.project-card--josephturner {
+    background-color: #0D1C39;
+    color: #fff;
+    &:after {
+        background-color: rgba(#0D1C39,.75);
     }
 }
 
@@ -44,13 +53,14 @@
 }
 
 .project-card--deckstorm {
-    background-color: lighten(#040a18,7%);
+    background-color: lighten(#040a18,12%);
     color: #fff;
     &:after {
-        background-color: rgba(lighten(#040a18,7%),.75);
+        background-color: rgba(lighten(#040a18,12%),.75);
     }
 }
 
+.project-card--josephturner,
 .project-card--routeone,
 .project-card--teapigs,
 .project-card--tptoys,
