@@ -6,6 +6,14 @@
     flex-grow: 1;
     overflow: hidden;
     position: relative;
+    &:hover {
+        @include respond-to(small) {
+            transform: translate3d(0,0,10em) scale(1.02);
+            transition-property: transform;
+            transition-duration: .25s;
+            transition-timing-function: ease-in-out;
+        }
+    }
 }
 
 .project-card--half {
