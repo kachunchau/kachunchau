@@ -3,12 +3,12 @@
     padding-bottom: (27px * 3);
 
     @include respond-to(small) {
-        padding-top: (27px * 5);
-        padding-bottom: (27px * 5);
+        padding-top: (27px * 4);
+        padding-bottom: (27px * 4);
     }
 
     @include respond-to(medium) {
-        width: 66%;
-        // width: 50%;
+        // width: 66%;
+        width: 50%;
     }
 }
