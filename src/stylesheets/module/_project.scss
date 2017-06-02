@@ -11,7 +11,7 @@
 .project-card--hover {
     &:hover {
         @include respond-to(small) {
-            transform: translate3d(0,0,10em) scale(1.02);
+            transform: translate3d(0,0,1em) scale(1.015);
             transition-property: transform;
             transition-duration: .25s;
             transition-timing-function: ease-in-out;
@@ -33,6 +33,7 @@
 
     .project-overlay {
         background-color: rgba(#ccc,.75);
+        color: inherit;
     }
 }
 
@@ -42,6 +43,7 @@
 
     .project-overlay {
         background-color: rgba(#00aba2,.75);
+        color: inherit;
     }
 }
 
@@ -51,6 +53,7 @@
 
     .project-overlay {
         background-color: rgba(#bed22f,.75);
+        color: inherit;
     }
 }
 
@@ -60,6 +63,7 @@
 
     .project-overlay {
         background-color: rgba(#b2c5bc,.75);
+        color: inherit;
     }
 }
 
@@ -69,6 +73,7 @@
 
     .project-overlay {
         background-color: rgba(lighten(#040a18,10%),.75);
+        color: inherit;
     }
 }
 
@@ -101,7 +106,7 @@
 }
 
 .project-overlay {
-    color: #fff !important;
+    color: inherit;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -130,8 +135,4 @@
 .project-company {
     font-weight: 600;
     margin-bottom: 0;
-}
-
-.project-desc {
-    // @extend %uppercase;
 }
