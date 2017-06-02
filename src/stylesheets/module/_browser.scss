@@ -1,10 +1,8 @@
 .browser-grid {
-    // height: 75%;
     margin-right: 5%;
     margin-left: 5%;
 
     @include respond-to(small) {
-        // height: auto;
         margin-right: (27px * 1.5);
         margin-left: (27px * 1.5);
     }
