@@ -9,7 +9,6 @@
 }
 
 .browser-mobile {
-    display: inline;
     position: absolute;
     left: 5%;
     bottom: 0;
@@ -18,11 +17,11 @@
 
     @include respond-to(small) {
         left: (27px * 1.5);
-        width: 40%;
+        width: 45%;
     }
 }
 
-.browser-single {
+.browser-full {
     margin-right: 5%;
     margin-left: 5%;
 
@@ -86,7 +85,11 @@
 }
 
 .browser-primary--stack {
-    left: (27px * 3);
+    left: (27px * 1);
+
+    @include respond-to(small) {
+        left: (27px * 3);
+    }
 }
 
 .browser-secondary {

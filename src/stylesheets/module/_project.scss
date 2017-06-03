@@ -20,11 +20,14 @@
 }
 
 .project-card--half {
-    height: 800px;
+    // height: 800px;
 
     @include respond-to(small) {
-        height: 900px;
         width: (100% / 2);
+    }
+
+    @include respond-to(medium) {
+        // height: 900px;
     }
 }
 
