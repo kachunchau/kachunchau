@@ -12,25 +12,25 @@ h6 {
 
 .giga {
     color: #222;
+    font-weight: 800;
     font-size: 37px;
-    line-height: 1.2;
-    margin-bottom: .5em;
+    margin-bottom: .3em;
 
     @include respond-to(small) {
         font-size: 63px;
-        margin-bottom: .3em;
+        line-height: 1.2;
+        margin-bottom: .2em;
     }
 
     @include respond-to(medium) {
         font-size: 97px;
-        letter-spacing: -.01em;
     }
 }
 
 .mega {
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 400;
-    margin-bottom: 1em;
+    margin-bottom: 0;
 
     @include respond-to(small) {
         font-size: 37px;
@@ -88,7 +88,7 @@ html {
     font-family: $sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+    line-height: 1.55;
     text-rendering: optimizeLegibility;
 }
 

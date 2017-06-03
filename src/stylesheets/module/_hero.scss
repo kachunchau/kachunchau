@@ -1,14 +1,10 @@
 .hero-unit {
-    padding-top: (27px * 3);
-    padding-bottom: (27px * 3);
-
-    @include respond-to(small) {
-        padding-top: (27px * 4);
-        padding-bottom: (27px * 4);
-    }
+    padding-top: 16vh;
+    padding-bottom: 13vh;
 
     @include respond-to(medium) {
-        // width: 66%;
-        width: 50%;
+        padding-top: 20vh;
+        padding-bottom: 17vh;
+        width: 60%;
     }
 }

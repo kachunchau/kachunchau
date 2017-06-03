@@ -23,12 +23,12 @@
 }
 
 .l-header {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: (27px * 1);
+    // padding-bottom: (27px * 1);
 
     @include respond-to(small) {
-        padding-top: 27px;
-        padding-bottom: 27px;
+        padding-top: (27px * 2);
+        // padding-bottom: (27px * 2);
     }
 }
 
@@ -36,7 +36,7 @@
 .l-constrained-tight {
     margin-right: auto;
     margin-left: auto;
-    max-width: 1340px;
+    max-width: 1260px;
 }
 
 .l-constrained-tight {
