@@ -11,9 +11,9 @@
 .project-card--hover {
     &:hover {
         @include respond-to(small) {
-            transform: translate3d(0,0,1em) scale(1.015);
+            transform: translate3d(0,0,1em) scale(1.02);
             transition-property: transform;
-            transition-duration: .25s;
+            transition-duration: .33s;
             transition-timing-function: ease-in-out;
         }
     }
