@@ -48,7 +48,9 @@ gulp.task('javascript', function() {
 
 gulp.task('images', function() {
     return gulp.src('src/images/**/*')
-        .pipe(imagemin())
+        .pipe(imagemin([
+            imagemin.jpegtran({progressive: true})
+        ]))
         .pipe(gulp.dest('dist/images'));
 });
 
