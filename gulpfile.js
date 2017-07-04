@@ -6,6 +6,7 @@ var
     imagemin    = require('gulp-imagemin');
     del         = require('del'),
     px2rem      = require('gulp-px2rem'),
+    imageminJpegRecompress = require('imagemin-jpeg-recompress'),
     reload      = browserSync.reload
 ;
 
@@ -49,7 +50,12 @@ gulp.task('javascript', function() {
 gulp.task('images', function() {
     return gulp.src('src/images/**/*')
         .pipe(imagemin([
-            imagemin.jpegtran({progressive: true})
+            imageminJpegRecompress({
+                progressive: true,
+                max: 80,
+                min: 70
+            }),
+            imagemin.svgo({plugins: [{removeViewBox: true}]})
         ]))
         .pipe(gulp.dest('dist/images'));
 });
