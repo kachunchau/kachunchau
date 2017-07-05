@@ -22,6 +22,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
     return gulp.src(['src/*.html', 'src/CNAME'])
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
 });
 
@@ -78,12 +79,6 @@ gulp.task('watch', ['html', 'stylesheets', 'webfonts', 'javascript', 'images', '
     gulp.watch('src/javascript/**/*.js', ['javascript']);
     gulp.watch('src/images/**/*', ['images']);
 
-});
-
-gulp.task('build', function() {
-    return gulp.src(['src/*.html', 'src/CNAME'])
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('critical', ['watch'], function (cb) {
