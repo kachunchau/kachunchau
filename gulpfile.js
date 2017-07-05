@@ -22,7 +22,10 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
     return gulp.src(['src/*.html', 'src/CNAME'])
-        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            minifyJS: true
+        }))
         .pipe(gulp.dest('dist'));
 });
 
