@@ -6,6 +6,7 @@ var
     imagemin               = require('gulp-imagemin');
     del                    = require('del'),
     px2rem                 = require('gulp-px2rem'),
+    htmlmin                = require('gulp-htmlmin'),
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
     critical               = require('critical'),
     reload                 = browserSync.reload
@@ -77,6 +78,12 @@ gulp.task('watch', ['html', 'stylesheets', 'webfonts', 'javascript', 'images', '
     gulp.watch('src/javascript/**/*.js', ['javascript']);
     gulp.watch('src/images/**/*', ['images']);
 
+});
+
+gulp.task('build', function() {
+    return gulp.src(['src/*.html', 'src/CNAME'])
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('critical', ['watch'], function (cb) {
