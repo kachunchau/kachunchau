@@ -1,13 +1,14 @@
 var
-    gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer');
-    browserSync = require('browser-sync'),
-    imagemin    = require('gulp-imagemin');
-    del         = require('del'),
-    px2rem      = require('gulp-px2rem'),
+    gulp                   = require('gulp'),
+    sass                   = require('gulp-sass'),
+    autoprefixer           = require('gulp-autoprefixer');
+    browserSync            = require('browser-sync'),
+    imagemin               = require('gulp-imagemin');
+    del                    = require('del'),
+    px2rem                 = require('gulp-px2rem'),
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-    reload      = browserSync.reload
+    critical               = require('critical'),
+    reload                 = browserSync.reload
 ;
 
 gulp.task('browser-sync', function() {
@@ -76,4 +77,14 @@ gulp.task('watch', ['html', 'stylesheets', 'webfonts', 'javascript', 'images', '
     gulp.watch('src/javascript/**/*.js', ['javascript']);
     gulp.watch('src/images/**/*', ['images']);
 
+});
+
+gulp.task('critical', ['watch'], function (cb) {
+    critical.generate({
+        inline: true,
+        base: 'dist/',
+        src: 'index.html',
+        dest: 'index.html',
+        minify: true
+    });
 });
