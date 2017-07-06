@@ -90,6 +90,18 @@ gulp.task('critical', ['watch'], function (cb) {
         base: 'dist/',
         src: 'index.html',
         dest: 'index.html',
-        minify: true
+        minify: true,
+        width: 1300,
+        height: 900
     });
+});
+
+
+gulp.task('build', function() {
+    return gulp.src(['src/*.html'])
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            minifyJS: true
+        }))
+        .pipe(gulp.dest('dist'));
 });
