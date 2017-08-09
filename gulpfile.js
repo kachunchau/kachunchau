@@ -84,7 +84,7 @@ gulp.task('watch', ['html', 'stylesheets', 'webfonts', 'javascript', 'images', '
 
 });
 
-gulp.task('critical', ['watch'], function (cb) {
+gulp.task('critical', function (cb) {
     critical.generate({
         inline: true,
         base: 'dist/',
@@ -97,7 +97,7 @@ gulp.task('critical', ['watch'], function (cb) {
 });
 
 
-gulp.task('build', function() {
+gulp.task('minify', function() {
     return gulp.src(['src/*.html'])
         .pipe(htmlmin({
             collapseWhitespace: true,
