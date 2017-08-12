@@ -142,9 +142,9 @@ a {
     color: #11bb92;
     text-decoration: none;
     transition-property: all;
-    transition-duration: .25s;
+    transition-duration: .33s;
     transition-timing-function: ease-in-out;
     &:hover {
-        color: #11bb92;
+        color: inherit;
     }
 }
