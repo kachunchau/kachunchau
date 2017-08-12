@@ -12,15 +12,15 @@ h6 {
 }
 
 .giga {
-    font-size: 48px;
+    font-size: 50px;
     font-weight: 700;
-    line-height: 1.48;
-    margin-bottom: 0;
+    letter-spacing: -.01em;
+    line-height: 1.38;
+    margin-bottom: .1em;
 
     @include respond-to(small) {
-        font-size: 90px;
-        letter-spacing: -.03em;
-        // margin-bottom: .1em;
+        font-size: 93px;
+        letter-spacing: -.02em;
     }
 }
 
@@ -111,7 +111,7 @@ body {
 html {
     background-color: #fff;
     box-sizing: border-box;
-    color: lighten(#222,15%);
+    color: lighten(#222,25%);
     // font-family: $serif;
     font-family: $sans-serif;
     -moz-osx-font-smoothing: grayscale;

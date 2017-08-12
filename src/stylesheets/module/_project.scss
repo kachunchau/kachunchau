@@ -1,5 +1,5 @@
 .projects {
-    background: #fff url(../images/wave.svg) repeat-x top center;
+    background-color: #fff;
     margin-bottom: 50vh;
     overflow: hidden;
     padding-top: 35px * 4;
@@ -13,8 +13,8 @@
     text-align: center;
     &:hover {
         .project-arrow {
-            transform: translateX(0);
             opacity: 1;
+            transform: translateX(0);
         }
     }
     &:last-child {
