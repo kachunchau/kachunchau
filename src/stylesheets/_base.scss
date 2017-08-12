@@ -7,48 +7,61 @@ h3,
 h4,
 h5,
 h6 {
+    color: #222;
     margin-top: 0;
 }
 
 .giga {
-    color: #222;
-    font-weight: 800;
-    font-size: 37px;
-    margin-bottom: .3em;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.48;
+    margin-bottom: 0;
 
     @include respond-to(small) {
-        font-size: 63px;
-        line-height: 1.2;
-        margin-bottom: .2em;
-    }
-
-    @include respond-to(medium) {
-        font-size: 97px;
+        font-size: 90px;
+        letter-spacing: -.03em;
+        margin-bottom: .1em;
     }
 }
 
 .mega {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 0;
+    font-size: 38px;
+    line-height: 1.48;
 
     @include respond-to(small) {
-        font-size: 37px;
+        font-size: 50px;
+        letter-spacing: -.01em;
+        line-height: 1.38;
     }
 }
 
 h1,
 .alpha {
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.48;
+    margin-bottom: 1.5em;
+
+    a {
+        font-weight: 600;
+    }
 
     @include respond-to(small) {
-        font-size: 27px;
+        font-size: 35px;
+    }
+
+    @include respond-to(medium) {
+        font-size: 35px;
     }
 }
 
 h2,
 .beta {
-    font-size: 20px;
+    font-size: 18px;
+
+    @include respond-to(small) {
+        font-size: 22px;
+    }
 }
 
 h3,
@@ -58,7 +71,22 @@ h3,
 
 h4,
 .delta {
+    font-size: 16px;
+}
+
+h5,
+.epsilon {
     font-size: 14px;
+}
+
+p,
+ul,
+ol {
+    font-size: 18px;
+
+    @include respond-to(small) {
+        font-size: 22px;
+    }
 }
 
 p {
@@ -88,7 +116,7 @@ html {
     font-family: $sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.55;
+    line-height: 1.6;
     text-rendering: optimizeLegibility;
 }
 
@@ -111,9 +139,8 @@ img {
 }
 
 a {
-    color: inherit;
-    display: inline-block;
-    text-decoration: underline;
+    color: #11bb92;
+    text-decoration: none;
     transition-property: all;
     transition-duration: .25s;
     transition-timing-function: ease-in-out;

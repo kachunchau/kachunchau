@@ -4,35 +4,37 @@
 
     > li {
         &:not(:last-child) {
-            margin-right: 10px;
+            margin-right: 14px;
 
             @include respond-to(small) {
-                margin-right: 16px;
+                margin-right:18px;
             }
         }
     }
 }
 
-.social--primary {
-    margin-left: auto;
-}
-
 .social-icon {
-    transition-timing-function: ease-in-out;
+    text-decoration: none;
     &:hover {
-        transform: scale(1.25);
+        .social-text {
+            max-width: inherit;
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+        }
     }
 }
 
 .social-text {
     display: none;
+    margin-left: 8px;
 
     @include respond-to(small) {
-        margin-left: 10px;
+        display: block;
+        transition: all .33s ease-in-out;
+        max-width: 0;
+        opacity: 0;
+        transform: translateX(-10px);
+        visibility: hidden;
     }
-}
-
-.yolo {
-    color: #222;
-    font-weight: 600;
 }

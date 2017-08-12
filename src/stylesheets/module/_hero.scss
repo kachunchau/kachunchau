@@ -1,10 +1,20 @@
+.hero {
+    background-image: linear-gradient(#fff, #f5f5f5);
+    // background-color: #f5f5f5;
+    // border-bottom: 4px solid darken(#f5f5f5,2%);
+    height: 95vh;
+}
+
 .hero-unit {
-    padding-top: 16vh;
-    padding-bottom: 13vh;
+    // align-self: center;
+    // padding-top: 16vh;
+    // padding-bottom: 13vh;
 
     @include respond-to(medium) {
-        padding-top: 20vh;
-        padding-bottom: 17vh;
-        width: 60%;
+        // height: 100vh;
+        // padding-top: 40vh;
+        // padding-bottom: 40vh;
+        width: 66%;
+        // width: 50%;
     }
 }
