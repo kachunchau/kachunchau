@@ -1,15 +1,9 @@
 .hero {
     background-image: linear-gradient(#fff, #f5f5f5);
-    // background-color: #f5f5f5;
-    // border-bottom: 4px solid darken(#f5f5f5,2%);
-    height: 95vh;
+    height: 92vh;
 }
 
 .hero-unit {
-    // align-self: center;
-    // padding-top: 16vh;
-    // padding-bottom: 13vh;
-
     @include respond-to(medium) {
         // height: 100vh;
         // padding-top: 40vh;
