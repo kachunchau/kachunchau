@@ -44,24 +44,28 @@
 .project-meta {
     align-self: center;
     position: relative;
-    // outline: 1px solid red;
 
     @include respond-to(small) {
         align-self: center;
-        // flex: 0.25;
     }
 }
 
 .project-meta--b {
     @include respond-to(medium) {
         margin-right: auto;
-        padding-left: 175px;
+        padding-left: 140px;
     }
 }
 
 .project-img {
     align-self: center;
     position: relative;
+    // outline: 1px solid red;
+
+    @include respond-to(medium) {
+        // flex: .25;
+        width: 50%;
+    }
 }
 
 .project-role {
@@ -75,9 +79,13 @@
 }
 
 .project-arrow {
-    display: block;
+    display: none;
     opacity: 0;
     transform: translateX(-35px);
     transition: all .33s ease-in-out;
     width: 35px;
+
+    @include respond-to(small) {
+        display: block;
+    }
 }

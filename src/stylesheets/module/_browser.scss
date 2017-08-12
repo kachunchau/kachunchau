@@ -1,16 +1,13 @@
 .browser {
+    background-color: #333;
+    padding-top: 20px;
+
     border-radius: 10px 10px 4px 4px;
     box-shadow: 0 1px 2px rgba(#000,.05),
                 0 4px 20px rgba(#000,.25);
+    display: inline-block;
     transition: all .25s cubic-bezier(.17,.67,.83,.67);
     overflow: hidden;
-    &:before {
-        background-color: #333;
-        content: "";
-        display: block;
-        height: 20px;
-        width: 100%;
-    }
 }
 
 .browser--primary {
@@ -18,49 +15,74 @@
 }
 
 .browser--primary-top {
-    display: none;
-    &:hover {
-        transform: scale(1.03) translate3d(-10%, -10%, 10px);
-    }
-
     @include respond-to(medium) {
         display: block;
         position: absolute;
-        transform: translate(-10%, -10%);
+        transform: translate(-10%, -5%);
+        &:hover {
+            transform: scale(1.03) translate3d(-10%, -5%, 10px);
+        }
     }
 }
 
 .browser--primary-bottom {
+    display: none;
     &:hover {
-        position: relative;
         transform: scale(1.03) translateZ(10px);
+    }
+
+    @include respond-to(medium) {
+        display: block;
     }
 }
 
 .browser--secondary {
-    // height: 565px;
     height: 600px;
 }
 
 .browser--secondary-top {
     display: none;
     &:hover {
-        transform: scale(1.03)  translate3d(15%, -10%, 10px);
+        transform: scale(1.03)  translate3d(15%, -5%, 10px);
     }
 
     @include respond-to(medium) {
         display: block;
         position: absolute;
-        transform: translate(15%, -10%);
+        transform: translate(15%, -5%);
     }
 }
 
 .browser--secondary-bottom {
-    &:hover {
-        position: relative;
-        transform: scale(1.03) translateZ(10px);
+    @include respond-to(medium) {
+        &:hover {
+            transform: scale(1.03) translateZ(10px);
+        }
     }
 }
+
+.browser--tertiary {
+    height: 600px;
+}
+
+.browser--tertiary-top {
+    @include respond-to(medium) {
+        position: absolute;
+        transform: translate(15%, -5%);
+        &:hover {
+            transform: scale(1.03) translate3d(15%, -5%, 10px);
+        }
+    }
+}
+
+.browser--tertiary-bottom {
+    @include respond-to(medium) {
+        &:hover {
+            transform: scale(1.03) translateZ(10px);
+        }
+    }
+}
+
 
 .browser--mobile {
     position: absolute;
