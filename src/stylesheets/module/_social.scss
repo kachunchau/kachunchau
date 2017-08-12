@@ -15,26 +15,13 @@
 
 .social-icon {
     text-decoration: none;
-    &:hover {
-        .social-text {
-            max-width: inherit;
-            opacity: 1;
-            transform: translateX(0);
-            visibility: visible;
-        }
-    }
 }
 
 .social-text {
     display: none;
-    margin-left: 8px;
 
     @include respond-to(small) {
         display: block;
-        transition: all .33s ease-in-out;
-        max-width: 0;
-        opacity: 0;
-        transform: translateX(-10px);
-        visibility: hidden;
+        margin-left: 8px;
     }
 }

@@ -2,6 +2,7 @@
     border-radius: 10px 10px 4px 4px;
     box-shadow: 0 1px 2px rgba(#000,.05),
                 0 4px 20px rgba(#000,.25);
+    transition: all .25s cubic-bezier(.17,.67,.83,.67);
     overflow: hidden;
     &:before {
         background-color: #333;
@@ -18,12 +19,13 @@
 
 .browser--primary-top {
     display: none;
+    &:hover {
+        transform: scale(1.03) translate3d(-10%, -10%, 10px);
+    }
 
     @include respond-to(medium) {
         display: block;
         position: absolute;
-        // bottom: 0;
-        // left: -140px;
         transform: translate(-10%, -10%);
     }
 }
@@ -31,7 +33,7 @@
 .browser--primary-bottom {
     &:hover {
         position: relative;
-        z-index: 2;
+        transform: scale(1.03) translateZ(10px);
     }
 }
 
@@ -42,6 +44,9 @@
 
 .browser--secondary-top {
     display: none;
+    &:hover {
+        transform: scale(1.03)  translate3d(15%, -10%, 10px);
+    }
 
     @include respond-to(medium) {
         display: block;
@@ -53,7 +58,7 @@
 .browser--secondary-bottom {
     &:hover {
         position: relative;
-        z-index: 2;
+        transform: scale(1.03) translateZ(10px);
     }
 }
 
