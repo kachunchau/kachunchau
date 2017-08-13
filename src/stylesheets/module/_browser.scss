@@ -2,11 +2,19 @@
     background-color: #333;
     border-radius: 10px 10px 4px 4px;
     box-shadow: 0 1px 2px rgba(#000,.05),
-                0 4px 20px rgba(#000,.25);
+                0 2px 14px rgba(#000,.1);
     display: inline-block;
     overflow: hidden;
     padding-top: 20px;
-    transition: all .25s cubic-bezier(.17,.67,.83,.67);
+    transition: all .33s cubic-bezier(.17,.67,.83,.67);
+
+    @include respond-to(medium) {
+        &:hover {
+            transform: scale(1.03) translateZ(10px);
+            box-shadow: 0 2px 4px rgba(#000,.05),
+                        0 4px 24px rgba(#000,.15);
+        }
+    }
 }
 
 .browser--primary {
@@ -19,9 +27,9 @@
     @include respond-to(medium) {
         display: block;
         position: absolute;
-        transform: translate(-10%, -5%);
+        transform: translate(-10%, -8%);
         &:hover {
-            transform: scale(1.03) translate3d(-10%, -5%, 10px);
+            transform: scale(1.03) translate3d(-10%, -8%, 10px);
         }
     }
 }
@@ -31,9 +39,6 @@
 
     @include respond-to(medium) {
         display: block;
-        &:hover {
-            transform: scale(1.03) translateZ(10px);
-        }
     }
 }
 
@@ -49,17 +54,9 @@
     @include respond-to(medium) {
         display: block;
         position: absolute;
-        transform: translate(15%, -5%);
+        transform: translate(20%, -7%);
         &:hover {
-            transform: scale(1.03)  translate3d(15%, -5%, 10px);
-        }
-    }
-}
-
-.browser--secondary-bottom {
-    @include respond-to(medium) {
-        &:hover {
-            transform: scale(1.03) translateZ(10px);
+            transform: scale(1.03)  translate3d(20%, -7%, 10px);
         }
     }
 }
@@ -71,17 +68,19 @@
 .browser--tertiary-top {
     @include respond-to(medium) {
         position: absolute;
-        transform: translate(15%, -5%);
+        transform: translate3d(60%, 5%, 100px);
         &:hover {
-            transform: scale(1.03) translate3d(15%, -5%, 10px);
+            transform: scale(1.03) translate3d(60%, 5%, 100px);
         }
     }
 }
 
-.browser--tertiary-bottom {
+.browser--tertiary-middle {
     @include respond-to(medium) {
+        position: absolute;
+        transform: translate3d(25%, -5%, 10px);
         &:hover {
-            transform: scale(1.03) translateZ(10px);
+            transform: scale(1.03) translate3d(25%, -5%, 10px);
         }
     }
 }
