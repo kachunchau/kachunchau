@@ -78,9 +78,9 @@
 .browser--tertiary-middle {
     @include respond-to(medium) {
         position: absolute;
-        transform: translate3d(25%, -5%, 10px);
+        transform: translate3d(30%, -5%, 10px);
         &:hover {
-            transform: scale(1.03) translate3d(25%, -5%, 10px);
+            transform: scale(1.03) translate3d(30%, -5%, 10px);
         }
     }
 }
