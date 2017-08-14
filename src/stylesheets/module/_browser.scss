@@ -68,9 +68,9 @@
 .browser--tertiary-top {
     @include respond-to(medium) {
         position: absolute;
-        transform: translate3d(60%, 5%, 100px);
+        transform: translate3d(60%, 5%, -100px);
         &:hover {
-            transform: scale(1.03) translate3d(60%, 5%, 100px);
+            transform: scale(1.03) translate3d(60%, 5%, -100px);
         }
     }
 }
