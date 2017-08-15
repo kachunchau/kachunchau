@@ -6,14 +6,28 @@
     display: inline-block;
     overflow: hidden;
     padding-top: 20px;
-    transition: all .25s cubic-bezier(.17,.67,.83,.67);
+    transition: transform .25s ease-in-out;
 
     @include respond-to(medium) {
-        transform: scale(scale(.95);
         &:hover {
-            transform: scale(1.05) translateZ(10px);
             box-shadow: 0 1px 8px rgba(#000,.1),
                         0 10px 40px 8px rgba(#000,.15);
+            z-index: 10;
+
+        }
+    }
+}
+
+.project-img {
+    &:hover {
+        .browser {
+            transform: scale(.96);
+        }
+    }
+
+    .browser {
+        &:hover {
+            transform: scale(1.04);
         }
     }
 }
@@ -26,12 +40,8 @@
 
 .browser--primary-top {
     @include respond-to(medium) {
-        display: block;
-        position: absolute;
-        transform: scale(.95) translate(-10%, -8%);
-        &:hover {
-            transform: scale(1.05) translate3d(-10%, -8%, 10px);
-        }
+        position: relative;
+        z-index: 10;
     }
 }
 
@@ -40,6 +50,9 @@
 
     @include respond-to(medium) {
         display: block;
+        position: absolute;
+        top: 10%;
+        left: -14%;
     }
 }
 
@@ -53,12 +66,17 @@
     display: none;
 
     @include respond-to(medium) {
-        display: block;
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.browser--secondary-bottom {
+    @include respond-to(medium) {
         position: absolute;
-        transform: scale(.95) translate(20%, -7%);
-        &:hover {
-            transform: scale(1.05)  translate3d(20%, -7%, 10px);
-        }
+        top: -7%;
+        left: 20%;
     }
 }
 
@@ -69,20 +87,16 @@
 .browser--tertiary-top {
     @include respond-to(medium) {
         position: absolute;
-        transform: scale(.95) translate3d(60%, 5%, -100px);
-        &:hover {
-            transform: scale(1.05) translate3d(60%, 5%, -100px);
-        }
+        top: 5%;
+        left: 10%;
     }
 }
 
 .browser--tertiary-middle {
     @include respond-to(medium) {
         position: absolute;
-        transform: scale(.95) translate3d(30%, -5%, 10px);
-        &:hover {
-            transform: scale(1.05) translate3d(30%, -5%, 10px);
-        }
+        top: -5%;
+        left: 30%;
     }
 }
 
