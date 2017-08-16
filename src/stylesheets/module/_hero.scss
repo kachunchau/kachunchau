@@ -1,42 +1,33 @@
 .hero {
     background-color: #FFFAFA;
-    // border-bottom: 4px solid #ccc;
-
-    // background-image: url(../images/wave.svg),
-    //                   linear-gradient(#f5f5f5 calc(100% - 40px), #fff calc(100% - 40px));
-    // background-repeat: repeat-x,
-    //                    repeat;
-    // background-position: bottom center,
-    //                      top left;
     height: 95vh;
+    padding-top: 35px * 4;
 }
 
 .hero-bar {
-    margin-right: auto;
-    margin-left: auto;
-    // max-width: 1200px;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
     position: absolute;
     top: 35px;
-    width: 95%;
 }
 
 .hero-block {
-    // background-color: #222;
-    color: #222;
+    background-color: #222;
+    box-shadow: 0 2px 10px rgba(#000,.1),
+                0 10px 30px rgba(#000,.3);
+    color: #fff;
     font-weight: 700;
+    padding: .3em .8em;
+    text-transform: uppercase;
 }
 
 .hero-link {
-    // position: absolute;
-    // top: 35px;
-    // right: 35px;
+    align-self: center;
+    line-height: 0;
+    margin-left: auto;
 }
 
 .hero-unit {
-    h2 {
-        // color: lighten(#222,25%);
-    }
-
     @include respond-to(medium) {
         width: 66%;
     }

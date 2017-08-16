@@ -9,10 +9,10 @@
     padding-left: 35px * 1.5;
 
     @include respond-to(small) {
-        padding-top: 35px * 1.5;
-        padding-right: 35px * 2.25;
-        padding-bottom: 35px * 1.5;
-        padding-left: 35px * 2.25;
+        padding-top: 35px * 1.25;
+        padding-right: 35px * 2.5;
+        padding-bottom: 35px * 1.25;
+        padding-left: 35px * 2.5;
     }
 
     a {
