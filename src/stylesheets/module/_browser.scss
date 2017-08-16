@@ -6,7 +6,7 @@
     display: inline-block;
     overflow: hidden;
     padding-top: 20px;
-    transition: transform .25s ease-in-out;
+    transition: transform .25s .1s ease-in-out;
 
     @include respond-to(medium) {
         &:hover {

@@ -1,18 +1,19 @@
 .hero {
-    // background-color: #f5f5f5;
-    // background-color: #11bb92;
-    background-image: url(../images/wave.svg),
-                      linear-gradient(#f5f5f5 calc(100% - 40px), #fff calc(100% - 40px));
-    background-repeat: repeat-x,
-                       repeat;
-    background-position: bottom center,
-                         top left;
+    background-color: #FFFAFA;
+    // border-bottom: 4px solid #ccc;
+
+    // background-image: url(../images/wave.svg),
+    //                   linear-gradient(#f5f5f5 calc(100% - 40px), #fff calc(100% - 40px));
+    // background-repeat: repeat-x,
+    //                    repeat;
+    // background-position: bottom center,
+    //                      top left;
     height: 95vh;
 }
 
 .hero-unit {
     h2 {
-        color: lighten(#222,25%);
+        // color: lighten(#222,25%);
     }
 
     @include respond-to(medium) {
