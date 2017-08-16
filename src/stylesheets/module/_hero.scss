@@ -11,10 +11,25 @@
     height: 95vh;
 }
 
-.hero-link {
+.hero-bar {
+    margin-right: auto;
+    margin-left: auto;
+    // max-width: 1200px;
     position: absolute;
     top: 35px;
-    right: 35px;
+    width: 95%;
+}
+
+.hero-block {
+    // background-color: #222;
+    color: #222;
+    font-weight: 700;
+}
+
+.hero-link {
+    // position: absolute;
+    // top: 35px;
+    // right: 35px;
 }
 
 .hero-unit {
