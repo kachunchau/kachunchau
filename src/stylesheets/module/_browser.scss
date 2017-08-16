@@ -97,7 +97,6 @@
 
     @include respond-to(medium) {
         display: inline-block;
-        outline: 1px solid red;
         position: absolute;
         top: 5%;
         left: 10%;
