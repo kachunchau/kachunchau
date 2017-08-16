@@ -6,11 +6,15 @@
 
     a {
         color: #ea4c89;
+        font-weight: 600;
+        &:hover {
+            color: #fff;
+        }
     }
 }
 
 .dribbble-title {
     color: #fff;
     font-weight: 400;
-    margin-bottom: 1em;
+    margin-bottom: .75em;
 }

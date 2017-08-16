@@ -12,6 +12,8 @@
 
 	<body>
 		<div class="hero flexbox flexbox--center">
+            <a class="hero-link" href="#">Contact</a>
+
 		    <div class="l-constrained">
 		        <div class="hero-unit">
                     <h1 class="giga">Hello  there</h1>
@@ -189,7 +191,7 @@
 
             <div class="dribbble">
                 <div class="l-constrained">
-                    <h2 class="beta dribbble-title">See more of my work on <a href="https://dribbble.com/kachunchau">dribbble</a></h2>
+                    <h2 class="alpha dribbble-title">See more of my work on <a href="https://dribbble.com/kachunchau">dribbble</a></h2>
 
                     <ul class="js-dribbble-list l-stacked flexbox">
                         <li class="dribbble-shot"></li>
@@ -200,7 +202,7 @@
 
         <footer class="flexbox footer">
             <div class="footer-unit">
-                <h3 class="alpha footer-title">Follow me on</h3>
+                <!-- <h3 class="alpha footer-title">Follow me on</h3> -->
 
                 <ul class="l-inline social social--primary">
                     <li>
@@ -238,14 +240,14 @@
                 dribbbleType = 'shots';
 
             $.ajax({
-              dataType: 'jsonp',
-              url: 'https://api.dribbble.com/v1/users/' + dribbbleUserName + '/' + dribbbleType + '?access_token=4b8ad1a5a3828e509d1f7174d0f8feefe6012b93a288ab4040ebc86db838d104',
-              data: "jsonp",
-              success: function(data) {
-                for(var i = 0, l = data.data.length / 2; i < l; i++) {
-                  $(".js-dribbble-list").append('<li><img src="' + data.data[i].images.normal + '" class="dribbble-shot"></li>');
+                dataType: 'jsonp',
+                url: 'https://api.dribbble.com/v1/users/' + dribbbleUserName + '/' + dribbbleType + '?access_token=4b8ad1a5a3828e509d1f7174d0f8feefe6012b93a288ab4040ebc86db838d104',
+                data: "jsonp",
+                success: function(data) {
+                    for(var i = 0, l = data.data.length / 2; i < l; i++) {
+                        $(".js-dribbble-list").append('<li><img src="' + data.data[i].images.normal + '" class="dribbble-shot"></li>');
+                    }
                 }
-              }
             });
             </script>
         </footer>
