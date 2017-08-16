@@ -12,7 +12,7 @@
 
 	<body>
 		<div class="hero flexbox flexbox--center">
-            <a class="hero-link" href="#">Contact</a>
+            <!-- <a class="hero-link" href="#">Contact</a> -->
 
 		    <div class="l-constrained">
 		        <div class="hero-unit">
@@ -191,11 +191,9 @@
 
             <div class="dribbble">
                 <div class="l-constrained">
-                    <h2 class="alpha dribbble-title">See more of my work on <a href="https://dribbble.com/kachunchau">dribbble</a></h2>
+                    <h2 class="dribbble-title">See more of my work on <a href="https://dribbble.com/kachunchau">dribbble</a></h2>
 
-                    <ul class="js-dribbble-list l-stacked flexbox">
-                        <li class="dribbble-shot"></li>
-                    </ul>
+                    <ul class="js-dribbble-list l-stacked flexbox"></ul>
                 </div>
             </div>
         </main>
@@ -236,19 +234,20 @@
 
             <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
             <script>
-            var dribbbleUserName = 'kachunchau',
-                dribbbleType = 'shots';
+                var dribbbleUserName = 'kachunchau',
+                    dribbbleType = 'shots',
+                    limit = '5';
 
-            $.ajax({
-                dataType: 'jsonp',
-                url: 'https://api.dribbble.com/v1/users/' + dribbbleUserName + '/' + dribbbleType + '?access_token=4b8ad1a5a3828e509d1f7174d0f8feefe6012b93a288ab4040ebc86db838d104',
-                data: "jsonp",
-                success: function(data) {
-                    for(var i = 0, l = data.data.length / 2; i < l; i++) {
-                        $(".js-dribbble-list").append('<li><img src="' + data.data[i].images.normal + '" class="dribbble-shot"></li>');
+                $.ajax({
+                    dataType: 'jsonp',
+                    url: 'https://api.dribbble.com/v1/users/' + dribbbleUserName + '/' + dribbbleType + '?access_token=4b8ad1a5a3828e509d1f7174d0f8feefe6012b93a288ab4040ebc86db838d104',
+                    data: "jsonp",
+                    success: function(data) {
+                        for(var i = 0, l = limit; i < l; i++) {
+                            $(".js-dribbble-list").append('<li><a href="' + data.data[i].html_url +'"><img src="' + data.data[i].images.normal + '" class="dribbble-shot"></a></li>');
+                        }
                     }
-                }
-            });
+                });
             </script>
         </footer>
 	</body>
