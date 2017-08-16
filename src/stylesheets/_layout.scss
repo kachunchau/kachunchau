@@ -22,10 +22,16 @@
     }
 }
 
-.l-constrained {
+
+main {
+    margin-bottom: 50vh;
+}
+
+
+.l-constrained,
+.l-full {
     margin-right: auto;
     margin-left: auto;
-    max-width: 1200px;
     width: 90%;
 
     @include respond-to(small) {
@@ -33,6 +39,10 @@
     }
 }
 
-main {
-    margin-bottom: 50vh;
+.l-constrained {
+    max-width: 1200px;
+}
+
+.l-full {
+    max-width: 1500px;
 }

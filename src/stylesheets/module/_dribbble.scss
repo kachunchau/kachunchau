@@ -1,8 +1,13 @@
 .dribbble {
     background-color: #222;
-    padding-top: 35px * 3;
-    padding-bottom: 35px * 3;
-    // text-align: center;
+    padding-top: 35px * 1.75;
+    padding-bottom: 35px * 1.75;
+    text-align: center;
+
+    @include respond-to(medium) {
+        padding-top: 35px * 3;
+        padding-bottom: 35px * 3;
+    }
 
     a {
         color: #ea4c89;
@@ -13,8 +18,20 @@
     }
 }
 
+.dribbble-list {
+    flex-wrap: wrap;
+}
+
 .dribbble-title {
     color: #fff;
     font-weight: 400;
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
+}
+
+.dribbble-shot {
+    flex: 1 1 33%;
+
+    @include respond-to(medium) {
+        flex: 1;
+    }
 }
