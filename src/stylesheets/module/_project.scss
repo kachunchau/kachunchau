@@ -16,13 +16,10 @@
             transform: translateX(0);
         }
     }
-    &:last-child {
-        // margin-bottom: 0;
-    }
 
     @include respond-to(medium) {
         justify-content: space-between;
-        height: 95vh;
+        // height: 95vh;
         flex-direction: row;
         text-align: left;
     }
