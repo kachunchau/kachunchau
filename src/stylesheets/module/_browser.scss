@@ -1,5 +1,8 @@
 .browser {
     background-color: #333;
+    background-image: url(../images/dots.svg);
+    background-repeat: no-repeat;
+    background-position: left 8px top 6px;
     border-radius: 10px 10px 4px 4px;
     box-shadow: 0 2px 10px rgba(#000,.1),
                 0 10px 30px rgba(#000,.3);
@@ -7,28 +10,6 @@
     overflow: hidden;
     padding-top: 20px;
     transition: transform .25s .1s ease-in-out;
-    &:before {
-        content: "";
-        background-color: #fff;
-        border-radius: 8px;
-        height: 8px;
-        display: block;
-        position: absolute;
-        top: 6px;
-        left: 6px;
-        width: 8px;
-    }
-    &:after {
-        content: "";
-        background-color: #fff;
-        border-radius: 8px;
-        height: 8px;
-        display: block;
-        position: absolute;
-        top: 6px;
-        left: 30px;
-        width: 8px;
-    }
 
     @include respond-to(medium) {
         &:hover {
