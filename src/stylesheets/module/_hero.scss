@@ -12,16 +12,12 @@
     font-weight: 600;
     padding: .3em 1em;
     position: fixed;
-    // text-transform: uppercase;
     z-index: 20;
     top: 35px;
     right: 35px;
-}
-
-.hero-link {
-    align-self: center;
-    line-height: 0;
-    margin-left: auto;
+    &:hover {
+        color: #fff;
+    }
 }
 
 .hero-unit {
