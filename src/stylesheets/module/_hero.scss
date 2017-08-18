@@ -4,19 +4,26 @@
     padding-top: 35px * 4;
 }
 
-.hero-block {
+.hero-link {
     background-color: #222;
     box-shadow: 0 2px 10px rgba(#000,.1),
                 0 10px 30px rgba(#000,.3);
     color: #fff;
     font-weight: 600;
-    padding: .3em 1em;
+    padding: .3em .85em;
     position: fixed;
     z-index: 20;
     top: 35px;
     right: 35px;
     &:hover {
         color: #fff;
+    }
+
+    .hero-link-emoji {
+        display: inline-block;
+        line-height: 0;
+        margin-right: 2px;
+        vertical-align: middle;
     }
 }
 
