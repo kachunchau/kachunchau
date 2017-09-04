@@ -3,6 +3,7 @@
     margin-bottom: 0;
 
     > li {
+        display: inline-block;
         &:not(:last-child) {
             margin-right: 14px;
 
@@ -15,13 +16,58 @@
 
 .social-icon {
     text-decoration: none;
+
+    path {
+        fill: #ccc;
+        transition: fill .33s ease-in-out;
+    }
+}
+
+.social-icon--twitter {
+    &:hover {
+        path {
+            fill: #1da1f2;
+        }
+    }
+}
+
+.social-icon--dribbble {
+    &:hover {
+        path {
+            fill: #ea4c89;
+        }
+    }
+}
+
+.social-icon--github {
+    &:hover {
+        path {
+            fill: #222;
+        }
+    }
+}
+
+.social-icon--spotify {
+    &:hover {
+        path {
+            fill: #1db954;
+        }
+    }
+}
+
+.social-icon--instagram {
+    &:hover {
+        path {
+            fill: #222;
+        }
+    }
 }
 
 .social-text {
     display: none;
 
     @include respond-to(small) {
-        display: block;
+        display: inline-block;
         margin-left: 8px;
     }
 }
