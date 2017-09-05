@@ -4,6 +4,7 @@
 
     > li {
         display: inline-block;
+        vertical-align: middle;
         &:not(:last-child) {
             margin-right: 14px;
 
@@ -15,7 +16,9 @@
 }
 
 .social-icon {
-    text-decoration: none;
+    svg {
+        vertical-align: middle;
+    }
 
     path {
         fill: #ccc;

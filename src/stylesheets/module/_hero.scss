@@ -32,6 +32,7 @@
     h2 {
         color: #fff;
     }
+
     @include respond-to(medium) {
         width: 66%;
     }
@@ -45,7 +46,7 @@
         background-color: rgba(#11bb92,1);
         content: "";
         display: block;
-        height: 35%;
+        height: 25%;
         transition: all .33s ease;
         position: absolute;
         bottom: 4px;
