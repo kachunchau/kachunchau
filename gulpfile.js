@@ -38,7 +38,9 @@ gulp.task('stylesheets', function() {
           browsers: ['last 2 versions'],
           cascade: false
         }))
-        .pipe(px2rem())
+        .pipe(px2rem({
+            replace: true
+        }))
         .pipe(gulp.dest('dist/stylesheets'))
         .pipe(browserSync.stream());
 });
