@@ -1,9 +1,7 @@
 .social {
     line-height: 1;
-    margin-bottom: 0;
 
     > li {
-        display: inline-block;
         vertical-align: middle;
         &:not(:last-child) {
             margin-right: 14px;
@@ -15,18 +13,12 @@
     }
 }
 
-.social--secondary {
-
-}
-
 .social-icon {
-    svg {
-        vertical-align: middle;
+    display: inline-block;
 
-        path {
-            fill: #ccc;
-            transition: fill .33s ease-in-out;
-        }
+    path {
+        fill: #ccc;
+        transition: fill .33s ease-in-out;
     }
 }
 
