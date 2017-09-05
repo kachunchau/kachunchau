@@ -2,6 +2,8 @@
     background-color: #1c2024;
     height: 100vh;
     padding-top: 35px * 1;
+    position: relative;
+    z-index: 100;
 }
 
 .hero-sticky {
@@ -12,9 +14,9 @@
     font-weight: 600;
     padding: .3em .85em;
     position: fixed;
-    z-index: 20;
     top: 35px;
     right: 35px;
+    z-index: 90;
     &:hover {
         color: #fff;
     }

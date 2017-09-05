@@ -9,20 +9,24 @@
             margin-right: 14px;
 
             @include respond-to(small) {
-                margin-right:18px;
+                margin-right:22px;
             }
         }
     }
 }
 
+.social--secondary {
+
+}
+
 .social-icon {
     svg {
         vertical-align: middle;
-    }
 
-    path {
-        fill: #ccc;
-        transition: fill .33s ease-in-out;
+        path {
+            fill: #ccc;
+            transition: fill .33s ease-in-out;
+        }
     }
 }
 
