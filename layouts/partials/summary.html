@@ -1,0 +1,15 @@
+<div class="js-project project project--{{ lower .Params.class }}
+	{{ if or (eq .Title "Ah.Design") (eq .Title "NCVO") }}
+		project--alt
+	{{ end }}
+">
+	<div class="l-constrained">
+		<div class="flexbox justify-content-center" style="min-height: 100vh;">
+			<a class="project-link align-self-center" href="{{ .Permalink }}">
+				{{ with .Params.hero_image }}<img src="{{ . }}">{{ end }}
+			</a>
+		</div>
+
+		<h2 class="project-title mb-0"><a class="js-project-href" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+	</div>
+</div>

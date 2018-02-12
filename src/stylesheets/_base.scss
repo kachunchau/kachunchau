@@ -1,0 +1,119 @@
+@import 'normalize';
+
+/* Fonts
+     =========================================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    margin-top: 0;
+}
+
+h1,
+.alpha {
+    font-size: 40px;
+    &:before {
+        content: "";
+    }
+}
+h2,
+.beta {
+
+}
+h3,
+.gamma {
+
+}
+h4,
+.delta {
+    font-size: 14px;
+
+    @include respond-to(small) {
+        font-size: 17px;
+    }
+
+    @include respond-to(medium) {
+        font-size: 20px;
+    }
+}
+h5,
+.epsilon {
+
+}
+h6,
+.zeta {
+    font-size: 14px;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* Defaults
+     =========================================================================*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+html {
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+body {
+    background-color: #F3F8F9;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+        opacity: .5;
+        transition: .3s opacity ease-in-out;
+    }
+}
+
+::-moz-selection {
+    @include selection();
+}
+
+::selection {
+    @include selection();
+}
+
+::-webkit-input-placeholder {
+    @include placeholder();
+}
+
+::-moz-placeholder {
+    @include placeholder();
+}
+
+:-ms-input-placeholder {
+    @include placeholder();
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}

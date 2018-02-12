@@ -1,0 +1,37 @@
+.overlay {
+    background-color: #F4F4F4;
+    color: #373737;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+}
+
+.overlay-content {
+    margin-top: 78px;
+
+    @include respond-to(small) {
+        margin-top: 82px;
+    }
+
+    @include respond-to(medium) {
+        margin-top: 106px;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .flexbox {
+        @include respond-to(small) {
+            flex-direction: column;
+        }
+
+        @include respond-to(medium) {
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "smacss-boilerplate",
+  "version": "1.0.0",
+  "description": "SMACSS Boilerplate",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-px2rem": "^1.0.11",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-jpeg-recompress": "^5.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kachunchau/smacss-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kachunchau/smacss-boilerplate/issues"
+  },
+  "homepage": "https://github.com/kachunchau/smacss-boilerplate"
+}

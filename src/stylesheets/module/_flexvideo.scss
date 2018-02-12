@@ -1,0 +1,25 @@
+/**
+ * Responsive iframes that maintains aspect ratio.
+ * http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+ *
+ * Example HTML:
+ *
+ * <div class="flexvideo">
+ *   <iframe class="flexvideo-iframe" src=""></iframe>
+ * </div>
+ */
+
+.flexvideo {
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    position: relative;
+}
+
+.flexvideo-iframe {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

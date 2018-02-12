@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+	<div class="l-constrained">
+		<div class="projects projects--grid flexbox">
+			{{ range where .Site.RegularPages "Section" "projects" }}
+				<div class="project col-half-medium">
+					<a class="project-link" href="{{ .Permalink }}">{{ with .Params.hero_image }}<img src="{{ . }}">{{ end }}</a>
+				</div>
+			{{ end }}
+		</div>
+	</div>
+
+{{ partial "footer.html" . }}

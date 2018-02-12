@@ -1,0 +1,41 @@
+@import
+    "layout/col",
+    "layout/flexbox"
+    ;
+
+.list-inline {
+    font-size: 0;
+
+    > li {
+        display: inline-block;
+    }
+}
+
+.l-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+    @include respond-to(small) {
+
+    }
+
+    @include respond-to(medium) {
+
+    }
+}
+
+.l-constrained {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 810px;
+}
+
+.l-constrained {
+    // padding-right: 4%;
+    // padding-left: 4%;
+}

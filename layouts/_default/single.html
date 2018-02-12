@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+
+	<div class="project project--single">
+		<div class="l-constrained">
+			<h1 class="project-title mb-0"><a class="js-project-href" href="david-cobley.html">{{ .Title}}</a></h1>
+		</div>
+
+		<div class="l-constrained pr-0-medium pl-0-medium">
+			{{ with .Params.hero_image }}<img class="project-hero-image" src="{{ . }}">{{ end }}
+		</div>
+
+		<div class="l-constrained">
+			<div class="col-5-medium mr-a ml-a">
+				<ul class="list-unstyled project-gallery">
+					{{ .Content }}
+				</ul>
+
+				<ul class="list-unstyled flexbox offset-3-medium pagination">
+					{{ if .NextInSection }}
+						<li>
+							<a class="pagination-next" href="{{ .NextInSection.Permalink }}">
+								<span class="delta">Previous Project</span>
+								<h3 class="delta">{{ .NextInSection.Title }}</h3>
+							</a>
+						</li>
+					{{ end }}
+
+					{{ if .PrevInSection }}
+						<li>
+							<a class="pagination-prev" href="{{ .PrevInSection.Permalink }}">
+								<span class="delta">Next Project</span>
+								<h3 class="delta">{{ .PrevInSection.Title }}</h3>
+							</a>
+						</li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+	</div>
+
+{{ partial "footer.html" . }}

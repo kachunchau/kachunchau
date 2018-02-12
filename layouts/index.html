@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+	<div class="l-constrained">
+		{{ .Content }}
+	</div>
+
+	<div class="js-projects projects projects--landing">
+		{{ range where .Site.RegularPages "Section" "projects" }}
+			{{ partial "summary.html" . }}
+		{{ end }}
+	</div>
+
+{{ partial "footer.html" . }}
