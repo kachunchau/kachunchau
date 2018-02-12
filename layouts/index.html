@@ -1,13 +1,35 @@
 {{ partial "header.html" . }}
 
-	<div class="section">
-		<div class="l-constrained">
-			{{ .Content }}
+	<div class="l-constrained">
+		<div class="section flexbox justify-content-center">
+			<div class="align-self-center">
+				{{ .Content }}
+
+				{{ partial "wave.html" . }}
+			</div>
 		</div>
 	</div>
 
-	<div class="js-projects projects projects--landing">
-		{{ range where .Site.RegularPages "Section" "projects" }}
+	<div class="l-constrained">
+		<div class="flexbox">
+			<div class="col-1-small">
+				<h2 class="gamma mb-0">About me</h2>
+			</div>
+
+			<div class="col-3-small">
+				<p class="gamma">Hey there, I’m Ka-Chun Chau a freelance digital designer based in Bath, UK. Over the past 7 years I’ve worked with companies such as Teapigs, Sealskinz, Sky Sports, Route One, and DeNA.</p>
+
+				<p class="gamma">I love typography, math rock and video games.</p>
+
+				<p class="gamma"><a href="#none">Let’s get in touch!</a></p>
+
+				{{ partial "wave.html" . }}
+			</div>
+		</div>
+	</div>
+
+	<div class="projects projects--landing">
+		{{ range where .Site.RegularPages "Section" "portfolio" }}
 			{{ partial "summary.html" . }}
 		{{ end }}
 	</div>

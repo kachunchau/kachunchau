@@ -12,13 +12,10 @@
 }
 
 .l-header {
+    // background-color: #fff;
+    border-bottom: 1px solid rgba(#000,.1);
     padding-top: 32px;
     padding-bottom: 32px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
 
     @include respond-to(small) {
 
@@ -29,13 +26,18 @@
     }
 }
 
-.l-constrained {
+.l-constrained,
+.l-full {
     margin-right: auto;
     margin-left: auto;
-    max-width: 810px;
+    padding-right: 4%;
+    padding-left: 4%;
 }
 
 .l-constrained {
-    // padding-right: 4%;
-    // padding-left: 4%;
+    max-width: 810px;
+}
+
+.l-full {
+    max-width: 1230px;
 }

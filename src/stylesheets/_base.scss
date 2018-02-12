@@ -9,36 +9,45 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 0;
 }
 
 h1,
 .alpha {
     font-size: 40px;
-    &:before {
-        content: "";
+    line-height: 1.4;
+
+    @include respond-to(small) {
+        margin-bottom: 56px;
+    }
+
+    span {
+        background: linear-gradient(180deg, #F3F8F9 30%, #D0FBD2 30%, #D0FBD2 70%, #F3F8F9 70%);
+        display: inline;
     }
 }
 h2,
 .beta {
-
+    @include respond-to(medium) {
+        font-size: 27px;
+    }
 }
 h3,
 .gamma {
-
-}
-h4,
-.delta {
-    font-size: 14px;
+    font-size: 16px;
 
     @include respond-to(small) {
-        font-size: 17px;
+        // font-size: 17px;
     }
 
     @include respond-to(medium) {
-        font-size: 20px;
+        font-size: 18px;
     }
+}
+h4,
+.delta {
+
 }
 h5,
 .epsilon {
@@ -64,13 +73,6 @@ html {
     box-sizing: inherit;
 }
 
-html,
-body {
-    &.no-scroll {
-        overflow: hidden;
-    }
-}
-
 html {
     font-family: 'Rubik', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -83,7 +85,7 @@ body {
 }
 
 a {
-    color: #fff;
+    color: #0290FD;
     text-decoration: none;
     &:hover {
         opacity: .5;
