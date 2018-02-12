@@ -9,17 +9,18 @@ h3,
 h4,
 h5,
 h6 {
+    color: #2C2C2C;
     font-weight: 500;
     margin-top: 0;
 }
 
 h1,
 .alpha {
-    font-size: 40px;
+    font-size: 42px;
     line-height: 1.4;
 
     @include respond-to(small) {
-        margin-bottom: 56px;
+        // margin-bottom: 56px;
     }
 
     span {
@@ -74,6 +75,7 @@ html {
 }
 
 html {
+    color: #484848;
     font-family: 'Rubik', sans-serif;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

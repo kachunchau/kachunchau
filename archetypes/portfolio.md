@@ -1,6 +1,7 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
-description:
+description: ""
 weight:
+company: ""
 ---
 

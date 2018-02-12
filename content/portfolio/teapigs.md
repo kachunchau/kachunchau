@@ -1,5 +1,6 @@
 ---
 title: "Teapigs"
-description: "Wireframes, Design"
-weight: 3
+description: "Wireframes & Design"
+weight: 4
+company: "blubolt"
 ---

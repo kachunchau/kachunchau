@@ -4,4 +4,6 @@ description: Testing
 bio:
 ---
 
-<h1><span>I’m a Digital Designer based in Bath. I take great pride in designing attentive and clean user interfaces and websites.</span></h1>
+<h1><span>I’m a Digital Designer based in Bath, UK. I take great pride in designing attentive and clean user interfaces.</span></h1>
+
+<p class="beta hero-desc" style="margin-bottom: 56px;">If you want to chat get in 🤙 <a href="#none">touch</a>.</p>
