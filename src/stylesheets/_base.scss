@@ -16,12 +16,8 @@ h6 {
 
 h1,
 .alpha {
-    font-size: 42px;
+    font-size: 41px;
     line-height: 1.39;
-
-    @include respond-to(small) {
-        // margin-bottom: 56px;
-    }
 
     span {
         background: linear-gradient(180deg, #Fff 30%, #D0FBD2 30%, #D0FBD2 70%, #Fff 70%);
@@ -93,8 +89,12 @@ body {
 }
 
 a {
-    color: #2C2C2C;
+    color: #0290FD;
     text-decoration: none;
+}
+
+a.underline {
+    color: #2C2C2C;
 }
 
 .underline {
@@ -111,7 +111,7 @@ a {
         position: absolute;
         bottom: 2px;
         transform: translateX(-100%);
-        transition: transform .33s ease-in;
+        transition: transform .33s ease-in-out;
         width: 100%;
     }
     &:hover {

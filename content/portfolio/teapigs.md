@@ -3,8 +3,8 @@ title: "Teapigs"
 description: "Pure and simple tea"
 weight: 4
 snippet_1: [
-    "/images/Teapigs-01.png",
-    "/images/Teapigs-02.png"
+    "/images/Teapigs-01.jpg",
+    "/images/Teapigs-02.jpg"
     ]
 company: "blubolt"
 role: "Design"
