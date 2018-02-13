@@ -104,18 +104,15 @@
 .project-meta {
     background-color: #fff;
     padding: 32px;
-    // width: 100%;
 }
 
 .project-title {
-    font-weight: 400;
-    margin-bottom: 4px;
+    font-weight: 500;
+    margin-bottom: 2px;
 
     a {
-        color: inherit;
-        display: inline-block;
-
         svg {
+            margin-left: 8px;
             &:hover {
                 g {
                     stroke: #0290FD;

@@ -9,14 +9,14 @@
 				</header>
 
 				<div class="article-body">
-					{{ .Content }}
+					{{ .Content | replaceRE "<p>" "<p class=\"gamma\">" | safeHTML }}
 				</div>
 
 				<footer class="article-footer">
 					{{ partial "wave.html" . }}
 
 					{{ if .Params.site_url }}
-						<a class="btn col-3-small mr-a ml-a" href="{{ .Params.site_url }}">Launch site</a>
+						<a class="btn" href="{{ .Params.site_url }}">Launch site</a>
 					{{ end }}
 				</footer>
 			</article>

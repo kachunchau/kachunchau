@@ -7,7 +7,7 @@ snippet_1: [
     "/images/Teapigs-02.png"
     ]
 company: "blubolt"
-role: "Wireframes & design"
+role: "Design"
 site_url: "https://www.teapigs.co.uk/"
 ---
 
@@ -15,8 +15,6 @@ site_url: "https://www.teapigs.co.uk/"
 
 {{< img src="/images/Teapigs-04.jpg" >}}
 
-<div class="col-3-small mr-a ml-a">
-    <p class="gamma">blubolt where tasked to freshen up their dated ecommerce store. I was to redesign their ecommerce store to reflect more of their brand.</p>
+<p class="gamma">blubolt where tasked to freshen up their dated ecommerce store. I was to redesign their ecommerce store to reflect more of their brand.</p>
 
-    <p class="gamma">I used a combintion of thick borders and their whimsical artwork to portray a helpful and friendly brand.</p>
-</div>
+<p class="gamma">I used a combintion of thick borders and their whimsical artwork to portray a helpful and friendly brand.</p>

@@ -5,7 +5,6 @@
         box-shadow: 0 8px 16px rgba(#000,.2),
                     0 0 16px -24px rgba(#000,.8)
                     ;
-        margin-bottom: 16px;
     }
 }
 
@@ -14,16 +13,24 @@
     margin-bottom: 72px;
 }
 
-.article-footer {
-    text-align: center;
+.article-body {
+    p,
+    ul {
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+}
 
+
+.article-footer {
     svg {
-        margin-right: auto;
-        margin-left: auto;
+        margin-left: 60px;
     }
 
     svg + .btn {
         margin-top: 72px;
+        margin-right: 60px;
+        margin-left: 60px;
     }
 }
 

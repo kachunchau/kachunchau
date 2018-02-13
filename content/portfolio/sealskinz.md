@@ -13,10 +13,8 @@ site_url: "https://www.sealskinz.com"
 
 {{< img src="/images/Sealskinz-03.jpg" >}}
 
-{{< img src="/images/Sealskinz-04.jpg >}}
+{{< img src="/images/Sealskinz-04.jpg" >}}
 
-<div class="col-3-small mr-a ml-a">
-    <p class="gamma">At blubolt I was asked to redesign for Sealskinz. Their old site was dated and hard to navigate.</p>
+At blubolt I was asked to redesign for Sealskinz—a premium outdoor brand. Their old site was dated and hard to navigate.
 
-    <p class="gamma">As Sealskinz are a preimium brand they wanted their new design to reflect the quality of their products. I introduced ample white space, supported with a dark colour palette for a more luxurious look.</p>
-</div>
+As Sealskinz are a preimium brand they wanted their new design to reflect the quality of their products. I introduced ample white space, supported with a dark colour palette for a more luxurious look.

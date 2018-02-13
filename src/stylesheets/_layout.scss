@@ -59,10 +59,16 @@ main {
     padding-left: 4%;
 }
 
+.l-reading {
+    max-width: 720px;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+
 .l-constrained {
-    max-width: calc(770px + 8%);
+    max-width: 770px;
 }
 
 .l-full {
-    max-width: calc(1180px + 8%);
+    max-width: 1180px;
 }

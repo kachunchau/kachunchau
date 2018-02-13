@@ -16,9 +16,9 @@
 				</div>
 
 				<div class="col-3-small">
-					<p class="gamma">Hey there, I’m Ka-Chun Chau a freelance digital designer based in Bath, UK. Over the past 7 years I’ve worked with companies such as Teapigs, Sealskinz, Sky Sports, Route One, and DeNA West.</p>
+					<p class="gamma">Hey there, I’m Ka-Chun Chau a freelance digital designer based in Bath, UK with a strong interest in good typography. Over the past 7 years I’ve worked with companies such as Teapigs, Sealskinz, Sky Sports, Route One, and DeNA West.</p>
 
-					<p class="gamma">I love typography, math rock and video games.</p>
+					<p class="gamma">Outside of work I enjoy listening to post/math-rock and playing video games.</p>
 
 					<p class="gamma"><a href="#none">Let’s get in touch!</a></p>
 				</div>
@@ -42,7 +42,7 @@
 				{{ range where .Site.RegularPages ".Title" "Other" }}
 					{{ range .Params.list }}
 					<li>
-						<h3 class="beta project-title">{{ if .site_url }}<a href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
+						<h3 class="beta project-title">{{ if .site_url }}<a class="underline" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
 						<p class="gamma mb-0">{{ .role }} {{ if .company }}at {{ .company }}{{ end }}</p>
 					</li>
 					{{ end }}

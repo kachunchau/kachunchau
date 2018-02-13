@@ -6,7 +6,7 @@ snippet_1: [
     "/images/Local-Boiler-Company-01.png",
     "/images/Local-Boiler-Company-02.png"
     ]
-role: "Wireframes & design"
+role: "Design"
 no_detail: true
 ---
 
