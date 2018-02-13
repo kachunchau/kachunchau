@@ -13,3 +13,17 @@
     transition: .4s opacity ease;
     visibility: visible;
 }
+
+.bobbing {
+    animation: bobbing 1s ease-in-out infinite alternate both;
+}
+
+@keyframes bobbing {
+    0% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(8px);
+    }
+}
