@@ -11,11 +11,9 @@ role: "Design"
 site_url: "https://www.sealskinz.com"
 ---
 
-{{< img src="/images/Sealskinz-02.png" >}}
+{{< img src="/images/Sealskinz-03.jpg" >}}
 
-{{< img src="/images/Sealskinz-03.png" >}}
-
-{{< img src="/images/Sealskinz-04.png" >}}
+{{< img src="/images/Sealskinz-04.jpg >}}
 
 <div class="col-3-small mr-a ml-a">
     <p class="gamma">At blubolt I was asked to redesign for Sealskinz. Their old site was dated and hard to navigate.</p>

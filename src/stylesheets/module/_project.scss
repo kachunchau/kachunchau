@@ -1,13 +1,13 @@
 .project {
     flex-grow: 1;
     transition: all .33s ease-in-out;
-    width: calc(50% - 15px);
     &:nth-child(odd) {
-        margin-right: 30px;
+        @include respond-to(medium) {
+            margin-right: 30px;
+        }
     }
     &:not(:last-child) {
         margin-bottom: 72px;
-        // margin-bottom: 96px;
     }
     &:nth-last-child(2) {
         margin-bottom: 0;
@@ -16,6 +16,10 @@
         box-shadow: 0 8px 24px rgba(#000,.1),
                     0 0 8px -16px rgba(#000,.75);
         transform: translateY(-16px);
+    }
+
+    @include respond-to(medium) {
+        width: calc(50% - 15px);
     }
 }
 
@@ -57,9 +61,14 @@
 }
 
 .project-image {
+    height: 280px;
     overflow-x: scroll;
     padding-right: 24px;
     padding-left: 24px;
+
+    @include respond-to(small) {
+        height: 460px;
+    }
 
     @include respond-to(medium) {
         height: 560px;

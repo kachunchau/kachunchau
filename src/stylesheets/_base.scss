@@ -96,8 +96,8 @@ a {
     color: #0290FD;
     text-decoration: none;
     &:hover {
-        text-decoration: underline;
-        transition: .3s opacity ease-in-out;
+        color: inherit;
+        transition: .33s all ease-in-out;
     }
 }
 

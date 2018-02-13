@@ -27,7 +27,11 @@
 
 	<div class="project-meta">
 		<h2 class="beta project-title">
-			<a href="{{ .Permalink }}">{{ .Title }}</a>
+			{{ if not .Params.no_detail }}
+				<a href="{{ .Permalink }}">{{ .Title }}</a>
+			{{ else }}
+				{{ .Title }}
+			{{ end }}
 
 			{{ if .Params.site_url }}
 				<a href="{{ .Params.site_url }}">

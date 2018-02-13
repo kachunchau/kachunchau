@@ -12,6 +12,21 @@ role: "Design"
 site_url: ""
 ---
 
+{{< img src="/images/BluCommerce-Denim-04.jpg" >}}
+
 <div class="col-3-small mr-a ml-a">
-    <p class="gamma">I was part of the team that redesigned the base mobile templates using existing data for bluCommerce which you can see here - http://www.blubolt.com/mobile/. I was the main designer for this project and as a team we went through research, wireframes, prototypes and then hi-fidelity mockups. Here are some live examples using the templates - <a href="https://www.teapigs.co.uk/m">https://www.teapigs.co.uk/m</a>, http://mi-pac.com/m and <a href="https://www.hush-uk.com/m">https://www.hush-uk.com/m</a>.</p>
+    <p class="gamma">I was part of the team that redesigned the base mobile templates using existing data for bluCommerce.</p>
+
+    <p class="gamma">I was tasked to design the new Denim templates and as a team we went through user and competitor research to define what we needed to solve. Wireframe prototypes were created to quickly demonstrate layout and user workflow. After various feedback stages we progress to hi-fidelity mockups.</p>
+
+    <p class="gamma">Here are some live sites using these templates.</p>
+
+    <ul class="gamma list-unstyled mb-0">
+        <li><a href="https://www.seasaltcornwall.co.uk/m">Seasalt</a></li>
+        <li><a href="https://www.teapigs.co.uk/m">Teapigs</a></li>
+        <li><a href="https://www.seasaltcornwall.co.uk/m">Robert Welch</a></li>
+        <li><a href="https://www.theletteroom.com/m">The Letterroom</a></li>
+        <li><a href="https://www.mi-pac.com/m">Mipac</a></li>
+        <li><a href="https://www.hush-uk.com/m">Hush</a></li>
+    </ul>
 </div>

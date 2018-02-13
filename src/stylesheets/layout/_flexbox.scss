@@ -38,7 +38,7 @@
     align-self: flex-end;
 }
 
-.flex-direction-column-small {
+.flex-row-small {
     flex-direction: column;
 
     @include respond-to(small) {
@@ -48,6 +48,12 @@
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.flex-wrap-medium {
+    @include respond-to(medium) {
+        flex-wrap: wrap;
+    }
 }
 
 .flex-nowrap {

@@ -19,8 +19,11 @@
 
     svg {
         margin-right: auto;
-        margin-bottom: 72px;
         margin-left: auto;
+    }
+
+    svg + .btn {
+        margin-top: 72px;
     }
 }
 

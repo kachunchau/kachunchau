@@ -1,7 +1,7 @@
 ---
 title: "Route One"
 date: 2018-02-13T10:01:11Z
-description: "Edgy designs"
+description: "UK's premier destination for streetwear"
 weight: 5
 snippet_1: [
     "/images/Route-One-01.jpg",
