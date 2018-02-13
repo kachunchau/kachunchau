@@ -17,14 +17,14 @@ h6 {
 h1,
 .alpha {
     font-size: 42px;
-    line-height: 1.4;
+    line-height: 1.39;
 
     @include respond-to(small) {
         // margin-bottom: 56px;
     }
 
     span {
-        background: linear-gradient(180deg, #F3F8F9 30%, #D0FBD2 30%, #D0FBD2 70%, #F3F8F9 70%);
+        background: linear-gradient(180deg, #Fff 30%, #D0FBD2 30%, #D0FBD2 70%, #Fff 70%);
         display: inline;
     }
 }
@@ -61,6 +61,9 @@ h6,
 
 p {
     margin-top: 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* Defaults
@@ -86,7 +89,7 @@ html {
 }
 
 body {
-    background-color: #F3F8F9;
+    background-color: #FFF;
 }
 
 a {

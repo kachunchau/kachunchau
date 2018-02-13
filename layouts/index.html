@@ -1,37 +1,66 @@
 {{ partial "header.html" . }}
 
-	<div class="l-constrained">
-		<div class="hero flexbox justify-content-center">
-			<div class="align-self-center">
-				{{ .Content }}
+	<main>
+		<div class="l-constrained">
+			<div class="hero flexbox justify-content-center">
+				<div class="align-self-center">
+					{{ .Content }}
 
-				{{ partial "wave.html" . }}
+					{{ partial "wave.html" . }}
+				</div>
+			</div>
+
+			<div class="section flexbox">
+				<div class="col-1-small">
+					<h2 class="gamma mb-0">✍️ About Ka-Chun</h2>
+				</div>
+
+				<div class="col-3-small">
+					<p class="gamma">Hey there, I’m Ka-Chun Chau a freelance digital designer based in Bath, UK. Over the past 7 years I’ve worked with companies such as Teapigs, Sealskinz, Sky Sports, Route One, and DeNA West.</p>
+
+					<p class="gamma">I love typography, math rock and video games.</p>
+
+					<p class="gamma" style="margin-bottom: 56px;"><a href="#none">Let’s get in touch!</a></p>
+
+					{{ partial "wave.html" . }}
+				</div>
 			</div>
 		</div>
 
-		<div class="section flexbox">
-			<div class="col-1-small">
-				<h2 class="gamma mb-0">About me</h2>
-			</div>
-
-			<div class="col-3-small">
-				<p class="gamma">Hey there, I’m Ka-Chun Chau a freelance digital designer based in Bath, UK. Over the past 7 years I’ve worked with companies such as Teapigs, Sealskinz, Sky Sports, Route One, and DeNA West.</p>
-
-				<p class="gamma">I love typography, math rock and video games.</p>
-
-				<p class="gamma" style="margin-bottom: 56px;"><a href="#none">Let’s get in touch!</a></p>
-
-				{{ partial "wave.html" . }}
+		<div class="section section--island section--alt">
+			<div class="l-full">
+				<div class="flexbox flex-wrap projects">
+					{{ range where .Site.RegularPages "Section" "portfolio" }}
+						{{ partial "summary.html" . }}
+					{{ end }}
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="l-full">
-		<div class="projects projects--landing">
-			{{ range where .Site.RegularPages "Section" "portfolio" }}
-				{{ partial "summary.html" . }}
-			{{ end }}
+		<div class="l-full">
+			<ul class="list-unstyled mb-0">
+				<li style="margin-bottom: 16px;">
+					<h3 class="beta project-title mb-0">Ash Smith Blog&mdash;</h3>
+					<p class="gamma mb-0">Design</p>
+				</li>
+				<li style="margin-bottom: 16px;">
+					<h3 class="beta project-title mb-0">Joseph Turner&mdash; </h3>
+					<p class="gamma mb-0">Wireframes &amp; design at blubolt</p>
+				</li>
+				<li style="margin-bottom: 16px;">
+					<h3 class="beta project-title mb-0">Pure Collection&mdash;</h3>
+					<p class="gamma mb-0">Wireframes &amp; design at blubolt</p>
+				</li>
+				<li style="margin-bottom: 16px;">
+					<h3 class="beta project-title mb-0">Kitchen Craft&mdash;</h3>
+					<p class="gamma mb-0">Wireframes &amp; design at blubolt</p>
+				</li>
+				<li>
+					<h3 class="beta project-title mb-0">TP Toys&mdash;</h3>
+					<p class="gamma mb-0">Wireframes &amp; design at blubolt</p>
+				</li>
+			</ul>
 		</div>
-	</div>
+	</main>
 
 {{ partial "footer.html" . }}

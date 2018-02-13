@@ -1,6 +1,7 @@
 *.sass-cache
 .DS_Store
 Build
+Public
 Icon^M^M
 Icon^M^M$
 /node_modules

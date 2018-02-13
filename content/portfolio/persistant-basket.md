@@ -1,16 +1,22 @@
 ---
-title: "Sealskinz"
-description: "Design"
-weight: 2
+title: "Persistant Basket"
+date: 2018-02-13T11:39:29Z
+description: "UX & design"
+weight: 3
 snippet_1: [
-    "/images/Sealskinz-01.png",
-    "/images/Sealskinz-02.png"
+    "/images/Persistent-Basket-01.png",
+    "/images/Persistent-Basket-02.png",
+    "/images/Persistent-Basket-03.png"
     ]
 company: "blubolt"
-site_url: "https://www.sealskinz.com"
+site_url: ""
 ---
 
-{{< img src="/images/Sealskinz-01.pn" >}}
+{{< img src="/images/Persistent-Basket-05.png" alt="Empty basket with no saved items" >}}
+
+{{< img src="/images/Persistent-Basket-04.png" alt="Empty basket with saved items" >}}
+
+{{< img src="/images/Persistent-Basket-06.png" alt="Basket with saved items" >}}
 
 <div class="col-3-small mr-a ml-a">
     <p class="gamma">During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistant Basket is a way to sync your basket across devices on bluCommerce Sites.</p>

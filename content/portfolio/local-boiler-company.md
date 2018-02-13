@@ -1,6 +1,6 @@
 ---
 title: "Local Boiler Company"
-description: "Wireframes & Design"
+description: "Wireframes & design"
 weight: 1
 snippet_1: [
     "/images/Local-Boiler-Company-01.png",

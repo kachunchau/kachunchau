@@ -14,8 +14,12 @@
 
     <body>
         <header class="l-header">
-            <ul class="list-unstyled flexbox justify-content-end nav mb-0">
-                <li>Dribbble</li>
+            <ul class="list-unstyled flexbox nav mb-0">
+                {{ if eq .Section "portfolio" }}
+                    <li><a href="{{ .Site.BaseURL }}">👈 Back</a></li>
+                {{ end }}
+
+                <li class="ml-a">Dribbble</li>
                 <li>GitHub</li>
                 <li>Twitter</li>
                 <li>Instagram</li>

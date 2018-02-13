@@ -1,8 +1,5 @@
 [class^=col-] {
     flex-grow: 1;
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
 }
 
 .col-1 {
@@ -41,76 +38,12 @@
 
 .col-half-medium {
     @include respond-to(medium) {
-        width: calc(50% - 10px);
-    }
-}
-
-.offset-1 {
-    @include respond-to(small) {
-        margin-left: calc(15.45% + 20px);
-    }
-}
-
-.offset-1-only-small {
-    @include respond-to(small) {
-        margin-left: calc(15.45% + 20px);
-    }
-
-    @include respond-to(medium) {
-        margin-left: 0;
+        width: calc(50% - 15px);
     }
 }
 
 .offset-1-medium {
     @include respond-to(medium) {
-        margin-left: calc(15.45% + 20px);
-    }
-}
-
-.offset-2 {
-    @include respond-to(small) {
-        margin-left: calc((15.45% * 2) + 20px);
-    }
-}
-
-.offset-2-medium {
-    @include respond-to(medium) {
-        margin-left: calc((15.45% * 2) + 20px);
-    }
-}
-
-.offset-3-small {
-    @include respond-to(small) {
-        margin-left: calc((15.45% * 3) + 20px);
-    }
-}
-
-.offset-3-medium {
-    @include respond-to(medium) {
-        margin-left: calc((15.45% * 3) + 20px);
-    }
-}
-
-.alt-offset-1 {
-    @include respond-to(small) {
-        margin-left: calc(-15.45% + 20px);
-    }
-}
-
-.alt-offset-1-medium {
-    @include respond-to(medium) {
-        margin-left: calc(-15.45% + 20px);
-    }
-}
-
-.alt-offset-2 {
-    @include respond-to(small) {
-        margin-left: calc((-15.45 * 2) + 20px);
-    }
-}
-
-.alt-offset-2-medium {
-    @include respond-to(medium) {
-        margin-left: calc((-15.45 * 2) + 20px);
+        margin-left: calc(25% - 22.5px);
     }
 }

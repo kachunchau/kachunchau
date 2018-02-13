@@ -4,5 +4,6 @@ date: {{ .Date }}
 description: ""
 weight:
 company: ""
-url: ""
+project_type: ""
+site_url: ""
 ---

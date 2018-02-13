@@ -12,6 +12,7 @@
 }
 
 .l-header {
+    background-color: #FFF;
     border-bottom: 1px solid rgba(#000,.1);
     padding: 32px;
     position: fixed;
@@ -32,6 +33,24 @@
     }
 }
 
+.l-footer {
+    background-color: #000;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: -100;
+}
+
+main {
+    background-color: #fff;
+    margin-bottom: 280px;
+    padding-bottom: 120px;
+}
+
 .l-constrained,
 .l-full {
     margin-right: auto;
@@ -41,9 +60,9 @@
 }
 
 .l-constrained {
-    max-width: calc(810px + 8%);
+    max-width: calc(770px + 8%);
 }
 
 .l-full {
-    max-width: calc(1230px + 8%);
+    max-width: calc(1180px + 8%);
 }

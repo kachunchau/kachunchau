@@ -16,6 +16,12 @@
     margin-right: auto;
 }
 
+.mr-a-small {
+    @include respond-to(small) {
+        margin-right: auto;
+    }
+}
+
 .ml-a {
     margin-left: auto;
 }

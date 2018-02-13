@@ -1,50 +1,82 @@
 .project {
-    border-radius: 10px;
+    flex-grow: 1;
     transition: all .33s ease-in-out;
+    width: calc(50% - 15px);
+    &:nth-child(odd) {
+        margin-right: 30px;
+    }
     &:not(:last-child) {
-        margin-bottom: 96px;
+        margin-bottom: 56px;
+        // margin-bottom: 96px;
+    }
+    &:nth-last-child(2) {
+        margin-bottom: 0;
     }
     &:hover {
-        box-shadow: 0 16px 24px rgba(#000,.1),
-                    0 0 10px -20px rgba(#000,.2);
-        transform: translateY(-40px);
+        box-shadow: 0 8px 24px rgba(#000,.1),
+                    0 0 8px -16px rgba(#000,.75);
+        transform: translateY(-16px);
     }
 }
 
 .project--local-boiler-company {
-    background-color: #FFD40A;
-    // background-image: linear-gradient(-180deg, #FFD40A 1%, #F0C411 100%);
+    .project-image {
+        background-color: #FFD40A;
+    }
 }
 
 .project--sealskinz {
-    background-color: #202C6D;
-    // background-image: linear-gradient(-180deg, #D6DBFF 3%, #CFCEFA 98%);
+    .project-image {
+        background-color: #202C6D;
+        // background-image: linear-gradient(-180deg, #D6DBFF 3%, #CFCEFA 98%);
+    }
+}
+
+.project--persistant-basket {
+    .project-image {
+        background-color: #0191DE;
+    }
 }
 
 .project--blucommerce-denim-templates {
-    background-image: linear-gradient(-180deg, #D5E6FC 3%, #ABCDF9 100%);
+    .project-image {
+        background-image: linear-gradient(-180deg, #D5E6FC 3%, #ABCDF9 100%);
+
+    }
 }
 
 .project--teapigs {
-    background-color: #a2c87f;
+    .project-image {
+        background-color: #a2c87f;
+    }
+}
+
+.project--route-one {
+    .project-image {
+        background-color: #00aba2;
+    }
 }
 
 .project-image {
-    overflow: hidden;
+    overflow-x: scroll;
+    padding-right: 24px;
+    padding-left: 24px;
 
     @include respond-to(medium) {
-        height: 580px;
+        height: 560px;
+        padding-right: 40px;
+        padding-left: 40px;
     }
 }
 
 .project-image-item {
-    box-shadow: 0 2px 24px rgba(#000,.2),
-                0 0 8px -10px rgba(#000,.2)
+    box-shadow: 0 2px 16px rgba(#000,.2),
+                0 0 8px -12px rgba(#000,.75)
                 ;
 
     @include respond-to(medium) {
         &:not(:last-child) {
-            margin-right: 40px;
+            margin-right: 24px;
         }
     }
 }
@@ -63,10 +95,28 @@
 
 .project-meta {
     background-color: #fff;
-    border-radius: 0 0 10px 10px;
     padding: 32px;
+    // width: 100%;
 }
 
 .project-title {
     font-weight: 400;
+    margin-bottom: 4px;
+
+    a {
+        color: inherit;
+        display: inline-block;
+
+        svg {
+            &:hover {
+                g {
+                    stroke: #0290FD;
+                }
+            }
+        }
+    }
+}
+
+.project-list {
+
 }
