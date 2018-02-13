@@ -3,8 +3,8 @@ title: "Sealskinz"
 description: "Premium outdoor endurance brand"
 weight: 2
 snippet_1: [
-    "/images/Sealskinz-02.png",
-    "/images/Sealskinz-01.png"
+    "/images/Sealskinz-01.jpg",
+    "/images/Sealskinz-02.jpg"
     ]
 company: "blubolt"
 role: "Design"
