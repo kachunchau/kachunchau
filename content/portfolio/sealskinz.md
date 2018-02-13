@@ -7,4 +7,5 @@ snippet_1: [
     "/images/Sealskinz-02.png"
     ]
 company: "blubolt"
+site_url: "https://www.sealskinz.com"
 ---

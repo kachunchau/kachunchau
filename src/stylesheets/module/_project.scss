@@ -12,16 +12,52 @@
 }
 
 .project--local-boiler-company {
-    background-image: linear-gradient(-180deg, #D6DBFF 3%, #CFCEFA 98%);
+    background-color: #FFD40A;
+    // background-image: linear-gradient(-180deg, #FFD40A 1%, #F0C411 100%);
+}
+
+.project--sealskinz {
+    background-color: #202C6D;
+    // background-image: linear-gradient(-180deg, #D6DBFF 3%, #CFCEFA 98%);
 }
 
 .project--blucommerce-denim-templates {
     background-image: linear-gradient(-180deg, #D5E6FC 3%, #ABCDF9 100%);
 }
 
+.project--teapigs {
+    background-color: #a2c87f;
+}
+
 .project-image {
+    overflow: hidden;
+
     @include respond-to(medium) {
         height: 580px;
+    }
+}
+
+.project-image-item {
+    box-shadow: 0 2px 24px rgba(#000,.2),
+                0 0 8px -10px rgba(#000,.2)
+                ;
+
+    @include respond-to(medium) {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+}
+
+.project-image-item--desktop {
+    @include respond-to(medium) {
+        width: 480px;
+    }
+}
+
+.project-image-item--mobile {
+    @include respond-to(medium) {
+        width: 300px;
     }
 }
 
@@ -29,4 +65,8 @@
     background-color: #fff;
     border-radius: 0 0 10px 10px;
     padding: 32px;
+}
+
+.project-title {
+    font-weight: 400;
 }

@@ -70,8 +70,11 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+* {
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
 }
 
 html {
@@ -90,7 +93,7 @@ a {
     color: #0290FD;
     text-decoration: none;
     &:hover {
-        opacity: .5;
+        text-decoration: underline;
         transition: .3s opacity ease-in-out;
     }
 }

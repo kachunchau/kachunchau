@@ -6,7 +6,6 @@ snippet_1: [
     "/images/Local-Boiler-Company-01.png",
     "/images/Local-Boiler-Company-02.png"
     ]
-snippet_2: "/images/Local-Boiler-Company-02.png"
 ---
 
 ![Example image](/images/Local-Boiler-Company-01.png)
