@@ -1,19 +1,24 @@
 ---
 title: "Sealskinz"
-description: "Design"
+description: "Premium outdoor endurance brand"
 weight: 2
 snippet_1: [
-    "/images/Sealskinz-01.png",
-    "/images/Sealskinz-02.png"
+    "/images/Sealskinz-02.png",
+    "/images/Sealskinz-01.png"
     ]
 company: "blubolt"
+role: "Design"
 site_url: "https://www.sealskinz.com"
 ---
 
-{{< img src="/images/Sealskinz-01.pn" >}}
+{{< img src="/images/Sealskinz-02.png" >}}
+
+{{< img src="/images/Sealskinz-03.png" >}}
+
+{{< img src="/images/Sealskinz-04.png" >}}
 
 <div class="col-3-small mr-a ml-a">
-    <p class="gamma">During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistant Basket is a way to sync your basket across devices on bluCommerce Sites.</p>
+    <p class="gamma">At blubolt I was asked to redesign for Sealskinz. Their old site was dated and hard to navigate.</p>
 
-    <p class="gamma">I worked with the product owner on user journeys to see how users will traverse this action. After various feedback stages we progressed to hi-fidelity mockups with different iterations depending on the basket content. The UI was based on the base templates but each client will have their own custom styling. I explored separate desktop and mobile versions due to the legacy nature of the platform.</p>
+    <p class="gamma">As Sealskinz are a preimium brand they wanted their new design to reflect the quality of their products. I introduced ample white space, supported with a dark colour palette for a more luxurious look.</p>
 </div>

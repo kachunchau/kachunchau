@@ -2,20 +2,23 @@
 
 	<main>
 		<div class="l-constrained">
-			<article style="padding-top: 200px;">
-				<div style="margin-bottom: 56px;">
-					<h1 class="beta mb-0">{{ .Title}}</h1>
+			<article class="article">
+				<header class="article-header">
+					<h1 class="article-title">{{ .Title}}</h1>
+					<p class="beta">{{ .Description }}</p>
+				</header>
+
+				<div class="article-body">
+					{{ .Content }}
 				</div>
 
-				<div style="margin-bottom: 56px;">
+				<footer class="article-footer">
 					{{ partial "wave.html" . }}
-				</div>
 
-				{{ .Content }}
-
-				{{ if .Params.site_url }}
-					<a class="btn" href="{{ .Params.site_url }}" >View site</a>
-				{{ end }}
+					{{ if .Params.site_url }}
+						<a class="btn" href="{{ .Params.site_url }}">Launch site</a>
+					{{ end }}
+				</footer>
 			</article>
 		</div>
 	</main>

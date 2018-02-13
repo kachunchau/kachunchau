@@ -12,7 +12,7 @@
 
 			<div class="section flexbox">
 				<div class="col-1-small">
-					<h2 class="gamma mb-0">✍️ About Ka-Chun</h2>
+					<h2 class="gamma mb-0">About Ka-Chun</h2>
 				</div>
 
 				<div class="col-3-small">
@@ -20,9 +20,7 @@
 
 					<p class="gamma">I love typography, math rock and video games.</p>
 
-					<p class="gamma" style="margin-bottom: 56px;"><a href="#none">Let’s get in touch!</a></p>
-
-					{{ partial "wave.html" . }}
+					<p class="gamma"><a href="#none">Let’s get in touch!</a></p>
 				</div>
 			</div>
 		</div>
@@ -30,7 +28,7 @@
 		<div class="section section--island section--alt">
 			<div class="l-full">
 				<div class="flexbox flex-wrap projects">
-					{{ range where .Site.RegularPages "Section" "portfolio" }}
+					{{ range where (where .Site.RegularPages "Section" "portfolio") ".Title" "!=" "Other" }}
 						{{ partial "summary.html" . }}
 					{{ end }}
 				</div>
@@ -38,28 +36,20 @@
 		</div>
 
 		<div class="l-full">
-			<ul class="list-unstyled mb-0">
-				<li style="margin-bottom: 16px;">
-					<h3 class="beta project-title mb-0">Ash Smith Blog&mdash;</h3>
-					<p class="gamma mb-0">Design</p>
-				</li>
-				<li style="margin-bottom: 16px;">
-					<h3 class="beta project-title mb-0">Joseph Turner&mdash; </h3>
-					<p class="gamma mb-0">Wireframes &amp; design at blubolt</p>
-				</li>
-				<li style="margin-bottom: 16px;">
-					<h3 class="beta project-title mb-0">Pure Collection&mdash;</h3>
-					<p class="gamma mb-0">Wireframes &amp; design at blubolt</p>
-				</li>
-				<li style="margin-bottom: 16px;">
-					<h3 class="beta project-title mb-0">Kitchen Craft&mdash;</h3>
-					<p class="gamma mb-0">Wireframes &amp; design at blubolt</p>
-				</li>
-				<li>
-					<h3 class="beta project-title mb-0">TP Toys&mdash;</h3>
-					<p class="gamma mb-0">Wireframes &amp; design at blubolt</p>
-				</li>
+			<h2 class="alpha">Other work</h2>
+
+			<ul class="list-unstyled project-list">
+				{{ range where .Site.RegularPages ".Title" "Other" }}
+					{{ range .Params.list }}
+					<li>
+						<h3 class="beta project-title">{{ if .site_url }}<a href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
+						<p class="gamma mb-0">{{ .role }} {{ if .company }}at {{ .company }}{{ end }}</p>
+					</li>
+					{{ end }}
+				{{ end }}
 			</ul>
+
+			{{ partial "wave.html" . }}
 		</div>
 	</main>
 

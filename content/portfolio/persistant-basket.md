@@ -21,5 +21,5 @@ site_url: ""
 <div class="col-3-small mr-a ml-a">
     <p class="gamma">During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistant Basket is a way to sync your basket across devices on bluCommerce Sites.</p>
 
-    <p class="gamma">I worked with the product owner on user journeys to see how users will traverse this action. After various feedback stages we progressed to hi-fidelity mockups with different iterations depending on the basket content. The UI was based on the base templates but each client will have their own custom styling. I explored separate desktop and mobile versions due to the legacy nature of the platform.</p>
+    <p class="gamma">I worked with the product owner on user journeys to see how users will traverse this action. After various feedback stages we progressed to hi-fidelity mockups with different iterations depending on the basket content. The UI was based on the base templates but each client will have their own custom styling. I explored separate desktop and mobile versions.</p>
 </div>
