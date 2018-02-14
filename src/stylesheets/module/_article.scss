@@ -18,8 +18,10 @@
     h3,
     p,
     ul {
-        margin-right: 60px;
-        margin-left: 60px;
+        @include respond-to(small) {
+            margin-right: 60px;
+            margin-left: 60px;
+        }
     }
 
     p,
@@ -34,13 +36,18 @@
 
 .article-footer {
     svg {
-        margin-left: 60px;
+        @include respond-to(small) {
+            margin-left: 60px;
+        }
     }
 
     svg + .btn {
         margin-top: 72px;
-        margin-right: 60px;
-        margin-left: 60px;
+
+        @include respond-to(small) {
+            margin-right: 60px;
+            margin-left: 60px;
+        }
     }
 }
 

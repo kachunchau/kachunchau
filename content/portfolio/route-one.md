@@ -26,6 +26,6 @@ A complete redesign at blubolt due to Route One's ever expanding warehousing the
 * Easy to navigate
 * Better conversions
 
-A modern typeface sans-serif was used to convey strong and indepdent whereas a grid layout lets their product imagery shine.
+Roboto Condensed was the typeface used to reflect their strong and indepdent brand and a serif was used sparingly to hint at their class. A grid layout lets their product imagery shine.
 
 Due to how important the product pages were I had to make sure the main call to action has the highest contrast
