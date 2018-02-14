@@ -9,7 +9,8 @@ var
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
     px2rem                 = require('gulp-px2rem'),
     uglify       = require('gulp-uglify'),
-    map = require('vinyl-map');
+    critical     = require('critical');
+    map          = require('vinyl-map'),
     sass         = require('gulp-sass')
 ;
 
@@ -107,4 +108,20 @@ gulp.task('watch', ['html', 'stylesheets', 'images', 'webfonts', 'javascript'], 
 
     gulp.watch('src/javascript/**/*.js', ['javascript']);
 
+});
+
+gulp.task('critical', function (cb) {
+    return gulp.src('public/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('public'));
+
+    critical.generate({
+        inline: true,
+        base: 'public/',
+        src: 'index.html',
+        dest: 'index.html',
+        minify: true,
+        width: 1300,
+        height: 900
+    });
 });
