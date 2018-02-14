@@ -7,7 +7,7 @@ snippet_1: [
     "/images/Sealskinz-02.jpg"
     ]
 company: "blubolt"
-role: "Design"
+role: "UI design"
 site_url: "https://www.sealskinz.com"
 ---
 
@@ -15,6 +15,20 @@ site_url: "https://www.sealskinz.com"
 
 {{< img src="/images/Sealskinz-04.jpg" >}}
 
-At blubolt I was asked to redesign for Sealskinz—a premium outdoor brand. Their old site was dated and hard to navigate.
+## Overview
 
-As Sealskinz are a preimium brand they wanted their new design to reflect the quality of their products. I introduced ample white space, supported with a dark colour palette for a more luxurious look.
+Sealskinz's old site was hard to navigate and difficult to traverse. At blubolt I was tasked to redesign their entire ecommerce site.
+
+### Goals and objectives
+
+* Increase conversions
+* Easier to navigate
+* Incorporate more lifestyle imagery
+* More emphasis to their category pages
+* Product pages should portray more content
+
+Sealskinz are a preimium brand and they wanted their new design to reflect the quality of their products. This was done by using ample white space and a dark colour palette to reflect luxury.
+
+{{< img src="/images/Sealskinz-05.jpg" >}}
+
+An internal component library was created in Sketch was ease of maintainability and scability in the future.

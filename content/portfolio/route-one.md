@@ -9,7 +9,7 @@ snippet_1: [
     "/images/Route-One-03.jpg"
     ]
 company: "blubolt"
-role: "Design"
+role: "UI design"
 site_url: "https://www.routeone.co.uk"
 ---
 
@@ -17,6 +17,15 @@ site_url: "https://www.routeone.co.uk"
 
 {{< img src="/images/Route-One-05.jpg" alt="Detail page" >}}
 
-A complete redesign at blubolt. Before the redesign their site was old and hard to search for specific products.
+## Overview
 
-Modern typeface and clean layout to let their products breathe.
+A complete redesign at blubolt due to Route One's ever expanding warehousing they needed a UX to reflect the customer facing side.
+
+### Goals and objectives
+
+* Easy to navigate
+* Better conversions
+
+A modern typeface sans-serif was used to convey strong and indepdent whereas a grid layout lets their product imagery shine.
+
+Due to how important the product pages were I had to make sure the main call to action has the highest contrast

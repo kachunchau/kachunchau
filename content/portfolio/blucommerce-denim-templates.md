@@ -8,15 +8,22 @@ snippet_1: [
     "/images/BluCommerce-Denim-03.jpg"
     ]
 company: "blubolt"
-role: "Design"
+role: "UI design"
 site_url: ""
 ---
 
 {{< img src="/images/BluCommerce-Denim-04.jpg" >}}
 
-I was part of the team that redesigned the base mobile templates using existing data for bluCommerce.
+## Overview
 
-I was tasked to design the new Denim templates and as a team we went through user and competitor research to define what we needed to solve. Wireframe prototypes were created to quickly demonstrate layout and user workflow. After various feedback stages we progress to hi-fidelity mockups.
+bluCommerce's old mobile templates were very dated and hard to maintain. As more and more customers started shopping on mobile we needed templates that had a better UX.
+
+### Goals and objectives
+
+* Increase conversions
+* Easier to navigate
+
+I was tasked to design the new Denim templates and as a team we went through user and competitor research to define what we needed. Wireframe prototypes were created to quickly demonstrate layout and user workflow. After various feedback stages we progressed to hi-fidelity mockups and iterated.
 
 Here are some live sites using these templates.
 
