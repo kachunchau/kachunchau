@@ -11,13 +11,12 @@ summary_img: [
 company: "blubolt"
 role: "UI design"
 site_url: ""
+hero: "/images/Persistent-Basket-04.jpg"
 ---
 
-{{< img src="/images/Persistent-Basket-05.jpg" alt="Empty basket with no saved items" >}}
+{{< img src="/images/Persistent-Basket-05.jpg" alt="Empty basket" >}}
 
-{{< img src="/images/Persistent-Basket-04.jpg" alt="Empty basket with saved items" >}}
-
-{{< img src="/images/Persistent-Basket-06.jpg" alt="Basket with saved items" >}}
+{{< img src="/images/Persistent-Basket-06.jpg" alt="Empty basket with no saved items" >}}
 
 ## Problem
 
@@ -29,5 +28,7 @@ During my time at blubolt I was tasked to design one of their new features for b
 * Make sure a MVP is shippable
 
 I worked with the product owner on user journeys to see how users will traverse this action. After various feedback stages we progressed to hi-fidelity mockups with different iterations depending on the basket content.
+
+{{< img src="/images/Persistent-Basket-07.jpg" alt="Basket with saved items" >}}
 
 The UI was based on the base templates but each client will have their own custom styling. I explored separate desktop and mobile versions.
