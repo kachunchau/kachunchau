@@ -5,11 +5,11 @@
 			<article class="article">
 				<header class="article-header">
 					<h1 class="article-title">{{ .Title}}</h1>
-					<p class="beta">{{ .Description }}</p>
+					<p class="beta">{{ .Params.role }} {{ if .Params.company }}at {{ .Params.company }}{{ end }}</p>
 				</header>
 
 				<div class="article-body">
-					{{ .Content | replaceRE "<p>" "<p class=\"gamma\">" | safeHTML }}
+					{{ .Content | replaceRE "<p>" "<p class=\"gamma\">" | replaceRE "<ul>" "<ul class=\"gamma\">" | safeHTML }}
 				</div>
 
 				<footer class="article-footer">

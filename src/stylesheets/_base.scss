@@ -16,8 +16,12 @@ h6 {
 
 h1,
 .alpha {
-    font-size: 41px;
-    line-height: 1.39;
+    font-size: 32px;
+    line-height: 1.4;
+
+    @include respond-to(medium) {
+        font-size: 42px;
+    }
 
     span {
         background: linear-gradient(180deg, #Fff 30%, #D0FBD2 30%, #D0FBD2 70%, #Fff 70%);
@@ -26,6 +30,8 @@ h1,
 }
 h2,
 .beta {
+    font-size: 24px;
+
     @include respond-to(medium) {
         font-size: 27px;
     }
@@ -35,7 +41,6 @@ h3,
     font-size: 16px;
 
     @include respond-to(small) {
-        // font-size: 17px;
     }
 
     @include respond-to(medium) {
@@ -52,7 +57,7 @@ h5,
 }
 h6,
 .zeta {
-    font-size: 14px;
+
 }
 
 p {

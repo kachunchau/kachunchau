@@ -48,19 +48,17 @@
 main {
     background-color: #fff;
     margin-bottom: 280px;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
+
+    @include respond-to(medium) {
+        padding-bottom: 120px;
+    }
 }
 
 .l-constrained,
 .l-full {
     margin-right: auto;
     margin-left: auto;
-    padding-right: 4%;
-    padding-left: 4%;
-}
-
-.l-reading {
-    max-width: 720px;
     padding-right: 4%;
     padding-left: 4%;
 }

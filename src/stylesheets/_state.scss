@@ -20,10 +20,10 @@
 
 @keyframes bobbing {
     0% {
-        transform: translateY(-8px);
+        transform: translateY(-4px);
     }
 
     100% {
-        transform: translateY(8px);
+        transform: translateY(4px);
     }
 }
