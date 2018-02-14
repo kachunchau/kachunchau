@@ -110,11 +110,13 @@ gulp.task('watch', ['html', 'stylesheets', 'images', 'webfonts', 'javascript'], 
 
 });
 
-gulp.task('critical', function (cb) {
+gulp.task('minify', function() {
     return gulp.src('public/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('public'));
+});
 
+gulp.task('critical', ['minify'], function (cb) {
     critical.generate({
         inline: true,
         base: 'public/',
