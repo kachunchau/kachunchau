@@ -2,7 +2,7 @@
 title: "bluCommerce Denim Templates"
 description: "New mobile templates"
 weight: 6
-snippet_1: [
+summary_img: [
     "/images/BluCommerce-Denim-01.jpg",
     "/images/BluCommerce-Denim-02.jpg",
     "/images/BluCommerce-Denim-03.jpg"

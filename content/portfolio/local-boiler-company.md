@@ -2,7 +2,7 @@
 title: "Local Boiler Company"
 description: "Wireframes & design"
 weight: 1
-snippet_1: [
+summary_img: [
     "/images/Local-Boiler-Company-01.jpg",
     "/images/Local-Boiler-Company-02.jpg"
     ]

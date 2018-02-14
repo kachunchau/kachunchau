@@ -2,18 +2,15 @@
 title: "Teapigs"
 description: "Pure and simple tea"
 weight: 4
-snippet_1: [
+summary_img: [
     "/images/Teapigs-01.jpg",
     "/images/Teapigs-02.jpg"
     ]
 company: "blubolt"
 role: "UI design"
 site_url: "https://www.teapigs.co.uk/"
+hero: "/images/Teapigs-03.jpg"
 ---
-
-{{< img src="/images/Teapigs-03.jpg" >}}
-
-{{< img src="/images/Teapigs-04.jpg" >}}
 
 ## Overview
 

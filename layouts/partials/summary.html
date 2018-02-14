@@ -2,7 +2,7 @@
 	<div class="flexbox justify-content-start project-image">
 		<ul class="flexbox flexbox--end list-unstyled mb-0">
 			{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistant Basket")) }}
-				{{ range .Params.snippet_1 }}
+				{{ range .Params.summary_img }}
 					<li class="project-image-item project-image-item--desktop">
 						<div class="browser">
 							<div class="browser-dots">
@@ -16,7 +16,7 @@
 					</li>
 				{{ end }}
 			{{ else }}
-				{{ range .Params.snippet_1 }}
+				{{ range .Params.summary_img }}
 					<li class="project-image-item project-image-item--mobile">
 						<img class="align-self-end" src="{{ . }}" alt="">
 					</li>

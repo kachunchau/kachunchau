@@ -3,7 +3,7 @@ title: "Persistant Basket"
 date: 2018-02-13T11:39:29Z
 description: "UX & design"
 weight: 3
-snippet_1: [
+summary_img: [
     "/images/Persistent-Basket-01.jpg",
     "/images/Persistent-Basket-02.jpg",
     "/images/Persistent-Basket-03.jpg"
