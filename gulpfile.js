@@ -4,10 +4,12 @@ var
     concat       = require('gulp-concat'),
     del          = require('del'),
     htmlmin      = require('gulp-htmlmin'),
-    imagemin    = require('gulp-imagemin'),
+    CleanCSS               = require('clean-css');
+    imagemin        = require('gulp-imagemin'),
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
     px2rem                 = require('gulp-px2rem'),
     uglify       = require('gulp-uglify'),
+    map = require('vinyl-map');
     sass         = require('gulp-sass')
 ;
 
@@ -21,10 +23,36 @@ gulp.task('html', function() {
 });
 
 gulp.task('stylesheets', function() {
+    // this snippet basically replaces `gulp-minify-css`
+    var minify = map(function (buff, filename) {
+        return new CleanCSS({
+        // specify your clean-css options here
+        level: {
+            1:  {
+                specialComments: 0
+            },
+            2: {
+                mergeAdjacentRules: true, // controls adjacent rules merging; defaults to true
+                mergeIntoShorthands: true, // controls merging properties into shorthands; defaults to true
+                mergeMedia: true, // controls `@media` merging; defaults to true
+                mergeNonAdjacentRules: true, // controls non-adjacent rule merging; defaults to true
+                mergeSemantically: false, // controls semantic merging; defaults to false
+                overrideProperties: true, // controls property overriding based on understandability; defaults to true
+                removeEmpty: true, // controls removing empty rules and nested blocks; defaults to `true`
+                reduceNonAdjacentRules: true, // controls non-adjacent rule reducing; defaults to true
+                removeDuplicateFontRules: true, // controls duplicate `@font-face` removing; defaults to true
+                removeDuplicateMediaBlocks: true, // controls duplicate `@media` removing; defaults to true
+                removeDuplicateRules: true, // controls duplicate rules removing; defaults to true
+                removeUnusedAtRules: false, // controls unused at rule removing; defaults to false (available since 4.1.0)
+                restructureRules: true, // controls rule restructuring; defaults to false
+                skipProperties: [] // controls which properties won't be optimized, defaults to `[]` which means all will be optimized (since 4.1.0)
+            }
+        }
+        }).minify(buff.toString()).styles;
+    });
+
     return gulp.src('src/stylesheets/style.scss')
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }))
+        .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
@@ -32,6 +60,7 @@ gulp.task('stylesheets', function() {
         .pipe(px2rem({
             replace: true
         }))
+        .pipe(minify)
         .pipe(gulp.dest('static/stylesheets'))
 });
 
