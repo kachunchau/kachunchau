@@ -44,6 +44,7 @@
     svg + .btn {
         margin-top: 72px;
 
+
         @include respond-to(small) {
             margin-right: 60px;
             margin-left: 60px;
