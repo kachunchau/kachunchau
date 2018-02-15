@@ -1,4 +1,5 @@
 .project {
+    color: inherit;
     flex-grow: 1;
     transition: all .33s ease-in-out;
     &:nth-child(odd) {
