@@ -32,42 +32,26 @@
     }
 }
 
-a:hover {
-    .nav-dribbble {
-        path {
-            fill: #ea4c89;
-        }
-    }
-}
-
 .nav-dribbble {
-    &:hover {
-        path {
-            fill: #ea4c89;
-        }
+    path {
+        fill: #ea4c89;
     }
 }
 
 .nav-github {
-    &:hover {
-        path {
-            fill: #333;
-        }
+    path {
+        fill: #333;
     }
 }
 
 .nav-twitter {
-    &:hover {
-        path {
-            fill: #1da1f2;
-        }
+    path {
+        fill: #1da1f2;
     }
 }
 
 .nav-instagram {
-    &:hover {
-        path {
-            fill: #405de6;
-        }
+    path {
+        fill: #405de6;
     }
 }
