@@ -2,6 +2,8 @@
 title: "Ka-Chun Chau"
 baseURL: "/"
 languageCode: "en"
+permalinks:
+  portfolio: "/:filename/"
 disableKinds: [
   "taxonomy",
   "taxonomyTerm",
