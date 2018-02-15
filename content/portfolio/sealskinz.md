@@ -14,7 +14,7 @@ hero: "/images/Sealskinz-03.jpg"
 
 ## Overview
 
-Sealskinz's old site was hard to navigate and difficult to traverse. At blubolt I was tasked to redesign their entire ecommerce site.
+Sealskinz's old site was cluttered, hard to navigate and visually very boring in comparision to their high priced products. At blubolt I was tasked to redesign their entire ecommerce site.
 
 ### Goals and objectives
 
