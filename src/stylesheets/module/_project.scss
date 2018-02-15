@@ -1,6 +1,4 @@
 .project {
-    color: inherit;
-    flex-grow: 1;
     transition: all .33s ease-in-out;
     &:nth-child(odd) {
         @include respond-to(medium) {
@@ -22,10 +20,6 @@
                     0 0 8px -16px rgba(#000,.75);
         transform: translateY(-16px);
     }
-
-    @include respond-to(medium) {
-        width: calc(50% - 15px);
-    }
 }
 
 .project--local-boiler-company {
@@ -40,7 +34,7 @@
     }
 }
 
-.project--persistant-basket {
+.project--persistent-basket {
     .project-image {
         background-color: #0191DE;
     }
@@ -126,8 +120,9 @@
     margin-bottom: 2px;
 
     a {
+        // color: inherit;
+
         svg {
-            margin-left: 8px;
             &:hover {
                 g {
                     stroke: #0290FD;
