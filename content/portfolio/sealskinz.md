@@ -30,4 +30,4 @@ Sealskinz are a preimium brand and they wanted their new design to reflect the q
 
 {{< img src="/images/Sealskinz-05.jpg" >}}
 
-An internal component library was created in Sketch was ease of maintainability and scability in the future.
+An internal component library was created in Sketch  maintainability.
