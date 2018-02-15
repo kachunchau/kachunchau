@@ -7,6 +7,7 @@ summary_img: [
     "/images/Local-Boiler-Company-02.jpg"
     ]
 role: "UI design"
+hero: "/images/Local-Boiler-Company-03.jpg"
 ---
 
 ## Overview
