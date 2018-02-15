@@ -26,9 +26,9 @@
 .nav-github,
 .nav-twitter,
 .nav-instagram {
-    transition: all .33s ease-in-out;
+    transition: all .33s ease-out;
     &:hover {
-        transform: scale(1.4);
+        transform: scale(1.3);
     }
 }
 
@@ -60,6 +60,14 @@ a:hover {
     &:hover {
         path {
             fill: #1da1f2;
+        }
+    }
+}
+
+.nav-instagram {
+    &:hover {
+        path {
+            fill: #405de6;
         }
     }
 }
