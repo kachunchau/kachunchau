@@ -1,6 +1,6 @@
 ---
 title: "Sealskinz"
-description: "Premium outdoor endurance brand"
+description: "Redesign for a premium outdoor clothing brand"
 weight: 2
 summary_img: [
     "/images/Sealskinz-01.jpg",
@@ -22,7 +22,7 @@ Sealskinz's old site was hard to navigate and difficult to traverse. At blubolt 
 * Easier to navigate
 * Incorporate more lifestyle imagery
 * More emphasis to their category pages
-* Product pages should portray more content
+* More content on product pages so customers can get immersed in the products
 
 Sealskinz are a preimium brand and they wanted their new design to reflect the quality of their products. This was done by using ample white space and a dark colour palette to reflect luxury.
 
