@@ -2,8 +2,10 @@
 title: "Ka-Chun Chau"
 baseURL: "/"
 languageCode: "en"
-blackfriday:
-  plainIDAnchors: false
-  extentions:
-  - autoHeaderIds: disabled
+disableKinds: [
+  "taxonomy",
+  "taxonomyTerm",
+  "section",
+  "sitemap"
+]
 ---
