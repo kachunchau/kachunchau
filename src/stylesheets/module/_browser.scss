@@ -1,123 +1,31 @@
 .browser {
-    background-color: #333;
-    background-image: url(../images/dots.svg);
-    background-repeat: no-repeat;
-    background-position: left 8px top 6px;
-    border-radius: 10px 10px 4px 4px;
-    box-shadow: 0 2px 10px rgba(#000,.1),
-                0 10px 30px rgba(#000,.3);
-    display: inline-block;
-    overflow: hidden;
-    padding-top: 20px;
-    transition: transform .25s .1s ease-in-out;
+    background-color: #fff;
+    border-radius: 4px 4px 0 0;
+    height: 20px;
+    position: relative;
 
     @include respond-to(medium) {
-        &:hover {
-            box-shadow: 0 2px 10px rgba(#000,.1),
-                        0 10px 30px rgba(#000,.4);
-        }
+        height: 20px;
     }
 }
 
-.project-img {
-    &:hover {
-        .browser {
-            transform: scale(.96);
-        }
-    }
-
-    .browser {
-        &:hover {
-            transform: scale(1.04);
-            z-index: 10;
-        }
-    }
-}
-
-.browser--primary {
-    @include respond-to(medium) {
-        height: 700px;
-    }
-}
-
-.browser--primary-top {
-    @include respond-to(medium) {
-        position: relative;
-        z-index: 10;
-    }
-}
-
-.browser--primary-bottom {
-    display: none;
-
-    @include respond-to(medium) {
-        display: block;
-        position: absolute;
-        top: 5%;
-        left: -14%;
-    }
-}
-
-.browser--secondary {
-    @include respond-to(medium) {
-        height: 600px;
-    }
-}
-
-.browser--secondary-top {
-    display: none;
-
-    @include respond-to(medium) {
-        display: inline-block;
-        position: relative;
-        z-index: 10;
-    }
-}
-
-.browser--secondary-bottom {
-    @include respond-to(medium) {
-        position: absolute;
-        top: -7%;
-        left: 20%;
-    }
-}
-
-.browser--tertiary {
-    height: 600px;
-}
-
-.browser--tertiary-top {
-    @include respond-to(medium) {
-        position: absolute;
-        top: -5%;
-        left: 30%;
-        z-index: 10;
-    }
-}
-
-.browser--tertiary-middle {
-    display: none;
-
-    @include respond-to(medium) {
-        display: inline-block;
-        position: absolute;
-        top: 5%;
-        left: 10%;
-        z-index: 5;
-    }
-}
-
-.browser--tertiary-bottom {
-    display: none;
-
-    @include respond-to(medium) {
-        display: inline-block;
-    }
-}
-
-.browser--mobile {
+.browser-dots {
+    font-size: 0;
+    height: 8px;
+    margin-top: -4px;
     position: absolute;
-    bottom: 0;
-    right: -70px;
-    width: 200px;
+    top: 50%;
+    left: 8px;
+}
+
+.browser-dot {
+    background-color: #000;
+    border-radius: 100%;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top;
+    width: 8px;
+    &:not(:last-child) {
+        margin-right: 4px;
+    }
 }

@@ -1,5 +1,7 @@
-@import
-    "normalize";
+@import 'normalize';
+
+/* Fonts
+     =========================================================================*/
 
 h1,
 h2,
@@ -7,149 +9,147 @@ h3,
 h4,
 h5,
 h6 {
-    color: #1c2024;
+    color: #2C2C2C;
+    font-weight: 500;
     margin-top: 0;
-}
-
-.giga {
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: -.01em;
-    line-height: 1.38;
-    margin-bottom: .1em;
-
-    @include respond-to(small) {
-        font-size: 93px;
-        letter-spacing: -.02em;
-    }
-}
-
-.mega {
-    font-size: 38px;
-    line-height: 1.48;
-
-    @include respond-to(small) {
-        font-size: 50px;
-        letter-spacing: -.01em;
-        line-height: 1.38;
-    }
 }
 
 h1,
 .alpha {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 1.48;
-    margin-bottom: 1.5em;
+    font-size: 32px;
+    line-height: 1.4;
 
-    a {
-        font-weight: 600;
+    @include respond-to(medium) {
+        font-size: 42px;
     }
 
+    span {
+        background: linear-gradient(180deg, #Fff 30%, #D0FBD2 30%, #D0FBD2 70%, #Fff 70%);
+        display: inline;
+    }
+}
+h2,
+.beta {
+    font-size: 24px;
+
+    @include respond-to(medium) {
+        font-size: 27px;
+    }
+}
+h3,
+.gamma {
+    font-size: 16px;
+
     @include respond-to(small) {
-        font-size: 35px;
     }
 
     @include respond-to(medium) {
-        font-size: 35px;
+        font-size: 18px;
     }
 }
-
-h2,
-.beta {
-    font-size: 18px;
-
-    @include respond-to(small) {
-        font-size: 22px;
-    }
-}
-
-h3,
-.gamma {
-    font-size: 18px;
-}
-
 h4,
 .delta {
-    font-size: 16px;
-}
 
+}
 h5,
 .epsilon {
-    font-size: 14px;
+
 }
+h6,
+.zeta {
 
-p,
-ul,
-ol {
-    font-size: 18px;
-
-    @include respond-to(small) {
-        font-size: 22px;
-    }
 }
 
 p {
     margin-top: 0;
-    &:last-of-type {
+    &:last-child {
         margin-bottom: 0;
-        // outline: 1px solid red;
-
-        @include respond-to(small) {
-            margin-bottom: 1em;
-        }
     }
 }
 
-* {
+/* Defaults
+     =========================================================================*/
+
+html {
     box-sizing: border-box;
+}
+
+* {
+    &:before,
     &:after {
         box-sizing: inherit;
     }
 }
 
-html,
-body {
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-}
-
 html {
-    background-color: #f5f5f5;
-    color: lighten(#222,25%);
-    // font-family: $serif;
-    font-family: $sans-serif;
-    -moz-osx-font-smoothing: grayscale;
+    color: #484848;
+    font-family: 'Rubik', sans-serif;
     -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
-    text-rendering: optimizeLegibility;
 }
 
-::-moz-selection {
-    background: #11bb92;
-    color: #fff;
-    text-shadow: none;
-}
-
-::selection {
-    background: #11bb92;
-    color: #fff;
-    text-shadow: none;
-}
-
-img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
+body {
+    background-color: #FFF;
 }
 
 a {
-    color: #11bb92;
+    color: #0290FD;
     text-decoration: none;
-    transition-property: all;
-    transition-duration: .33s;
-    transition-timing-function: ease-in-out;
-    &:hover {
-        // color: #fff;
-        color: inherit;
+}
+
+a.underline {
+    color: #2C2C2C;
+}
+
+.underline {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transition: color .33s ease-in-out;
+    white-space: nowrap;
+    &:before {
+        background-color: rgba( #0290FD, .25 );
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        bottom: 2px;
+        transform: translateX(-100%);
+        transition: transform .33s ease-in-out;
+        width: 100%;
     }
+    &:hover {
+        color: #0290FD;
+        &:before {
+            transform: translateX(0);
+        }
+    }
+}
+
+::-moz-selection {
+    @include selection();
+}
+
+::selection {
+    @include selection();
+}
+
+::-webkit-input-placeholder {
+    @include placeholder();
+}
+
+::-moz-placeholder {
+    @include placeholder();
+}
+
+:-ms-input-placeholder {
+    @include placeholder();
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 }

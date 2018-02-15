@@ -1,3 +1,15 @@
+// Selection
+@mixin selection() {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+// Placeholder
+@mixin placeholder() {
+    color: #999;
+}
+
+// Breakpoints
 @mixin respond-to($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         $value: map-get($breakpoints, $breakpoint);
@@ -7,5 +19,5 @@
         }
     }
 
-    // @warn "Unknown '#{$breakpoint}' in $breakpoints";
+    @warn "Unknown `#{$breakpoint}` in $breakpoints";
 }

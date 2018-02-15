@@ -1,0 +1,37 @@
+[class^=col-] {
+    flex-grow: 1;
+}
+
+.col-1 {
+    width: calc(25% - 22.5px);
+}
+
+.col-1-small {
+    @include respond-to(small) {
+        width: calc(25% - 22.5px);
+    }
+}
+
+.col-3-small {
+    @include respond-to(small) {
+        width: calc((25% - 22.5px) * 3);
+    }
+}
+
+.col-3-medium {
+    @include respond-to(medium) {
+        width: calc((25.45% - 22.5px) * 3);
+    }
+}
+
+.col-half-medium {
+    @include respond-to(medium) {
+        width: calc(50% - 15px);
+    }
+}
+
+.offset-1-medium {
+    @include respond-to(medium) {
+        margin-left: calc(25% - 22.5px);
+    }
+}

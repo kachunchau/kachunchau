@@ -1,0 +1,15 @@
+.nav {
+    flex-wrap: wrap;
+    white-space: nowrap;
+    transition: all .3s ease;
+
+    > li {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    a {
+        display: block;
+    }
+}

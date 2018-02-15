@@ -1,0 +1,29 @@
+.is-slide-up {
+    transform: translateY(-100%);
+}
+
+.is-hidden {
+    opacity: 0;
+    transition: visibility 2s ease, .4s opacity ease;
+    visibility: hidden;
+}
+
+.is-visible {
+    opacity: 1;
+    transition: .4s opacity ease;
+    visibility: visible;
+}
+
+.bobbing {
+    animation: bobbing 1s ease-in-out infinite alternate both;
+}
+
+@keyframes bobbing {
+    0% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(4px);
+    }
+}

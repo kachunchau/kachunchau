@@ -1,48 +1,72 @@
-.l-stacked,
-.l-inline,
-.l-grid {
-    @extend %nobullets;
+@import
+    "layout/col",
+    "layout/flexbox"
+    ;
 
-    margin-bottom: 0;
-}
+.list-inline {
+    font-size: 0;
 
-.l-inline {
     > li {
         display: inline-block;
     }
 }
 
-.l-grid {
-    @extend %clearfix;
+.l-header {
+    background-color: #FFF;
+    border-bottom: 1px solid rgba(#000,.1);
+    padding: 32px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+    transition-property: transform;
+    z-index: 500;
 
-    margin-bottom: 0;
+    @include respond-to(small) {
 
-    > li {
-        float: left;
+    }
+
+    @include respond-to(medium) {
+
     }
 }
 
-
-main {
-    margin-bottom: 30vh;
+.l-footer {
+    background-color: #000;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: -100;
 }
 
+main {
+    background-color: #fff;
+    margin-bottom: 280px;
+    padding-bottom: 80px;
+
+    @include respond-to(medium) {
+        padding-bottom: 120px;
+    }
+}
 
 .l-constrained,
 .l-full {
     margin-right: auto;
     margin-left: auto;
-    width: 90%;
-
-    @include respond-to(small) {
-        width: 95%;
-    }
+    padding-right: 4%;
+    padding-left: 4%;
 }
 
 .l-constrained {
-    max-width: 1200px;
+    max-width: 770px;
 }
 
 .l-full {
-    max-width: 1500px;
+    max-width: 1180px;
 }

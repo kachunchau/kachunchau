@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ .Site.Title }} — {{ .Page.Title }}</title>
+        <meta name="description" content="{{ .Page.Description }}">
+        <meta name="viewport" content="width=device-width">
+
+        <link href="{{ .Site.BaseURL }}stylesheets/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+        {{ .Hugo.Generator }}
+    </head>
+
+    <body>
+        <header class="l-header">
+            <ul class="gamma list-unstyled flexbox nav mb-0">
+                {{ if eq .Section "portfolio" }}
+                    <li><a href="{{ .Site.BaseURL }}">👈 Back</a></li>
+                {{ end }}
+
+                <li class="ml-a"><a href="https://dribbble.com/kachunchau">Dribbble</a></li>
+                <li><a href="https://github.com/kachunchau">GitHub</a></li>
+                <li><a href="https://twitter.com/kachunchau">Twitter</a></li>
+                <li><a href="https://www.instagram.com/kachunchau/">Instagram</a></li>
+                <li><a href="mailto:kachunchau.com">👋 Say Hello</a></li>
+            </ul>
+        </header>
