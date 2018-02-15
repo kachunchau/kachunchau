@@ -1,7 +1,6 @@
 .nav {
     flex-wrap: wrap;
     white-space: nowrap;
-    transition: all .3s ease;
 
     > li {
         &:not(:last-child) {
@@ -20,5 +19,47 @@
     svg {
         display: inline-block;
         vertical-align: middle;
+    }
+}
+
+.nav-dribbble,
+.nav-github,
+.nav-twitter,
+.nav-instagram {
+    transition: all .33s ease-in-out;
+    &:hover {
+        transform: scale(1.4);
+    }
+}
+
+a:hover {
+    .nav-dribbble {
+        path {
+            fill: #ea4c89;
+        }
+    }
+}
+
+.nav-dribbble {
+    &:hover {
+        path {
+            fill: #ea4c89;
+        }
+    }
+}
+
+.nav-github {
+    &:hover {
+        path {
+            fill: #333;
+        }
+    }
+}
+
+.nav-twitter {
+    &:hover {
+        path {
+            fill: #1da1f2;
+        }
     }
 }
