@@ -10,13 +10,14 @@ summary_img: [
 company: "blubolt"
 role: "UI design"
 site_url: ""
+hero: "/images/BluCommerce-Denim-04.jpg"
 ---
-
-{{< img src="/images/BluCommerce-Denim-04.jpg" >}}
 
 ## Overview
 
-bluCommerce's old mobile templates were very dated and hard to maintain. As more and more customers started shopping on mobile we needed templates that had a better UX.
+bluCommerce's old mobile templates were very dated and hard to maintain. As more and more customers started shopping on mobile we needed templates that reflected this with the UX.
+
+This is a white label product.
 
 ### Goals and objectives
 

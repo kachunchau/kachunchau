@@ -16,7 +16,7 @@ hero: "/images/Persistent-Basket-04.jpg"
 
 ## Problem
 
-During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistent Basket allows you to sync your basket across devices on bluCommerce sites.</p>
+During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistent Basket allows you to sync your basket across devices on bluCommerce sites enabling shoppers to shop everywhere.</p>
 
 ### Goals and objectives
 
