@@ -37,14 +37,14 @@
 			</div>
 		</div>
 
-		<div class="l-full">
-			<h2 class="alpha">Other work</h2>
+		<div class="l-constrained">
+			<h2 class="beta">Other work</h2>
 
 			<ul class="list-unstyled project-list">
 				{{ range where .Site.RegularPages ".Title" "Other" }}
 					{{ range .Params.list }}
 					<li>
-						<h3 class="beta project-title">{{ if .site_url }}<a class="underline" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
+						<h3 class="gamma project-title">{{ if .site_url }}<a class="highlight" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
 						<p class="gamma mb-0">{{ .role }} {{ if .company }}at {{ .company }}{{ end }}</p>
 					</li>
 					{{ end }}
