@@ -7,8 +7,6 @@
     background-color: #FFF;
     border-bottom: 1px solid rgba(#000,.1);
     padding-top: 24px;
-    padding-right: 16px;
-    padding-left: 16px;
     padding-bottom: 24px;
     position: fixed;
     top: 0;
@@ -24,7 +22,8 @@
     }
 
     @include respond-to(medium) {
-        padding: 32px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 

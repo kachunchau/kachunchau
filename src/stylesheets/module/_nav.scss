@@ -6,10 +6,19 @@
     > li {
         &:not(:last-child) {
             margin-right: 16px;
+
+            @include respond-to(medium) {
+                margin-right: 24px;
+            }
         }
     }
 
     a {
         display: block;
+    }
+
+    svg {
+        display: inline-block;
+        vertical-align: middle;
     }
 }
