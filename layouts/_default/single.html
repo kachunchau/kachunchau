@@ -4,14 +4,16 @@
 		<article class="article">
 			<div class="l-constrained">
 				<header class="article-header">
-					<h1 class="article-title">{{ .Title}}</h1>
+					<h1 class="mb-0">{{ .Title}}</h1>
 					<p class="beta">{{ .Params.role }} {{ if .Params.company }}at {{ .Params.company }}{{ end }}</p>
 				</header>
 			</div>
 
 			{{ if .Params.hero }}
 				<div class="section-small section--island-small section--alt pb-0">
-					<img class="l-full" src="{{ .Params.hero }}" alt="">
+					<div class="l-full">
+						<img src="{{ .Params.hero }}" alt="">
+					</div>
 				</div>
 			{{ end }}
 

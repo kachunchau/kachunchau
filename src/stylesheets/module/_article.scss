@@ -7,7 +7,13 @@
     margin-bottom: 72px;
 }
 
+.article-header {
+    text-align: center;
+}
+
 .article-body {
+    // margin-bottom: 120px;
+
     h2,
     h3,
     p,
@@ -49,10 +55,6 @@
             margin-left: 60px;
         }
     }
-}
-
-.article-title {
-    margin-bottom: 4px;
 }
 
 figure {
