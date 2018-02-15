@@ -1,7 +1,7 @@
 <a class="project project--{{ lower .Title | urlize }}" href="{{ if not .Params.no_detail }}{{ .Permalink }}{{ else }}#none{{ end }}">
 	<div class="flexbox justify-content-start project-image">
 		<ul class="flexbox flexbox--end list-unstyled mb-0">
-			{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistant Basket")) }}
+			{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistent Basket")) }}
 				{{ range .Params.summary_img }}
 					<li class="project-image-item project-image-item--desktop">
 						<div class="browser">

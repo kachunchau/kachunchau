@@ -1,5 +1,5 @@
 ---
-title: "Persistant Basket"
+title: "Persistent Basket"
 date: 2018-02-13T11:39:29Z
 description: "UX & design"
 weight: 3
@@ -16,7 +16,7 @@ hero: "/images/Persistent-Basket-04.jpg"
 
 ## Problem
 
-During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistant Basket allows you to sync your basket across devices on bluCommerce sites.</p>
+During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistent Basket allows you to sync your basket across devices on bluCommerce sites.</p>
 
 ### Goals and objectives
 
