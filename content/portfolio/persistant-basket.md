@@ -11,11 +11,10 @@ summary_img: [
 company: "blubolt"
 role: "UI design"
 site_url: ""
+hero: "/images/Persistent-Basket-04.jpg"
 ---
 
 {{< img src="/images/Persistent-Basket-05.jpg" alt="Empty basket with no saved items" >}}
-
-{{< img src="/images/Persistent-Basket-04.jpg" alt="Empty basket with saved items" >}}
 
 {{< img src="/images/Persistent-Basket-06.jpg" alt="Basket with saved items" >}}
 
