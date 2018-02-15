@@ -95,35 +95,12 @@ body {
 
 a {
     color: #0290FD;
+    transition-property: all;
+    transition-duration: .33s;
+    transition-timing-function: ease-in-out;
     text-decoration: none;
-}
-
-a.underline {
-    color: #2C2C2C;
-}
-
-.underline {
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    transition: color .33s ease-in-out;
-    white-space: nowrap;
-    &:before {
-        background-color: rgba( #0290FD, .25 );
-        content: "";
-        display: block;
-        height: 3px;
-        position: absolute;
-        bottom: 2px;
-        transform: translateX(-100%);
-        transition: transform .33s ease-in-out;
-        width: 100%;
-    }
     &:hover {
         color: #0290FD;
-        &:before {
-            transform: translateX(0);
-        }
     }
 }
 
