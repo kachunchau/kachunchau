@@ -26,6 +26,6 @@ Sealskinz's old site was cluttered, hard to navigate and visually very boring in
 
 Sealskinz are a preimium brand and they wanted their new design to reflect the quality of their products. This was done by using ample white space and a dark colour palette to reflect luxury.
 
-{{< img src="/images/Sealskinz-04.jpg" >}}
+{{< img src="/images/Sealskinz-04.jpg" title="Sticky filters on the listing page" >}}
 
-An internal component library was created in Sketch  maintainability.
+{{< img src="/images/Sealskinz-05.jpg" title="An internal component library was created in Sketch  maintainability" >}}
