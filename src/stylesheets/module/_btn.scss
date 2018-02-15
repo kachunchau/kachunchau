@@ -9,7 +9,8 @@
     padding-bottom: 24px;
     text-align: center;
     &:hover {
-        color: inherit;
+        background-color: darken(#0290FD,4%);
+        color: #fff;
         text-decoration: none;
     }
 }
