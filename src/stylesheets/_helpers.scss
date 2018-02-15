@@ -40,6 +40,26 @@
     }
 }
 
-.pb-0 {
-    padding-bottom: 0;
+.pr-0-small {
+    @include respond-to(small) {
+        padding-right: 0;
+    }
+}
+
+.pr-0-medium {
+    @include respond-to(medium) {
+        padding-right: 0;
+    }
+}
+
+.pl-0-small {
+    @include respond-to(small) {
+        padding-left: 0;
+    }
+}
+
+.pl-0-medium {
+    @include respond-to(medium) {
+        padding-left: 0;
+    }
 }

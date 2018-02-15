@@ -1,10 +1,4 @@
-<a class="project project--{{ lower .Title | urlize }}" href="
-	{{ if not .Params.no_detail }}
-		{{ .Permalink }}
-	{{ else }}
-		#
-	{{ end }}
-">
+<div class="project project--{{ lower .Title | urlize }}">
 	<div class="flexbox justify-content-start project-image">
 		<ul class="flexbox flexbox--end list-unstyled mb-0">
 			{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistant Basket")) }}
@@ -32,9 +26,14 @@
 	</div>
 
 	<div class="project-meta">
-		<h2 class="beta project-title">{{ .Title }}
+		<h2 class="beta project-title">
+			{{ if not .Params.no_detail }}
+				<a class="underline" href="{{ .Permalink }}">{{ .Title }}</a>
+			{{ else }}
+				{{ .Title }}
+			{{ end }}
 
-			<!-- {{ if .Params.site_url }}
+			{{ if .Params.site_url }}
 				<a href="{{ .Params.site_url }}">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 22 22">
 						<g fill="none" fill-rule="evenodd" stroke="#484848" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1)">
@@ -43,9 +42,9 @@
 						</g>
 					</svg>
 				</a>
-			{{ end }} -->
+			{{ end }}
 		</h2>
 
 		<p class="gamma mb-0">{{ .Params.role }} {{ if .Params.company }} at {{ .Params.company }}{{ end }}</p>
 	</div>
-</a>
+</div>
