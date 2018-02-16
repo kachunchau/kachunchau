@@ -40,14 +40,14 @@
 		</div>
 
 		<div class="l-constrained">
-			<h3 class="beta">Other work</h3>
+			<h3 class="alpha">Other work</h3>
 
 			<ul class="list-unstyled project-list mb-9">
 				{{ range where .Site.RegularPages ".Title" "Other" }}
 					{{ range .Params.list }}
 					<li>
-						<h3 class="gamma mb-0">{{ if .site_url }}<a class="d-ib highlight" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
-						<p class="gamma mb-0">{{ .role }} {{ if .company }}at {{ .company }}{{ end }}</p>
+						<h3 class="beta mb-0">{{ if .site_url }}<a class="d-ib highlight" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
+						<p class="gamma grey-60 mb-0">{{ .role }} {{ if .company }}at {{ .company }}{{ end }}</p>
 					</li>
 					{{ end }}
 				{{ end }}

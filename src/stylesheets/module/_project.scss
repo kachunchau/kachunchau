@@ -116,8 +116,6 @@
 }
 
 .project-title {
-    margin-bottom: .1em;
-
     svg {
         transition: .5s stroke cubic-bezier(0.645, 0.045, 0.355, 1);
         &:hover {
@@ -146,7 +144,7 @@
             margin-bottom: 16px;
 
             @include respond-to(medium) {
-                margin-bottom: 24px;
+                // margin-bottom: 24px;
             }
         }
     }
