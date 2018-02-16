@@ -14,8 +14,8 @@
     right: 0;
     left: 0;
     transition-duration: .5s;
-    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
     transition-property: transform;
+    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
     z-index: 500;
 
     @include respond-to(small) {
@@ -37,12 +37,9 @@
     // bottom: 0;
     // left: 0;
     text-align: center;
-    // z-index: -100;
 }
 
 main {
-    // background-color: #fff;
-    // margin-bottom: 280px;
     padding-bottom: 80px;
 
     @include respond-to(medium) {

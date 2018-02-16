@@ -104,8 +104,8 @@ body {
 }
 
 a {
-    transition-property: all;
     transition-duration: .25s;
+    transition-property: all;
     transition-timing-function: ease-in-out;
     text-decoration: none;
     &:hover {
@@ -137,5 +137,9 @@ img {
     display: block;
     height: auto;
     max-width: 100%;
+    vertical-align: middle;
+}
+
+svg {
     vertical-align: middle;
 }

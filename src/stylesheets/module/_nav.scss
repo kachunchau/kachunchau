@@ -15,18 +15,15 @@
     a {
         display: block;
     }
-
-    svg {
-        display: inline-block;
-        vertical-align: middle;
-    }
 }
 
 .nav-dribbble,
 .nav-github,
 .nav-twitter,
 .nav-instagram {
-    transition: all .33s ease-out;
+    transition-duration: .33s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
     &:hover {
         transform: scale(1.3);
     }

@@ -116,15 +116,26 @@
 }
 
 .project-title {
-    margin-bottom: 2px;
+    margin-bottom: .1em;
 
-    a {
-        svg {
-            &:hover {
-                g {
-                    stroke: #0290FD;
-                }
+    svg {
+        transition: .5s stroke cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:hover {
+            g {
+                stroke: var(--primary);
             }
+        }
+
+        g {
+            stroke: var(--grey);
+        }
+    }
+
+    g {
+        stroke: var(--grey);
+        transition: .5s stroke cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:hover {
+            stroke: var(--primary);
         }
     }
 }
