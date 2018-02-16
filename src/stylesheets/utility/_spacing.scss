@@ -1,0 +1,35 @@
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mr-a {
+    margin-right: auto;
+}
+
+.mr-a-small {
+    @include respond-to(small) {
+        margin-right: auto;
+    }
+}
+
+.ml-a {
+    margin-left: auto;
+}
+
+.ml-a-only-small {
+    margin-left: auto;
+
+    @include respond-to(small) {
+        margin-left: 0;
+    }
+}
+
+.ml-a-small {
+    @include respond-to(small) {
+        margin-left: auto;
+    }
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
