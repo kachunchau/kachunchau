@@ -1,10 +1,13 @@
 .article {
-    padding-top: 200px;
+    padding-top: 160px;
+
+    @include respond-to(medium) {
+        padding-top: 200px;
+    }
 }
 
 .article-header {
     margin-bottom: 56px;
-    text-align: center;
 }
 
 .article-body {
