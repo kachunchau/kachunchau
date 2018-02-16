@@ -1,6 +1,6 @@
 @import
-    "layout/col",
-    "layout/flexbox"
+    "layout/flexbox",
+    "layout/grid"
     ;
 
 .l-header {
@@ -28,21 +28,20 @@
 }
 
 .l-footer {
-    background-color: #000;
-    color: #fff;
+    background-color: #222;
     padding-top: 120px;
     padding-bottom: 120px;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    // position: fixed;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
     text-align: center;
-    z-index: -100;
+    // z-index: -100;
 }
 
 main {
-    background-color: #fff;
-    margin-bottom: 280px;
+    // background-color: #fff;
+    // margin-bottom: 280px;
     padding-bottom: 80px;
 
     @include respond-to(medium) {
