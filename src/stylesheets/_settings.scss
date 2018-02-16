@@ -1,3 +1,27 @@
+/* Variables
+    ==========================================================================*/
+
+:root {
+    --primary: #0290FD;
+
+    --black: #2C2C2C;
+
+    --grey: #484848;
+    --grey-90: rgba(#484848,.9);
+    --grey-80: rgba(#484848,.8);
+    --grey-70: rgba(#484848,.7);
+    --grey-60: rgba(#484848,.6);
+    --grey-50: rgba(#484848,.5);
+
+    --white: #fff;
+    --white-90: rgba(#fff,.9);
+    --white-80: rgba(#fff,.8);
+    --white-70: rgba(#fff,.7);
+    --white-60: rgba(#fff,.6);
+    --white-50: rgba(#fff,.5);
+}
+
+
 $breakpoints: (
     "small": 35em,
     "medium": 50em
