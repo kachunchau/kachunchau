@@ -38,12 +38,20 @@
     align-self: flex-end;
 }
 
+.align-self-end {
+    align-self: stretch;
+}
+
 .flex-row-small {
     flex-direction: column;
 
     @include respond-to(small) {
         flex-direction: row;
     }
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 .flex-wrap {
