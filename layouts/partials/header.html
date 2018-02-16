@@ -14,12 +14,11 @@
     </head>
 
     <body>
-        <header class="l-header">
-
+        <header class="l-header fade-in-alt">
             <div class="l-full">
                 <ul class="gamma list-unstyled flexbox nav mb-0">
                     {{ if eq .Section "portfolio" }}
-                        <li><a href="{{ .Site.BaseURL }}">Back to home</a></li>
+                        <li><a class="black" href="{{ .Site.BaseURL }}">Back to home</a></li>
                     {{ end }}
 
                     <li>
