@@ -15,14 +15,14 @@
 					<h2 class="beta">About me</h2>
 				</div>
 
-				<div class="col-3-small mt-9-small">
+				<div class="col-3-small mt-1">
 					<p class="gamma">Hey there, I’m Ka-Chun Chau a freelance digital designer with a focus in UI on the web. Over the past 7 years I’ve worked with companies such as Teapigs, Sealskinz, Sky Sports, DeNA West and many more.</p>
 
-					<p class="gamma">I enjoy working with companies who are passionate and understand the value of good design. Most of all I want to simplify each user’s workflow so it’s unobtrusive and delightful.</p>
+					<p class="gamma">I enjoy working with companies who are passionate and understand the value of good design. Most of all I want to simplify each person’s workflow so it’s unobtrusive and delightful.</p>
 
-					<p class="gamma">Outside of work I enjoy post/math-rock, beers and playing video games.</p>
+					<p class="gamma mb-3">Outside of work I enjoy post/math-rock, beers and playing video games.</p>
 
-					<h3 class="gamma">See my recent work.</h3>
+					<h3 class="gamma mb-1">See my recent work.</h3>
 
 					<span class="alpha d-ib bobbing">👇</span>
 				</div>
@@ -42,11 +42,11 @@
 		<div class="l-constrained">
 			<h3 class="beta">Other work</h3>
 
-			<ul class="list-unstyled project-list">
+			<ul class="list-unstyled project-list mb-9">
 				{{ range where .Site.RegularPages ".Title" "Other" }}
 					{{ range .Params.list }}
 					<li>
-						<h3 class="gamma project-title">{{ if .site_url }}<a class="d-ib highlight" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
+						<h3 class="gamma mb-0">{{ if .site_url }}<a class="d-ib highlight" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
 						<p class="gamma mb-0">{{ .role }} {{ if .company }}at {{ .company }}{{ end }}</p>
 					</li>
 					{{ end }}
