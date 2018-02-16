@@ -30,11 +30,22 @@
 
 .l-footer {
     background-color: #f9f9f9;
-    // background-color: #222;
+    grid-template-areas:
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    min-height: 55vh;
+}
+
+.footer-body {
+    grid-area: content;
 }
 
 .footer-copyright {
     border-top: 1px solid var(--grey-10);
+    grid-area: footer;
 }
 
 main {
