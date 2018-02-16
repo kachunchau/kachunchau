@@ -1,27 +1,21 @@
 @import
-    "layout/col",
-    "layout/flexbox"
+    "layout/display",
+    "layout/flexbox",
+    "layout/grid"
     ;
-
-.list-inline {
-    font-size: 0;
-
-    > li {
-        display: inline-block;
-    }
-}
 
 .l-header {
     background-color: #FFF;
     border-bottom: 1px solid rgba(#000,.1);
-    padding: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     transition-duration: .5s;
-    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
     transition-property: transform;
+    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
     z-index: 500;
 
     @include respond-to(small) {
@@ -29,25 +23,18 @@
     }
 
     @include respond-to(medium) {
-
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
 .l-footer {
-    background-color: #000;
+    background-color: #222;
     padding-top: 120px;
     padding-bottom: 120px;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    z-index: -100;
 }
 
 main {
-    background-color: #fff;
-    margin-bottom: 280px;
     padding-bottom: 80px;
 
     @include respond-to(medium) {
@@ -64,9 +51,9 @@ main {
 }
 
 .l-constrained {
-    max-width: 770px;
+    max-width: 850px;
 }
 
 .l-full {
-    max-width: 1180px;
+    max-width: 1290px;
 }

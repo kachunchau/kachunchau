@@ -10,13 +10,12 @@ summary_img: [
 company: "blubolt"
 role: "UI design"
 site_url: ""
+hero: "/images/BluCommerce-Denim-04.jpg"
 ---
-
-{{< img src="/images/BluCommerce-Denim-04.jpg" >}}
 
 ## Overview
 
-bluCommerce's old mobile templates were very dated and hard to maintain. As more and more customers started shopping on mobile we needed templates that had a better UX.
+bluCommerce's old mobile templates were very dated and hard to maintain. As more and more customers started shopping on mobile we needed templates that reflected this with the UX.
 
 ### Goals and objectives
 
@@ -24,6 +23,8 @@ bluCommerce's old mobile templates were very dated and hard to maintain. As more
 * Easier to navigate
 
 I was tasked to design the new Denim templates and as a team we went through user and competitor research to define what we needed. Wireframe prototypes were created to quickly demonstrate layout and user workflow. After various feedback stages we progressed to hi-fidelity mockups and iterated.
+
+Denim is a white label product where each of blubolt's client will have their own theme and styling.
 
 Here are some live sites using these templates.
 

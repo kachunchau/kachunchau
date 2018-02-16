@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-	<main>
+	<main class="fade-in">
 		<div class="l-constrained">
 			<div class="hero flexbox justify-content-center">
 				<div class="align-self-center">
@@ -12,17 +12,19 @@
 
 			<div class="section flexbox flex-row-small">
 				<div class="col-1-small">
-					<h2 class="gamma">About Ka-Chun</h2>
+					<h2 class="beta">About me</h2>
 				</div>
 
-				<div class="col-3-small">
-					<p class="gamma">Hey there, I’m Ka-Chun Chau a freelance digital designer based in Bath, UK with a strong interest in good typography. Over the past 7 years I’ve worked with companies such as Teapigs, Sealskinz, Sky Sports, Route One, and DeNA West.</p>
+				<div class="col-3-small mt-1">
+					<p class="gamma">Hey there, I’m Ka-Chun Chau a freelance digital designer with a focus in UI on the web. Over the past 7 years I’ve worked with companies such as Teapigs, Sealskinz, Sky Sports, DeNA West and many more.</p>
 
-					<p class="gamma">Outside of work I enjoy listening to post/math-rock and playing video games.</p>
+					<p class="gamma">I enjoy working with companies who are passionate and understand the value of good design. Most of all I want to simplify each person’s workflow so it’s unobtrusive and delightful.</p>
 
-					<p class="gamma">See my recent work.</p>
+					<p class="gamma mb-3">Outside of work I enjoy post/math-rock, beers and playing video games.</p>
 
-					<span class="beta bobbing" style="display: inline-block;">👇</span>
+					<h3 class="gamma mb-1">See my recent work.</h3>
+
+					<span class="alpha d-ib bobbing">👇</span>
 				</div>
 			</div>
 		</div>
@@ -37,14 +39,14 @@
 			</div>
 		</div>
 
-		<div class="l-full">
-			<h2 class="alpha">Other work</h2>
+		<div class="l-constrained">
+			<h3 class="beta">Other work</h3>
 
-			<ul class="list-unstyled project-list">
+			<ul class="list-unstyled project-list mb-9">
 				{{ range where .Site.RegularPages ".Title" "Other" }}
 					{{ range .Params.list }}
 					<li>
-						<h3 class="beta project-title">{{ if .site_url }}<a class="underline" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
+						<h3 class="gamma mb-0">{{ if .site_url }}<a class="d-ib highlight" href="{{ .site_url }}">{{ .work }}</a>{{ end }}</h3>
 						<p class="gamma mb-0">{{ .role }} {{ if .company }}at {{ .company }}{{ end }}</p>
 					</li>
 					{{ end }}

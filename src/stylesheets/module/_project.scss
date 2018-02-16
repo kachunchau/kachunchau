@@ -1,7 +1,4 @@
 .project {
-    color: inherit;
-    display: inline-block;
-    flex-grow: 1;
     transition: all .33s ease-in-out;
     &:nth-child(odd) {
         @include respond-to(medium) {
@@ -23,10 +20,6 @@
                     0 0 8px -16px rgba(#000,.75);
         transform: translateY(-16px);
     }
-
-    @include respond-to(medium) {
-        width: calc(50% - 15px);
-    }
 }
 
 .project--local-boiler-company {
@@ -41,7 +34,7 @@
     }
 }
 
-.project--persistant-basket {
+.project--persistent-basket {
     .project-image {
         background-color: #0191DE;
     }
@@ -123,24 +116,31 @@
 }
 
 .project-title {
-    font-weight: 500;
-    margin-bottom: 2px;
+    margin-bottom: .1em;
 
-    a {
-        svg {
-            margin-left: 8px;
-            &:hover {
-                g {
-                    stroke: #0290FD;
-                }
+    svg {
+        transition: .5s stroke cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:hover {
+            g {
+                stroke: var(--primary);
             }
+        }
+
+        g {
+            stroke: var(--grey);
+        }
+    }
+
+    g {
+        stroke: var(--grey);
+        transition: .5s stroke cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:hover {
+            stroke: var(--primary);
         }
     }
 }
 
 .project-list {
-    margin-bottom: 72px;
-
     > li {
         &:not(:last-child) {
             margin-bottom: 16px;

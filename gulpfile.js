@@ -111,7 +111,7 @@ gulp.task('watch', ['html', 'stylesheets', 'images', 'webfonts', 'javascript'], 
 });
 
 gulp.task('minify', function() {
-    return gulp.src('public/*.html')
+    return gulp.src('public/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('public'));
 });

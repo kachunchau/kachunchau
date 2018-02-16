@@ -1,7 +1,17 @@
 @import 'normalize';
 
+/* Variables
+    ==========================================================================*/
+
+:root {
+    --black: #2C2C2C;
+    --grey: #484848;
+    --primary: #0290FD;
+    --white: #fff;
+}
+
 /* Fonts
-     =========================================================================*/
+    ==========================================================================*/
 
 h1,
 h2,
@@ -9,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #2C2C2C;
+    color: var(--black);
     font-weight: 500;
     margin-top: 0;
 }
@@ -30,7 +40,7 @@ h1,
 }
 h2,
 .beta {
-    font-size: 24px;
+    font-size: 20px;
 
     @include respond-to(medium) {
         font-size: 27px;
@@ -68,7 +78,7 @@ p {
 }
 
 /* Defaults
-     =========================================================================*/
+    ==========================================================================*/
 
 html {
     box-sizing: border-box;
@@ -82,7 +92,7 @@ html {
 }
 
 html {
-    color: #484848;
+    color: var(--grey);
     font-family: 'Rubik', sans-serif;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -94,36 +104,12 @@ body {
 }
 
 a {
-    color: #0290FD;
+    transition-duration: .25s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
     text-decoration: none;
-}
-
-a.underline {
-    color: #2C2C2C;
-}
-
-.underline {
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    transition: color .33s ease-in-out;
-    white-space: nowrap;
-    &:before {
-        background-color: rgba( #0290FD, .25 );
-        content: "";
-        display: block;
-        height: 3px;
-        position: absolute;
-        bottom: 2px;
-        transform: translateX(-100%);
-        transition: transform .33s ease-in-out;
-        width: 100%;
-    }
     &:hover {
-        color: #0290FD;
-        &:before {
-            transform: translateX(0);
-        }
+        color: var(--primary);
     }
 }
 
@@ -151,5 +137,9 @@ img {
     display: block;
     height: auto;
     max-width: 100%;
+    vertical-align: middle;
+}
+
+svg {
     vertical-align: middle;
 }

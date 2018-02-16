@@ -15,7 +15,15 @@
 }
 
 .bobbing {
-    animation: bobbing 1s ease-in-out infinite alternate both;
+    animation: bobbing .75s ease-in-out infinite alternate both;
+}
+
+.fade-in {
+    animation: fade-in .5s ease .4s alternate both;
+}
+
+.fade-in-alt {
+    animation: fade-in-alt .5s ease alternate backwards;
 }
 
 @keyframes bobbing {
@@ -25,5 +33,29 @@
 
     100% {
         transform: translateY(4px);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-alt {
+    0% {
+        opacity: 0;
+        transform: translateY(-24px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -1,22 +1,24 @@
 {{ partial "header.html" . }}
 
-	<main>
+	<main class="fade-in">
 		<article class="article">
 			<div class="l-constrained">
-				<header class="article-header">
-					<h1 class="article-title">{{ .Title}}</h1>
+				<header class="article-header ta-c mb-7">
+					<h1 class="mb-0">{{ .Title}}</h1>
 					<p class="beta">{{ .Params.role }} {{ if .Params.company }}at {{ .Params.company }}{{ end }}</p>
 				</header>
 			</div>
 
 			{{ if .Params.hero }}
-				<div class="section-small section--island section--alt pb-0">
-					<img class="l-full" src="{{ .Params.hero }}" alt="">
+				<div class="section--island section--alt mb-7 pb-0">
+					<div class="l-full">
+						<img class="mr-a ml-a" src="{{ .Params.hero }}" alt="">
+					</div>
 				</div>
 			{{ end }}
 
 			<div class="l-constrained">
-				<div class="article-body">
+				<div class="article-body mb-9">
 					{{ .Content | replaceRE "<p>" "<p class=\"gamma\">" | replaceRE "<ul>" "<ul class=\"gamma\">" | safeHTML }}
 				</div>
 
@@ -24,7 +26,7 @@
 					{{ partial "wave.html" . }}
 
 					{{ if .Params.site_url }}
-						<a class="btn" href="{{ .Params.site_url }}">Launch site</a>
+						<a class="btn mt-9" href="{{ .Params.site_url }}">Launch site</a>
 					{{ end }}
 				</footer>
 			</div>

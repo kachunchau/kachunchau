@@ -11,11 +11,8 @@ summary_img: [
 company: "blubolt"
 role: "UI design"
 site_url: "https://www.routeone.co.uk"
+hero: "/images/Route-One-04.jpg"
 ---
-
-{{< img src="/images/Route-One-04.jpg" alt="Home page" >}}
-
-{{< img src="/images/Route-One-05.jpg" alt="Detail page" >}}
 
 ## Overview
 

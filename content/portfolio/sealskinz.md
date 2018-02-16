@@ -1,6 +1,6 @@
 ---
 title: "Sealskinz"
-description: "Premium outdoor endurance brand"
+description: "Redesign for a premium outdoor clothing brand"
 weight: 2
 summary_img: [
     "/images/Sealskinz-01.jpg",
@@ -14,7 +14,7 @@ hero: "/images/Sealskinz-03.jpg"
 
 ## Overview
 
-Sealskinz's old site was hard to navigate and difficult to traverse. At blubolt I was tasked to redesign their entire ecommerce site.
+Sealskinz's old site was cluttered, hard to navigate and visually very boring in comparision to their high priced products. At blubolt I was tasked to redesign their entire ecommerce site.
 
 ### Goals and objectives
 
@@ -22,12 +22,10 @@ Sealskinz's old site was hard to navigate and difficult to traverse. At blubolt 
 * Easier to navigate
 * Incorporate more lifestyle imagery
 * More emphasis to their category pages
-* Product pages should portray more content
+* More content on product pages so customers can get immersed in the products
 
 Sealskinz are a preimium brand and they wanted their new design to reflect the quality of their products. This was done by using ample white space and a dark colour palette to reflect luxury.
 
-{{< img src="/images/Sealskinz-04.jpg" >}}
+{{< img src="/images/Sealskinz-04.jpg" title="Sticky filters on the listing page" >}}
 
-{{< img src="/images/Sealskinz-05.jpg" >}}
-
-An internal component library was created in Sketch was ease of maintainability and scability in the future.
+{{< img src="/images/Sealskinz-05.jpg" title="An internal component library was created in Sketch  maintainability" >}}

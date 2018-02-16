@@ -1,10 +1,9 @@
 .article {
-    padding-top: 200px;
-}
+    padding-top: 160px;
 
-.article-header,
-.article-body {
-    margin-bottom: 72px;
+    @include respond-to(medium) {
+        padding-top: 200px;
+    }
 }
 
 .article-body {
@@ -13,8 +12,8 @@
     p,
     ul {
         @include respond-to(small) {
-            margin-right: 60px;
-            margin-left: 60px;
+            margin-right: 96px;
+            margin-left: 96px;
         }
     }
 
@@ -36,28 +35,14 @@
 .article-footer {
     svg {
         @include respond-to(small) {
-            margin-left: 60px;
+            margin-left: 96px;
         }
     }
 
     svg + .btn {
-        margin-top: 72px;
-
-
         @include respond-to(small) {
-            margin-right: 60px;
-            margin-left: 60px;
+            margin-right: 96px;
+            margin-left: 96px;
         }
     }
-}
-
-.article-title {
-    margin-bottom: 4px;
-}
-
-figure {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 40px;
-    margin-left: 0;
 }
