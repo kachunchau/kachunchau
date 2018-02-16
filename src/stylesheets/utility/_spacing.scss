@@ -34,6 +34,18 @@
     margin-top: 72px;
 }
 
+.mt-9-small {
+    @include respond-to(small) {
+        margin-top: 72px;
+    }
+}
+
+.mt-9-medium {
+    @include respond-to(medium) {
+        margin-top: 72px;
+    }
+}
+
 .mb-0 {
     margin-bottom: 0;
 }
