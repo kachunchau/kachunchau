@@ -6,7 +6,7 @@
 
 .l-header {
     background-color: #FFF;
-    border-bottom: 1px solid rgba(#000,.1);
+    border-bottom: 1px solid var(--grey-10);
     padding-top: 24px;
     padding-bottom: 24px;
     position: fixed;
@@ -29,9 +29,12 @@
 }
 
 .l-footer {
-    background-color: #222;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    background-color: #f9f9f9;
+    // background-color: #222;
+}
+
+.footer-copyright {
+    border-top: 1px solid var(--grey-10);
 }
 
 main {
