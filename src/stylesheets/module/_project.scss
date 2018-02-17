@@ -19,6 +19,12 @@
         box-shadow: 0 8px 24px rgba(#000,.1),
                     0 0 8px -16px rgba(#000,.75);
         transform: translateY(-16px);
+
+        svg {
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+        }
     }
 }
 
@@ -119,7 +125,10 @@
     white-space: nowrap;
 
     svg {
-        transition: .5s stroke cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: .3s all cubic-bezier(0.645, 0.045, 0.355, 1);
+        opacity: 0;
+        transform: translateX(-8px);
+        visibility: hidden;
         &:hover {
             g {
                 stroke: var(--primary);
@@ -144,10 +153,6 @@
     > li {
         &:not(:last-child) {
             margin-bottom: 16px;
-
-            @include respond-to(medium) {
-                // margin-bottom: 24px;
-            }
         }
     }
 }
