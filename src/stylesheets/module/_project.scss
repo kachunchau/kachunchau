@@ -1,20 +1,21 @@
-.project {
-    transition: all .33s ease-in-out;
-    &:nth-child(odd) {
-        @include respond-to(medium) {
-            margin-right: 30px;
-        }
-    }
-    &:not(:last-child) {
-        margin-bottom: 56px;
+.projects {
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 56px;
 
-        @include respond-to(medium) {
-            margin-bottom: 72px;
-        }
+    @include respond-to(small) {
+        grid-template-columns: repeat(2, 1fr);
     }
-    &:nth-last-child(2) {
-        margin-bottom: 0;
+
+    @include respond-to(medium) {
+        grid-row-gap: 72px;
     }
+}
+
+.project {
+    overflow: hidden;
+    transition: all .33s ease-in-out;
     &:hover {
         box-shadow: 0 8px 24px rgba(#000,.1),
                     0 0 8px -16px rgba(#000,.75);
