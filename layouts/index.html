@@ -29,7 +29,7 @@
 			</div>
 		</div>
 
-		<div class="mb-10 mb-15-medium section--island section--alt">
+		<div class="mb-10 mb-15-medium island bg-offwhite">
 			<div class="l-full">
 				<div class="grid projects">
 					{{ range where (where .Site.RegularPages "Section" "portfolio") ".Title" "!=" "Other" }}
@@ -42,7 +42,7 @@
 		<div class="l-constrained">
 			<h3 class="alpha">Other work</h3>
 
-			<ul class="list-unstyled project-list mb-5 mb-9-medium">
+			<ul class="list-unstyled project-list mb-5 mb-8-medium">
 				{{ range where .Site.RegularPages ".Title" "Other" }}
 					{{ range .Params.list }}
 					<li>
