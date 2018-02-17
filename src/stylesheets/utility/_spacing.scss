@@ -10,17 +10,13 @@
     .mt-#{$i} {
         margin-top: $i * 8px
     }
-}
 
-@for $i from 1 through 15 {
-    .mt-#{$i}-snakk {
-        @include respond-to(medium) {
+    .mt-#{$i}-small {
+        @include respond-to(small) {
             margin-top: $i * 8px
         }
     }
-}
 
-@for $i from 0 through 15 {
     .mt-#{$i}-medium {
         @include respond-to(medium) {
             margin-top: $i * 8px
@@ -40,17 +36,13 @@
     .mb-#{$i} {
         margin-bottom: $i * 8px
     }
-}
 
-@for $i from 1 through 15 {
-    .mb-#{$i}-snakk {
-        @include respond-to(medium) {
+    .mb-#{$i}-small {
+        @include respond-to(small) {
             margin-bottom: $i * 8px
         }
     }
-}
 
-@for $i from 1 through 15 {
     .mb-#{$i}-medium {
         @include respond-to(medium) {
             margin-bottom: $i * 8px
