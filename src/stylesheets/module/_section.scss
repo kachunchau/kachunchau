@@ -1,11 +1,3 @@
-.section {
-    margin-bottom: 80px;
-
-    @include respond-to(medium) {
-        margin-bottom: 120px;
-    }
-}
-
 .section--island {
     padding-top: 80px;
     padding-bottom: 80px;
