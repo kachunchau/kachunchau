@@ -3,12 +3,8 @@ figure {
     margin-right: 0;
     margin-bottom: 40px;
     margin-left: 0;
-
-    img + figcaption {
-        margin-top: 16px;
-    }
 }
 
 figcaption {
-    color: #999;
+    color: var(--grey-60);
 }
