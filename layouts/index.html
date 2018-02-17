@@ -31,7 +31,7 @@
 
 		<div class="section section--island section--alt">
 			<div class="l-full">
-				<div class="flexbox flex-wrap projects">
+				<div class="d-grid projects">
 					{{ range where (where .Site.RegularPages "Section" "portfolio") ".Title" "!=" "Other" }}
 						{{ partial "summary.html" . }}
 					{{ end }}
