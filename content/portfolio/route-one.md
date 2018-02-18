@@ -29,3 +29,5 @@ Route One is a strong and dependable brand with a hint of elegance. To evoke thi
 A grid layout lets their product imagery shine and keeps it clean.
 
 Due to how important the product pages are for ecommerce stores I had to make sure the main call to action has the highest contrast. In this case this is the add to basket button.
+
+{{< img src="/images/Route-One-05.jpg" title="Product page with a clear call to action" >}}

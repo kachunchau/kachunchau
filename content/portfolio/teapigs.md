@@ -26,3 +26,5 @@ Their old site didn't reflect the quality of their products and the store show c
 I used a combination of thick borders and their whimsical artwork to portray them as friendly and helpful. To make sure the site is easy to navigate the top links were condensed to only a few supported with a full screen search overlay.
 
 The end result is a site that represented their brand a lot better.
+
+{{< img src="/images/Teapigs-04.jpg" title="Their whimsical about landing page" >}}
