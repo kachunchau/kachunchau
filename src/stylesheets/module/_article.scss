@@ -10,11 +10,6 @@
     border-bottom: 1px solid var(--grey-10);
     padding-top: 24px;
     padding-bottom: 24px;
-
-    @include respond-to(medium) {
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
 }
 
 .article-body {
