@@ -26,12 +26,10 @@
 							<p class="beta grey-60 mb-0">{{ .Params.role}}</p>
 						</div>
 
-						{{ if .Params.company }}
-							<div class="col">
-								<h2 class="delta mb-0">Company</h2>
-								<p class="beta grey-60 mb-0">{{ .Params.company }}</p>
-							</div>
-						{{ end }}
+						<div class="col">
+							<h2 class="delta mb-0">Company</h2>
+							<p class="beta grey-60 mb-0">{{ if .Params.company }}{{ .Params.company }}{{ else }}Freelance{{ end }}</p>
+						</div>
 					</div>
 				</div>
 			</div>
