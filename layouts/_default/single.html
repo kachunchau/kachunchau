@@ -18,15 +18,13 @@
 			{{ end }}
 
 			<div class="l-constrained">
-				<div class="article-body mb-6 mb-9-medium">
+				<div class="article-body mb-5">
 					{{ .Content | replaceRE "<p>" "<p class=\"gamma\">" | replaceRE "<ul>" "<ul class=\"gamma\">" | safeHTML }}
 				</div>
 
 				<footer class="article-footer">
-					{{ partial "wave.html" . }}
-
 					{{ if .Params.site_url }}
-						<a class="btn ta-c mt-6 mt-9-medium" href="{{ .Params.site_url }}">Launch site</a>
+						<a class="btn ta-c" href="{{ .Params.site_url }}">Launch site</a>
 					{{ end }}
 				</footer>
 			</div>
