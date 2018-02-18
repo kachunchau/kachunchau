@@ -16,11 +16,10 @@ hero: "/images/Persistent-Basket-04.jpg"
 
 ## Problem
 
-During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistent Basket allows you to sync your basket across devices on bluCommerce sites enabling shoppers to shop everywhere.</p>
+During my time at blubolt I was tasked to design one of their new features for bluCommerce. Persistent Basket allows you to sync your basket on any bluCommerce sites enabling shoppers to access their basket on any device.</p>
 
 ### Goals and objectives
 
-* Define the best user journey
 * Make sure a MVP is shippable
 
 I worked with the product owner on user journeys to see how users will traverse this action. After various feedback stages we progressed to hi-fidelity mockups with different iterations depending on the basket content.

@@ -24,7 +24,7 @@ Sealskinz's old site was cluttered, hard to navigate and visually very boring in
 * More emphasis to their category pages
 * More content on product pages so customers can get immersed in the products
 
-Sealskinz are a preimium brand and they wanted their new design to reflect the quality of their products. This was done by using ample white space and a dark colour palette to reflect luxury.
+Sealskinz are a preimium brand and they wanted their new design to reflect the quality of their products. This was done by using ample white space to support their imagery and a dark colour palette to show luxury.
 
 {{< img src="/images/Sealskinz-04.jpg" title="Sticky filters on the listing page" >}}
 
