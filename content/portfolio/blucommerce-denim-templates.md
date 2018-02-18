@@ -28,11 +28,11 @@ Denim is a white label product where each of blubolt's client will have their ow
 
 Here are some live sites using these templates.
 
-<ul class="gamma list-unstyled mb-0">
-    <li><a href="https://www.seasaltcornwall.co.uk/m">Seasalt</a></li>
-    <li><a href="https://www.teapigs.co.uk/m">Teapigs</a></li>
-    <li><a href="https://www.seasaltcornwall.co.uk/m">Robert Welch</a></li>
-    <li><a href="https://www.theletteroom.com/m">The Letterroom</a></li>
-    <li><a href="https://www.mi-pac.com/m">Mipac</a></li>
-    <li><a href="https://www.hush-uk.com/m">Hush</a></li>
+<ul class="gamma list-unstyled">
+    <li><a class="black" href="https://www.seasaltcornwall.co.uk/m">Seasalt</a></li>
+    <li><a class="black" href="https://www.teapigs.co.uk/m">Teapigs</a></li>
+    <li><a class="black" href="https://www.seasaltcornwall.co.uk/m">Robert Welch</a></li>
+    <li><a class="black" href="https://www.theletteroom.com/m">The Letterroom</a></li>
+    <li><a class="black" href="https://www.mi-pac.com/m">Mipac</a></li>
+    <li><a class="black" href="https://www.hush-uk.com/m">Hush</a></li>
 </ul>
