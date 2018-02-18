@@ -151,9 +151,5 @@
 }
 
 .project-list {
-    > li {
-        &:not(:last-child) {
-            margin-bottom: 16px;
-        }
-    }
+    grid-row-gap: 16px;
 }

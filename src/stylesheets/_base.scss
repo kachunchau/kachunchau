@@ -14,13 +14,18 @@ h6 {
     margin-top: 0;
 }
 
+.giga {
+    @include respond-to(medium) {
+        font-size: 45px;
+    }
+}
 h1,
 .alpha {
     font-size: 32px;
     line-height: 1.4;
 
     @include respond-to(medium) {
-        font-size: 42px;
+        font-size: 40px;
     }
 
     span {
