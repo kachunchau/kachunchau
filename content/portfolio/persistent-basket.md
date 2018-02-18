@@ -1,7 +1,7 @@
 ---
 title: "Persistent Basket"
 date: 2018-02-13T11:39:29Z
-description: "UX & design"
+description: "Cross device basket sync"
 weight: 3
 summary_img: [
     "/images/Persistent-Basket-01.jpg",

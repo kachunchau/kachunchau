@@ -2,31 +2,50 @@
 
 	<main class="fade-in">
 		<article class="article">
-			<div class="l-constrained">
-				<header class="article-header ta-c mb-6 mb-9-medium">
+
+			<div class="l-full">
+				<header class="article-header mb-8 mb-15-medium">
 					<h1 class="mb-0">{{ .Title}}</h1>
-					<p class="beta grey-60 mb-0">{{ .Params.role }} {{ if .Params.company }}at {{ .Params.company }}{{ end }}</p>
+					<p class="beta grey-60 mb-0">{{ .Description }}</p>
 				</header>
 			</div>
 
 			{{ if .Params.hero }}
-				<div class="mb-4 mb-7-medium island bg-offwhite pb-0">
+				<div class="island bg-offwhite pb-0">
 					<div class="l-full">
 						<img class="mr-a ml-a" src="{{ .Params.hero }}" alt="">
 					</div>
 				</div>
 			{{ end }}
 
+			<div class="article-bar mb-5 mb-7-medium">
+				<div class="l-full">
+					<div class="grid grid-col-2">
+						<div class="col">
+							<h2 class="delta mb-0">Role</h2>
+							<p class="beta mb-0">{{ .Params.role}}</p>
+						</div>
+
+						{{ if .Params.company }}
+							<div class="col">
+								<h2 class="delta mb-0">Company</h2>
+								<p class="beta mb-0">{{ .Params.company }}</p>
+							</div>
+						{{ end }}
+					</div>
+				</div>
+			</div>
+
 			<div class="l-constrained">
-				<div class="article-body mb-5">
+				<div class="article-body">
 					{{ .Content | replaceRE "<p>" "<p class=\"gamma\">" | replaceRE "<ul>" "<ul class=\"gamma\">" | safeHTML }}
 				</div>
 
-				<footer class="article-footer">
-					{{ if .Params.site_url }}
+				{{ if .Params.site_url }}
+					<footer class="article-footer">
 						<a class="btn ta-c" href="{{ .Params.site_url }}">Launch site</a>
-					{{ end }}
-				</footer>
+					</footer>
+				{{ end }}
 			</div>
 		</article>
 	</main>

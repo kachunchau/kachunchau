@@ -1,8 +1,19 @@
 .article {
-    padding-top: 128px;
+    padding-top: 144px;
 
     @include respond-to(medium) {
         padding-top: 200px;
+    }
+}
+
+.article-bar {
+    border-bottom: 1px solid var(--grey-10);
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include respond-to(medium) {
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
@@ -21,7 +32,11 @@
     ul {
         + h2,
         + figure {
-            margin-top: 40px;
+            margin-top: 32px;
+
+            @include respond-to(medium) {
+                margin-top: 40px;
+            }
         }
     }
 
