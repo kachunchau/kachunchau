@@ -24,7 +24,7 @@ A complete redesign at blubolt due to Route One's ever expanding warehousing the
 * Better showcase of their products
 * Better conversions
 
-A sans serif and a serif were used to represent their new site. Roboto Condensed was used to show they are strong and indepdent whereas the serif was used sparingly to hint at their elegance.
+Route One is a strong and dependable brand with a hint of elegance. To evoke this personality through the typography I used a combination of a sans-serif and a serif font.
 
 A grid layout lets their product imagery shine and keeps it clean.
 

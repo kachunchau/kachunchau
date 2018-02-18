@@ -33,13 +33,7 @@
 }
 
 .article-footer {
-    svg {
-        @include respond-to(small) {
-            margin-left: 88px;
-        }
-    }
-
-    svg + .btn {
+    .btn {
         @include respond-to(small) {
             margin-right: 88px;
             margin-left: 88px;
