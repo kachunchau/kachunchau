@@ -28,7 +28,7 @@ Denim is a white label product where each of blubolt's client will have their ow
 
 Here are some live sites using these templates.
 
-<ul class="gamma list-unstyled">
+<ul class="delta list-unstyled">
     <li><a class="black" href="https://www.seasaltcornwall.co.uk/m">Seasalt</a></li>
     <li><a class="black" href="https://www.teapigs.co.uk/m">Teapigs</a></li>
     <li><a class="black" href="https://www.seasaltcornwall.co.uk/m">Robert Welch</a></li>

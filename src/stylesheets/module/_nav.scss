@@ -4,10 +4,6 @@
     > li {
         &:not(:last-child) {
             margin-right: 16px;
-
-            @include respond-to(medium) {
-                // margin-right: 24px;
-            }
         }
     }
 

@@ -6,6 +6,10 @@
     margin-top: 0;
 }
 
+.mt-half {
+    margin-top: .1em;
+}
+
 @for $i from 0 through 15 {
     .mt-#{$i} {
         margin-top: $i * 8px
@@ -30,6 +34,10 @@
 
 .mb-0 {
     margin-bottom: 0;
+}
+
+.mb-half {
+    margin-bottom: .1em;
 }
 
 @for $i from 1 through 15 {

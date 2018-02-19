@@ -17,6 +17,7 @@ h6 {
 .giga {
     @include respond-to(medium) {
         font-size: 45px;
+        line-height: 1.35;
     }
 }
 h1,
@@ -38,42 +39,45 @@ h2,
     font-size: 20px;
 
     @include respond-to(medium) {
-        font-size: 27px;
+        font-size: 33px;
         line-height: 1.4;
     }
 }
 h3,
 .gamma {
+    font-size: 20px;
+    margin-bottom: .5em;
+
+    @include respond-to(small) {
+    }
+
+    @include respond-to(medium) {
+        font-size: 25px;
+    }
+}
+h4,
+.delta {
     font-size: 16px;
 
     @include respond-to(small) {
     }
 
     @include respond-to(medium) {
-        font-size: 18px;
+        font-size: 20px;
     }
-}
-h4,
-.delta {
-    font-size: 14px;
 }
 h5,
 .epsilon {
-
+    font-size: 16px;
 }
 h6,
 .zeta {
 
 }
 
-p {
-    margin-top: 0;
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
+p,
 ul {
+    margin-top: 0;
     &:last-child {
         margin-bottom: 0;
     }
@@ -95,7 +99,7 @@ html {
 
 html {
     color: var(--grey);
-    font-family: 'Rubik', sans-serif;
+    font-family: Rubik, sans-serif;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
