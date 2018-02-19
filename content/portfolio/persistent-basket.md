@@ -2,7 +2,7 @@
 title: "Persistent Basket"
 date: 2018-02-13T11:39:29Z
 description: "Cross device basket sync"
-weight: 3
+weight: 4
 summary_img: [
     "/images/Persistent-Basket-01.jpg",
     "/images/Persistent-Basket-02.jpg",

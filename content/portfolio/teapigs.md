@@ -1,7 +1,7 @@
 ---
 title: "Teapigs"
 description: "Pure and simple tea"
-weight: 4
+weight: 5
 summary_img: [
     "/images/Teapigs-01.jpg",
     "/images/Teapigs-02.jpg"

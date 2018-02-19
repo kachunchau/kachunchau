@@ -60,6 +60,12 @@
     }
 }
 
+.project--joseph-turner {
+    .project-image {
+        background-color: #990033;
+    }
+}
+
 .project--route-one {
     .project-image {
         background-color: #00aba2;
@@ -102,6 +108,10 @@
 }
 
 .project-image-item--desktop {
+    @include respond-to(small) {
+        border-radius: 4px 4px 0 0;
+    }
+
     @include respond-to(medium) {
         width: 480px;
     }

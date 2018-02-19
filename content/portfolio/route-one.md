@@ -12,6 +12,7 @@ company: "blubolt"
 role: "UI design"
 site_url: "https://www.routeone.co.uk"
 hero: "/images/Route-One-04.jpg"
+draft: true
 ---
 
 ## Overview
@@ -19,6 +20,7 @@ hero: "/images/Route-One-04.jpg"
 A complete redesign at blubolt due to Route One's ever expanding warehousing they needed a UX to reflect the customer facing side.
 
 ### Goals and objectives
+
 * Easy to navigate
 * Better showcase of their products
 * Better conversions
