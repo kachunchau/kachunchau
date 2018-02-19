@@ -2,54 +2,56 @@
 
 	<main class="fade-in">
 		<article class="article">
-			<div class="l-full">
-				<header class="mb-5 mb-8-medium">
-					<h1 class="mb-1">{{ .Title}}</h1>
-					<p class="gamma grey-60 mb-0">{{ .Description }}</p>
-				</header>
+			<div class="bg-article">
+				<div class="l-full">
+					<header class="mb-5 mb-8-medium">
+						<h1 class="mb-1">{{ .Title}}</h1>
+						<p class="gamma grey-60 mb-0">{{ .Description }}</p>
+					</header>
 
-				<div class="article-hero bg-{{ lower .Title | urlize }} mb-2">
-					<ul class="list-unstyled grid
-					{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistent Basket")) }}
-						grid-col-2
-					{{ else }}
-						grid-col-3
-					{{ end }}
-						justify-content-center
-					">
+					<div class="article-hero bg-{{ lower .Title | urlize }} mb-2">
+						<ul class="list-unstyled grid
 						{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistent Basket")) }}
-							{{ range .Params.summary_img }}
-								<li class="align-self-end">
-									<div class="browser">
-										<div class="browser-dots">
-											<div class="d-ib browser-dot browser-dot--1"></div>
-											<div class="d-ib browser-dot browser-dot--2"></div>
-											<div class="d-ib browser-dot browser-dot--3"></div>
-										</div>
-									</div>
-
-									<img src="{{ . }}" alt="">
-								</li>
-							{{ end }}
+							grid-col-2
 						{{ else }}
-							{{ range .Params.summary_img }}
-								<li class="align-self-end">
-									<img src="{{ . }}" alt="">
-								</li>
-							{{ end }}
+							grid-col-3
 						{{ end }}
-					</ul>
-				</div>
+							justify-content-center
+						">
+							{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistent Basket")) }}
+								{{ range .Params.summary_img }}
+									<li class="align-self-end">
+										<div class="browser">
+											<div class="browser-dots">
+												<div class="d-ib browser-dot browser-dot--1"></div>
+												<div class="d-ib browser-dot browser-dot--2"></div>
+												<div class="d-ib browser-dot browser-dot--3"></div>
+											</div>
+										</div>
 
-				<div class="grid grid-col-2 mb-5 mb-9-medium">
-					<div class="col">
-						<h2 class="epsilon mb-half">Role</h2>
-						<p class="delta grey-60 mb-0">{{ .Params.role}}</p>
+										<img src="{{ . }}" alt="">
+									</li>
+								{{ end }}
+							{{ else }}
+								{{ range .Params.summary_img }}
+									<li class="align-self-end">
+										<img src="{{ . }}" alt="">
+									</li>
+								{{ end }}
+							{{ end }}
+						</ul>
 					</div>
 
-					<div class="col">
-						<h2 class="epsilon mb-half">Company</h2>
-						<p class="delta grey-60 mb-0">{{ if .Params.company }}{{ .Params.company }}{{ else }}Freelance{{ end }}</p>
+					<div class="grid grid-col-2 mb-5 mb-9-medium">
+						<div class="col">
+							<h2 class="epsilon mb-half">Role</h2>
+							<p class="delta grey-60 mb-0">{{ .Params.role}}</p>
+						</div>
+
+						<div class="col">
+							<h2 class="epsilon mb-half">Company</h2>
+							<p class="delta grey-60 mb-0">{{ if .Params.company }}{{ .Params.company }}{{ else }}Freelance{{ end }}</p>
+						</div>
 					</div>
 				</div>
 			</div>

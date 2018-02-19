@@ -6,6 +6,15 @@
     color: var(--black);
 }
 
+.bg-article {
+    background: linear-gradient(360deg, #fff 15%, #F3F8F9 15%);
+    padding-top: 144px;
+
+    @include respond-to(medium) {
+        padding-top: 216px;
+    }
+}
+
 .bg-offwhite {
     background-color: #F3F8F9;
 }

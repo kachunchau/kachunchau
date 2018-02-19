@@ -1,11 +1,3 @@
-.article {
-    padding-top: 144px;
-
-    @include respond-to(medium) {
-        padding-top: 216px;
-    }
-}
-
 .article-hero {
     margin-right: -4%;
     margin-left: -4%;
