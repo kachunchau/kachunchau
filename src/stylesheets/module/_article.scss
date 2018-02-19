@@ -6,6 +6,18 @@
     }
 }
 
+.article-hero {
+    padding-top: 24px;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    @include respond-to(medium) {
+        padding-top: 56px;
+        padding-right: 72px;
+        padding-left: 72px;
+    }
+}
+
 .article-body {
     h2,
     h3,
