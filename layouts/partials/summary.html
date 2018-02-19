@@ -1,6 +1,6 @@
-<div class="project project--{{ lower .Title | urlize }}">
+<div class="project">
 	<a href="{{ .Permalink }}">
-		<div class="flexbox justify-content-start project-image">
+		<div class="flexbox justify-content-start project-image bg-{{ lower .Title | urlize }}">
 			<ul class="flexbox flexbox--end list-unstyled mb-0">
 				{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistent Basket")) }}
 					{{ range .Params.summary_img }}
