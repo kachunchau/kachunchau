@@ -45,9 +45,6 @@
 }
 
 .project-image-item {
-    box-shadow: 0 2px 16px rgba(#000,.2),
-                0 0 8px -12px rgba(#000,.75)
-                ;
     &:not(:last-child) {
         margin-right: 16px;
 
