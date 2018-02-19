@@ -10,24 +10,24 @@
 			</div>
 
 			{{ if .Params.hero }}
-				<div class="island bg-offwhite pb-0">
+				<div class="island bg-offwhite mb-3 pb-0">
 					<div class="l-full">
 						<img class="mr-a ml-a" src="{{ .Params.hero }}" alt="">
 					</div>
 				</div>
 			{{ end }}
 
-			<div class="article-bar mb-5 mb-7-medium">
+			<div class="mb-5 mb-9-medium">
 				<div class="l-full">
 					<div class="grid grid-col-2">
 						<div class="col">
 							<h2 class="epsilon mb-half">Role</h2>
-							<p class="gamma grey-60 mb-0">{{ .Params.role}}</p>
+							<p class="delta grey-60 mb-0">{{ .Params.role}}</p>
 						</div>
 
 						<div class="col">
 							<h2 class="epsilon mb-half">Company</h2>
-							<p class="gamma grey-60 mb-0">{{ if .Params.company }}{{ .Params.company }}{{ else }}Freelance{{ end }}</p>
+							<p class="delta grey-60 mb-0">{{ if .Params.company }}{{ .Params.company }}{{ else }}Freelance{{ end }}</p>
 						</div>
 					</div>
 				</div>
