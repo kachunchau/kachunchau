@@ -13,8 +13,12 @@
 }
 
 .grid-col-2 {
-    grid-column-gap: 30px;
+    grid-column-gap: 16px;
     grid-template-columns: 1fr 1fr;
+
+    @include respond-to(medium) {
+        grid-column-gap: 30px;
+    }
 }
 
 .grid-col-3 {
