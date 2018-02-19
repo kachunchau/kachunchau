@@ -30,16 +30,16 @@
 }
 
 .project-image {
-    height: 240px;
     overflow-x: scroll;
+    padding-top: 24px;
     padding-left: 24px;
 
     @include respond-to(small) {
-        height: 330px;
     }
 
     @include respond-to(medium) {
         height: 560px;
+        padding-top: 0;
         padding-left: 40px;
     }
 }
