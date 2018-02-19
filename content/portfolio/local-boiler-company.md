@@ -1,6 +1,6 @@
 ---
 title: "Local Boiler Company"
-description: "Revamp for a local boiler company"
+description: "Revamp to showcase a local boiler company"
 weight: 1
 summary_img: [
     "/images/Local-Boiler-Company-01.jpg",

@@ -1,7 +1,7 @@
 ---
 title: "Persistent Basket"
 date: 2018-02-13T11:39:29Z
-description: "Cross device basket sync"
+description: "Cross device basket sync across bluCommerce"
 weight: 4
 summary_img: [
     "/images/Persistent-Basket-01.jpg",

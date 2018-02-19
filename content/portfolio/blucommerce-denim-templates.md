@@ -1,6 +1,6 @@
 ---
 title: "bluCommerce Denim Templates"
-description: "New mobile templates"
+description: "Improved standalone mobile templates"
 weight: 6
 summary_img: [
     "/images/BluCommerce-Denim-01.jpg",
