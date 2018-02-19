@@ -4,7 +4,7 @@
 			<ul class="flexbox flexbox--end list-unstyled mb-0">
 				{{ if not (eq .Title "bluCommerce Denim Templates" | or (eq .Title "Persistent Basket")) }}
 					{{ range .Params.summary_img }}
-						<li class="project-image-item project-image-item--desktop">
+						<li class="project-image-item project-image-item--desktop align-self-end">
 							<div class="browser">
 								<div class="browser-dots">
 									<div class="d-ib browser-dot browser-dot--1"></div>
@@ -13,13 +13,13 @@
 								</div>
 							</div>
 
-							<img class="align-self-end" src="{{ . }}" alt="">
+							<img src="{{ . }}" alt="">
 						</li>
 					{{ end }}
 				{{ else }}
 					{{ range .Params.summary_img }}
-						<li class="project-image-item project-image-item--mobile">
-							<img class="align-self-end" src="{{ . }}" alt="">
+						<li class="project-image-item project-image-item--mobile align-self-end">
+							<img src="{{ . }}" alt="">
 						</li>
 					{{ end }}
 				{{ end }}
