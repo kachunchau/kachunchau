@@ -21,6 +21,13 @@
     }
 }
 
+.grid-col-2-small {
+    @include respond-to(small) {
+        grid-column-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .grid-col-3 {
     grid-column-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;

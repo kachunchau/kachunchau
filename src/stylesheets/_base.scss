@@ -46,7 +46,6 @@ h2,
 h3,
 .gamma {
     font-size: 20px;
-    margin-bottom: .5em;
 
     @include respond-to(small) {
     }

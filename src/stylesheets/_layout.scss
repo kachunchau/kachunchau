@@ -5,7 +5,6 @@
     ;
 
 .l-header {
-    background-color: #FFF;
     border-bottom: 1px solid var(--grey-10);
     padding-top: 24px;
     padding-bottom: 24px;
@@ -23,8 +22,8 @@
     }
 
     @include respond-to(medium) {
-        padding-top: 32px;
-        padding-bottom: 32px;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 }
 
@@ -38,7 +37,7 @@
     min-height: 30vh;
 
     @include respond-to(medium) {
-        min-height: 40vh;
+        min-height: 50vh;
     }
 }
 

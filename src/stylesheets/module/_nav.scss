@@ -1,14 +1,8 @@
 .nav {
-    flex-wrap: wrap;
-
     > li {
         &:not(:last-child) {
-            margin-right: 16px;
+            margin-right: 14px;
         }
-    }
-
-    a {
-        display: block;
     }
 }
 
