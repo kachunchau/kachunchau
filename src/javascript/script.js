@@ -1,65 +1,80 @@
-;( function ( document, window, index ) {
-    'use strict';
+	/*
+		By Osvaldas Valutis, www.osvaldas.info
+		Available for use under the MIT License
+	*/
 
-    var elSelector		= '.l-header',
-        elClassHidden	= 'is-slide-up',
-        throttleTimeout	= 500,
-        element			= document.querySelector( elSelector );
+	;( function ( document, window, index )
+	{
+		'use strict';
 
-    if( !element ) return true;
+		var elSelector		= '.l-header',
+            elClassHidden	= 'is-slide-up',
+			elClassNarrow	= 'l-header--narrow',
+			elNarrowOffset	= 50,
+			throttleTimeout	= 500,
+			element			= document.querySelector( elSelector );
 
-    var dHeight			= 0,
-        wHeight			= 0,
-        wScrollCurrent	= 0,
-        wScrollBefore	= 0,
-        wScrollDiff		= 0,
+		if( !element ) return true;
 
-        hasElementClass		= function( element, className ){ return element.classList ? element.classList.contains( className ) : new RegExp( '(^| )' + className + '( |$)', 'gi' ).test( element.className ); },
-        addElementClass		= function( element, className ){ element.classList ? element.classList.add( className ) : element.className += ' ' + className; },
-        removeElementClass	= function( element, className ){ element.classList ? element.classList.remove( className ) : element.className = element.className.replace( new RegExp( '(^|\\b)' + className.split( ' ' ).join( '|' ) + '(\\b|$)', 'gi' ), ' ' ); },
+		var dHeight			= 0,
+			wHeight			= 0,
+			wScrollCurrent	= 0,
+			wScrollBefore	= 0,
+			wScrollDiff		= 0,
 
-        throttle = function( delay, fn )
-        {
-            var last, deferTimer;
-            return function()
-            {
-                var context = this, args = arguments, now = +new Date;
-                if( last && now < last + delay )
-                {
-                    clearTimeout( deferTimer );
-                    deferTimer = setTimeout( function(){ last = now; fn.apply( context, args ); }, delay );
-                }
-                else
-                {
-                    last = now;
-                    fn.apply( context, args );
-                }
-            };
-        };
+			hasElementClass		= function( element, className ){ return element.classList ? element.classList.contains( className ) : new RegExp( '(^| )' + className + '( |$)', 'gi' ).test( element.className ); },
+			addElementClass		= function( element, className ){ element.classList ? element.classList.add( className ) : element.className += ' ' + className; },
+			removeElementClass	= function( element, className ){ element.classList ? element.classList.remove( className ) : element.className = element.className.replace( new RegExp( '(^|\\b)' + className.split( ' ' ).join( '|' ) + '(\\b|$)', 'gi' ), ' ' ); },
 
-    window.addEventListener( 'scroll', throttle( throttleTimeout, function()
-    {
-        dHeight			= document.body.offsetHeight;
-        wHeight			= window.innerHeight;
-        wScrollCurrent	= window.pageYOffset;
-        wScrollDiff		= wScrollBefore - wScrollCurrent;
+			throttle = function( delay, fn )
+			{
+				var last, deferTimer;
+				return function()
+				{
+					var context = this, args = arguments, now = +new Date;
+					if( last && now < last + delay )
+					{
+						clearTimeout( deferTimer );
+						deferTimer = setTimeout( function(){ last = now; fn.apply( context, args ); }, delay );
+					}
+					else
+					{
+						last = now;
+						fn.apply( context, args );
+					}
+				};
+			};
 
-        if( wScrollCurrent <= 0 ) // scrolled to the very top; element sticks to the top
-            removeElementClass( element, elClassHidden );
+		window.addEventListener( 'scroll', throttle( throttleTimeout, function()
+		{
+			dHeight			= document.body.offsetHeight;
+			wHeight			= window.innerHeight;
+			wScrollCurrent	= window.pageYOffset;
+			wScrollDiff		= wScrollBefore - wScrollCurrent;
 
-        else if( wScrollDiff > 0 && hasElementClass( element, elClassHidden ) ) // scrolled up; element slides in
-            removeElementClass( element, elClassHidden );
+			if( wScrollCurrent > elNarrowOffset ) // toggles "narrow" classname
+			{
+				if( !hasElementClass( element, elClassNarrow ) )
+					addElementClass( element, elClassNarrow );
+			}
+			else removeElementClass( element, elClassNarrow );
 
-        else if( wScrollDiff < 0 ) // scrolled down
-        {
-            if( wScrollCurrent + wHeight >= dHeight && hasElementClass( element, elClassHidden ) ) // scrolled to the very bottom; element slides in
-                removeElementClass( element, elClassHidden );
+			if( wScrollCurrent <= 0 ) // scrolled to the very top; element sticks to the top
+				removeElementClass( element, elClassHidden );
 
-            else // scrolled down; element slides out
-                addElementClass( element, elClassHidden );
-        }
+			else if( wScrollDiff > 0 && hasElementClass( element, elClassHidden ) ) // scrolled up; element slides in
+				removeElementClass( element, elClassHidden );
 
-        wScrollBefore = wScrollCurrent;
-    }));
+			else if( wScrollDiff < 0 ) // scrolled down
+			{
+				if( wScrollCurrent + wHeight >= dHeight && hasElementClass( element, elClassHidden ) ) // scrolled to the very bottom; element slides in
+					removeElementClass( element, elClassHidden );
 
-}( document, window, 0 ));
+				else // scrolled down; element slides out
+					addElementClass( element, elClassHidden );
+			}
+
+			wScrollBefore = wScrollCurrent;
+		}));
+
+	}( document, window, 0 ));

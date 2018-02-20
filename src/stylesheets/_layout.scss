@@ -27,6 +27,10 @@
     }
 }
 
+.l-header--narrow {
+    border-bottom: 0;
+}
+
 .l-footer {
     grid-template-areas:
       "content"
