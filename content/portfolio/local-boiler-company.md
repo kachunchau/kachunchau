@@ -8,6 +8,7 @@ summary_img: [
     ]
 role: "UI design"
 hero: "/images/Local-Boiler-Company-03.jpg"
+type: "portfolio"
 ---
 
 ## Overview

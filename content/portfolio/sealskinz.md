@@ -8,8 +8,9 @@ summary_img: [
     ]
 company: "blubolt"
 role: "UI design"
-site_url: "https://www.sealskinz.com"
+site_url: "sealskinz.com"
 hero: "/images/Sealskinz-03.jpg"
+type: "portfolio"
 ---
 
 ## Overview
@@ -24,8 +25,8 @@ Sealskinz's old site was cluttered, hard to navigate and visually very boring in
 * More emphasis to their category pages
 * More content on product pages so customers can get immersed in the products
 
-Sealskinz are a preimium brand and they wanted their new design to reflect the quality of their products. This was done by using ample white space to support their imagery and a dark colour palette to show luxury.
-
 {{< img src="/images/Sealskinz-04.jpg" title="Sticky filters on the listing page" >}}
 
-{{< img src="/images/Sealskinz-05.jpg" title="An internal component library was created in Sketch  maintainability" >}}
+{{< img src="/images/Sealskinz-05.jpg" title="An internal component library was created in Sketch" >}}
+
+Sealskinz are a preimium brand and they wanted their new design to reflect the quality of their products. This was done by using ample white space to support their imagery and a dark colour palette to show luxury.

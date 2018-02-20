@@ -9,8 +9,9 @@ summary_img: [
     ]
 company: "blubolt"
 role: "UI design"
-site_url: "https://josephturner.co.uk"
+site_url: "josephturner.co.uk"
 hero: "/images/Joseph-Turner-03.jpg"
+type: "portfolio"
 draft: false
 ---
 

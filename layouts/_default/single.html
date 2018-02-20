@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-	<main class="fade-in">
+	<main class="fade-in pb-0">
 		<article class="article">
 			<div class="bg-article">
 				<div class="l-full">
@@ -57,17 +57,41 @@
 			</div>
 
 			<div class="l-constrained">
-				<div class="article-body">
+				<div class="article-body mb-5 mb-10-medium">
 					{{ .Content | replaceRE "<p>" "<p class=\"delta\">" | replaceRE "<ul>" "<ul class=\"delta\">" | safeHTML }}
 				</div>
-
-				{{ if .Params.site_url }}
-					<footer class="article-footer">
-						<a class="btn ta-c" href="{{ .Params.site_url }}">Launch site</a>
-					</footer>
-				{{ end }}
 			</div>
+
+			{{ if .Params.site_url }}
+				<footer class="bg-offwhite pt-6 pb-6 ta-c">
+					<a class="delta black" href="https://www.{{ .Params.site_url }}">Visit {{ .Params.site_url }}</a>
+				</footer>
+			{{ else }}
+				<footer style="background-color: var(--grey-10); height: 1px;"></footer>
+			{{ end }}
 		</article>
+
+		<div class="flexbox ta-c">
+			{{ if .Prev }}
+				<div class="col" style="padding: 120px 40px;">
+					<a class="d-block gamma primary" href="{{ .Prev.Permalink }}">
+						<span class="epsilon d-b epsilon">Prev</span>
+						<h3 class="gamma mb-0">{{ .Prev.Title }}</h3>
+					</a>
+				</div>
+			{{ end }}
+
+			{{ if .Next }}
+				{{ if ne .Next.Title "Other" }}
+					<div class="col" style="padding: 120px 40px;">
+						<a class="d-block gamma primary" href="{{ .Next.Permalink }}">
+							<span class="epsilon d-b epsilon">Next</span>
+							<h3 class="gamma mb-0">{{ .Next.Title }}</h3>
+						</a>
+					</div>
+				{{ end }}
+			{{ end }}
+		</div>
 	</main>
 
 {{ partial "footer.html" . }}

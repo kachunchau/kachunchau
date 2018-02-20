@@ -57,12 +57,3 @@
                     ;
     }
 }
-
-.article-footer {
-    .btn {
-        @include respond-to(small) {
-            margin-right: 88px;
-            margin-left: 88px;
-        }
-    }
-}

@@ -11,6 +11,7 @@ company: "blubolt"
 role: "UI design"
 site_url: ""
 hero: "/images/BluCommerce-Denim-04.jpg"
+type: "portfolio"
 ---
 
 ## Overview

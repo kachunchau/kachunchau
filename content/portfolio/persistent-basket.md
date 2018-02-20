@@ -12,6 +12,7 @@ company: "blubolt"
 role: "UI design"
 site_url: ""
 hero: "/images/Persistent-Basket-04.jpg"
+type: "portfolio"
 ---
 
 ## Problem
