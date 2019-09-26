@@ -199,12 +199,8 @@ var buildStyles = function (done) {
 			outputStyle: 'expanded',
 			sourceComments: true
 		}))
-		.pipe(prefix({
-			browsers: ['last 2 version', '> 0.25%'],
-			cascade: true,
-			remove: true
-		}))
-		.pipe(header(banner.full, { package : package }))
+		.pipe(prefix())
+		// .pipe(header(banner.full, { package : package }))
 		.pipe(dest(paths.styles.output))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(minify({
@@ -212,7 +208,7 @@ var buildStyles = function (done) {
 				removeAll: true
 			}
 		}))
-		.pipe(header(banner.min, { package : package }))
+		// .pipe(header(banner.min, { package : package }))
 		.pipe(dest(paths.styles.output));
 
 };
