@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style type="text/css">
+      /**
+      * @license
+      *
+      * Font Family: Clash Grotesk
+      * Designed by: Indian Type Foundry
+      * URL: https://www.fontshare.com/fonts/clash-grotesk
+      * © 2021 Indian Type Foundry
+      *
+      * Font Styles:
+      * Clash Grotesk Variable(Variable font)
+      * Clash Grotesk Extralight
+      * Clash Grotesk Light
+      * Clash Grotesk Regular
+      * Clash Grotesk Medium
+      * Clash Grotesk Semibold
+      * Clash Grotesk Bold
+      *
+      */
+
+
+      /**
+      * This is a variable font
+      * You can controll variable axes as shown below:
+      * font-variation-settings: 'wght' 700.0;
+      *
+      * available axes:
+
+      * 'wght' (range from 200.0 to 700.0)
+
+      */
+
+      @font-face {
+        font-family: 'ClashGrotesk-Variable';
+        src: url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Variable.woff2') format('woff2'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Variable.woff') format('woff'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Variable.ttf') format('truetype');
+            font-weight: 200 700;
+            font-display: swap;
+            font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'ClashGrotesk';
+        src: url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Regular.woff2') format('woff2'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Regular.woff') format('woff'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-display: swap;
+            font-style: normal;
+      }
+
+
+      @font-face {
+        font-family: 'ClashGrotesk';
+        src: url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Medium.woff2') format('woff2'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Medium.woff') format('woff'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-display: swap;
+            font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'ClashGrotesk';
+        src: url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Semibold.woff2') format('woff2'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Semibold.woff') format('woff'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Semibold.ttf') format('truetype');
+            font-weight: 600;
+            font-display: swap;
+            font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'ClashGrotesk';
+        src: url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Bold.woff2') format('woff2'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Bold.woff') format('woff'),
+            url('/assets/css/fonts/clash-grotesk/ClashGrotesk-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-display: swap;
+            font-style: normal;
+      }
+    </style>
+
+  </head>
+
+  <body class="bg-white text-slate-400">
+
+    <div class="space-y-24 sm:space-y-28 lg:space-y-36">
+
+      {{ content | safe }}
+
+    </div>
+
+  </body>
+
+</html>

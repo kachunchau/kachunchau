@@ -1,0 +1,20 @@
+@tailwind base;
+
+@layer base {
+
+  html {
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+  }
+
+}
+
+@tailwind components;
+
+@layer components {
+
+
+
+}
+
+@tailwind utilities;
