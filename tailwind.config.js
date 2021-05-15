@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       headline: [
-        'ClashGrotesk',
+        'ClashDisplay',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
@@ -24,7 +24,7 @@ module.exports = {
         '"Noto Color Emoji"'
       ],
       sans: [
-        '"Avenir Next W01"',
+        'Satoshi',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
@@ -38,52 +38,9 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"'
       ],
-      mono: [
-        // 'ui-monospace',
-        // 'SFMono-Regular',
-        // 'Menlo',
-        // 'Monaco',
-        // 'Consolas',
-        // '"Liberation Mono"',
-        // '"Courier New"',
-        // 'monospace',
-      ],
     },
     extend: {
       colors: {
-        'teal': '#01B2D0',
-        'navy': '#1B2E5B',
-        primary: {
-          50: '#F6F7FB',
-          100: '#EEEFF8',
-          200: '#D4D7ED',
-          300: '#7F86C8',
-          400: '#2936A3',
-          500: '#253193',
-          600: '#1D2672',
-        },
-        secondary: {
-          200: '#D3EAFD',
-          300: '#7AC1F9',
-          400: '#2297F4',
-          500: '#1E88DC',
-          600: '#186AAB',
-        },
-        tertiary: {
-          300: '#74E9B8',
-          400: '#17DA88',
-          500: '#14C47A',
-          600: '#10985F',
-        },
-        lime: {
-          400: '#6FD350',
-        },
-        slate: {
-          200: '#D0D1DB',
-          300: '#A2A3B7',
-          400: '#16184B',
-          500: '#0F1135',
-        },
       },
       borderRadius: {
         '4xl': '2rem'

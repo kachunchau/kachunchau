@@ -10,7 +10,6 @@ module.exports =  function(eleventyConfig) {
   // Copy static assets to _site/
   eleventyConfig.addPassthroughCopy('favicon.ico');
   eleventyConfig.addPassthroughCopy('favicon.png');
-  eleventyConfig.addPassthroughCopy('robots.txt');
 
   // Copy assets/* to _site/
   eleventyConfig.addPassthroughCopy('src/assets/images');
