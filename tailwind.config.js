@@ -42,9 +42,6 @@ module.exports = {
     extend: {
       colors: {
       },
-      borderRadius: {
-        '4xl': '2rem'
-      },
       inset: {
         '1/5': '20%',
         '2/5': '40%',
