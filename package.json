@@ -2,7 +2,7 @@
   "name": "kachunchau",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "dev": "rm -rf _site && ELEVENTY_ENV=development npx @11ty/eleventy --serve & npx postcss src/assets/css/tailwind.css --output _tmp/styles.css --watch",
     "build": "ELEVENTY_ENV=production npx @11ty/eleventy && npx postcss src/assets/css/tailwind.css --output _site/assets/css/styles.css"
@@ -13,9 +13,9 @@
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.9",
+    "postcss": "^8.2.15",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^2.1.2"
   },
   "repository": {
     "type": "git"
