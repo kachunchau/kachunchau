@@ -9,7 +9,6 @@ module.exports =  function(eleventyConfig) {
   // Passthrough file copy paths are relative to the project root and not the input directory
   // Copy static assets to _site/
   eleventyConfig.addPassthroughCopy('favicon.ico');
-  eleventyConfig.addPassthroughCopy('favicon.png');
 
   // Copy assets/* to _site/
   eleventyConfig.addPassthroughCopy('src/assets/images');
