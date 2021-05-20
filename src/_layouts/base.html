@@ -36,28 +36,6 @@
       *
       */
 
-
-      /**
-      * This is a variable font
-      * You can controll variable axes as shown below:
-      * font-variation-settings: 'wght' 700.0;
-      *
-      * available axes:
-
-      * 'wght' (range from 200.0 to 700.0)
-
-      */
-
-      @font-face {
-        font-family: "ClashDisplay-Variable";
-        src: url("assets/css/fonts/clash-display/ClashDisplay-Variable.woff2") format("woff2"),
-            url("assets/css/fonts/clash-display/ClashDisplay-Variable.woff") format("woff"),
-            url("assets/css/fonts/clash-display/ClashDisplay-Variable.ttf") format("truetype");
-            font-weight: 200 700;
-            font-display: swap;
-            font-style: normal;
-      }
-
       @font-face {
         font-family: "ClashDisplay";
         src: url("assets/css/fonts/clash-display/ClashDisplay-Regular.woff2") format("woff2"),
@@ -67,7 +45,6 @@
             font-display: swap;
             font-style: normal;
       }
-
 
       @font-face {
         font-family: "ClashDisplay";
@@ -169,11 +146,11 @@
 
     <div class="max-w-screen-md xl:max-w-screen-lg mx-auto space-y-20 sm:space-y-24">
       {{ content | safe }}
-
-      <footer>
-        <p>&copy; Ka-Chun Chau</p>
-      </footer>
     </div>
+
+    <footer class="py-10">
+      <p class="max-w-screen-md xl:max-w-screen-lg mx-auto">Hosted on Netlify</p>
+    </footer>
   </body>
 
 </html>
