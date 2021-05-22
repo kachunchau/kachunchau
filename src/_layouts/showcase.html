@@ -2,13 +2,23 @@
 layout: base
 ---
 
-<div class="max-w-screen-md xl:max-w-screen-lg mx-auto space-y-20 sm:space-y-24">
+<div class="space-y-16 sm:space-y-20">
+  <header class="mt-24 md:mt-32 lg:mt-48 space-y-10 md:w-1/2">
+    <h1 class="font-headline font-semibold leading-tight mb-1.5 text-5xl">{{ title }}</h1>
 
-  <header class="md:mt-40">
-    <h1 class="font-headline font-semibold leading-tight mb-6 text-5xl">{{ title }}</h1>
-    <p class="leading-normal text-gray-500 text-2xl w-1/2">{{ desc }}</p>
+    <ul class="flex mb-10">
+      <li class="flex-1">
+          <p class="inlifont-headline mb-1 text-gray-500 text-sm tracking-widest uppercase">Company</p>
+          <p class="ml-auto font-semibold text-gray-800 text-xl">{{ company }}</p>
+      </li>
+      <li class="flex-1">
+          <p class="inlifont-headline mb-1 text-gray-500 text-sm tracking-widest uppercase">Role</p>
+          <p class="ml-auto font-semibold text-gray-800 text-xl">{{ tag }}</p>
+      </li>
+    </ul>
+
+    <p class="leading-normal text-gray-500 text-xl">{{ desc }}</p>
   </header>
 
   {{ content | safe }}
-
 </div>
