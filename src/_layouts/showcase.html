@@ -1,0 +1,14 @@
+---
+layout: base
+---
+
+<div class="max-w-screen-md xl:max-w-screen-lg mx-auto space-y-20 sm:space-y-24">
+
+  <header class="md:mt-40">
+    <h1 class="font-headline font-semibold leading-tight mb-6 text-5xl">{{ title }}</h1>
+    <p class="leading-normal text-gray-500 text-2xl w-1/2">{{ desc }}</p>
+  </header>
+
+  {{ content | safe }}
+
+</div>
