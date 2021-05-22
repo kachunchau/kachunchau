@@ -41,6 +41,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        aqua: {
+          50: '#E5F7FF',
+        },
         lilac: {
           50: '#F2ECFF',
           100: '#CFB8FF',
