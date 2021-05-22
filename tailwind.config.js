@@ -24,7 +24,7 @@ module.exports = {
         '"Noto Color Emoji"'
       ],
       sans: [
-        'Satoshi',
+        'GeneralSans',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
@@ -52,6 +52,19 @@ module.exports = {
           300: '#FFB066',
           400: '#FF9633',
         },
+        'vero-blue': '#2936A3',
+        'vero-teal': '#2297F4',
+        'vero-green': '#17DA88',
+      },
+      scale: {
+        '101': '1.01',
+        '102': '1.02',
+        '103': '1.03',
+        '104': '1.04',
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
       },
       width: {
         '2/1': '200%',
@@ -73,6 +86,13 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      margin: ['group-hover'],
+      rotate: ['group-hover'],
+      scale: ['group-hover'],
+      translate: ['group-hover'],
+      visibility: ['group-hover'],
+      width: ['group-hover'],
+    },
   },
 }
