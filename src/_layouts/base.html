@@ -149,24 +149,17 @@
             font-style: normal;
       }
 
-
-      @font-face {
-        font-family: "GeneralSans-Bold";
-        src: url("/assets/css/fonts/general/GeneralSans-Bold.woff2") format("woff2"),
-            url("/assets/css/fonts/general/GeneralSans-Bold.woff") format("woff"),
-            url("/assets/css/fonts/general/GeneralSans-Bold.ttf") format("truetype");
-            font-weight: 700;
-            font-display: swap;
-            font-style: normal;
-      }
-
     </style>
   </head>
 
   <body class="bg-white text-gray-800 px-6 sm:px-8">
-    <a class="inline-block" href="/">
-      <svg class="fixed top-8 left-8" width="63" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M1 1v30h26.754l-8.311-15 8.311-15H1zm61 15H47.018 62zm0 0c0 8.284-6.708 15-14.982 15-8.275 0-14.983-6.716-14.983-15 0-8.284 6.708-15 14.983-15C55.292 1 62 7.716 62 16z" stroke="#111" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linejoin="round"/></svg>
-    </a>
+    <header class="lg:fixed lg:top-8 lg:inset-x-8 flex items-center pt-8 lg:pt-0 z-50">
+      <a class="inline-block" href="/">
+        <svg width="63" height="32" xmlns="http://www.w3.org/2000/svg"><path d="M1 1v30h26.754l-8.311-15 8.311-15H1zm61 15H47.018 62zm0 0c0 8.284-6.708 15-14.982 15-8.275 0-14.983-6.716-14.983-15 0-8.284 6.708-15 14.983-15C55.292 1 62 7.716 62 16z" stroke="#111" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="animate-bounce flex font-medium items-center ml-auto space-x-1.5" href="mailto:kachun@kachunchau.com"><span>👋</span> <span>Hire me</span></a>
+    </header>
 
     {{ content | safe }}
 
