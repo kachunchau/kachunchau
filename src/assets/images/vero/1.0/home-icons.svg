@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="397" height="198" viewBox="0 0 397 198">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="198" viewBox="0 0 375 198">
   <defs>
     <rect id="home-icons-b" width="60" height="76" x="0" y="0" rx="4"/>
     <filter id="home-icons-a" width="133.3%" height="126.3%" x="-16.7%" y="-10.5%" filterUnits="objectBoundingBox">
@@ -219,7 +219,7 @@
     </filter>
   </defs>
   <g fill="none" fill-rule="evenodd" transform="translate(6 4)">
-    <g transform="translate(228)">
+    <g transform="translate(206)">
       <g transform="translate(27)">
         <use fill="#000" filter="url(#home-icons-a)" xlink:href="#home-icons-b"/>
         <rect width="59" height="75" x=".5" y=".5" fill="#FFF" stroke="#E1E1E1" stroke-linejoin="square" rx="4"/>
@@ -420,7 +420,7 @@
         <path fill="#FFF" stroke="#E1E1E1" stroke-linejoin="square" d="M32.5,0.504622564 C39.6192582,0.636359429 46.0522341,3.5755747 50.7383297,8.2616703 C55.5338865,13.0572271 58.5,19.6822271 58.5,27 C58.5,31.0832279 57.5766472,34.9508117 55.9270746,38.4051776 L55.9270746,38.4051776 L32.5,26.6909907 Z"/>
       </g>
     </g>
-    <g transform="translate(225 105)">
+    <g transform="translate(203 105)">
       <g transform="translate(30 67)">
         <use fill="#000" filter="url(#home-icons-T)" xlink:href="#home-icons-U"/>
         <rect width="99" height="5" x=".5" y="4.5" fill="#FFF" stroke="#E1E1E1" stroke-linejoin="square" rx="2.5"/>

@@ -14,7 +14,7 @@
 @layer components {
 
   .showcase {
-    @apply duration-300 ease-in-out object-contain rounded-lg shadow-2xl relative transform-gpu transition-transform;
+    @apply duration-300 ease-in-out object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu transition-transform;
   }
 
 }
