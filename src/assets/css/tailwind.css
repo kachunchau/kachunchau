@@ -13,18 +13,6 @@
 
 @layer components {
 
-  .project-card {
-    @apply overflow-hidden rounded-2xl;
-  }
-
-  .project-card--primary {
-    @apply max-h-96 sm:max-h-144 pt-10 md:pt-16 px-20 sm:px-32 lg:px-0 pb-0;
-  }
-
-  .project-card--secondary {
-    @apply max-h-80 sm:max-h-128 pt-10 md:pt-16;
-  }
-
   .showcase {
     @apply duration-300 ease-in-out object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu transition-transform;
   }

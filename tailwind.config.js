@@ -43,10 +43,11 @@ module.exports = {
       colors: {
         aqua: {
           50: '#E5F7FF',
+          100: '#D1F1FF',
         },
         lilac: {
           50: '#F2ECFF',
-          100: '#CFB8FF',
+          100: '#E0D1FF',
         },
         tango: {
           50: '#FFF7F0',
@@ -90,6 +91,7 @@ module.exports = {
   },
   variants: {
     extend: {
+      animation: ['hover'],
       margin: ['group-hover'],
       rotate: ['group-hover'],
       scale: ['group-hover'],

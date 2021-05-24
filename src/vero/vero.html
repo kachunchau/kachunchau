@@ -13,10 +13,19 @@ company: Vero
 <div class="gap-6 grid grid-cols-2">
   {{ cardPrimary
     (
-      color = "bg-lilac-50",
-      imgPrimary = "vero/1.0/home-1",
+      color = "lilac",
+      imgPrimary = "vero/1.0/features-1",
       altPrimary = "Test",
-      imgSecondary = "vero/1.0/pricing",
+      imgSecondary = "vero/1.0/multi",
+      altSecondary = "Multi-language LP"
+    )
+  }}
+  {{ cardSecondary
+    (
+      color = "lilac",
+      imgPrimary = "vero/1.0/d&d",
+      altPrimary = "Test",
+      imgSecondary = "vero/1.0/d&d-2",
       altSecondary = "Test"
     )
   }}
@@ -29,12 +38,12 @@ company: Vero
   <div class="bg-lilac-50 col-span-full flex items-center justify-center p-12 sm:px-24 sm:py-20 rounded-2xl">
     <img class="showcase" src="/assets/images/vero/1.0/calculator.webp" srcset="/assets/images/vero/1.0/calculator@2x.webp 2x" loading="lazy" alt="Zoomed in overage calculator UI">
   </div>
-  {{ cardSecondary
+  {{ cardPrimary
     (
-      color = "bg-lilac-50",
-      imgPrimary = "vero/1.0/features",
+      color = "lilac",
+      imgPrimary = "vero/1.0/videos",
       altPrimary = "Test",
-      imgSecondary = "vero/1.0/videos",
+      imgSecondary = "vero/1.0/pricing",
       altSecondary = "Test",
       loading = "lazy"
     )
@@ -47,7 +56,7 @@ company: Vero
   </div>
   {{ cardTertiary
     (
-      color = "bg-lilac-50",
+      color = "lilac",
       imgPrimary = "vero/1.0/careers",
       altPrimary = "Careers LP",
       imgSecondary = "vero/1.0/fusion",
