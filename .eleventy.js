@@ -21,8 +21,9 @@ module.exports =  function(eleventyConfig) {
     htmlTemplateEngine: 'njk',
 
     dir: {
-      // These values is relative to your input directory.
       input: 'src',
+
+      // These values is relative to your input directory.
       layouts: '_layouts'
     }
   }
