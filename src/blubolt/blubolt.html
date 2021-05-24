@@ -1,0 +1,45 @@
+---
+title: blubolt
+layout: showcase
+desc: blubolt is a UK leading eCommerce agency. Test test
+tag: UX/UI design
+company: blubolt
+---
+
+{% from "_components/card.html" import cardPrimary %}
+{% from "_components/card.html" import cardSecondary %}
+{% from "_components/card.html" import cardTertiary %}
+
+<div class="gap-6 grid grid-cols-2">
+  {{ cardPrimary
+    (
+      color = "bg-aqua-50",
+      imgPrimary = "blubolt/joseph/home",
+      altPrimary = "Joseph Turner storefront",
+      imgSecondary = "blubolt/joseph/listing",
+      altSecondary = ""
+    )
+  }}
+  {{ cardSecondary
+    (
+      color = "bg-aqua-50",
+      imgPrimary = "blubolt/sealskinz/listing",
+      altPrimary = "Joseph Turner storefront",
+      imgSecondary = "blubolt/sealskinz/category-2",
+      altSecondary = "",
+      loading = "lazy"
+    )
+  }}
+  {{ cardTertiary
+    (
+      color = "bg-aqua-50",
+      imgPrimary = "blubolt/routeone",
+      altPrimary = "Joseph Turner storefront",
+      imgSecondary = "blubolt/kc",
+      altSecondary = "",
+      imgTertiary = "blubolt/rigby/rigby",
+      altTertiary = "",
+      loading = "lazy"
+    )
+  }}
+</div>
