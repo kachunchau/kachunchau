@@ -6,13 +6,20 @@ tag: Design + front-end
 company: Vero
 ---
 
-<div class="gap-3 sm:gap-6 grid grid-cols-2">
-  <div class="bg-lilac-50 col-span-2 max-h-96 sm:max-h-144 overflow-hidden pt-10 md:pt-16 pb-0 rounded-2xl">
-    <div class="flex flex-nowrap justify-center -space-x-40">
-      <img class="showcase z-10" src="/assets/images/vero/1.0/home-1.webp" srcset="/assets/images/vero/1.0/home-1@2x.webp 2x" alt="">
-      <img class="showcase translate-y-8 " src="/assets/images/vero/1.0/pricing.webp" srcset="/assets/images/vero/1.0/pricing@2x.webp 2x" alt="">
-    </div>
-  </div>
+{% from "_components/card.html" import cardPrimary %}
+{% from "_components/card.html" import cardSecondary %}
+{% from "_components/card.html" import cardTertiary %}
+
+<div class="gap-6 grid grid-cols-2">
+  {{ cardPrimary
+    (
+      color = "bg-lilac-50",
+      imgPrimary = "vero/1.0/home-1",
+      altPrimary = "Test",
+      imgSecondary = "vero/1.0/pricing",
+      altSecondary = "Test"
+    )
+  }}
   <div class="bg-lilac-50 flex items-center justify-center p-10 sm:p-20 relative rounded-2xl">
     <img src="/assets/images/vero/1.0/push-icons.svg" alt="Icons on the Push Notifcation LP">
   </div>
@@ -22,23 +29,32 @@ company: Vero
   <div class="bg-lilac-50 col-span-full flex items-center justify-center p-12 sm:px-24 sm:py-20 relative rounded-2xl">
     <img class="showcase" src="/assets/images/vero/1.0/calculator.webp" srcset="/assets/images/vero/1.0/calculator@2x.webp 2x" loading="lazy" alt="Zoomed in overage calculator UI">
   </div>
-  <div class="bg-lilac-50 col-span-2 max-h-96 sm:max-h-144 overflow-hidden pt-10 md:pt-16 pb-0 rounded-2xl">
-    <div class="flex flex-nowrap justify-center -space-x-40">
-      <img class="showcase object-left-top translate-y-8" src="/assets/images/vero/1.0/videos.webp" srcset="/assets/images/vero/1.0/videos@2x.webp 2x" alt="Getting started videos LP">
-      <img class="showcase object-left-top z-10" src="/assets/images/vero/1.0/features.webp" srcset="/assets/images/vero/1.0/features@2x.webp 2x" loading="lazy" alt="Features overview LP">
-    </div>
-  </div>
+  {{ cardSecondary
+    (
+      color = "bg-lilac-50",
+      imgPrimary = "vero/1.0/features",
+      altPrimary = "Test",
+      imgSecondary = "vero/1.0/videos",
+      altSecondary = "Test",
+      loading = "lazy"
+    )
+  }}
   <div class="bg-lilac-50 flex items-center justify-center p-10 sm:p-20 relative rounded-2xl">
     <img src="/assets/images/vero/1.0/d&d-icons.svg" alt="Icons on the D&D LP">
   </div>
   <div class="bg-lilac-50 flex items-center justify-center p-10 sm:p-20 relative rounded-2xl">
     <img src="/assets/images/vero/1.0/home-icons.svg" alt="Icons on the D&D LP">
   </div>
-  <div class="bg-lilac-50 col-span-2 max-h-96 sm:max-h-128 overflow-hidden pt-10 md:pt-16 pb-0 rounded-2xl">
-    <div class="flex flex-nowrap justify-center -space-x-16">
-      <img class="showcase object-left-top w-80 z-20" src="/assets/images/vero/1.0/careers.webp" srcset="/assets/images/vero/1.0/careers@2x.webp 2x" loading="lazy" alt="Careers LP">
-      <img class="showcase translate-y-6 object-left-top w-80 z-10" src="/assets/images/vero/1.0/fusion.webp" srcset="/assets/images/vero/1.0/fusion@2x.webp 2x" loading="lazy" alt="Fusion LP">
-      <img class="showcase object-left-top w-80" src="/assets/images/vero/1.0/freshpaint.webp" srcset="/assets/images/vero/1.0/freshpaint@2x.webp 2x" loading="lazy" alt="Freshpaint LP">
-    </div>
-  </div>
+  {{ cardTertiary
+    (
+      color = "bg-lilac-50",
+      imgPrimary = "vero/1.0/careers",
+      altPrimary = "Careers LP",
+      imgSecondary = "vero/1.0/fusion",
+      altSecondary = "Fusion LP",
+      imgTertiary = "vero/1.0/freshpaint",
+      altTertiary = "Freshpaint LP",
+      loading = "lazy"
+    )
+  }}
 </div>

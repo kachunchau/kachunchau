@@ -6,24 +6,40 @@ tag: UX/UI design
 company: blubolt
 ---
 
-<div class="gap-3 sm:gap-6 grid grid-cols-2">
-  <div class="bg-aqua-50 col-span-2 max-h-96 sm:max-h-144 overflow-hidden p-10 md:pt-16 md:px-24 rounded-2xl">
-    <div class="flex flex-nowrap -space-x-40">
-      <img class="showcase z-10" src="/assets/images/{{ title }}/joseph/home.webp" srcset="/assets/images/{{ title }}/joseph/home@2x.webp 2x" alt="Teapigs storefront">
-      <img class="showcase translate-y-8 " src="/assets/images/{{ title }}/joseph/listing.webp" srcset="/assets/images/{{ title }}/joseph/listing@2x.webp 2x" alt="">
-    </div>
-  </div>
-  <div class="bg-aqua-50 col-span-2 max-h-96 sm:max-h-144 overflow-hidden p-10 md:pt-16 md:px-24 rounded-2xl">
-    <div class="flex flex-nowrap -space-x-40">
-      <img class="showcase translate-y-8" src="/assets/images/{{ title }}/sealskinz/category-2.webp" srcset="/assets/images/{{ title }}/sealskinz/category-2@2x.webp 2x" loading="lazy" alt="Sealskinz category page">
-      <img class="showcase z-10" src="/assets/images/{{ title }}/sealskinz/listing.webp" srcset="/assets/images/{{ title }}/sealskinz/listing@2x.webp 2x" loading="lazy" alt="Sealskinz listing page">
-    </div>
-  </div>
-  <div class="bg-aqua-50 col-span-2 max-h-96 sm:max-h-128 overflow-hidden p-10 md:pt-16 md:px-24 rounded-2xl">
-    <div class="flex flex-nowrap -space-x-16">
-      <img class="showcase w-80 z-20" src="/assets/images/{{ title }}/routeone.webp" srcset="/assets/images/{{ title }}/routeone@2x.webp 2x" alt="Route One storefront">
-      <img class="showcase translate-y-6 w-80 z-10"  src="/assets/images/{{ title }}/kc.webp" srcset="/assets/images/{{ title }}/kc@2x.webp 2x" alt="KitchenCraft storefront">
-      <img class="showcase w-80" src="/assets/images/{{ title }}/rigby/rigby.webp" srcset="/assets/images/{{ title }}/rigby/rigby@2x.webp 2x" alt="Rigby and Mac storefront">
-    </div>
-  </div>
+{% from "_components/card.html" import cardPrimary %}
+{% from "_components/card.html" import cardSecondary %}
+{% from "_components/card.html" import cardTertiary %}
+
+<div class="gap-6 grid grid-cols-2">
+  {{ cardPrimary
+    (
+      color = "bg-aqua-50",
+      imgPrimary = "blubolt/joseph/home",
+      altPrimary = "Joseph Turner storefront",
+      imgSecondary = "blubolt/joseph/listing",
+      altSecondary = ""
+    )
+  }}
+  {{ cardSecondary
+    (
+      color = "bg-aqua-50",
+      imgPrimary = "blubolt/sealskinz/listing",
+      altPrimary = "Joseph Turner storefront",
+      imgSecondary = "blubolt/sealskinz/category-2",
+      altSecondary = "",
+      loading = "lazy"
+    )
+  }}
+  {{ cardTertiary
+    (
+      color = "bg-aqua-50",
+      imgPrimary = "blubolt/routeone",
+      altPrimary = "Joseph Turner storefront",
+      imgSecondary = "blubolt/kc",
+      altSecondary = "",
+      imgTertiary = "blubolt/rigby/rigby",
+      altTertiary = "",
+      loading = "lazy"
+    )
+  }}
 </div>
