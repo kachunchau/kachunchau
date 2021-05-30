@@ -1,0 +1,54 @@
+---
+title: Vero
+layout: showcase
+desc: Vero is proactive notification software. A revamp from 1.0 to 2.0 and a marketing site to reflect this.
+tag: Design + front-end
+company: Vero
+---
+
+{% from "_components/showcase.html" import showcasePrimary %}
+{% from "_components/showcase.html" import showcaseSecondary %}
+{% from "_components/showcase.html" import showcaseTertiary %}
+
+{% from "_components/swatch.html" import swatch %}
+
+<div class="gap-6 grid grid-cols-2">
+  {{ showcasePrimary
+    (
+      color = "lilac",
+      imgPrimary = "vero/1.0/features-1",
+      altPrimary = "Test",
+      imgSecondary = "vero/1.0/multi",
+      altSecondary = "Multi-language LP"
+    )
+  }}
+  <div class="bg-lilac-50 col-span-full flex gap-10 items-center justify-center p-10 sm:p-20 rounded-2xl">
+    {{ swatch(hex = "2936A3") }}
+    {{ swatch(hex = "2297F4") }}
+    {{ swatch(hex = "17DA88") }}
+    {{ swatch(hex = "E0218A") }}
+    {{ swatch(hex = "8929AB") }}
+  </div>
+  {{ showcaseSecondary
+    (
+      color = "lilac",
+      imgPrimary = "vero/2.0/workflows",
+      altPrimary = "Workflows (Classic) LP",
+      imgSecondary = "vero/2.0/pricing",
+      altSecondary = "Outdated pricing LP",
+      loading = "lazy"
+    )
+  }}
+  {{ showcaseTertiary
+    (
+      color = "lilac",
+      imgPrimary = "vero/1.0/careers",
+      altPrimary = "Careers LP",
+      imgSecondary = "vero/1.0/fusion",
+      altSecondary = "Fusion LP",
+      imgTertiary = "vero/1.0/freshpaint",
+      altTertiary = "Freshpaint LP",
+      loading = "lazy"
+    )
+  }}
+</div>

@@ -1,0 +1,32 @@
+{% macro img(
+  position = "",
+  src = "",
+  alt = "",
+  loading = "auto"
+) %}
+
+{% if position == "primaryLeft" %}
+  {% set placement = "group-hover:scale-102 group-hover:-translate-x-8 group-hover:translate-y-8 z-10" %}
+{% elseif position == "primaryRight" %}
+  {% set placement = "group-hover:scale-102 group-hover:translate-x-8 translate-y-8 group-hover:translate-y-0" %}
+{% elseif position == "secondaryLeft" %}
+  {% set placement = "group-hover:-translate-x-8 translate-y-8 group-hover:translate-y-0" %}
+{% elseif position == "secondaryRight" %}
+  {% set placement = "group-hover:scale-102 group-hover:translate-x-8 group-hover:translate-y-8  z-10" %}
+{% elseif position == "tertiaryLeft" %}
+  {% set placement = "group-hover:scale-102 group-hover:-translate-x-6 group-hover:translate-y-8 z-20" %}
+{% elseif position == "tertiaryCenter" %}
+  {% set placement = "translate-y-8 group-hover:scale-102 group-hover:translate-y-0 z-10" %}
+{% elseif position == "tertiaryRight" %}
+  {% set placement = "group-hover:scale-102 group-hover:translate-x-6 group-hover:translate-y-8" %}
+{% endif %}
+
+<img
+  class="duration-300 ease-in-out object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu transition-transform {{ placement if placement }}"
+  src="/assets/images/{{ src }}.webp"
+  srcset="/assets/images/{{ src }}@2x.webp 2x"
+  loading="{{ loading }}"
+  alt="{{ alt }}"
+>
+
+{% endmacro %}

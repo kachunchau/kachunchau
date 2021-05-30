@@ -2,9 +2,9 @@
 layout: base
 ---
 
-{% from "_components/card.html" import cardPrimary %}
-{% from "_components/card.html" import cardSecondary %}
-{% from "_components/card.html" import cardTertiary %}
+{% from "_components/showcase.html" import showcasePrimary %}
+{% from "_components/showcase.html" import showcaseSecondary %}
+{% from "_components/showcase.html" import showcaseTertiary %}
 
 <div class="space-y-20 sm:space-y-24">
   <div class="mt-24 md:mt-32 lg:mt-48">
@@ -35,28 +35,28 @@ layout: base
     </header>
 
     <div class="space-y-16">
-      <div class="filter blur-md">
-        <section class="space-y-8">
-          <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu  transition-transform" href="#">
-            {{ cardPrimary
-              (
-                color = "lilac",
-                imgPrimary = "vero/2.0/home-1",
-                altPrimary = "Test",
-                imgSecondary = "vero/2.0/pricing",
-                altSecondary = "Test"
-              )
-            }}
-          </a>
-          <div>
-            <h3 class="font-headline font-semibold mb-1 text-3xl">Vero 2.0 marketing site</h3>
-            <p class="text-gray-500 text-xl">Design &plus; front-end</p>
-          </div>
-        </section>
-      </div>
+
+      <section class="space-y-8">
+        <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu  transition-transform" href="#">
+          {{ showcasePrimary
+            (
+              color = "lilac",
+              imgPrimary = "vero/2.0/home-1",
+              altPrimary = "Test",
+              imgSecondary = "vero/2.0/pricing",
+              altSecondary = "Test"
+            )
+          }}
+        </a>
+        <div>
+          <h3 class="font-headline font-semibold mb-1 text-3xl">Vero 2.0 marketing site</h3>
+          <p class="text-gray-500 text-xl">Design &plus; front-end</p>
+        </div>
+      </section>
+
       <section class="group space-y-8">
-        <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu transition" href="/vero">
-          {{ cardSecondary
+        <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu transition" href="/vero-one">
+          {{ showcaseSecondary
             (
               color = "lilac",
               imgPrimary = "vero/1.0/home",
@@ -87,7 +87,7 @@ layout: base
 
     <section class="group space-y-8">
       <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu  transition-transform" href="/blubolt">
-        {{ cardTertiary
+        {{ showcaseTertiary
           (
             color = "aqua",
             imgPrimary = "blubolt/joseph",
@@ -127,15 +127,15 @@ layout: base
         </div>
         <div class="bg-pink-50 col-span-full md:col-auto max-h-64 md:max-h-80 overflow-hidden p-8 sm:p-12 rounded-2xl">
           <div class="flex flex-nowrap justify-center -space-x-64 sm:-space-x-60">
-            <img class="showcase translate-y-4" src="/assets/images/cardioscope.webp" srcset="/assets/images/cardioscope@2x.webp 2x" alt="Hidden Pause home page">
-            <img class="showcase z-10" src="/assets/images/iati.webp" srcset="/assets/images/iati@2x.webp 2x" alt="International Aid Transparency Initiative">
+            <img class="object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu translate-y-4" src="/assets/images/cardioscope.webp" srcset="/assets/images/cardioscope@2x.webp 2x" alt="Hidden Pause home page">
+            <img class="object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu z-10" src="/assets/images/iati.webp" srcset="/assets/images/iati@2x.webp 2x" alt="International Aid Transparency Initiative">
           </div>
         </div>
         <div class="bg-pink-50 max-h-48 md:max-h-80 overflow-hidden p-4 sm:p-12 rounded-2xl">
-          <img class="showcase" src="/assets/images/payhere.webp" srcset="/assets/images/payhere@2x.webp 2x" alt="Icons on the Push Notifcation LP">
+          <img class="object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu" src="/assets/images/payhere.webp" srcset="/assets/images/payhere@2x.webp 2x" alt="Icons on the Push Notifcation LP">
         </div>
         <div class="bg-pink-50 max-h-48 md:max-h-80 overflow-hidden p-4 sm:p-12 rounded-2xl">
-          <img class="showcase" src="/assets/images/ben.webp" srcset="/assets/images/ben@2x.webp 2x" alt="Icons on the Push Notifcation LP">
+          <img class="object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu" src="/assets/images/ben.webp" srcset="/assets/images/ben@2x.webp 2x" alt="Icons on the Push Notifcation LP">
         </div>
       </div>
       <div>
