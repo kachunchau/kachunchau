@@ -35,18 +35,15 @@ layout: base
     </header>
 
     <div class="space-y-16">
-
       <section class="filter blur-md space-y-8">
         <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu  transition-transform" href="#">
-          {{ showcasePrimary
-            (
-              color = "lilac",
-              imgPrimary = "vero/2.0/home-1",
-              altPrimary = "Test",
-              imgSecondary = "vero/2.0/pricing",
-              altSecondary = "Test"
-            )
-          }}
+          {{ showcasePrimary (
+            color = "lilac",
+            imgPrimary = "vero/2.0/home-1",
+            altPrimary = "Test",
+            imgSecondary = "vero/2.0/pricing",
+            altSecondary = "Test"
+          ) }}
         </a>
         <div>
           <h3 class="font-headline font-semibold mb-1 text-3xl">Vero 2.0 marketing site</h3>
@@ -56,16 +53,14 @@ layout: base
 
       <section class="group space-y-8">
         <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu transition" href="/vero-one">
-          {{ showcaseSecondary
-            (
-              color = "lilac",
-              imgPrimary = "vero/1.0/home",
-              altPrimary = "Test",
-              imgSecondary = "vero/1.0/d&d",
-              altSecondary = "Test",
-              loading = "lazy"
-            )
-          }}
+          {{ showcaseSecondary(
+            color = "lilac",
+            imgPrimary = "vero/1.0/home",
+            altPrimary = "Vero 1.0 marketing site",
+            imgSecondary = "vero/1.0/d&d",
+            altSecondary = "Vero 1.0 marketing site",
+            loading = "lazy"
+          ) }}
         </a>
         <div>
           <h3 class="font-headline font-semibold mb-1 text-3xl">Vero 1.0 marketing site</h3>
@@ -74,6 +69,21 @@ layout: base
             <span>View work</span>
             <span class="duraction-300 ease-in-out inline-block transform-gpu  transition-all group-hover:ml-4">&rarr;</span>
           </a>
+        </div>
+      </section>
+
+      <section class="space-y-8">
+        {{ showcasePrimary(
+          color = "lilac",
+          imgPrimary = "vero/1.0/blog",
+          altPrimary = "Vero 1.0 blog",
+          imgSecondary = "vero/1.0/post",
+          altSecondary = "Vero 1.0 blog",
+          loading = "lazy"
+        ) }}
+        <div>
+          <h3 class="font-headline font-semibold mb-1 text-3xl">Vero 1.0 blog</h3>
+          <p class="text-gray-500 text-xl">Design &plus; front-end</p>
         </div>
       </section>
     </div>
@@ -121,21 +131,21 @@ layout: base
       <div class="gap-6 grid grid-cols-2">
         <div class="bg-pink-50 col-span-full md:col-auto max-h-64 md:max-h-80 overflow-hidden p-8 sm:p-12 rounded-2xl">
           <div class="flex flex-nowrap justify-center -space-x-64 sm:-space-x-60">
-            <img class="showcase z-10" src="/assets/images/hidden.webp" srcset="/assets/images/hidden@2x.webp 2x" alt="Hidden Pause home page">
-            <img class="showcase translate-y-4" src="/assets/images/hidden-2.webp" srcset="/assets/ images/hidden-2@2x.webp 2x" alt="Hidden Pause portfolio">
+            <img class="rounded-lg shadow-2xl relative transform-gpu z-10" src="/assets/images/hidden.webp" srcset="/assets/images/hidden@2x.webp 2x" alt="Hidden Pause home page">
+            <img class="rounded-lg shadow-2xl relative transform-gpu translate-y-4" src="/assets/images/hidden-2.webp" srcset="/assets/ images/hidden-2@2x.webp 2x" alt="Hidden Pause portfolio">
           </div>
         </div>
         <div class="bg-pink-50 col-span-full md:col-auto max-h-64 md:max-h-80 overflow-hidden p-8 sm:p-12 rounded-2xl">
           <div class="flex flex-nowrap justify-center -space-x-64 sm:-space-x-60">
-            <img class="object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu translate-y-4" src="/assets/images/cardioscope.webp" srcset="/assets/images/cardioscope@2x.webp 2x" alt="Hidden Pause home page">
-            <img class="object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu z-10" src="/assets/images/iati.webp" srcset="/assets/images/iati@2x.webp 2x" alt="International Aid Transparency Initiative">
+            <img class="rounded-lg shadow-2xl relative transform-gpu translate-y-4" src="/assets/images/cardioscope.webp" srcset="/assets/images/cardioscope@2x.webp 2x" alt="Hidden Pause home page">
+            <img class="rounded-lg shadow-2xl relative transform-gpu z-10" src="/assets/images/iati.webp" srcset="/assets/images/iati@2x.webp 2x" alt="International Aid Transparency Initiative">
           </div>
         </div>
         <div class="bg-pink-50 max-h-48 md:max-h-80 overflow-hidden p-4 sm:p-12 rounded-2xl">
-          <img class="object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu" src="/assets/images/payhere.webp" srcset="/assets/images/payhere@2x.webp 2x" alt="Icons on the Push Notifcation LP">
+          <img class="rounded-lg shadow-2xl relative transform-gpu" src="/assets/images/payhere.webp" srcset="/assets/images/payhere@2x.webp 2x" alt="Icons on the Push Notifcation LP">
         </div>
         <div class="bg-pink-50 max-h-48 md:max-h-80 overflow-hidden p-4 sm:p-12 rounded-2xl">
-          <img class="object-contain object-left-top rounded-lg shadow-2xl relative transform-gpu" src="/assets/images/ben.webp" srcset="/assets/images/ben@2x.webp 2x" alt="Icons on the Push Notifcation LP">
+          <img class="rounded-lg shadow-2xl relative transform-gpu" src="/assets/images/ben.webp" srcset="/assets/images/ben@2x.webp 2x" alt="Icons on the Push Notifcation LP">
         </div>
       </div>
       <div>
