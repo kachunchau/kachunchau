@@ -6,12 +6,12 @@ tag: UX/UI design
 company: blubolt
 ---
 
-{% from "_components/card.html" import cardPrimary %}
-{% from "_components/card.html" import cardSecondary %}
-{% from "_components/card.html" import cardTertiary %}
+{% from "_components/showcase.html" import showcasePrimary %}
+{% from "_components/showcase.html" import showcaseSecondary %}
+{% from "_components/showcase.html" import showcaseTertiary %}
 
 <div class="gap-6 grid grid-cols-2">
-  {{ cardPrimary
+  {{ showcasePrimary
     (
       color = "aqua",
       imgPrimary = "blubolt/joseph/detail",
@@ -20,7 +20,7 @@ company: blubolt
       altSecondary = "Joseph Turner listing page"
     )
   }}
-  {{ cardSecondary
+  {{ showcaseSecondary
     (
       color = "aqua",
       imgPrimary = "blubolt/sealskinz/listing",
@@ -30,7 +30,7 @@ company: blubolt
       loading = "lazy"
     )
   }}
-  {{ cardTertiary
+  {{ showcaseTertiary
     (
       color = "aqua",
       imgPrimary = "blubolt/routeone",

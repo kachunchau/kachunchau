@@ -1,0 +1,9 @@
+{% macro swatch(
+  hex = "") %}
+
+<div class="text-center">
+  <div class="h-24 mb-2 rounded-lg w-32" style="background-color: #{{ hex }};"></div>
+  <span class="text-gray-500 text">#{{ hex }}</span>
+</div>
+
+{% endmacro %}

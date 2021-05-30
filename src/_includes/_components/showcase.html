@@ -1,0 +1,94 @@
+{% from "_components/img.html" import img %}
+
+{% macro showcasePrimary(
+  color = "",
+  imgPrimary = "",
+  altPrimary = "",
+  imgSecondary = "",
+  altSecondary = "",
+  loading = "auto") %}
+
+<div class="bg-{{ color }}-50 col-span-full max-h-80 sm:max-h-96 md:max-h-144 overflow-hidden p-8 sm:p-16 rounded-2xl">
+
+  <div class="flex flex-nowrap justify-center -space-x-64 sm:-space-x-96 xl:-space-x-36">
+    {{ img(
+      position = "primaryLeft",
+      src = imgPrimary,
+      alt = altPrimary,
+      loading = loading
+    ) }}
+    {{ img(
+      position = "primaryRight",
+      src = imgSecondary,
+      alt = altSecondary,
+      loading = loading
+    ) }}
+  </div>
+</div>
+
+{% endmacro %}
+
+
+{% macro showcaseSecondary(
+  color = "",
+  imgPrimary = "",
+  altPrimary = "",
+  imgSecondary = "",
+  altSecondary = "",
+  loading = "auto") %}
+
+<div class="bg-{{ color }}-50 col-span-full max-h-80 sm:max-h-96 md:max-h-144 overflow-hidden p-8 sm:p-16 rounded-2xl">
+  <div class="flex flex-nowrap justify-center -space-x-64 sm:-space-x-96 xl:-space-x-36">
+    {{ img(
+      position = "secondaryLeft",
+      src = imgSecondary,
+      alt = altSecondary,
+      loading = loading
+    ) }}
+    {{ img(
+      position = "secondaryRight",
+      src = imgPrimary,
+      alt = altPrimary,
+      loading = loading
+    ) }}
+  </div>
+</div>
+
+{% endmacro %}
+
+
+{% macro showcaseTertiary(
+  color = "",
+  imgPrimary = "",
+  altPrimary = "",
+  imgSecondary = "",
+  altSecondary = "",
+  imgTertiary = "",
+  altTertiary = "",
+  loading = "auto") %}
+
+<div class="bg-{{ color }}-50 col-span-full max-h-80 sm:max-h-128 overflow-hidden p-8
+ sm:p-16 rounded-2xl">
+  <div class="flex flex-nowrap justify-center -space-x-56 sm:-space-x-72 xl:-space-x-40">
+    {{ img(
+      position = "tertiaryLeft",
+      src = imgPrimary,
+      alt = altPrimary,
+      loading = loading
+    ) }}
+    {{ img(
+      position = "tertiaryCenter",
+      src = imgSecondary,
+      alt = altSecondary,
+      loading = loading
+    ) }}
+    {{ img(
+      position = "tertiaryRight",
+      src = imgTertiary,
+      alt = altTertiary,
+      loading = loading
+    ) }}
+  </div>
+</div>
+
+{% endmacro %}
