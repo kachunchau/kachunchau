@@ -13,7 +13,6 @@ module.exports =  function(eleventyConfig) {
   // Copy assets/* to _site/
   eleventyConfig.addPassthroughCopy('src/assets/images');
   eleventyConfig.addPassthroughCopy('src/assets/css/fonts');
-  eleventyConfig.addPassthroughCopy('src/assets/css/plugins');
   eleventyConfig.addPassthroughCopy('src/assets/js');
 
   return {
