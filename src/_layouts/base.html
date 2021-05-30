@@ -5,9 +5,6 @@
     <title>{% if page.url != "/" %}{{ title }} &mdash; {% endif %}Ka-Chun Chau is a digital designer</title>
     <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex">
-
-    <link rel="apple-touch-icon" href="icon.png">
 
     <link rel="preload" href="/assets/css/fonts/clash-display/ClashDisplay-Variable.woff2" as="font"type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/css/fonts/general/GeneralSans-Variable.woff2" as="font"type="font/woff2" crossorigin>
@@ -86,10 +83,9 @@
   </head>
 
   <body class="bg-white text-gray-800 px-6 sm:px-8">
-    <header class="lg:sticky lg:top-8 lg:inset-x-8 flex items-center pt-2 lg:pt-0 z-50">
+    <header class="lg:sticky lg:top-8 lg:inset-x-8 flex items-center pt-6 lg:pt-0 z-50">
       <a class="inline-block" href="/">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><defs><linearGradient id="a" x1="64.256%" x2="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#2A9FFF"/><stop offset="100%" stop-color="#0652DD"/></linearGradient><linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#F8934A"/><stop offset="100%" stop-color="#EE5A24"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path fill="url(#a)" d="M20 20l20 20H0V0h40L20 20z"/><path fill="url(#b)" d="M0 20l20 20H0V20zM20 0L0 20V0h20z"/><path fill="#0652DD" fill-opacity=".1" d="M0 0l20 20L0 40z"/><path fill="#000" fill-opacity=".12" d="M0 0l20 20L0 40z"/></g></svg> -->
-        <img src="/assets/images/logo.svg" alt="">
+        <img src="/assets/images/logo.svg" alt="Logo">
       </a>
 
       <a class="animate-bounce flex font-medium items-center ml-auto space-x-1.5" href="mailto:kachun@kachunchau.com?subject=Hiya!"><span>👋</span> <span>Contact me</span></a>
@@ -102,7 +98,8 @@
     </div>
 
     <footer class="mt-24">
-      <p class="border-t border-gray-200 py-16 sm:py-20 max-w-screen-md xl:max-w-screen-lg mx-auto text-gray-400 text-sm">&copy; 2021. Hosted on Netlify</p>
+      <p class="py-16 sm:py-20 max-w-screen-md xl:max-w-screen-lg mx-auto text-gray-400 text-sm">&copy; 2021. Hosted on <a class="underline" href="https://netlify.com">Netlify</a>
+      </p>
     </footer>
 
     <div class="sticky bottom-4 text-center z-50">
