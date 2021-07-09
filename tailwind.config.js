@@ -43,11 +43,11 @@ module.exports = {
       colors: {
         aqua: {
           50: '#E5F7FF',
-          100: '#D1F1FF',
+          100: '#BDEBFF',
         },
         lilac: {
           50: '#F2ECFF',
-          100: '#E0D1FF',
+          100: '#D6C2FF',
         },
         tango: {
           50: '#FFF7F0',
