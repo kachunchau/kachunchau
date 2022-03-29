@@ -1,42 +1,20 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  purge: {
-    content: [
-      './_site/**/*.html',
-      './_site/**/*.js',
-    ]
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './src/**/*.{html,js}',
+  ],
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
       headline: [
         'ClashDisplay',
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"'
+        ...defaultTheme.fontFamily.sans
       ],
       sans: [
+        'Space Grotesk',
         'GeneralSans',
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"'
+        ...defaultTheme.fontFamily.sans
       ],
     },
     extend: {
@@ -87,17 +65,6 @@ module.exports = {
         '14/10': '140%',
         '15/10': '150%',
       },
-    },
-  },
-  variants: {
-    extend: {
-      animation: ['hover'],
-      margin: ['group-hover'],
-      rotate: ['group-hover'],
-      scale: ['group-hover'],
-      translate: ['group-hover'],
-      visibility: ['group-hover'],
-      width: ['group-hover'],
     },
   },
 }
