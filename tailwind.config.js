@@ -2,19 +2,20 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    './src/**/*.{html,js}',
+    'src/**/*.html',
+    'src/**/*.{js,jsx,ts,tsx,vue}'
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
       headline: [
         'ClashDisplay',
-        ...defaultTheme.fontFamily.sans
+        ...defaultTheme.fontFamily.sans,
       ],
       sans: [
         'Space Grotesk',
         'GeneralSans',
-        ...defaultTheme.fontFamily.sans
+        ...defaultTheme.fontFamily.sans,
       ],
     },
     extend: {
