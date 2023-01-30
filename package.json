@@ -4,22 +4,22 @@
   "description": "",
   "main": "",
   "scripts": {
-    "dev": "rm -rf _site && ELEVENTY_ENV=development npx @11ty/eleventy --serve & npx tailwindcss -i ./src/assets/css/tailwind.css -o ./_site/assets/css/styles.css --watch --jit",
-    "build": "ELEVENTY_ENV=production npx @11ty/eleventy && NODE_ENV=production npx tailwindcss -i ./src/assets/css/tailwind.css -o ./_site/assets/css/styles.css --jit --minify"
+    "dev": "rm -rf _site && ELEVENTY_ENV=development npx @11ty/eleventy --serve & npx tailwindcss -i ./src/assets/css/tailwind.css -o ./_site/assets/css/styles.css --watch",
+    "build": "ELEVENTY_ENV=production npx @11ty/eleventy && NODE_ENV=production npx tailwindcss -i ./src/assets/css/tailwind.css -o ./_site/assets/css/styles.css --minify"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "autoprefixer": "^10.3.5",
-    "tailwindcss": "^2.2.15"
+    "@11ty/eleventy": "^1.0.2",
+    "autoprefixer": "^10.4.13",
+    "tailwindcss": "^3.2.4"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kachunchau/kachunchau.git"
   },
   "devDependencies": {
-    "npm-check-updates": "^11.8.5"
+    "npm-check-updates": "^16.6.3"
   }
 }
