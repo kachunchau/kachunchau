@@ -13,7 +13,6 @@ module.exports = {
         ...defaultTheme.fontFamily.sans,
       ],
       sans: [
-        'Space Grotesk',
         'GeneralSans',
         ...defaultTheme.fontFamily.sans,
       ],

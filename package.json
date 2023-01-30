@@ -11,15 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "autoprefixer": "^10.4.4",
-    "tailwindcss": "^3.0.23"
+    "@11ty/eleventy": "^1.0.2",
+    "autoprefixer": "^10.4.13",
+    "tailwindcss": "^3.2.4"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kachunchau/kachunchau.git"
   },
   "devDependencies": {
-    "npm-check-updates": "^12.5.4"
+    "npm-check-updates": "^16.6.3"
   }
 }
