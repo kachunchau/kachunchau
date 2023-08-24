@@ -49,66 +49,12 @@
           font-weight: 400 600;
           font-style: normal;
         }
-
-      /**
-      * @license
-      *
-      * Font Family: General Sans
-      * Designed by: Frode Helland
-      * URL: https://www.fontshare.com/fonts/general-sans
-      * © 2021 Indian Type Foundry
-      *
-      * Font Styles:
-      * General Sans Variable(Variable font)
-      *
-      */
-
-      /**
-        * This is a variable font
-        * You can controll variable axes as shown below:
-        * font-variation-settings: "wght" 200.0;
-        *
-        * available axes:
-
-        * "wght" (range from 200.0 to 700.0)
-
-        */
-
-        @font-face {
-          font-family: "GeneralSans";
-          src:
-            url("/assets/css/fonts/general/GeneralSans-Variable.woff2") format("woff2"),
-            url("/assets/css/fonts/general/GeneralSans-Variable.woff2") format("woff2");
-          font-display: swap;
-          font-style: normal;
-          font-weight: 400 700;
-        }
-
     </style>
   </head>
 
-  <body class="bg-white text-gray-800 px-6 sm:px-8">
-    <header class="lg:sticky lg:top-8 lg:inset-x-8 flex items-center pt-6 lg:pt-0 z-50">
-      <a class="inline-block" href="/">
-        <img src="/assets/images/logo.svg" alt="Logo">
-      </a>
-
-      <a class="animate-bounce flex font-medium items-center ml-auto space-x-1.5" href="mailto:kachun@kachunchau.com?subject=Hiya!"><span>👋</span> <span>Contact me</span></a>
-    </header>
-
-    <div class="max-w-screen-md xl:max-w-screen-lg mx-auto">
-
+  <body class="bg-gradient-to-b from-stone-800 to-black box-border flex items-center justify-center h-screen text-gray-50 px-16">
+    <div class="flex-1 max-w-[600px] mx-auto">
       {{ content | safe }}
-
-    </div>
-
-    <footer class="mt-24">
-      <p class="py-16 sm:py-20 max-w-screen-md xl:max-w-screen-lg mx-auto text-gray-400 text-sm">&copy; 2023. Hosted on <a class="underline" href="https://netlify.com">Netlify</a>
-      </p>
-    </footer>
-
-    <div class="sticky bottom-4 text-center z-50">
-      <span class="backdrop-filter backdrop-blur-xl bg-opacity-50 bg-white font-medium inline-block px-2 py-1 rounded-full text-xs text-gray-500">🚧 This is a live redesign<span>
     </div>
   </body>
 

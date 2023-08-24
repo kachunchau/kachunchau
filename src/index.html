@@ -1,158 +1,46 @@
 ---
-layout: base
+layout: _layouts/base.html
+socials:
+  - title: Mastodon
+    handle: chocho@fosstodon.org
+    url: https://fosstodon.org/@chocho
+  - title: Github
+    handle: kachunchau
+    url: https://github.com/kachunchau
+  - title: Spotify
+    handle: chocho
+    url: https://open.spotify.com/user/1123026550?si=3ad8b17298354ea3
+  - title: Email
+    handle: kachun@kachunchau.com
+    url: mailto:kachun@kachunchau.com
 ---
 
-{% from "macros/showcase.html" import showcasePrimary %}
-{% from "macros/showcase.html" import showcaseSecondary %}
-{% from "macros/showcase.html" import showcaseTertiary %}
+<div class="mb-10 text-5xl">👋</div>
 
-<div class="space-y-20 sm:space-y-24">
-  <div class="mt-24 md:mt-32 lg:mt-48">
-    <h1 class="font-headline font-semibold leading-tight md:leading-tight mb-10 text-4xl md:text-5xl">I’m a digital designer based in Hong Kong working remotely for
-    <a class="inline-flex group items-baseline overflow-hidden space-x-2 underline hover:no-underline" href="https://getvero.com">
-      <svg class="sm:block duration-200 ease-in-out hidden -mr-10 group-hover:mr-0 opacity-0 group-hover:opacity-100 -rotate-180 group-hover:rotate-0 scale-50 group-hover:scale-100 transform-gpu transition-all" width="36" height="32" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M10.272 2.703l6.113 10.366-5.577 9.459c-.283.48-.51.976-.685 1.481L.74 8.092C-.782 5.512.121 2.208 2.75.722c2.633-1.488 6-.603 7.523 1.98z" fill="#2297F4"/><path d="M32.155 13.409l-9.37 15.89c-1.487 2.522-4.755 3.433-7.364 2.067l-.179-.098c-2.613-1.477-3.513-4.775-1.99-7.358l6.095-10.338h11.14a8.56 8.56 0 001.668-.163z" fill="#2936A3"/><path d="M30.487.03c2.974 0 5.414 2.315 5.51 5.21l.003.201c0 2.955-2.467 5.367-5.513 5.367H18.31L12.717 1.32a8.22 8.22 0 00-.943-1.293l18.713.001z" fill="#17DA88"/></g></svg>
+<h1 class="font-medium leading-tight mb-16 text-4xl text-white">Hello there, I'm Ka-Chun Chau a UI designer that codes for <a class="font-bold hover:underline" href="https://getvero.com">Vero</a>.</h1>
 
-      <span class="bg-clip-text hover:text-transparent bg-gradient-to-r from-vero-blue via-vero-teal to-vero-green">Vero</span>
-    </a> on web and marketing things.</h1>
-
-    <ul class="flex space-x-2 md:space-x-3">
-      <li>
-        <a class="bg-gray-50 hover:bg-gray-100 block border border-gray-200 border-solid duration-300 ease-in-out font-medium px-5 py-1.5 rounded-full text-lg md:text-xl transition-colors" href="mailto:kachun@kachunchau.com">Email</a>
-      </li>
-      <li>
-        <a class="bg-gray-50 hover:bg-gray-100 block border border-gray-200 border-solid duration-300 ease-in-out font-medium px-5 py-1.5 rounded-full text-lg md:text-xl transition-colors" href="https://github.com/kachunchau">GitHub</a>
-      </li>
-    </ul>
-  </div>
-
-  <section class="space-y-8">
-    <header>
-      <span class="inline-block font-headline font-medium mb-1 text-gray-400 tracking-widest uppercase">2018&ndash;present</span>
-      <h2 class="font-headline font-semibold leading-tight text-3xl md:text-4xl">Vero</h2>
-    </header>
-
-    <div class="space-y-16">
-      <section class="group space-y-8">
-        <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu transition" href="/vero-two/">
-          {{ showcasePrimary (
-            color = "lilac",
-            imgPrimary = "vero/2.0/home-1",
-            altPrimary = "Home",
-            imgSecondary = "vero/2.0/careers",
-            altSecondary = "Careers"
-          ) }}
-        </a>
-        <div>
-          <h3 class="font-headline font-semibold mb-1 text-3xl">Vero 2.0 marketing site</h3>
-          <p class="mb-6 text-gray-500 text-xl">Design &plus; front-end</p>
-          <a class="inline-flex items-center space-x-1 bg-gray-50 border border-gray-200 border-solid font-medium px-5 py-1.5 rounded-full text-lg md:text-xl" href="/vero-two/">
-            <span>View work</span>
-            <span class="duraction-300 ease-in-out inline-block transform-gpu  transition-all group-hover:ml-4">&rarr;</span>
-          </a>
+<h2 class="font-medium mb-2.5 uppercase text-sm text-gray-400">Elsewhere:</h2>
+<ul>
+  {% for social in socials %}
+    <li>
+      <a class="duration-300 flex items-center ease-in-out -mx-5 p-5 rounded-3xl space-x-5 transform-gpu transition hover:bg-white/5 hover:scale-105" href="{{ social.url }}" {{ 'rel=me' if social.title == 'Mastodon'}}>
+        <div class="flex-none">
+          {% if social.title == "Email" %}
+            <div class="flex items-center justify-center text-5xl w-14 h-14">📨</div>
+          {% else %}
+            <img class="w-14 h-14" src="/assets/images/{{ social.title | slugify }}.svg" loading="lazy" decoding="async" alt="{{ social.title }} logo">
+          {% endif %}
         </div>
-      </section>
 
-      <section class="group space-y-8">
-        <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu transition" href="/vero-one/">
-          {{ showcaseSecondary(
-            color = "lilac",
-            imgPrimary = "vero/1.0/home",
-            altPrimary = "Vero 1.0 marketing site",
-            imgSecondary = "vero/1.0/d&d",
-            altSecondary = "Vero 1.0 marketing site",
-            loading = "lazy"
-          ) }}
-        </a>
-        <div>
-          <h3 class="font-headline font-semibold mb-1 text-3xl">Vero 1.0 marketing site</h3>
-          <p class="mb-6 text-gray-500 text-xl">Design &plus; front-end</p>
-          <a class="inline-flex items-center space-x-1 bg-gray-50 border border-gray-200 border-solid font-medium px-5 py-1.5 rounded-full text-lg md:text-xl" href="/vero-one/">
-            <span>View work</span>
-            <span class="duraction-300 ease-in-out inline-block transform-gpu  transition-all group-hover:ml-4">&rarr;</span>
-          </a>
+        <div class="flex-1 space-y-1">
+          <h2 class="font-bold text-xl">
+            {{ social.title }}
+          </h2>
+          {% if social.handle %}
+            <p class="text-lg text-gray-400">{{ social.handle }}</p>
+          {% endif %}
         </div>
-      </section>
-
-      <section class="space-y-8">
-        {{ showcasePrimary(
-          color = "lilac",
-          imgPrimary = "vero/1.0/blog",
-          altPrimary = "Vero 1.0 blog",
-          imgSecondary = "vero/1.0/post",
-          altSecondary = "Vero 1.0 blog",
-          loading = "lazy"
-        ) }}
-        <div>
-          <h3 class="font-headline font-semibold mb-1 text-3xl">Vero 1.0 blog</h3>
-          <p class="text-gray-500 text-xl">Design &plus; front-end</p>
-        </div>
-      </section>
-    </div>
-  </section>
-
-  <section class="space-y-8">
-    <header>
-      <span class="inline-block font-headline font-medium mb-1 text-gray-400 tracking-widest uppercase">2014&ndash;2017</span>
-      <h2 class="font-headline font-semibold leading-tight text-3xl md:text-4xl">blubolt</h2>
-    </header>
-
-    <section class="group space-y-8">
-      <a class="block duration-300 ease-in-out group-hover:scale-103 transform-gpu  transition-transform" href="/blubolt">
-        {{ showcaseTertiary
-          (
-            color = "aqua",
-            imgPrimary = "blubolt/joseph",
-            altPrimary = "Joseph Turner storefront",
-            imgSecondary = "blubolt/teapigs",
-            altSecondary = "Teapigs storefront",
-            imgTertiary = "blubolt/sealskinz",
-            altTertiary = "Sealskinz storefront",
-            loading = "lazy"
-          )
-        }}
       </a>
-      <div>
-        <h3 class="font-headline font-semibold mb-1 text-3xl">Various stores</h3>
-        <p class="mb-6 text-gray-500 text-xl">UX/UI Design</p>
-        <a class="inline-flex items-center space-x-1 bg-gray-50 border border-gray-200 border-solid font-medium px-5 py-1.5 rounded-full text-lg md:text-xl" href="/blubolt">
-          <span>View work</span>
-          <span class="duraction-300 ease-in-out inline-block transform-gpu  transition-all group-hover:ml-4">&rarr;</span>
-        </a>
-      </div>
-    </section>
-  </section>
-
-  <section class="space-y-8">
-    <header>
-      <span class="inline-block font-headline font-medium mb-1 text-gray-400 tracking-widest uppercase">2014&ndash;2018</span>
-      <h2 class="font-headline font-semibold leading-tight text-3xl md:text-4xl">Freelance</h2>
-    </header>
-
-    <section class="space-y-8">
-      <div class="gap-6 grid grid-cols-2">
-        <div class="bg-pink-50 col-span-full md:col-auto max-h-64 md:max-h-80 overflow-hidden p-8 sm:p-12 rounded-2xl">
-          <div class="flex flex-nowrap justify-center -space-x-64 sm:-space-x-60">
-            <img class="rounded-lg shadow-2xl relative transform-gpu z-10" src="/assets/images/hidden.webp" srcset="/assets/images/hidden@2x.webp 2x" width="320" alt="Hidden Pause home page">
-            <img class="rounded-lg shadow-2xl relative transform-gpu translate-y-4" src="/assets/images/hidden-2.webp" srcset="/assets/ images/hidden-2@2x.webp 2x" width="320" alt="Hidden Pause portfolio">
-          </div>
-        </div>
-        <div class="bg-pink-50 col-span-full md:col-auto max-h-64 md:max-h-80 overflow-hidden p-8 sm:p-12 rounded-2xl">
-          <div class="flex flex-nowrap justify-center -space-x-64 sm:-space-x-60">
-            <img class="rounded-lg shadow-2xl relative transform-gpu translate-y-4" src="/assets/images/cardioscope.webp" srcset="/assets/images/cardioscope@2x.webp 2x" width="320" alt="Hidden Pause home page">
-            <img class="rounded-lg shadow-2xl relative transform-gpu z-10" src="/assets/images/iati.webp" srcset="/assets/images/iati@2x.webp 2x" width="320" alt="International Aid Transparency Initiative">
-          </div>
-        </div>
-        <div class="bg-pink-50 max-h-48 md:max-h-80 overflow-hidden p-4 sm:p-12 rounded-2xl">
-          <img class="rounded-lg shadow-2xl relative transform-gpu" src="/assets/images/payhere.webp" srcset="/assets/images/payhere@2x.webp 2x" width="400" alt="Pay Here">
-        </div>
-        <div class="bg-pink-50 max-h-48 md:max-h-80 overflow-hidden p-4 sm:p-12 rounded-2xl">
-          <img class="rounded-lg shadow-2xl relative transform-gpu" src="/assets/images/ben.webp" srcset="/assets/images/ben@2x.webp 2x" width="400" alt="Ben">
-        </div>
-      </div>
-      <div>
-        <h3 class="font-headline font-semibold mb-1 text-3xl">Assortment of work</h3>
-        <p class="mb-6 text-gray-500 text-xl">Design</p>
-      </div>
-    </section>
-  </section>
-</div>
+    </li>
+  {% endfor %}
+</ul>

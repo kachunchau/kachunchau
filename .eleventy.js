@@ -19,7 +19,6 @@ module.exports =  function(eleventyConfig) {
       input: 'src',
 
       // These values is relative to your input directory.
-      layouts: '_layouts'
     }
   }
 };
