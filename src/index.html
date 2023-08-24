@@ -17,7 +17,7 @@ socials:
 
 <div class="mb-10 text-5xl">👋</div>
 
-<h1 class="font-medium leading-snug mb-16 relative text-3xl text-gray-100">Hello there, I'm Ka-Chun Chau a UI designer from Northern Ireland that codes. Working remotely in Hong Kong for <a class="inline-block font-semibold text-gray-50 duration-300 transition ease-in-out hover:text-orange-500" href="https://getvero.com">Vero</a>.</h1>
+<h1 class="font-medium leading-snug mb-16 relative text-3xl text-gray-100">Hello there, I'm Ka-Chun Chau a UI designer from Northern Ireland that codes. Working remotely in Hong Kong for <a class="font-semibold text-gray-50 duration-300 transition ease-in-out hover:text-orange-500" href="https://getvero.com">Vero</a>.</h1>
 
 <h2 class="font-medium mb-3 uppercase text-sm text-gray-400">Elsewhere:</h2>
 <ul class="space-y-2 sm:space-y-0">
@@ -32,12 +32,12 @@ socials:
           {% endif %}
         </div>
 
-        <div class="flex-1 space-y-1">
+        <div class="space-y-1 overflow-hidden">
           <h2 class="font-medium text-xl text-gray-50 group-hover:text-orange-500">
             {{ social.title }}
           </h2>
           {% if social.handle %}
-            <p class="text-lg">{{ social.handle }}</p>
+            <p class="text-lg truncate">{{ social.handle }}</p>
           {% endif %}
         </div>
       </a>
