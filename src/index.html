@@ -19,11 +19,11 @@ socials:
 
 <h1 class="font-medium leading-snug mb-16 relative text-3xl text-gray-100">Hello there, I'm Ka-Chun Chau a UI designer from Northern Ireland that codes. Working remotely in Hong Kong for <a class="inline-block font-semibold text-gray-50 duration-300 transition ease-in-out hover:text-orange-500" href="https://getvero.com">Vero</a>.</h1>
 
-<h2 class="font-medium mb-2.5 uppercase text-sm text-gray-400">Elsewhere:</h2>
-<ul>
+<h2 class="font-medium mb-3 uppercase text-sm text-gray-400">Elsewhere:</h2>
+<ul class="space-y-2 sm:space-y-0">
   {% for social in socials %}
     <li>
-      <a class="duration-300 flex items-center ease-in-out group -mx-5 p-5 rounded-3xl space-x-5 transform-gpu transition hover:bg-white/5 hover:scale-105" href="{{ social.url }}" {{ 'rel=me' if social.title == 'Mastodon'}}>
+      <a class="duration-300 flex items-center ease-in-out group p-5 ring ring-inset ring-white/5 rounded-3xl space-x-5 transform-gpu transition hover:bg-white/5 sm:-mx-5 sm:ring-0 sm:hover:scale-105" href="{{ social.url }}" {{ 'rel=me' if social.title == 'Mastodon'}}>
         <div class="flex-none">
           {% if social.title == "Email" %}
             <div class="flex items-center justify-center text-5xl w-14 h-14">📨</div>
