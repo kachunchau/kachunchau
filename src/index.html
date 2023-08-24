@@ -17,13 +17,13 @@ socials:
 
 <div class="mb-10 text-5xl">👋</div>
 
-<h1 class="font-medium leading-tight mb-16 text-4xl text-white">Hello there, I'm Ka-Chun Chau a UI designer that codes for <a class="font-bold hover:underline" href="https://getvero.com">Vero</a>.</h1>
+<h1 class="font-medium leading-snug mb-16 relative text-3xl text-gray-300">Hello there, I'm Ka-Chun Chau a UI designer from Northern Ireland that codes. Working remotely in Hong Kong for <a class="inline-block font-semibold text-gray-50 duration-300 transition ease-in-out hover:text-orange-500" href="https://getvero.com">Vero</a>.</h1>
 
 <h2 class="font-medium mb-2.5 uppercase text-sm text-gray-400">Elsewhere:</h2>
 <ul>
   {% for social in socials %}
     <li>
-      <a class="duration-300 flex items-center ease-in-out -mx-5 p-5 rounded-3xl space-x-5 transform-gpu transition hover:bg-white/5 hover:scale-105" href="{{ social.url }}" {{ 'rel=me' if social.title == 'Mastodon'}}>
+      <a class="duration-300 flex items-center ease-in-out group -mx-5 p-5 rounded-3xl space-x-5 transform-gpu transition hover:bg-white/5 hover:scale-105" href="{{ social.url }}" {{ 'rel=me' if social.title == 'Mastodon'}}>
         <div class="flex-none">
           {% if social.title == "Email" %}
             <div class="flex items-center justify-center text-5xl w-14 h-14">📨</div>
@@ -33,11 +33,11 @@ socials:
         </div>
 
         <div class="flex-1 space-y-1">
-          <h2 class="font-bold text-xl">
+          <h2 class="font-semibold text-xl text-gray-50 group-hover:text-orange-500">
             {{ social.title }}
           </h2>
           {% if social.handle %}
-            <p class="text-lg text-gray-400">{{ social.handle }}</p>
+            <p class="text-lg">{{ social.handle }}</p>
           {% endif %}
         </div>
       </a>
