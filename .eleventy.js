@@ -7,8 +7,8 @@ module.exports =  function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('favicon.ico');
 
   // Copy assets/* to _site/
+  eleventyConfig.addPassthroughCopy('src/assets/**/!(tailwind.css)');
   eleventyConfig.addPassthroughCopy('src/assets/images');
-  eleventyConfig.addPassthroughCopy('src/assets/css/fonts');
   eleventyConfig.addPassthroughCopy('src/assets/js');
 
   return {
@@ -16,9 +16,8 @@ module.exports =  function(eleventyConfig) {
     htmlTemplateEngine: 'njk',
 
     dir: {
-      input: 'src',
-
       // These values is relative to your input directory.
+      input: 'src',
     }
   }
 };
