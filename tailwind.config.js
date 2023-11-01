@@ -8,22 +8,12 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      // headline: [
-      //   'ClashDisplay',
-      //   ...defaultTheme.fontFamily.sans,
-      // ],
       sans: [
-        'ClashDisplay',
-        'GeneralSans',
+        'CabinetGrotesk-Variable',
         ...defaultTheme.fontFamily.sans,
       ],
     },
     extend: {
-      colors: {
-        'vero-blue': '#2936A3',
-        'vero-teal': '#2297F4',
-        'vero-green': '#17DA88',
-      },
     },
   },
 }
