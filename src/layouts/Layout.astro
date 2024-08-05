@@ -1,0 +1,28 @@
+---
+import "@fontsource-variable/dm-sans";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="I'm Ka-Chun Chau UI designer from Northern Ireland that codes"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="bg-gradient-to-b from-stone-800 to-black box-border font-medium min-h-screen text-gray-400 px-8 py-16 sm:flex sm:items-center sm:px-20 sm:py-0"
+  >
+    <slot />
+  </body>
+</html>

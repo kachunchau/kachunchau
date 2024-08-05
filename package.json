@@ -1,22 +1,21 @@
 {
-  "name": "kachunchau",
-  "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "name": "dark-dwarf",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "rm -rf _site && ELEVENTY_ENV=development npx @11ty/eleventy --serve --incremental & npx tailwindcss -i ./src/assets/css/tailwind.css -o ./_site/assets/css/styles.css --watch",
-    "build": "ELEVENTY_ENV=production npx @11ty/eleventy && NODE_ENV=production npx tailwindcss -i ./src/assets/css/tailwind.css -o ./_site/assets/css/styles.css --minify"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "autoprefixer": "^10.4.15",
-    "tailwindcss": "^3.3.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kachunchau/kachunchau.git"
+    "@astrojs/check": "^0.9.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/dm-sans": "^5.0.6",
+    "astro": "^4.13.0",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.4"
   }
 }

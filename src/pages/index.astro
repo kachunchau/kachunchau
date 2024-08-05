@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+const socials = [
+  {
+    title: "Mastodon",
+    handle: "chocho@fosstodon.org",
+    href: "https://fosstodon.org/@chocho",
+  },
+  {
+    title: "GitHub",
+    handle: "kachunchau",
+    href: "https://github.com/kachunchau",
+  },
+  {
+    title: "Spotify",
+    handle: "chocho",
+    href: "https://open.spotify.com/user/1123026550?si=3ad8b17298354ea3",
+  },
+  {
+    title: "Email",
+    handle: "kachun@kachunchau.com",
+    href: "mailto:kachun@kachunchau.com",
+  },
+];
+---
+
+<Layout title="Ka-Chun Chau — UI Designer">
+  <main class="max-w-[580px]">
+    <div class="mb-10 text-5xl">👋</div>
+
+    <p class="font-black mb-2 text-4xl text-gray-100">
+      Hello there,
+      <h1 class="font-medium mb-12 text-3xl">
+        I'm Ka-Chun Chau&mdash;a <abbr
+          class="no-underline"
+          title="User Interface">UI</abbr
+        > designer from Northern Ireland that codes. Currently working for
+        <a
+          class="font-extrabold text-gray-50 duration-300 transition ease-in-out hover:text-orange-500"
+          href="https://getvero.com"
+          >Vero
+        </a> remotely in Melbourne.
+      </h1>
+
+      <h2
+        class="font-extrabold mb-2.5 uppercase text-sm text-gray-400 tracking-wider"
+      >
+        Elsewhere
+      </h2>
+      <ul class="space-y-2 sm:space-y-0">
+        {socials.map((social) => <Card social={social} />)}
+      </ul>
+    </p>
+  </main>
+</Layout>
