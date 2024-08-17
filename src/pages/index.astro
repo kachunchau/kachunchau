@@ -28,30 +28,30 @@ const socials = [
 
 <Layout title="Ka-Chun Chau — UI Designer">
   <main class="max-w-[580px]">
-    <div class="mb-10 text-5xl">👋</div>
+    <div
+      class="mb-8 animate-bounce flex items-center justify-center text-5xl size-14"
+    >
+      👋
+    </div>
 
-    <p class="font-black mb-2 text-4xl text-gray-100">
-      Hello there,
-      <h1 class="font-medium mb-12 text-3xl">
-        I'm Ka-Chun Chau&mdash;a <abbr
-          class="no-underline"
-          title="User Interface">UI</abbr
-        > designer from Northern Ireland that codes. Currently working for
-        <a
-          class="font-extrabold text-gray-50 duration-300 transition ease-in-out hover:text-orange-500"
-          href="https://getvero.com"
-          >Vero
-        </a> remotely in Melbourne.
-      </h1>
+    <h1 class="font-medium mb-12 text-4xl">
+      <span class="font-extrabold text-white">Hello there</span>, I'm Ka-Chun
+      Chau&mdash;a <abbr class="no-underline" title="User Interface">UI</abbr> designer
+      that codes. Currently working for
+      <a
+        class="font-extrabold text-gray-50 duration-300 transition ease-in-out hover:text-orange-500"
+        href="https://getvero.com"
+        >Vero
+      </a> remotely in Melbourne, Australia.
+    </h1>
 
-      <h2
-        class="font-extrabold mb-2.5 uppercase text-sm text-gray-400 tracking-wider"
-      >
-        Elsewhere
-      </h2>
-      <ul class="space-y-2 sm:space-y-0">
-        {socials.map((social) => <Card social={social} />)}
-      </ul>
-    </p>
+    <h2
+      class="font-extrabold mb-2.5 uppercase text-sm text-gray-400 tracking-wider"
+    >
+      Elsewhere
+    </h2>
+    <ul class="space-y-2 sm:space-y-0">
+      {socials.map((social) => <Card social={social} />)}
+    </ul>
   </main>
 </Layout>
