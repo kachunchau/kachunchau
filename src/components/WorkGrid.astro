@@ -1,0 +1,11 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="grid grid-cols-1 gap-8 md:grid md:grid-cols-3 md:gap-10">
+  <slot />
+</div>

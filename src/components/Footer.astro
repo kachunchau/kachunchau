@@ -1,0 +1,100 @@
+---
+import DribbbleLogo from "../images/dribbble.svg";
+import GithubLogo from "../images/github.svg";
+import MastodonLogo from "../images/mastodon.svg";
+import SpotifyLogo from "../images/spotify.svg";
+import SketchLogo from "../images/sketch.svg";
+import AstroLogo from "../images/astro.svg";
+
+const socialLinks = [
+  {
+    title: "Dribbble",
+    href: "https://dribbble.com/kachunchau",
+    logo: DribbbleLogo,
+  },
+  {
+    title: "GitHub",
+    href: "https://github.com/kachunchau",
+    logo: GithubLogo,
+  },
+  {
+    title: "Mastodon",
+    href: "https://fosstodon.org/@chocho",
+    logo: MastodonLogo,
+  },
+  {
+    title: "Spotify",
+    href: "https://open.spotify.com/user/1123026550?si=3ad8b17298354ea3",
+    logo: SpotifyLogo,
+  },
+];
+---
+
+<footer
+  class:list={[
+    "fixed right-0 bottom-0 left-0 z-0 flex h-100 flex-col bg-linear-to-t from-cyan-50 to-50% py-10 dark:bg-slate-800 dark:bg-none",
+  ]}
+>
+  <div
+    class="mx-auto flex w-full max-w-[1200px] flex-1 flex-col gap-5 px-10 md:px-20 xl:px-0"
+  >
+    <h4
+      class="font-bricolage text-3xl font-light tracking-[-0.025em] whitespace-nowrap md:text-5xl"
+    >
+      The boring stuff
+    </h4>
+
+    <ul class="-mx-3 flex flex-wrap items-center gap-px">
+      {
+        socialLinks.map((socialLink) => (
+          <li>
+            <a
+              class="group flex items-center gap-2 rounded-full px-3 py-1 transition-colors duration-300 ease-in-out hover:bg-slate-100 hover:ring hover:ring-slate-200 dark:hover:bg-white/5 dark:hover:ring-white/10"
+              href={socialLink.href}
+              {...(socialLink.title === "Mastodon" ? { rel: "me" } : {})}
+            >
+              {socialLink.logo && (
+                <socialLink.logo
+                  class={[
+                    "flex-none",
+                    ["GitHub", "Dribbble"].includes(socialLink.title) &&
+                      "dark:fill-white",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  width={24}
+                  height={24}
+                />
+              )}
+
+              <div class="flex flex-1 items-center gap-2">
+                <span class="text-xl">{socialLink.title}</span>
+
+                <span class="font-normal text-slate-300">↗</span>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="mt-auto flex items-center gap-1 text-slate-400">
+      <span class="flex items-center gap-0.5 text-base whitespace-nowrap">
+        <span>Designed in</span>
+        <SketchLogo
+          class="inline-block size-6 fill-black dark:fill-cyan-50"
+          width={24}
+          width={24}
+        />Sketch.
+      </span>
+      <span class="flex items-center text-base whitespace-nowrap">
+        <span>Built with</span>
+        <AstroLogo
+          class="ml-0.5 inline-block size-6 fill-black dark:fill-cyan-50"
+          width={24}
+          width={24}
+        /> Astro.
+      </span>
+    </p>
+  </div>
+</footer>
