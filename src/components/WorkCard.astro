@@ -8,6 +8,7 @@ interface Props {
   description?: string;
   alt?: string;
   src?: ImageMetadata;
+  imgColor?: string;
   variant?: "gradient" | "simple";
 }
 
@@ -17,6 +18,7 @@ const {
   description,
   alt,
   src,
+  imgColor = "bg-teal-50",
   variant = "simple",
 } = Astro.props;
 
@@ -32,9 +34,9 @@ const variantStyles = {
 >
   {
     src && (
-      <div class="overflow-clip rounded-3xl bg-teal-50">
+      <div class:list={["overflow-clip rounded-3xl", imgColor]}>
         <Image
-          class="rounded-xl drop-shadow-lg"
+          class="rounded-xl drop-shadow-xl"
           src={src}
           alt={alt || "Work card image"}
         />
