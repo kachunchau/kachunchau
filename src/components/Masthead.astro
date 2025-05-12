@@ -1,0 +1,24 @@
+---
+import Header from "./Header.astro";
+
+interface Props {
+  variant?: "white" | "transparent";
+}
+
+const { variant = "white" } = Astro.props;
+
+const variantStyles = {
+  white: "bg-linear-to-b from-cyan-50 to-50% to-white dark:bg-none",
+  transparent: "bg-transparent",
+};
+---
+
+<div class={`pt-4 md:pt-6 ${variantStyles[variant]}`}>
+  <Header />
+
+  <div
+    class="mx-auto max-w-7xl px-10 pt-30 pb-20 md:px-20 md:pt-44 md:pb-32 xl:px-10"
+  >
+    <slot />
+  </div>
+</div>

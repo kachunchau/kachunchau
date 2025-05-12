@@ -1,0 +1,61 @@
+---
+import ThemeToggle from "../components/ThemeToggle.astro";
+
+const navLinks = [
+  {
+    label: "Work",
+    href: "/",
+  },
+  {
+    label: "Resume",
+    href: "/resume",
+  },
+  {
+    label: "Contact",
+    href: "mailto:kachun@kachunchau.com",
+  },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header
+  class="mx-4 flex max-w-7xl flex-col items-stretch justify-between gap-5 rounded-xl border border-slate-200 bg-white px-6 py-4.5 md:mx-10 md:flex-row md:items-center md:px-10 xl:mx-auto dark:border-white/10 dark:bg-transparent dark:backdrop-blur-lg"
+>
+  <nav class="flex flex-1 items-center justify-between gap-3 md:gap-4 xl:gap-5">
+    <ul class="flex gap-3 md:gap-4 xl:gap-5">
+      {
+        navLinks.map((item) => (
+          <li class="relative">
+            <a
+              class:list={[
+                "inline-block text-lg font-medium whitespace-nowrap before:absolute before:inset-x-0 before:-bottom-[19px] before:left-0 before:block before:h-0.5 before:content-[''] md:text-xl md:before:-bottom-[23px]",
+                {
+                  "before:bg-teal-400": currentPath === item.href,
+                },
+              ]}
+              data-astro-prefetch
+              href={item.href}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div
+      class="flex flex-initial items-center gap-1.5 overflow-hidden text-sm text-emerald-400 md:gap-2 md:text-lg"
+    >
+      <span
+        class="size-2 flex-none rounded-full bg-emerald-400"
+        data-tooltip="Currently open to new opportunities"></span>
+
+      <span class="hidden truncate md:block"
+        >Currently open to new opportunities</span
+      >
+    </div>
+  </nav>
+
+  <ThemeToggle />
+</header>

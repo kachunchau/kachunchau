@@ -1,58 +1,294 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Masthead from "../components/Masthead.astro";
+import WorkGrid from "../components/WorkGrid.astro";
+import WorkCard from "../components/WorkCard.astro";
+import WorkDescription from "../components/WorkDescription.astro";
+import Button from "../components/Button.astro";
+import VeroLogo from "../images/vero.svg";
+import journeysImage from "../images/journeys@2x.png";
+import settingsImage from "../images/settings@2x.png";
+import dataFeedsImage from "../images/data-feeds@2x.png";
+import gaImage from "../images/ga@2x.png";
+import teamMembersImage from "../images/team-members@2x.png";
+import customHtmlBlockImage from "../images/custom-html-block@2x.png";
+import manualTestImage from "../images/manual-test@2x.png";
+import pickAWinnerImage from "../images/pick-a-winner@2x.png";
+import smsImage from "../images/sms@2x.png";
+import veroMarketingHomeImage from "../images/vero-marketing-home@2x.png";
+import helpCenterImage from "../images/help-center@2x.png";
+import helpCenterSearchImage from "../images/help-center-search@2x.png";
 
-const socials = [
-  {
-    title: "Mastodon",
-    handle: "chocho@fosstodon.org",
-    href: "https://fosstodon.org/@chocho",
-  },
-  {
-    title: "GitHub",
-    handle: "kachunchau",
-    href: "https://github.com/kachunchau",
-  },
-  {
-    title: "Spotify",
-    handle: "chocho",
-    href: "https://open.spotify.com/user/1123026550?si=3ad8b17298354ea3",
-  },
-  {
-    title: "Email",
-    handle: "kachun@kachunchau.com",
-    href: "mailto:kachun@kachunchau.com",
-  },
-];
+import vero2SidebarImage from "../images/vero-2-sidebar@2x.png";
+import vero1SidebarImage from "../images/vero-1-sidebar@2x.png";
+import vero2ProfileImage from "../images/vero-2-profile@2x.png";
+import templateIconsImage from "../images/template-icons@2x.png";
+import vero2CalloutsImage from "../images/vero-2-callouts@2x.png";
 ---
 
 <Layout title="Ka-Chun Chau — UI Designer">
-  <main class="max-w-[580px]">
-    <div
-      class="mb-8 flex size-14 animate-bounce items-center justify-center text-5xl"
+  <Masthead>
+    <h1
+      class="font-bricolage text-4xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.03em] dark:text-white"
     >
-      👋
-    </div>
-
-    <h1 class="mb-12 text-4xl">
-      <span class="text-white">Hello there</span>, I'm Ka-Chun Chau&mdash;a <abbr
-        class="no-underline"
-        title="User Interface">UI</abbr
-      > designer that codes. Currently working for
-      <a
-        class="font-extrabold text-gray-50 transition duration-300 ease-in-out focus-within:ring-4 focus-within:ring-orange-500 hover:text-orange-500"
-        href="https://getvero.com"
-        >Vero
-      </a> remotely in Melbourne, Australia.
+      <span class="font-medium">Hey there</span> &mdash; I'm KC, a UI Designer and
+      developer from Armagh, Northern Ireland, now based in Melbourne, Australia.
     </h1>
 
-    <h2
-      class="mb-2.5 text-sm font-extrabold uppercase tracking-wider text-gray-400"
+    <p
+      class="mt-8 text-2xl tracking-[-0.01em] text-slate-400 dark:text-cyan-50"
     >
-      Elsewhere
-    </h2>
-    <ul class="space-y-2 sm:space-y-0">
-      {socials.map((social) => <Card social={social} />)}
-    </ul>
-  </main>
+      I've spent the past 7 years at
+      <a
+        class="group relative inline-block pl-12"
+        href="https://www.getvero.com/"
+      >
+        <VeroLogo
+          class="absolute -top-0.5 left-1.5 -rotate-4 rounded-lg bg-slate-100 p-1 transition-transform duration-300 ease-in-out group-hover:rotate-3 dark:bg-white"
+          width={36}
+          height={36}
+        /> Vero <span
+          class="font-normal text-slate-300 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+          >↗</span
+        >
+      </a> as a Designer.
+    </p>
+
+    <Button class="mt-11" href="mailto:kachun@kachunchau.com" variant="solid">
+      👋 Get in touch
+    </Button>
+  </Masthead>
+
+  <div
+    class:list={[
+      "relative z-10 mb-100 border-t border-transparent text-cyan-50 dark:border-white/10",
+    ]}
+  >
+    <main class="mx-auto max-w-[1200px] px-10 py-20 md:px-20 md:py-32 xl:px-0">
+      <div class="mb-6 flex items-center justify-between gap-3 md:mb-12">
+        <div
+          class="font-bricolage text-3xl font-light -tracking-[0.01em] md:text-4xl"
+        >
+          Vero
+        </div>
+
+        <div class="rounded-full px-4 py-1 inset-ring-2 inset-ring-white/10">
+          2018 - Present
+        </div>
+      </div>
+
+      <!-- <WorkCard
+          className="col-span-1 md:col-span-full"
+          title="Vero 2.0"
+          description="Journeys."
+          src={journeysImage}
+          alt="Mastodon logo"
+          variant="gradient"
+        /> -->
+
+      <div class="space-y-20 md:space-y-32">
+        <WorkGrid>
+          <WorkCard
+            className="col-span-1 md:col-span-2"
+            title="Settings"
+            description="Full redesign of the settings section for Vero 2.0"
+            src={settingsImage}
+            alt="Mastodon logo"
+            variant="gradient"
+          />
+          <WorkCard
+            className="col-span-1"
+            title="Settings"
+            description="Redesign UI to add Data Feeds"
+            src={dataFeedsImage}
+            alt="Mastodon logo"
+            variant="gradient"
+          />
+          <WorkCard
+            className="col-span-1"
+            title="Settings"
+            description="Google Analytics integration"
+            src={gaImage}
+            alt="Mastodon logo"
+            variant="gradient"
+          />
+          <WorkCard
+            className="col-span-1 md:col-span-2"
+            title="Settings"
+            description="Team members"
+            src={teamMembersImage}
+            alt="Mastodon logo"
+            variant="gradient"
+          />
+          <WorkDescription>
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Problem:</strong>
+              The settings section was fragmented, making it hard to manage projects,
+              accounts, and user preferences.
+            </p>
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Goal:</strong>
+              Lead the redesign of the settings experience, improving information
+              architecture, usability, and consistency across all setting types.
+            </p>
+          </WorkDescription>
+        </WorkGrid>
+
+        <WorkCard
+          className="col-span-full"
+          title="Custom HTML block"
+          description="Design for a custom HTML block in Vero's drag and drop editor"
+          src={customHtmlBlockImage}
+          alt="Mastodon logo"
+          variant="gradient"
+        />
+
+        <WorkGrid>
+          <WorkCard
+            className="col-span-1"
+            title="AB Testing"
+            description="Manual test"
+            src={manualTestImage}
+            alt="Mastodon logo"
+            variant="gradient"
+          />
+          <WorkCard
+            className="col-span-full md:col-span-2"
+            title="AB Testing"
+            description="Pick a winner"
+            src={pickAWinnerImage}
+            alt="Mastodon logo"
+            variant="gradient"
+          />
+          <WorkDescription>
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Problem:</strong>
+              Vero 2.0 lacked the support to A/B test campaigns, limiting marketers'
+              ability to experiment with and optimise their campaigns.
+            </p>
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Goal:</strong>
+              Designed the AB testing flow and UI for campaigns, focusing on a streamlined
+              experience for creating, launching, and evaluating message variants.
+            </p>
+          </WorkDescription>
+        </WorkGrid>
+        <WorkGrid title="SMS Channel">
+          <WorkCard
+            className="col-span-full"
+            title="SMS Channel"
+            description="New custom HTML block for Vero's drag and drop editor."
+            src={smsImage}
+            alt="Mastodon logo"
+            variant="gradient"
+          />
+          <WorkDescription>
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Problem:</strong>
+              Vero 2.0 lacked dedicated support for SMS messaging campaigns.
+            </p>
+            <p class="mx-auto max-w-prose text-xl">
+              <strong class="font-semibold text-slate-400">Goal:</strong>
+              Contribute to the design and implementation of a new UI for SMS campaign
+              creation, scheduling, and performance tracking.
+            </p>
+          </WorkDescription>
+        </WorkGrid>
+        <WorkGrid>
+          <WorkCard
+            className="col-span-full"
+            title="Vero marketing site"
+            description="Continous evolution of the Vero marketing site"
+            src={veroMarketingHomeImage}
+            alt="Vero marketing home redesign"
+            variant="gradient"
+          />
+          <WorkDescription href="https://www.getvero.com/">
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Problem:</strong>
+              The Vero brand and UI lacked consistency across marketing and product
+              touch-points.
+            </p>
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Goal:</strong>
+              Collaborate on a full redesign of the Vero brand and design system,
+              and lead applying and adapting it across the marketing website, signup/login
+              pages, blog, help center, and social media platforms to ensure a cohesive
+              and modern visual identity.
+            </p>
+          </WorkDescription>
+        </WorkGrid>
+        <WorkGrid>
+          <WorkCard
+            className="col-span-1 md:col-span-2"
+            title="Help Center"
+            description="Redesigned and implementation of the Help Center"
+            src={helpCenterImage}
+            alt="Help Center redesign"
+            variant="gradient"
+          />
+          <WorkCard
+            className="col-span-1"
+            title="Help Center"
+            description="Redesigned the search experience"
+            src={helpCenterSearchImage}
+            alt="Help Center search"
+            variant="gradient"
+          />
+          <WorkDescription href="https://help.getvero.com/">
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Problem:</strong>
+              Our help documentation was difficult to navigate, especially since
+              we added support for a second distinct product.
+            </p>
+            <p class="text-xl">
+              <strong class="font-semibold text-slate-400">Goal:</strong>
+              Lead the redesign and implementation of a new Help Center experience
+              with improved categorisation, navigation, and visual consistency, making
+              it easier for users to find and understand support content.
+            </p>
+          </WorkDescription>
+        </WorkGrid>
+      </div>
+
+      <div class="mt-32 mb-4 flex items-center justify-between gap-3 md:mb-6">
+        <h2 class="font-medium text-slate-400 md:text-xl">Small things</h2>
+      </div>
+
+      <div
+        class="columns-2 gap-7 space-y-7 md:columns-3 md:gap-10 md:space-y-10"
+      >
+        <WorkCard
+          className="inline-block"
+          description="Vero 2.0 sidebar"
+          src={vero2SidebarImage}
+          alt="Mastodon logo"
+        />
+        <WorkCard
+          className="inline-block"
+          description="Vero 2.0 profile dropdown"
+          src={vero2ProfileImage}
+          alt="Mastodon logo"
+        />
+        <WorkCard
+          className="inline-block"
+          description="Email type icons"
+          src={templateIconsImage}
+          alt="Mastodon logo"
+        />
+        <WorkCard
+          className="inline-block"
+          description="Vero 1.0 sidebar"
+          src={vero1SidebarImage}
+          alt="Mastodon logo"
+        />
+        <WorkCard
+          className="inline-block"
+          description="Vero 2.0 callouts"
+          src={vero2CalloutsImage}
+          alt="Vero 2.0 upgrade callouts"
+        />
+      </div>
+    </main>
+  </div>
 </Layout>

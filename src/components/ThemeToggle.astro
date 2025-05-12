@@ -1,0 +1,124 @@
+---
+import SystemIcon from "../images/system.svg";
+import SunIcon from "../images/sun.svg";
+import MoonIcon from "../images/moon.svg";
+
+const themes = [
+  { id: "system", label: "Switch to system theme", icon: SystemIcon },
+  { id: "light", label: "Switch to light theme", icon: SunIcon },
+  { id: "dark", label: "Switch dark theme", icon: MoonIcon },
+];
+---
+
+<div
+  class="hidden items-center gap-0.5 rounded-full bg-slate-100 p-0.5 md:inline-flex dark:bg-white/10"
+>
+  {
+    themes.map((theme) => (
+      <button
+        aria-label={theme.label}
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:bg-white data-[active=true]:bg-white data-[active=true]:text-teal-400 dark:data-[active=true]:bg-white/25"
+        id={`theme-${theme.id}`}
+        type="button"
+      >
+        <theme.icon class="fill-current transition-all duration-300 ease-in-out group-hover:fill-teal-400 group-focus:fill-teal-400" />
+      </button>
+    ))
+  }
+</div>
+
+<script>
+  // Type declarations
+  type Theme = "light" | "dark" | "system";
+
+  interface ThemeManager {
+    getTheme(): Theme;
+    setTheme(newTheme: Theme): void;
+    updateActiveButton(theme: Theme): void;
+  }
+
+  // Theme management
+  const theme: ThemeManager = {
+    getTheme() {
+      const storedTheme = localStorage.getItem("theme") as Theme;
+      return storedTheme || "system";
+    },
+    setTheme(newTheme: Theme) {
+      if (newTheme === "system") {
+        localStorage.removeItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.setAttribute(
+          "data-theme",
+          systemPrefersDark ? "dark" : "light"
+        );
+      } else {
+        localStorage.setItem("theme", newTheme);
+        document.documentElement.setAttribute("data-theme", newTheme);
+      }
+      this.updateActiveButton(newTheme);
+    },
+    updateActiveButton(theme: Theme) {
+      document.querySelectorAll('[id^="theme-"]').forEach((btn) => {
+        (btn as HTMLElement).dataset.active = "false";
+      });
+      const activeButton = document.getElementById(`theme-${theme}`);
+      if (activeButton) {
+        (activeButton as HTMLElement).dataset.active = "true";
+      }
+    },
+  };
+
+  // Initialize theme on page load
+  function initializeTheme() {
+    const initialTheme = theme.getTheme();
+    theme.setTheme(initialTheme);
+  }
+
+  // Initialize on first load
+  initializeTheme();
+
+  // Theme button click handlers
+  function setupThemeButtons() {
+    document.getElementById("theme-light")?.addEventListener("click", () => {
+      theme.setTheme("light");
+    });
+    document.getElementById("theme-dark")?.addEventListener("click", () => {
+      theme.setTheme("dark");
+    });
+    document.getElementById("theme-system")?.addEventListener("click", () => {
+      theme.setTheme("system");
+    });
+  }
+
+  // Setup buttons on first load
+  setupThemeButtons();
+
+  // Listen for system theme changes
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (!localStorage.getItem("theme")) {
+        document.documentElement.setAttribute(
+          "data-theme",
+          e.matches ? "dark" : "light"
+        );
+        theme.updateActiveButton("system");
+      }
+    });
+
+  // Handle Astro page transitions
+  document.addEventListener("astro:before-swap", () => {
+    const currentTheme = theme.getTheme();
+    localStorage.setItem("theme", currentTheme);
+  });
+
+  document.addEventListener("astro:after-swap", () => {
+    initializeTheme();
+    setupThemeButtons();
+  });
+
+  // Make theme available globally
+  (window as any).theme = theme;
+</script>
