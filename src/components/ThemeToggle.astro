@@ -11,13 +11,13 @@ const themes = [
 ---
 
 <div
-  class="hidden items-center gap-0.5 rounded-full bg-slate-100 p-0.5 md:inline-flex dark:bg-white/10"
+  class="hidden items-center rounded-full p-1 ring ring-slate-200 md:inline-flex dark:ring-white/10"
 >
   {
     themes.map((theme) => (
       <button
         aria-label={theme.label}
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:bg-white data-[active=true]:bg-white data-[active=true]:text-teal-400 dark:data-[active=true]:bg-white/25"
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:bg-slate-100 data-[active=true]:text-teal-400"
         id={`theme-${theme.id}`}
         type="button"
       >
