@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  className?: string;
+  title?: string;
+  description?: string;
+  alt?: string;
+  src: ImageMetadata;
+  imgColor?: string;
+  aligment?: "right" | "left";
+  href?: string;
+}
+
+const {
+  className,
+  title,
+  description,
+  alt,
+  src,
+  imgColor = "bg-teal-50",
+  aligment = "right",
+  href = "#",
+} = Astro.props;
+
+const aligmentStyle = {
+  right: "right-14 text-right",
+  left: "left-14",
+};
+---
+
+<a
+  class={`rounded-4xl block group overflow-clip relative shadow-2xl p-2 inset-ring inset-ring-white/5 bg-radial-[170%_115%_at_50%_49%] backdrop-blur-lg from-white/5 from-40% to-teal-400/30 ${className || ""}`}
+  href={href}
+>
+  <div class:list={["absolute top-14 z-10 w-78", aligmentStyle[aligment]]}>
+    <span class="text-cyan-950">Vero</span>
+    {
+      title && (
+        <h3 class="font-bricolage text-xl font-light -tracking-[0.025em] text-cyan-950 md:text-4xl">
+          {title}
+        </h3>
+      )
+    }
+    <p class="mt-0.5 text-base text-slate-400 md:mt-1.5 md:text-xl">
+      {description}
+    </p>
+  </div>
+
+  <div
+    class:list={[
+      "absolute bottom-14 z-10 flex size-15 items-center justify-center rounded-2xl bg-slate-900 transition duration-300 ease-in-out group-hover:translate-x-2",
+      aligmentStyle[aligment],
+    ]}
+  >
+    <span class="text-white1 text-3xl font-light"> → </span>
+  </div>
+
+  <div class:list={["overflow-clip rounded-3xl", imgColor]}>
+    <Image
+      class="rounded-2xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-105"
+      src={src}
+      alt={alt || "Case study image"}
+    />
+  </div>
+</a>
