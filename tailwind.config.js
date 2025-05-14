@@ -1,0 +1,45 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      typography: () => ({
+        teal: {
+          css: {
+            "--tw-prose-body": "currentColor",
+            "--tw-prose-headings": "currentColor",
+            "--tw-prose-lead": "var(--color-teal-950)",
+            "--tw-prose-links": "currentColor",
+            "--tw-prose-bold": "currentColor",
+            "--tw-prose-counters": "var(--color-teal-600)",
+            "--tw-prose-bullets": "var(--color-teal-400)",
+            "--tw-prose-hr": "var(--color-teal-300)",
+            "--tw-prose-quotes": "var(--color-teal-900)",
+            "--tw-prose-quote-borders": "var(--color-teal-300)",
+            "--tw-prose-captions": "var(--color-slate-400)",
+            "--tw-prose-code": "var(--color-teal-900)",
+            "--tw-prose-pre-code": "var(--color-teal-100)",
+            "--tw-prose-pre-bg": "var(--color-teal-900)",
+            "--tw-prose-th-borders": "var(--color-teal-300)",
+            "--tw-prose-td-borders": "var(--color-teal-200)",
+            "--tw-prose-invert-body": "currentColor",
+            "--tw-prose-invert-headings": "currentColor",
+            "--tw-prose-invert-lead": "var(--color-teal-300)",
+            "--tw-prose-invert-links": "currentColor",
+            "--tw-prose-invert-bold": "currentColor",
+            "--tw-prose-invert-counters": "var(--color-teal-400)",
+            "--tw-prose-invert-bullets": "var(--color-teal-600)",
+            "--tw-prose-invert-hr": "var(--color-teal-700)",
+            "--tw-prose-invert-quotes": "var(--color-teal-100)",
+            "--tw-prose-invert-quote-borders": "var(--color-teal-700)",
+            "--tw-prose-invert-captions": "var(--color-teal-400)",
+            "--tw-prose-invert-code": "var(--color-white)",
+            "--tw-prose-invert-pre-code": "var(--color-teal-300)",
+            "--tw-prose-invert-pre-bg": "rgb(0 0 0 / 50%)",
+            "--tw-prose-invert-th-borders": "var(--color-teal-600)",
+            "--tw-prose-invert-td-borders": "var(--color-teal-700)",
+          },
+        },
+      }),
+    },
+  },
+};

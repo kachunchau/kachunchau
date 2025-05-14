@@ -4,9 +4,10 @@ interface Props {
 }
 
 const { href } = Astro.props;
+const displayText = href?.includes("https://") ? href : "View Project";
 ---
 
-<div class="col-span-1 mt-2.5 md:col-span-full md:mt-10">
+<div class="col-span-1 md:col-span-full">
   <div class="mx-auto max-w-2xl space-y-7">
     <slot />
 
@@ -16,7 +17,7 @@ const { href } = Astro.props;
           class="mt-10 flex items-center justify-between gap-4 rounded-2xl bg-white/5 px-10 py-7 text-2xl text-white transition duration-300 ease-in-out hover:bg-white/10"
           href={href}
         >
-          <span class="font-medium">{href}</span>{" "}
+          <span class="font-medium">{displayText}</span>{" "}
           <span class="text-slate-400">↗</span>
         </a>
       )
