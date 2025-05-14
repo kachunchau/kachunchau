@@ -6,14 +6,10 @@ import WorkCard from "../components/WorkCard.astro";
 import WorkDescription from "../components/WorkDescription.astro";
 import Button from "../components/Button.astro";
 import VeroLogo from "../images/vero.svg";
-import journeysImage from "../images/journeys@2x.png";
 import settingsImage from "../images/settings@2x.png";
-import dataFeedsImage from "../images/data-feeds@2x.png";
-import gaImage from "../images/ga@2x.png";
-import teamMembersImage from "../images/team-members@2x.png";
-import customHtmlBlockImage from "../images/custom-html-block@2x.png";
-import manualTestImage from "../images/manual-test@2x.png";
-import pickAWinnerImage from "../images/pick-a-winner@2x.png";
+import customHtmlBlocksImage from "../images/custom-html-blocks@2x.png";
+import customHtmlEditorImage from "../images/custom-html-editor@2x.png";
+import abTestingImage from "../images/ab-testing@2x.png";
 import smsImage from "../images/sms@2x.png";
 import veroMarketingHomeImage from "../images/vero-marketing-home@2x.png";
 import helpCenterImage from "../images/help-center@2x.png";
@@ -32,7 +28,7 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
 <Layout title="Ka-Chun Chau — UI Designer">
   <Masthead>
     <h1
-      class="font-bricolage text-4xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.03em] dark:text-white"
+      class="font-bricolage text-4xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.04em] dark:text-white"
     >
       <span class="font-medium">Hey there</span> &mdash; I'm KC, a UI Designer and
       developer from Armagh, Northern Ireland, now based in Melbourne, Australia.
@@ -77,90 +73,41 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
       </div>
 
       <div class="space-y-20 md:space-y-32">
-        <WorkGrid>
-          <WorkCard
-            className="col-span-1 md:col-span-2"
-            title="Settings"
-            description="Full redesign of the settings section for Vero 2.0"
-            src={settingsImage}
-            alt="Mastodon logo"
-            variant="gradient"
-          />
-          <WorkCard
-            className="col-span-1"
-            title="Settings"
-            description="Redesign UI to add Data Feeds"
-            src={dataFeedsImage}
-            alt="Mastodon logo"
-            variant="gradient"
-          />
-          <WorkCard
-            className="col-span-1"
-            title="Settings"
-            description="Google Analytics integration"
-            src={gaImage}
-            alt="Mastodon logo"
-            variant="gradient"
-          />
-          <WorkCard
-            className="col-span-1 md:col-span-2"
-            title="Settings"
-            description="Team members"
-            src={teamMembersImage}
-            alt="Mastodon logo"
-            variant="gradient"
-          />
-          <WorkDescription>
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Problem:</strong>
-              The settings section was fragmented, making it hard to manage projects,
-              accounts, and user preferences.
-            </p>
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Solution:</strong>
-              Lead the redesign of the settings experience, improving information
-              architecture, usability, and consistency across all setting types.
-            </p>
-          </WorkDescription>
-        </WorkGrid>
+        <WorkCard
+          title="Settings"
+          description="Full redesign of the settings section for Vero 2.0"
+          src={settingsImage}
+          alt="Full redesign of the settings section for Vero 2.0"
+          caseStudy={true}
+          href="/work/settings"
+        />
 
         <WorkCard
-          title="Custom HTML block"
-          description="Design for a custom HTML block in Vero's drag and drop editor"
-          src={customHtmlBlockImage}
-          alt="Mastodon logo"
-          variant="gradient"
+          className="col-span-1 md:col-span-2"
+          title="AB Testing"
+          description="Redesigning A/B Testing for newsletter-style campaigns"
+          src={abTestingImage}
+          alt="Redesigning A/B Testing for newsletter-style campaigns"
+          caseStudy={true}
+          href="/work/ab-testing"
         />
 
         <WorkGrid>
           <WorkCard
             className="col-span-1"
-            title="AB Testing"
-            description="Manual test"
-            src={manualTestImage}
+            title="HTML block"
+            description="Add a custom HTML block"
+            src={customHtmlBlocksImage}
             alt="Mastodon logo"
-            variant="gradient"
           />
+
           <WorkCard
-            className="col-span-full md:col-span-2"
-            title="AB Testing"
-            description="Pick a winner"
-            src={pickAWinnerImage}
+            className="col-span-1 md:col-span-2"
+            title="HTML block"
+            description="Design for a custom HTML editor in Vero's drag and drop editor"
+            src={customHtmlEditorImage}
             alt="Mastodon logo"
-            variant="gradient"
           />
-          <WorkDescription>
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Problem:</strong>
-              Vero 2.0 lacked the support to A/B test campaigns, limiting marketers'
-              ability to experiment with and optimise their campaigns.
-            </p>
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Solution:</strong>
-              Designed the AB testing flow and UI for campaigns, focusing on a streamlined
-              experience for creating, launching, and evaluating message variants.
-            </p>
-          </WorkDescription>
         </WorkGrid>
 
         <WorkGrid>
@@ -170,45 +117,67 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
             description="UI to allow sending of SMS message campaigns"
             src={smsImage}
             alt="SMS Channel"
-            variant="gradient"
           />
-          <WorkDescription>
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Problem:</strong>
-              Vero 2.0 lacked dedicated support for SMS messaging campaigns.
-            </p>
-            <p class="mx-auto max-w-prose text-xl">
-              <strong class="font-semibold text-slate-400">Solution:</strong>
-              Contribute to the design and implementation of a new UI for SMS messaging
-              campaign creation.
-            </p>
-          </WorkDescription>
         </WorkGrid>
 
-        <WorkGrid>
+        <h2 class="mt-32 mb-4 font-medium text-slate-400 md:mb-6 md:text-xl">
+          Small things
+        </h2>
+
+        <div
+          class="columns-2 gap-7 space-y-7 md:columns-3 md:gap-10 md:space-y-10"
+        >
           <WorkCard
-            className="col-span-full"
-            title="Vero marketing site"
-            description="Continuous evolution of the Vero marketing site"
-            src={veroMarketingHomeImage}
-            alt="Vero marketing home redesign"
-            variant="gradient"
+            className="inline-block"
+            description="Vero 2.0 profile dropdown"
+            src={vero2ProfileImage}
+            alt="Account & profile dropdown"
+            variant="simple"
           />
-          <WorkDescription href="https://www.getvero.com/">
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Problem:</strong>
-              The Vero brand and UI lacked consistency across marketing and product
-              touch-points.
-            </p>
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Solution:</strong>
-              Collaborate on a full redesign of the Vero brand and design system,
-              and lead applying and adapting it across the marketing website, signup/login
-              pages, blog, help center, and social media platforms to ensure a cohesive
-              and modern visual identity.
-            </p>
-          </WorkDescription>
-        </WorkGrid>
+          <WorkCard
+            className="inline-block"
+            description="Vero 2.0 upgrade callouts"
+            src={vero2CalloutsImage}
+            alt="Vero 2.0 upgrade callouts"
+            variant="simple"
+          />
+          <WorkCard
+            className="inline-block"
+            description="Vero 2.0 sidebar"
+            src={vero2SidebarImage}
+            alt="Vero 2.0 sidebar redesign"
+            variant="simple"
+          />
+          <WorkCard
+            className="inline-block"
+            description="Email type icons"
+            src={templateIconsImage}
+            alt="Mastodon logo"
+            imgColor="bg-sky-50"
+            variant="simple"
+          />
+          <WorkCard
+            className="inline-block"
+            description="Vero 1.0 sidebar redesign"
+            src={vero1SidebarImage}
+            alt="Vero 1.0 sidebar redesign"
+            variant="simple"
+          />
+          <WorkCard
+            className="inline-block"
+            description="Content breakdown"
+            src={contentBreakdownImage}
+            alt="Content breakdown table"
+            variant="simple"
+          />
+        </div>
+
+        <WorkCard
+          title="Vero marketing site"
+          description="Continuous evolution of the Vero marketing site"
+          src={veroMarketingHomeImage}
+          alt="Vero marketing home redesign"
+        />
 
         <WorkGrid>
           <WorkCard
@@ -217,7 +186,6 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
             description="Redesigned and implementation of the Help Center"
             src={helpCenterImage}
             alt="Help Center redesign"
-            variant="gradient"
           />
           <WorkCard
             className="col-span-1"
@@ -225,76 +193,15 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
             description="Redesigned the search experience"
             src={helpCenterSearchImage}
             alt="Help Center search"
-            variant="gradient"
           />
-          <WorkDescription href="https://help.getvero.com/">
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Problem:</strong>
-              Our help documentation was difficult to navigate, especially since
-              we added support for a second distinct product.
-            </p>
-            <p class="text-xl">
-              <strong class="font-semibold text-slate-400">Solution:</strong>
-              Lead the redesign and implementation of a new Help Center experience
-              with improved categorisation, navigation, and visual consistency, making
-              it easier for users to find and understand support content.
-            </p>
-          </WorkDescription>
         </WorkGrid>
-      </div>
-
-      <div class="mt-32 mb-4 flex items-center justify-between gap-3 md:mb-6">
-        <h2 class="font-medium text-slate-400 md:text-xl">Small things</h2>
-      </div>
-
-      <div
-        class="columns-2 gap-7 space-y-7 md:columns-3 md:gap-10 md:space-y-10"
-      >
-        <WorkCard
-          className="inline-block"
-          description="Vero 2.0 profile dropdown"
-          src={vero2ProfileImage}
-          alt="Mastodon logo"
-        />
-        <WorkCard
-          className="inline-block"
-          description="Vero 2.0 callouts"
-          src={vero2CalloutsImage}
-          alt="Vero 2.0 upgrade callouts"
-        />
-        <WorkCard
-          className="inline-block"
-          description="Vero 2.0 sidebar"
-          src={vero2SidebarImage}
-          alt="Vero 2.0 sidebar redesign"
-        />
-        <WorkCard
-          className="inline-block"
-          description="Email type icons"
-          src={templateIconsImage}
-          alt="Mastodon logo"
-          imgColor="bg-sky-50"
-        />
-        <WorkCard
-          className="inline-block"
-          description="Vero 1.0 sidebar redesign"
-          src={vero1SidebarImage}
-          alt="Vero 1.0 sidebar redesign"
-          imgColor="bg-sky-50"
-        />
-        <WorkCard
-          className="inline-block"
-          description="Content breakdown"
-          src={contentBreakdownImage}
-          alt="Content breakdown table"
-        />
       </div>
 
       <div class="mt-32 mb-5 flex items-center justify-between gap-3 md:mb-10">
         <div class="text-xl font-medium md:text-3xl">blubolt</div>
 
         <div class="rounded-full px-4 py-2 inset-ring-2 inset-ring-white/10">
-          2014 - 2018
+          2014 - 2017
         </div>
       </div>
 
@@ -303,7 +210,7 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
         description="Redesigns of various eCommerce stores"
         src={bluboltStoresImage}
         alt="Mastodon logo"
-        variant="gradient"
+        variant="simple"
         imgColor="bg-purple-50"
       />
     </main>

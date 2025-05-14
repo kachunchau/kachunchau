@@ -10,6 +10,9 @@ interface Props {
   src?: ImageMetadata;
   imgColor?: string;
   variant?: "gradient" | "simple";
+  reverse?: boolean;
+  caseStudy?: boolean;
+  href?: string;
 }
 
 const {
@@ -19,7 +22,9 @@ const {
   alt,
   src,
   imgColor = "bg-teal-50",
-  variant = "simple",
+  variant = "gradient",
+  caseStudy = false,
+  href = "#",
 } = Astro.props;
 
 const variantStyles = {
@@ -27,31 +32,60 @@ const variantStyles = {
     "bg-radial-[170%_115%_at_50%_49%] backdrop-blur-lg from-white/5 from-40% to-teal-400/30",
   simple: "bg-white/5",
 };
+
+const Tag = caseStudy ? "a" : "div";
 ---
 
-<div
-  class={`rounded-4xl shadow-2xl p-2 inset-ring inset-ring-white/5 ${variantStyles[variant]} ${className || ""}`}
+<Tag
+  class={`rounded-4xl block group overflow-clip relative shadow-2xl p-2 inset-ring inset-ring-white/5 ${variantStyles[variant]} ${className || ""}`}
+  {...caseStudy && { href }}
 >
   {
     src && (
-      <div class:list={["overflow-clip rounded-3xl", imgColor]}>
+      <div class:list={["relative overflow-clip rounded-3xl", imgColor]}>
         <Image
-          class="rounded-xl drop-shadow-xl"
+          class="rounded-2xl drop-shadow-xl"
           src={src}
           alt={alt || "Work card image"}
         />
+
+        {caseStudy && (
+          <div class="size-15 absolute right-2.5 bottom-2.5 rounded-2xl bg-slate-900  z-20 flex items-center justify-center transition duration-300 group-hover:bg-white ease-in-out"><span class="text-white group-hover:text-cyan-950 font-light text-3xl">→</span></div>
+
+
+          <div class="invisible absolute inset-0 z-10 flex items-center justify-center bg-slate-900/70 opacity-0 transition duration-300 ease-in-out group-hover:visible group-hover:opacity-100">
+            <span class="text-2xl font-medium">
+              Read case study
+            </span>
+          </div>
+        )}
       </div>
     )
   }
 
   <div class="px-6 pt-4.5 pb-2.5">
-    {title && <h3 class="text-lg font-semibold md:text-xl">{title}</h3>}
     {
-      description && (
-        <p class="text-base text-slate-400 md:text-lg">{description}</p>
+      title && (
+        <h3 class="text-xl font-semibold md:text-2xl">
+          {title}{" "}
+          {caseStudy && <span class="font-light text-slate-400">→</span>}
+        </h3>
       )
     }
+    <div class="flex items-center justify-between gap-2">
+      {
+        description && (
+          <p class="text-base text-slate-400 md:text-xl">{description}</p>
+        )
+      }
+      <!-- {
+        caseStudy && (
+          <span class="flex items-center gap-2 md:text-lg">
+            <span class="font-medium">View case study</span>
+            <span class="font-light text-slate-300">→</span>
+          </span>
+        )
+      } -->
+    </div>
   </div>
-
-  <slot />
-</div>
+</Tag>

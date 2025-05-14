@@ -3,13 +3,19 @@ import Header from "./Header.astro";
 
 interface Props {
   variant?: "white" | "transparent";
+  size?: "default" | "compact";
 }
 
-const { variant = "white" } = Astro.props;
+const { variant = "white", size = "default" } = Astro.props;
 
 const variantStyles = {
   white: "bg-linear-to-b from-cyan-50 to-50% to-white dark:bg-none",
   transparent: "bg-transparent",
+};
+
+const sizeStyles = {
+  default: "max-w-[1200px] md:px-20 xl:px-0",
+  compact: " max-w-2xl md:px-0 ",
 };
 ---
 
@@ -17,7 +23,7 @@ const variantStyles = {
   <Header />
 
   <div
-    class="mx-auto max-w-[1200px] px-10 pt-30 pb-20 md:px-20 md:pt-44 md:pb-32 xl:px-0"
+    class={`mx-auto px-10 pt-30 pb-20 md:pt-44 md:pb-32 ${sizeStyles[size]}`}
   >
     <slot />
   </div>
