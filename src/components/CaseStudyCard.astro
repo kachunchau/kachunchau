@@ -8,7 +8,7 @@ interface Props {
   description?: string;
   alt?: string;
   src: ImageMetadata;
-  imgColor?: string;
+  gradient?: "primary" | "secondary";
   aligment?: "right" | "left";
   href?: string;
 }
@@ -19,47 +19,71 @@ const {
   description,
   alt,
   src,
-  imgColor = "bg-teal-50",
+  gradient = "primary",
   aligment = "right",
-  href = "#",
+  href = "#none",
 } = Astro.props;
 
-const aligmentStyle = {
-  right: "right-14 text-right",
-  left: "left-14",
+const gradientStyles = {
+  primary: "from-cyan-100 to-yellow-50",
+  secondary: "from-yellow-50 to-cyan-100 ",
+};
+
+const aligmentStyles = {
+  right: "self-end text-right",
+  left: "self-start",
 };
 ---
 
 <a
-  class={`rounded-4xl block group overflow-clip relative shadow-2xl p-2 inset-ring inset-ring-white/5 bg-radial-[170%_115%_at_50%_49%] backdrop-blur-lg from-white/5 from-40% to-teal-400/30 ${className || ""}`}
-  href={href}
+  class:list={["group relative block rounded-4xl shadow-2xl", className]}
+  href={href !== "#none" ? href : undefined}
 >
-  <div class:list={["absolute top-14 z-10 w-78", aligmentStyle[aligment]]}>
-    <span class="text-cyan-950">Vero</span>
+  <div
+    class:list={[
+      "absolute inset-5 z-10 flex flex-col items-stretch md:inset-15",
+    ]}
+  >
+    <div class:list={["w-76 self-end", aligmentStyles[aligment]]}>
+      <span
+        class="inline-block text-sm tracking-widest text-slate-400 uppercase"
+        >Vero</span
+      >
+      <h3
+        class="font-bricolage mt-1 text-xl font-semibold -tracking-[0.025em] text-cyan-950 md:mt-2 md:text-4xl"
+      >
+        {title}
+      </h3>
+      <p class="mt-1 text-base text-cyan-950 md:mt-2 md:text-xl">
+        {description}
+      </p>
+    </div>
+
     {
-      title && (
-        <h3 class="font-bricolage text-xl font-light -tracking-[0.025em] text-cyan-950 md:text-4xl">
-          {title}
-        </h3>
+      href !== "#none" && (
+        <div
+          class:list={[
+            "group/link z-10 mt-auto flex items-center gap-2 rounded-full py-2 ring-2 ring-transparent transition-all duration-300 ease-in-out group-hover:px-5.5 group-hover:ring-cyan-950/25 hover:bg-cyan-950 hover:ring-cyan-950",
+            aligmentStyles[aligment],
+          ]}
+        >
+          <span class="inline-block font-semibold text-cyan-950 transition-transform duration-300 ease-in-out group-hover/link:text-cyan-50 md:text-xl">
+            Read case study
+          </span>
+          <span class="text-xl font-light text-slate-400">→</span>
+        </div>
       )
     }
-    <p class="mt-0.5 text-base text-slate-400 md:mt-1.5 md:text-xl">
-      {description}
-    </p>
   </div>
 
   <div
     class:list={[
-      "absolute bottom-14 z-10 flex size-15 items-center justify-center rounded-2xl bg-slate-900 transition duration-300 ease-in-out group-hover:translate-x-2",
-      aligmentStyle[aligment],
+      "transform-gpu overflow-clip rounded-3xl bg-linear-120",
+      gradientStyles[gradient],
     ]}
   >
-    <span class="text-white1 text-3xl font-light"> → </span>
-  </div>
-
-  <div class:list={["overflow-clip rounded-3xl", imgColor]}>
     <Image
-      class="rounded-2xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-105"
+      class="rounded-[inherit] drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025]"
       src={src}
       alt={alt || "Case study image"}
     />
