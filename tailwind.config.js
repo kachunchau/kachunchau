@@ -3,11 +3,11 @@ module.exports = {
   theme: {
     extend: {
       typography: () => ({
-        teal: {
+        cyan: {
           css: {
             "--tw-prose-body": "currentColor",
             "--tw-prose-headings": "currentColor",
-            "--tw-prose-lead": "var(--color-teal-950)",
+            "--tw-prose-lead": "currentColor",
             "--tw-prose-links": "currentColor",
             "--tw-prose-bold": "currentColor",
             "--tw-prose-counters": "var(--color-teal-600)",
@@ -42,5 +42,4 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
 };
