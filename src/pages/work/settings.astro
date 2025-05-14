@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
+import CaseStudyCallout from "../../components/CaseStudyCallout.astro";
 import netlifyImage from "../../images/netlify@2x.png";
 import vercelImage from "../../images/vercel@2x.png";
 import inlineFullScreenImage from "../../images/inline-full-screen@2x.png";
@@ -12,114 +13,111 @@ import teamMembersImage from "../../images/team-members@2x.png";
 ---
 
 <CaseStudyLayout
-  title="Redesigning Vero 2.0 Settings: Making Complex Simple"
-  headline="Redesigning Vero 2.0 Settings: Making Complex Simple"
+  title="Redesigning Vero 2.0 Settings"
+  headline="Redesigning Vero 2.0 Settings"
 >
-  <div
-    class="-mx-10 rounded-3xl border border-slate-200 p-10 dark:border-white/10"
-  >
-    <h2 class="mt-0">Overview</h2>
-    <p class="mb-0">
-      In Vero 2.0, the settings experience was confusing and spread out. Users
-      had trouble managing accounts, projects, and preferences without getting
-      lost. I led the redesign of the entire settings system to make it easier
-      to use, more consistent, and ready to scale.
+  <div class="max-w-prose">
+    <CaseStudyCallout
+      description="In Vero 2.0, the settings experience was confusing and spread out. Users had trouble managing accounts, projects, and preferences without getting lost. I led the redesign of the entire settings system to make it easier to use, more consistent, and ready to scale."
+    />
+
+    <h2>The Problem</h2>
+    <ul>
+      <li>
+        The settings section was fragmented, making it hard to manage projects,
+        accounts, and user preferences.
+      </li>
+      <li>
+        Several key settings weren't yet available in Vero 2.0 and had to be
+        migrated from the legacy platform.
+      </li>
+      <li>There was no clear structure or consistent design.</li>
+      <li>
+        The frontend was being rewritten in <a
+          href="https://nextjs.org/"
+          target="_blank"
+          rel="noopener noreferrer">Next.js</a
+        >, replacing the older <a
+          href="https://emberjs.com/"
+          target="_blank"
+          rel="noopener noreferrer">Ember</a
+        >
+        setup, which required rethinking how settings were structured, implemented,
+        and migrated.
+      </li>
+    </ul>
+    <p>This created frustration for both customers and internal teams.</p>
+
+    <h2>Goals</h2>
+    <ul>
+      <li>Organize all settings into a clear, logical structure.</li>
+      <li>Improve navigation and clarity.</li>
+      <li>Use consistent design patterns for every setting type.</li>
+      <li>Build a scalable system for future features.</li>
+    </ul>
+    <h2
+      class="font-bricolage text-xl font-light -tracking-[0.01em] md:text-3xl"
+    >
+      Process
+    </h2>
+    <h3>Research</h3>
+    <p>
+      Collaborated with the Head of Product to conduct a comprehensive audit of
+      all existing settings across user roles and project types. We identified
+      key gaps, overlaps, and usability issues that were creating friction. To
+      guide our approach, we also reviewed how tools in adjacent industries—such
+      as Netlify and Vercel—organised their settings, drawing inspiration from
+      proven patterns.
     </p>
   </div>
 
-  <h2>The Problem</h2>
-  <ul>
-    <li>
-      The settings section was fragmented, making it hard to manage projects,
-      accounts, and user preferences.
-    </li>
-    <li>
-      Several key settings weren't yet available in Vero 2.0 and had to be
-      migrated from the legacy platform.
-    </li>
-    <li>There was no clear structure or consistent design.</li>
-    <li>
-      The frontend was being rewritten in <a
-        href="https://nextjs.org/"
-        target="_blank"
-        rel="noopener noreferrer">Next.js</a
-      >, replacing the older <a
-        href="https://emberjs.com/"
-        target="_blank"
-        rel="noopener noreferrer">Ember</a
-      >
-      setup, which required rethinking how settings were structured, implemented,
-      and migrated.
-    </li>
-  </ul>
-  <p>This created frustration for both customers and internal teams.</p>
-
-  <h2>Goals</h2>
-  <ul>
-    <li>Organize all settings into a clear, logical structure.</li>
-    <li>Improve navigation and clarity.</li>
-    <li>Use consistent design patterns for every setting type.</li>
-    <li>Build a scalable system for future features.</li>
-  </ul>
-
-  <h2 class="font-bricolage text-xl font-light -tracking-[0.01em] md:text-3xl">
-    Process
-  </h2>
-
-  <h3>Research</h3>
-
-  <p>
-    Collaborated with the Head of Product to conduct a comprehensive audit of
-    all existing settings across user roles and project types. We identified key
-    gaps, overlaps, and usability issues that were creating friction. To guide
-    our approach, we also reviewed how tools in adjacent industries—such as
-    Netlify and Vercel—organised their settings, drawing inspiration from proven
-    patterns.
-  </p>
-
-  <div class="-mx-[calc((1200px-48rem)/2)] grid w-[1200px] grid-cols-2 gap-10">
+  <div class="-mx-10 grid grid-cols-2 gap-10">
     <figure>
       <Image
-        class="rounded-3xl"
+        class="rounded-3xl outline outline-black/5"
         src={netlifyImage}
         alt="Screenshot of Netlify for competitor analysis"
       />
+
       <figcaption>Screenshot of Netlify for competitor analysis</figcaption>
     </figure>
 
     <figure>
       <Image
-        class="rounded-3xl"
+        class="rounded-3xl outline outline-black/5"
         src={vercelImage}
         alt="Screenshot of Vercel for competitor analysis"
       />
+
       <figcaption>Screenshot of Vercel for competitor analysis</figcaption>
     </figure>
   </div>
 
-  <h3>Exploring designs</h3>
+  <div class="max-w-prose">
+    <h3>Exploring designs</h3>
 
-  <p>
-    We have a Sketch library our our components and I explored different mid to
-    hi-fidelity mockups—testing different ways to group and present the settings
-    sidebar. I shared these iterations regularly internally to gather feedback
-    early. This collaborative process helped me evaluate trade-offs due to
-    balancing business goals or technical constraints.
-  </p>
+    <p>
+      We have a Sketch library our our components and I explored different mid
+      to hi-fidelity mockups—testing different ways to group and present the
+      settings sidebar. I shared these iterations regularly internally to gather
+      feedback early. This collaborative process helped me evaluate trade-offs
+      due to balancing business goals or technical constraints.
+    </p>
 
-  <ul>
-    <li>
-      <strong>Modal vs inline for profile settings:</strong> Should profiles
-      open in a modal for quick access, or be embedded inline within the
-      settings view?
-    </li>
-    <li>
-      <strong>Inline vs full-screen views:</strong> Should it be full-screen so
-      the new settings could also be used in Vero 1.0?
-    </li>
-  </ul>
+    <ul>
+      <li>
+        <strong>Modal vs inline for profile settings:</strong> Should profiles
+        open in a modal for quick access, or be embedded inline within the
+        settings view?
+      </li>
+      <li>
+        <strong>Inline vs full-screen views:</strong> Should it be full-screen
+        so the new settings could also be used in Vero 1.0?
+      </li>
+    </ul>
+  </div>
 
-  <figure class="-mx-[calc((1200px-48rem)/2)] w-[1200px]">
+  <figure class="-mx-10">
     <Image
       class="rounded-3xl"
       src={inlineFullScreenImage}
@@ -129,13 +127,14 @@ import teamMembersImage from "../../images/team-members@2x.png";
     <figcaption>Inline vs full screen</figcaption>
   </figure>
 
-  <div class="-mx-[calc((1200px-48rem)/2)] grid w-[1200px] grid-cols-3 gap-10">
+  <div class="-mx-10 grid grid-cols-3 gap-10">
     <figure class="col-span-1">
       <Image
         class="rounded-3xl"
         src={colorPickerStatesImage}
         alt="Color picker state"
       />
+
       <figcaption>Color picker state mockups</figcaption>
     </figure>
 
@@ -145,60 +144,66 @@ import teamMembersImage from "../../images/team-members@2x.png";
         src={settingsSidebarsImage}
         alt="Different setting sidebars"
       />
+
       <figcaption>Settings sidebar mockups</figcaption>
     </figure>
   </div>
 
-  <h3>Refining design</h3>
+  <div class="max-w-prose">
+    <h3>Refining design</h3>
 
-  <p>
-    I focused on refining the design to balance usability, design consistency,
-    and technical feasibility. One of the key constraints was that, while the
-    new settings were being designed for a Next.js environment, the broader app
-    still ran on Ember. This meant I had to ensure the new designs visually
-    aligned with the Ember app to avoid jarring context shifts for users.
-  </p>
+    <p>
+      I focused on refining the design to balance usability, design consistency,
+      and technical feasibility. One of the key constraints was that, while the
+      new settings were being designed for a Next.js environment, the broader
+      app still ran on Ember. This meant I had to ensure the new designs
+      visually aligned with the Ember app to avoid jarring context shifts for
+      users.
+    </p>
+  </div>
 
-  <div
-    class="-mx-[calc((1200px-48rem)/2)] grid w-[1200px] grid-cols-1 gap-10 md:grid-cols-3"
-  >
-    <figure class="col-span-1 overflow-clip rounded-3xl bg-teal-50">
-      <Image
-        class="col-span-1 rounded-xl drop-shadow-xl"
-        title="Settings"
-        src={dataFeedsImage}
-        alt="Mastodon logo"
-      />
+  <div class="-mx-10 grid grid-cols-1 gap-10 md:grid-cols-3">
+    <figure class="col-span-1">
+      <div class="overflow-clip rounded-3xl bg-teal-50">
+        <Image
+          class="mb-0 drop-shadow-xl"
+          src={dataFeedsImage}
+          alt="Data feeds"
+        />
+      </div>
+      <figcaption>Data feeds</figcaption>
     </figure>
-    <figure
-      class="col-span-1 overflow-clip rounded-3xl bg-teal-50 md:col-span-2"
-    >
-      <Image
-        class="col-span-1 rounded-xl drop-shadow-xl md:col-span-2"
-        title="Settings"
-        src={teamMembersImage}
-        alt="Mastodon logo"
-      />
+    <figure class="col-span-1 md:col-span-2">
+      <div class="overflow-clip rounded-3xl bg-teal-50">
+        <Image
+          class="mb-0 drop-shadow-xl"
+          src={teamMembersImage}
+          alt="Team members"
+        />
+      </div>
+      <figcaption>Team members</figcaption>
     </figure>
   </div>
 
-  <p>
-    I also made small but important tweaks—adjusting spacing, improving text
-    hierarchy, and clarifying navigation states—to ensure a smoother, more
-    predictable experience across all settings types. This helped reduce
-    cognitive load and prepared the interface for scaling as new settings were
-    added.
-  </p>
+  <div class="max-w-prose">
+    <p>
+      I also made small but important tweaks—adjusting spacing, improving text
+      hierarchy, and clarifying navigation states—to ensure a smoother, more
+      predictable experience across all settings types. This helped reduce
+      cognitive load and prepared the interface for scaling as new settings were
+      added.
+    </p>
 
-  <h2>Release and iterate</h2>
+    <h2>Release and iterate</h2>
 
-  <p>
-    After release, we received feedback that the sidebar in the settings section
-    felt visually disconnected from the rest of the app—due to differences in
-    width and styling compared to the non-settings sidebar.
-  </p>
-  <p>
-    We responded by standardising the layout and aligning the styles of the
-    settings sidebar to improve visual consistency.
-  </p>
+    <p>
+      After release, we received feedback that the sidebar in the settings
+      section felt visually disconnected from the rest of the app—due to
+      differences in width and styling compared to the non-settings sidebar.
+    </p>
+    <p>
+      We responded by standardising the layout and aligning the styles of the
+      settings sidebar to improve visual consistency.
+    </p>
+  </div>
 </CaseStudyLayout>

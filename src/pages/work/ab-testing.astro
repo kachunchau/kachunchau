@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
+import CaseStudyCallout from "../../components/CaseStudyCallout.astro";
+// import CaseStudyCallout from "../../components/CaseStudyCallout.astro";
 import netlifyImage from "../../images/netlify@2x.png";
 import vercelImage from "../../images/vercel@2x.png";
 import inlineFullScreenImage from "../../images/inline-full-screen@2x.png";
@@ -15,102 +17,84 @@ import teamMembersImage from "../../images/team-members@2x.png";
   title="Redesigning A/B Testing for newsletter-style campaigns"
   headline="Redesigning A/B Testing for newsletter-style campaigns"
 >
-  <div class="bg-white dark:bg-transparent">
-    <main class="mx-auto max-w-[1200px] px-10 pb-20 md:px-20 md:pb-32 xl:px-0">
-      <div
-        class="prose prose-xl prose-img:shadow-xl prose-teal prose-ul:list-disc prose-p:text-pretty prose-headings:text-balance prose-h3:font-semibold prose-h2:text-2xl prose-h2:md:text-3xl prose-h3:text-xl prose-h3:md:text-2xl prose-h2:font-bricolage prose-h2:font-light prose-h2:-tracking-[0.025em] mx-auto max-w-2xl"
-      >
-        <div
-          class="-mx-10 rounded-3xl border border-slate-200 p-10 dark:border-white/10"
-        >
-          <h2 class="mt-0">Overview</h2>
-          <p class="mb-0">
-            As part of the Vero 2.0 merge, I led the redesign of A/B testing for
-            newsletter-style campaigns. The goal was to evaluate message
-            variants while ensuring we could rapidly deliver a working feature
-            to prevent customer churn. This work required balancing urgency with
-            thoughtful design, and ensuring parity with core functionality from
-            the legacy platform—while still improving usability.
-          </p>
-        </div>
+  <div
+    class="prose prose-xl prose-img:shadow-xl prose-teal prose-ul:list-disc prose-p:text-pretty prose-headings:text-balance prose-h3:font-semibold prose-h2:text-2xl prose-h2:md:text-3xl prose-h3:text-xl prose-h3:md:text-2xl prose-h2:font-bricolage prose-h2:font-light prose-h2:-tracking-[0.025em]"
+  >
+    <CaseStudyCallout
+      description="I designed the A/B testing experience for Vero 2.0, bringing back a critical feature from the legacy platform. The goal was to modernise the flow, integrate it into the new design system, and ensure it supported complex campaign logic. I worked closely with engineers to polish the UI, maintain consistency, and test functionality."
+    />
 
-        <h2>The Problem</h2>
-        <ul>
-          <li>
-            Vero 2.0 initially launched without A/B testing, putting a key
-            customer at risk of churning if the feature wasn't delivered
-            quickly.
-          </li>
-          <li>
-            The challenge was to migrate this functionality quickly from the
-            legacy platform to Vero 2.0 while also improving the overall UX to
-            better fit the new campaign builder model.
-          </li>
-        </ul>
+    <h2>The Problem</h2>
+    <ul>
+      <li>
+        Vero 2.0 initially launched without A/B testing, putting a key customer
+        at risk of churning if the feature wasn't delivered quickly.
+      </li>
+      <li>
+        The challenge was to migrate this functionality quickly from the legacy
+        platform to Vero 2.0 while also improving the overall UX to better fit
+        the new campaign builder model.
+      </li>
+    </ul>
 
-        <h2>Goals</h2>
-        <ul>
-          <li>
-            Independently design the UI and UX for a modernised A/B testing
-            experience.
-          </li>
-          <li>
-            Drawing inspiration from the legacy platform while fitting the
-            feature into the new design system and component patterns..
-          </li>
-          <li>
-            Identify and account for edge cases to support complex campaign
-            logic and ensure a reliable user experience.
-          </li>
-          <li>Build a scalable system for future features.</li>
-          <li>
-            Identify and account for edge cases to support complex campaign
-            logic and ensure a reliable user experience.
-          </li>
-        </ul>
+    <h2>Goals</h2>
+    <ul>
+      <li>
+        Independently design the UI and UX for a modernised A/B testing
+        experience.
+      </li>
+      <li>
+        Drawing inspiration from the legacy platform while fitting the feature
+        into the new design system and component patterns..
+      </li>
+      <li>
+        Identify and account for edge cases to support complex campaign logic
+        and ensure a reliable user experience.
+      </li>
+      <li>
+        Identify and account for edge cases to support complex campaign logic
+        and ensure a reliable user experience.
+      </li>
+    </ul>
 
-        <h2
-          class="font-bricolage text-xl font-light -tracking-[0.01em] md:text-3xl"
-        >
-          Process
-        </h2>
+    <h2
+      class="font-bricolage text-xl font-light -tracking-[0.01em] md:text-3xl"
+    >
+      Process
+    </h2>
 
-        <h3>Research</h3>
+    <h3>Research</h3>
 
-        <p>
-          Benchmarked how similar tools (like Mailchimp, Customer.io, and Braze)
-          handled A/B testing, especially how they explained traffic split,
-          metrics, and variant selection.
-        </p>
+    <p>
+      Benchmarked how similar tools (like Mailchimp, Customer.io, and Braze)
+      handled A/B testing, especially how they explained traffic split, metrics,
+      and variant selection.
+    </p>
 
-        <h3>Exploring designs</h3>
+    <h3>Exploring designs</h3>
 
-        <p>
-          Shared early mockups with PMs, engineers, and the customer success
-          team to validate direction and ensure feasibility under tight
-          timelines.
-        </p>
+    <p>
+      Shared early mockups internally to validate direction and ensure
+      feasibility under technical constraints and tight timelines.
+    </p>
 
-        <h3>Refining design</h3>
+    <h3>Refining design</h3>
 
-        <p>
-          Worked closely with product and engineering to scope a realistic MVP
-          version that covered core functionality but allowed for future
-          iteration.
-        </p>
+    <p>
+      Worked closely with product and engineering to scope a realistic MVP
+      version that covered core functionality but allowed for future iteration.
+    </p>
 
-        <!-- <h2>Release and iterate</h2>
+    <!-- <h2>Release and iterate</h2>
 
-      <p>
-        After release, we received feedback that the sidebar in the settings
-        section felt visually disconnected from the rest of the app—due to
-        differences in width and styling compared to the non-settings sidebar.
-      </p>
-      <p>
-        We responded by standardising the layout and aligning the styles of
-        the settings sidebar to improve visual consistency.
-      </p> -->
-      </div>
-    </main>
+  <p>
+    After release, we received feedback that the sidebar in the settings
+    section felt visually disconnected from the rest of the app—due to
+    differences in width and styling compared to the non-settings sidebar.
+  </p>
+  <p>
+    We responded by standardising the layout and aligning the styles of
+    the settings sidebar to improve visual consistency.
+  </p> -->
   </div>
 </CaseStudyLayout>
