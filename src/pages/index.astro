@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Masthead from "../components/Masthead.astro";
+import CaseStudyCard from "../components/CaseStudyCard.astro";
 import WorkGrid from "../components/WorkGrid.astro";
 import WorkCard from "../components/WorkCard.astro";
-import WorkDescription from "../components/WorkDescription.astro";
 import Button from "../components/Button.astro";
 import VeroLogo from "../images/vero.svg";
 import settingsImage from "../images/settings@2x.png";
@@ -73,23 +73,23 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
       </div>
 
       <div class="space-y-20 md:space-y-32">
-        <WorkCard
+        <CaseStudyCard
           title="Settings"
           description="Full redesign of the settings section for Vero 2.0"
           src={settingsImage}
           alt="Full redesign of the settings section for Vero 2.0"
-          caseStudy={true}
           href="/work/settings"
+          aligment="right"
         />
 
-        <WorkCard
+        <CaseStudyCard
           className="col-span-1 md:col-span-2"
           title="AB Testing"
           description="Redesigning A/B Testing for newsletter-style campaigns"
           src={abTestingImage}
           alt="Redesigning A/B Testing for newsletter-style campaigns"
-          caseStudy={true}
           href="/work/ab-testing"
+          aligment="left"
         />
 
         <WorkGrid>
