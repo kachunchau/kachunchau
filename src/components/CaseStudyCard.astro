@@ -30,27 +30,31 @@ const gradientStyles = {
 };
 
 const aligmentStyles = {
-  right: "self-end text-right",
-  left: "self-start",
+  right: "self-end text-right left-0",
+  left: "self-start right-0",
 };
 ---
 
 <a
-  class:list={["group relative block rounded-4xl shadow-2xl", className]}
+  class:list={[
+    "group relative flex max-h-150 min-h-100 flex-col justify-end overflow-hidden rounded-4xl bg-linear-120 shadow-2xl",
+    className,
+    gradientStyles[gradient],
+  ]}
   href={href !== "#none" ? href : undefined}
 >
   <div
     class:list={[
-      "absolute inset-5 z-10 flex flex-col items-stretch md:inset-15",
+      "absolute inset-5 z-10 flex flex-col items-stretch md:inset-10 lg:inset-15",
     ]}
   >
     <div class:list={["w-76 self-end", aligmentStyles[aligment]]}>
       <span
-        class="inline-block text-sm tracking-widest text-slate-400 uppercase"
+        class="inline-block text-xs tracking-widest text-slate-400 uppercase md:text-sm"
         >Vero</span
       >
       <h3
-        class="font-bricolage mt-1 text-xl font-semibold -tracking-[0.025em] text-cyan-950 md:mt-2 md:text-4xl"
+        class="font-bricolage mt-0.5 text-xl font-semibold -tracking-[0.025em] text-cyan-950 md:mt-2 md:text-4xl"
       >
         {title}
       </h3>
@@ -63,29 +67,24 @@ const aligmentStyles = {
       href !== "#none" && (
         <div
           class:list={[
-            "group/link z-10 mt-auto flex items-center gap-2 rounded-full py-2 ring-2 ring-transparent transition-all duration-300 ease-in-out group-hover:px-5.5 group-hover:ring-cyan-950/25 hover:bg-cyan-950 hover:ring-cyan-950",
+            "group/link z-10 mt-auto flex h-11 items-center gap-2 rounded-full transition-all duration-300 ease-in-out group-hover:px-5.5 group-hover:ring-2 group-hover:ring-cyan-950/25 hover:bg-cyan-950 hover:ring-cyan-950",
             aligmentStyles[aligment],
           ]}
         >
-          <span class="inline-block font-semibold text-cyan-950 transition-transform duration-300 ease-in-out group-hover/link:text-cyan-50 md:text-xl">
+          <span class="invisible inline-block max-w-0 font-semibold text-cyan-950 opacity-0 transition-transform duration-300 ease-in-out group-hover:visible group-hover:max-w-full group-hover:opacity-100 group-hover/link:text-cyan-50 md:text-xl">
             Read case study
           </span>
-          <span class="text-xl font-light text-slate-400">→</span>
+          <span class="flex size-11 items-center justify-center rounded-full bg-cyan-950 text-xl font-normal text-cyan-50 group-hover:size-auto group-hover:bg-transparent group-hover:text-slate-400">
+            →
+          </span>
         </div>
       )
     }
   </div>
 
-  <div
-    class:list={[
-      "transform-gpu overflow-clip rounded-3xl bg-linear-120",
-      gradientStyles[gradient],
-    ]}
-  >
-    <Image
-      class="rounded-[inherit] drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025]"
-      src={src}
-      alt={alt || "Case study image"}
-    />
-  </div>
+  <Image
+    class="w-180 max-w-none rounded-[inherit] drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025] md:w-210 lg:w-320"
+    src={src}
+    alt={alt || "Case study image"}
+  />
 </a>

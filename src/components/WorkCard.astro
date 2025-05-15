@@ -32,9 +32,13 @@ const variantStyles = {
 ---
 
 <div
-  class={`rounded-4xl block group overflow-clip relative shadow-2xl p-2 inset-ring inset-ring-white/5 ${variantStyles[variant]} ${className || ""}`}
+  class:list={[
+    "group relative rounded-4xl p-2 shadow-2xl inset-ring inset-ring-white/5",
+    variantStyles[variant],
+    className,
+  ]}
 >
-  <div class:list={["relative overflow-clip rounded-3xl", imgColor]}>
+  <div class:list={["overflow-clip rounded-3xl", imgColor]}>
     <Image
       class="rounded-[inherit] drop-shadow-xl"
       src={src}
