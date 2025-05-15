@@ -7,14 +7,12 @@ import WorkCard from "../components/WorkCard.astro";
 import Button from "../components/Button.astro";
 import VeroLogo from "../images/vero.svg";
 import settingsImage from "../images/settings@2x.png";
-import customHtmlBlocksImage from "../images/custom-html-blocks@2x.png";
-import customHtmlEditorImage from "../images/custom-html-editor@2x.png";
 import abTestingImage from "../images/ab-testing@2x.png";
+import publicFacingSitesImage from "../images/public-facing-sites@2x.png";
+import htmlBlockImage from "../images/html-block@2x.png";
 import smsImage from "../images/sms@2x.png";
-import veroMarketingHomeImage from "../images/vero-marketing-home@2x.png";
+import triggersImage from "../images/triggers@2x.png";
 import helpCenterImage from "../images/help-center@2x.png";
-import helpCenterSearchImage from "../images/help-center-search@2x.png";
-
 import vero2SidebarImage from "../images/vero-2-sidebar@2x.png";
 import vero1SidebarImage from "../images/vero-1-sidebar@2x.png";
 import vero2ProfileImage from "../images/vero-2-profile@2x.png";
@@ -28,16 +26,19 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
 <Layout title="Ka-Chun Chau — UI Designer">
   <Masthead>
     <h1
-      class="font-bricolage text-4xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.04em] dark:text-white"
+      class="font-bricolage text-5xl font-light -tracking-[0.025em] text-balance md:text-7xl xl:text-8xl xl:tracking-[-0.04em] dark:text-white"
     >
-      <span class="font-medium">Hey there</span> &mdash; I'm KC, a UI Designer and
-      developer from Armagh, Northern Ireland, now based in Melbourne, Australia.
+      <span class="font-medium">Hey</span>, I'm KC, a <span class="font-medium"
+        >UI Designer</span
+      > &amp;
+      <span class="font-medium">Developer</span>
     </h1>
 
     <p
-      class="mt-8 text-2xl tracking-[-0.01em] text-slate-400 dark:text-cyan-50"
+      class="mt-6 max-w-3xl text-xl tracking-[-0.01em] text-slate-400 md:mt-8 md:text-2xl/normal dark:text-cyan-50"
     >
-      I've spent the past 7 years at
+      I'm from Armagh, Northern Ireland, now based in Melbourne, Australia. For
+      the past 7 years I've worked at
       <a
         class="group relative inline-block pl-12"
         href="https://www.getvero.com/"
@@ -50,10 +51,14 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
           class="font-normal text-slate-300 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
           >↗</span
         >
-      </a> as a Designer.
+      </a> as a Product Designer &amp; Digital Designer.
     </p>
 
-    <Button class="mt-11" href="mailto:kachun@kachunchau.com" variant="solid">
+    <Button
+      class="mt-7 md:mt-11"
+      href="mailto:kachun@kachunchau.com"
+      variant="solid"
+    >
       👋 Get in touch
     </Button>
   </Masthead>
@@ -63,16 +68,16 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
       "relative z-10 mb-100 border-t border-transparent text-cyan-50 dark:border-white/10",
     ]}
   >
-    <main class="mx-auto max-w-[1200px] px-10 py-20 md:px-20 md:py-32 xl:px-0">
-      <div class="mb-5 flex items-center justify-between gap-3 md:mb-10">
+    <main class="mx-auto max-w-7xl px-10 py-20 md:px-20 md:py-32 xl:px-0">
+      <!-- <div class="mb-5 flex items-center justify-between gap-3 md:mb-10">
         <div class="text-xl font-medium md:text-3xl">Vero</div>
 
         <div class="rounded-full px-4 py-2 inset-ring-2 inset-ring-white/10">
           2018 - Present
         </div>
-      </div>
+      </div> -->
 
-      <div class="space-y-20 md:space-y-32">
+      <div class="space-y-16 md:space-y-26">
         <CaseStudyCard
           title="Settings"
           description="Full redesign of the settings section for Vero 2.0"
@@ -92,127 +97,97 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
           aligment="left"
         />
 
-        <WorkGrid>
-          <WorkCard
-            className="col-span-1"
-            title="HTML block"
-            description="Add a custom HTML block"
-            src={customHtmlBlocksImage}
-            alt="Mastodon logo"
-          />
+        <CaseStudyCard
+          title="Public-facing sites"
+          description="Varaious iterations on Vero's public-facing sites"
+          src={publicFacingSitesImage}
+          alt="Iterations of Vero's public-facing sites."
+        />
 
-          <WorkCard
-            className="col-span-1 md:col-span-2"
-            title="HTML block"
-            description="Design for a custom HTML editor in Vero's drag and drop editor"
-            src={customHtmlEditorImage}
-            alt="Mastodon logo"
-          />
-        </WorkGrid>
-
-        <WorkGrid>
-          <WorkCard
-            className="col-span-full"
-            title="SMS Channel"
-            description="UI to allow sending of SMS message campaigns"
-            src={smsImage}
-            alt="SMS Channel"
-          />
-        </WorkGrid>
-
-        <h2 class="mt-32 mb-4 font-medium text-slate-400 md:mb-6 md:text-xl">
+        <h2
+          class="mt-20 mb-4 font-medium text-slate-400 md:mt-32 md:mb-6 md:text-xl"
+        >
           Small things
         </h2>
 
-        <div
-          class="columns-2 gap-7 space-y-7 md:columns-3 md:gap-10 md:space-y-10"
-        >
-          <WorkCard
-            className="inline-block"
-            description="Vero 2.0 profile dropdown"
-            src={vero2ProfileImage}
-            alt="Account & profile dropdown"
-            variant="simple"
-          />
-          <WorkCard
-            className="inline-block"
-            description="Vero 2.0 upgrade callouts"
-            src={vero2CalloutsImage}
-            alt="Vero 2.0 upgrade callouts"
-            variant="simple"
-          />
-          <WorkCard
-            className="inline-block"
-            description="Vero 2.0 sidebar"
-            src={vero2SidebarImage}
-            alt="Vero 2.0 sidebar redesign"
-            variant="simple"
-          />
-          <WorkCard
-            className="inline-block"
-            description="Email type icons"
-            src={templateIconsImage}
-            alt="Mastodon logo"
-            imgColor="bg-sky-50"
-            variant="simple"
-          />
-          <WorkCard
-            className="inline-block"
-            description="Vero 1.0 sidebar redesign"
-            src={vero1SidebarImage}
-            alt="Vero 1.0 sidebar redesign"
-            variant="simple"
-          />
-          <WorkCard
-            className="inline-block"
-            description="Content breakdown"
-            src={contentBreakdownImage}
-            alt="Content breakdown table"
-            variant="simple"
-          />
-        </div>
-
-        <WorkCard
-          title="Vero marketing site"
-          description="Continuous evolution of the Vero marketing site"
-          src={veroMarketingHomeImage}
-          alt="Vero marketing home redesign"
-        />
-
         <WorkGrid>
           <WorkCard
-            className="col-span-1 md:col-span-2"
+            className="col-span-full md:col-span-2"
+            title="HTML Block"
+            src={htmlBlockImage}
+            alt="Mastodon logo"
+          />
+          <WorkCard
+            className="col-span-full md:col-span-1"
+            title="SMS Channel"
+            src={smsImage}
+            alt="SMS Channel"
+          />
+          <WorkCard
+            className="col-span-full md:col-span-1"
+            title="Triggers"
+            src={triggersImage}
+            alt="Triggers"
+          />
+          <WorkCard
+            className="col-span-full md:col-span-2"
             title="Help Center"
-            description="Redesigned and implementation of the Help Center"
             src={helpCenterImage}
             alt="Help Center redesign"
           />
-          <WorkCard
-            className="col-span-1"
-            title="Help Center"
-            description="Redesigned the search experience"
-            src={helpCenterSearchImage}
-            alt="Help Center search"
-          />
+
+          <div
+            class="col-span-full space-y-8 md:columns-2 md:gap-10 md:space-y-10 lg:columns-3"
+          >
+            <WorkCard
+              className="inline-block"
+              title="Profile dropdown"
+              src={vero2ProfileImage}
+              alt="Account & profile dropdown"
+            />
+            <WorkCard
+              className="inline-block"
+              title="Upgrade callouts"
+              src={vero2CalloutsImage}
+              alt="Ugrade callouts"
+            />
+            <WorkCard
+              className="inline-block"
+              title="Vero 2.0 sidebar"
+              src={vero2SidebarImage}
+              alt="Vero 2.0 sidebar redesign"
+            />
+            <WorkCard
+              className="inline-block"
+              title="Template icons"
+              src={templateIconsImage}
+              alt="Template icons"
+              imgColor="bg-sky-50"
+            />
+            <WorkCard
+              className="inline-block"
+              title="Vero 1.0 sidebar"
+              src={vero1SidebarImage}
+              alt="Vero 1.0 sidebar redesign"
+            />
+            <WorkCard
+              className="inline-block"
+              title="Content breakdown table"
+              src={contentBreakdownImage}
+              alt="Content breakdown table"
+            />
+          </div>
         </WorkGrid>
+
+        <WorkCard
+          company="blubolt"
+          title="Various eCommerce store redesigns"
+          src={bluboltStoresImage}
+          alt="Mastodon logo"
+          variant="simple"
+          imgColor="bg-purple-50"
+        />
       </div>
-
-      <div class="mt-32 mb-5 flex items-center justify-between gap-3 md:mb-10">
-        <div class="text-xl font-medium md:text-3xl">blubolt</div>
-
-        <div class="rounded-full px-4 py-2 inset-ring-2 inset-ring-white/10">
-          2014 - 2017
-        </div>
-      </div>
-
-      <WorkCard
-        title="eCommerce stores"
-        description="Redesigns of various eCommerce stores"
-        src={bluboltStoresImage}
-        alt="Mastodon logo"
-        variant="simple"
-        imgColor="bg-purple-50"
-      />
     </main>
   </div>
 </Layout>
