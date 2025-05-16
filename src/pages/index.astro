@@ -18,8 +18,6 @@ import vero1SidebarImage from "../images/vero-1-sidebar@2x.png";
 import vero2ProfileImage from "../images/vero-2-profile@2x.png";
 import templateIconsImage from "../images/template-icons@2x.png";
 import vero2CalloutsImage from "../images/vero-2-callouts@2x.png";
-import contentBreakdownImage from "../images/content-breakdown@2x.png";
-
 import bluboltStoresImage from "../images/blubolt-stores@2x.png";
 ---
 
@@ -102,6 +100,7 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
           description="Varaious iterations on Vero's public-facing sites"
           src={publicFacingSitesImage}
           alt="Iterations of Vero's public-facing sites."
+          href="/work/public-facing-sites"
         />
 
         <h2
@@ -135,42 +134,35 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
             src={helpCenterImage}
             alt="Help Center redesign"
           />
+        </WorkGrid>
 
+        <WorkGrid className="items-start">
+          <WorkCard
+            title="Vero 2.0 sidebar"
+            src={vero2SidebarImage}
+            alt="Vero 2.0 sidebar redesign"
+          />
           <div
-            class="col-span-full space-y-8 md:columns-2 md:gap-10 md:space-y-10 lg:columns-3"
+            class="col-span-full flex flex-col gap-8 md:col-span-1 md:gap-10"
           >
             <WorkCard
-              className="inline-block w-full"
-              title="Profile dropdown"
-              src={vero2ProfileImage}
-              alt="Account & profile dropdown"
-            />
-            <WorkCard
-              className="inline-block w-full"
-              title="Upgrade callouts"
-              src={vero2CalloutsImage}
-              alt="Ugrade callouts"
-            />
-            <WorkCard
-              className="inline-block w-full break-inside-avoid-column"
-              title="Vero 2.0 sidebar"
-              src={vero2SidebarImage}
-              alt="Vero 2.0 sidebar redesign"
-            />
-            <WorkCard
-              className="inline-block w-full"
               title="Template icons"
               src={templateIconsImage}
               alt="Template icons"
               imgColor="bg-sky-50"
             />
             <WorkCard
-              className="inline-block w-full break-inside-avoid-column"
-              title="Vero 1.0 sidebar"
-              src={vero1SidebarImage}
-              alt="Vero 1.0 sidebar redesign"
+              title="Upgrade callouts"
+              src={vero2CalloutsImage}
+              alt="Upgrade callouts"
+              imgColor="bg-sky-50"
             />
           </div>
+          <WorkCard
+            title="Vero 1.0 sidebar"
+            src={vero1SidebarImage}
+            alt="Vero 1.0 sidebar redesign"
+          />
         </WorkGrid>
 
         <WorkCard
