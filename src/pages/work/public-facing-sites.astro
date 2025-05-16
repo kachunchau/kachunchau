@@ -3,50 +3,104 @@ import { Image } from "astro:assets";
 
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
 import CaseStudyCallout from "../../components/CaseStudyCallout.astro";
+import repackagingWireframesImage from "../../images/repackaging-wireframes@2x.png";
+import repackagingMockupImage from "../../images/repackaging-mockups@2x.png";
 import stylesExplorationImage from "../../images/styles-exploration@2x.png";
-import stylesExploration2Image from "../../images/styles-exploration-2@2x.png";
+import helpCenterStylesImage from "../../images/help-center-styles@2x.png";
+import helpCenterStyles2Image from "../../images/help-center-styles-2@2x.png";
+import landingPagesImage from "../../images/landing-pages@2x.png";
 ---
 
 <CaseStudyLayout title="Public facing sites" headline="Public facing sites">
-  <div class="max-w-prose">
-    <CaseStudyCallout
-      description="I designed the A/B testing experience for Vero 2.0, bringing back a critical feature from the legacy platform. The goal was to modernise the flow, integrate it into the new design system, and ensure it supported complex campaign logic. I worked closely with engineers to polish the UI, maintain consistency, and test functionality."
-    />
+  <CaseStudyCallout
+    description="Vero's brand lacked visual consistency across their marketing and product touch points. This involved adapting the refreshed design system ensuring everything felt intentional. The work helped unify Vero's visual identity and set a stronger foundation for future design consistency."
+  />
 
-    <h2>The Problem</h2>
-    <ul>
-      <li>
-        The Vero brand and UI lacked consistency across marketing and product
-        touch-point.
-      </li>
-    </ul>
+  <h2>The Problem</h2>
+  <ul>
+    <li>
+      Core areas—like the marketing site, login/signup, blog, and help docs—felt
+      disconnected and outdated.
+    </li>
+    <li>
+      There was no unified approach to applying brand visuals across social
+      media platforms.
+    </li>
+  </ul>
 
-    <h2>Goals</h2>
-    <ul>
-      <li>
-        Collaborate on a full redesign of the Vero brand and design system, and
-        lead applying and adapting it across the marketing website, signup/login
-        pages, blog, help docs, and social media platforms to ensure a cohesive
-        and modern visual identity.
-      </li>
-    </ul>
-    <h2>Process</h2>
-  </div>
+  <h2>Goals</h2>
+  <ul>
+    <li>
+      Collaborate on a full redesign of the Vero brand and design system, and
+      lead applying and adapting it across the marketing website, signup/login
+      pages, blog, help docs, and social media platforms to ensure a cohesive
+      and modern visual identity.
+    </li>
+  </ul>
+
+  <p>
+    These are just a collection of things I've done on the public facing sites
+    over the past few years.
+  </p>
 
   <figure class="-mx-10">
     <Image
-      class="rounded-4xl bg-teal-50"
+      class="rounded-4xl bg-yellow-50"
+      src={repackagingWireframesImage}
+      alt="Repacking wireframes"
+    />
+    <figcaption>
+      Wireframes for repackaging the Cloud and Connect platforms
+    </figcaption>
+  </figure>
+  <figure class="-mx-10">
+    <Image
+      class="rounded-4xl bg-cyan-50"
+      src={repackagingMockupImage}
+      alt="Repacking mockup"
+    />
+    <figcaption>
+      Exploration for the repackaged Cloud and Connect platforms
+    </figcaption>
+  </figure>
+
+  <div class="-mx-10 grid grid-cols-3 gap-10">
+    <figure class="col-span-1 !my-0 md:col-span-2">
+      <Image
+        class="rounded-3xl bg-yellow-50"
+        src={helpCenterStylesImage}
+        alt="Help center styles"
+      />
+
+      <figcaption>Help Center home</figcaption>
+    </figure>
+
+    <figure class="col-span-1 !my-0">
+      <Image
+        class="rounded-3xl bg-yellow-50"
+        src={helpCenterStyles2Image}
+        alt="Help center styles 2"
+      />
+
+      <figcaption>Iconography exploration for the category page</figcaption>
+    </figure>
+  </div>
+  <figure class="-mx-10">
+    <Image
+      class="rounded-4xl bg-cyan-50"
       src={stylesExplorationImage}
       alt="Styles exploration"
     />
+    <figcaption>
+      Styles exploration for a more marketer friendly home page
+    </figcaption>
   </figure>
   <figure class="-mx-10">
     <Image
-      class="rounded-4xl bg-teal-50"
-      src={stylesExploration2Image}
-      alt="Styles exploration 2"
+      class="rounded-4xl bg-yellow-50"
+      src={landingPagesImage}
+      alt="Landing pages"
     />
+    <figcaption>Landing pages throughout the years</figcaption>
   </figure>
-
-  <h2>Release and iterate</h2>
 </CaseStudyLayout>
