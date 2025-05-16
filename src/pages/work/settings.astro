@@ -5,11 +5,14 @@ import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
 import CaseStudyCallout from "../../components/CaseStudyCallout.astro";
 import netlifyImage from "../../images/netlify@2x.png";
 import vercelImage from "../../images/vercel@2x.png";
+import accountProfileModalTypeImage from "../../images/account-profile-modal-type@2x.png";
 import inlineFullScreenImage from "../../images/inline-full-screen@2x.png";
 import colorPickerStatesImage from "../../images/color-picker-states@2x.png";
 import settingsSidebarsImage from "../../images/settings-sidebars@2x.png";
 import dataFeedsImage from "../../images/data-feeds@2x.png";
 import teamMembersImage from "../../images/team-members@2x.png";
+import switcherNewProjectImage from "../../images/switcher-new-project@2x.png";
+import settingsSidebarTweaksImage from "../../images/settings-sidebar-tweaks@2x.png";
 ---
 
 <CaseStudyLayout
@@ -55,11 +58,7 @@ import teamMembersImage from "../../images/team-members@2x.png";
       <li>Use consistent design patterns for every setting type.</li>
       <li>Build a scalable system for future features.</li>
     </ul>
-    <h2
-      class="font-bricolage text-xl font-light -tracking-[0.01em] md:text-3xl"
-    >
-      Process
-    </h2>
+    <h2>Process</h2>
     <h3>Research</h3>
     <p>
       Collaborated with the Head of Product to conduct a comprehensive audit of
@@ -111,26 +110,38 @@ import teamMembersImage from "../../images/team-members@2x.png";
         settings view?
       </li>
       <li>
-        <strong>Inline vs full-screen views:</strong> Should it be full-screen
-        so the new settings could also be used in Vero 1.0?
+        <strong>Inline vs full-screen views:</strong> Should settings open up
+        full-screen so the new settings could also be used in Vero 1.0?
       </li>
     </ul>
   </div>
 
   <figure class="-mx-10">
     <Image
-      class="rounded-3xl"
-      src={inlineFullScreenImage}
-      alt="Settings sidebar mockups"
+      class="rounded-4xl bg-cyan-50"
+      src={accountProfileModalTypeImage}
+      alt="Account profile modal type"
     />
 
-    <figcaption>Inline vs full screen</figcaption>
+    <figcaption>
+      Srolling vs tabbed navigation in the account & profile modal
+    </figcaption>
+  </figure>
+
+  <figure class="-mx-10">
+    <Image
+      class="rounded-4xl bg-yellow-50"
+      src={inlineFullScreenImage}
+      alt="Inline settings vs full-screen settings"
+    />
+
+    <figcaption>Inline settings vs full-screen settings</figcaption>
   </figure>
 
   <div class="-mx-10 grid grid-cols-3 gap-10">
     <figure class="col-span-1">
       <Image
-        class="rounded-3xl"
+        class="rounded-3xl bg-cyan-50"
         src={colorPickerStatesImage}
         alt="Color picker state"
       />
@@ -140,14 +151,24 @@ import teamMembersImage from "../../images/team-members@2x.png";
 
     <figure class="col-span-1 md:col-span-2">
       <Image
-        class="rounded-3xl"
+        class="rounded-3xl bg-cyan-50"
         src={settingsSidebarsImage}
-        alt="Different setting sidebars"
+        alt="Settings sidebar exploration"
       />
 
-      <figcaption>Settings sidebar mockups</figcaption>
+      <figcaption>Settings sidebar exploration</figcaption>
     </figure>
   </div>
+
+  <figure class="-mx-10">
+    <Image
+      class="rounded-4xl bg-yellow-50"
+      src={switcherNewProjectImage}
+      alt="Switcher new project"
+    />
+
+    <figcaption>Adding a new project from the switcher</figcaption>
+  </figure>
 
   <div class="max-w-prose">
     <h3>Refining design</h3>
@@ -164,7 +185,7 @@ import teamMembersImage from "../../images/team-members@2x.png";
 
   <div class="-mx-10 grid grid-cols-1 gap-10 md:grid-cols-3">
     <figure class="col-span-1">
-      <div class="overflow-clip rounded-3xl bg-teal-50">
+      <div class="overflow-clip rounded-3xl bg-cyan-50">
         <Image
           class="mb-0 drop-shadow-xl"
           src={dataFeedsImage}
@@ -174,7 +195,7 @@ import teamMembersImage from "../../images/team-members@2x.png";
       <figcaption>Data feeds</figcaption>
     </figure>
     <figure class="col-span-1 md:col-span-2">
-      <div class="overflow-clip rounded-3xl bg-teal-50">
+      <div class="overflow-clip rounded-3xl bg-yellow-50">
         <Image
           class="mb-0 drop-shadow-xl"
           src={teamMembersImage}
@@ -193,7 +214,9 @@ import teamMembersImage from "../../images/team-members@2x.png";
       cognitive load and prepared the interface for scaling as new settings were
       added.
     </p>
+  </div>
 
+  <div class="max-w-prose">
     <h2>Release and iterate</h2>
 
     <p>
@@ -206,4 +229,15 @@ import teamMembersImage from "../../images/team-members@2x.png";
       settings sidebar to improve visual consistency.
     </p>
   </div>
+
+  <figure class="-mx-10">
+    <div class="overflow-clip rounded-4xl bg-teal-50">
+      <Image
+        class="mb-0 drop-shadow-xl"
+        src={settingsSidebarTweaksImage}
+        alt="Settings sidebar tweaks"
+      />
+    </div>
+    <figcaption>Settings sidebar tweaks</figcaption>
+  </figure>
 </CaseStudyLayout>

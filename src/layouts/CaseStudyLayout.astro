@@ -17,10 +17,6 @@ const { title, headline } = Astro.props;
     >
       {headline}
     </h1>
-    <!-- <h1 class="text-4xl font-light tracking-[-0.025em] text-pretty md:text-5xl">
-      {headline}
-    </h1> -->
-
     <p
       class="mt-5 inline-block rounded-full bg-orange-100 px-3 py-0.5 text-base text-orange-500"
     >
@@ -31,7 +27,7 @@ const { title, headline } = Astro.props;
   <div class="bg-white dark:bg-transparent">
     <main class="mx-auto max-w-[1200px] px-10 pb-20 md:px-20 md:pb-32 xl:px-0">
       <div
-        class="prose prose-xl prose-cyan prose-ul:list-disc prose-p:text-pretty prose-headings:text-balance prose-h3:font-semibold prose-h2:text-2xl prose-h2:md:text-3xl prose-h3:text-xl prose-h3:md:text-2xl prose-h2:font-bricolage prose-h2:font-light prose-h2:-tracking-[0.03em] max-w-none"
+        class="prose prose-xl prose-cyan prose-ul:list-disc prose-p:text-pretty prose-headings:text-balance prose-headings:font-semibold prose-h3:text-xl prose-h3:md:text-2xl prose-h2:font-bricolage prose-h2:-tracking-[0.03em] max-w-none"
       >
         <slot />
       </div>
