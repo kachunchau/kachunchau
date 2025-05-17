@@ -3,11 +3,12 @@ import { Image } from "astro:assets";
 
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
 import CaseStudyCallout from "../../components/CaseStudyCallout.astro";
+import featureAuditImage from "../../images/feature-audit@2x.png";
 import netlifyImage from "../../images/netlify@2x.png";
 import vercelImage from "../../images/vercel@2x.png";
 import accountProfileModalTypeImage from "../../images/account-profile-modal-type@2x.png";
 import inlineFullScreenImage from "../../images/inline-full-screen@2x.png";
-import colorPickerStatesImage from "../../images/color-picker-states@2x.png";
+import nestedProjectsImage from "../../images/nested-projects@2x.png";
 import settingsSidebarsImage from "../../images/settings-sidebars@2x.png";
 import dataFeedsImage from "../../images/data-feeds@2x.png";
 import teamMembersImage from "../../images/team-members@2x.png";
@@ -16,39 +17,44 @@ import settingsSidebarTweaksImage from "../../images/settings-sidebar-tweaks@2x.
 ---
 
 <CaseStudyLayout
-  title="Redesigning Vero 2.0 Settings"
-  headline="Redesigning Vero 2.0 Settings"
+  title="Full redesign of the settings section for Vero 2.0"
+  headline="Full redesign of the settings section for Vero 2.0"
+  draft={true}
 >
   <CaseStudyCallout
     description="In Vero 2.0, the settings experience was confusing and spread out. Users had trouble managing accounts, projects, and preferences without getting lost. I led the redesign of the entire settings system to make it easier to use, more consistent, and ready to scale."
   />
 
   <h2>The Problem</h2>
+  <p>
+    To understand the key challenges, I collaborated with the Head of Product,
+    who provided problem statements grounded in strategic product goals and
+    insights gathered from internal teams and user feedback channels. These
+    formed the foundation for my design exploration and decision-making.
+  </p>
+
+  <h3>Identified Problems</h3>
   <ul>
     <li>
       The settings section was fragmented, making it hard to manage projects,
       accounts, and user preferences.
     </li>
+
     <li>
-      Several key settings weren't yet available in Vero 2.0 and had to be
-      migrated from the legacy platform.
+      There was no clear distinction between user-level and project-level
+      settings, causing confusion around which settings affected what.
     </li>
+    <li>
+      As more settings from Vero 1.0 are integrated into Vero 2.0, the lack of
+      hierarchical clarity is becoming increasingly problematic.
+    </li>
+    <li>Users can't customise their user profile by adding an image.</li>
     <li>There was no clear structure or consistent design.</li>
     <li>
-      The frontend was being rewritten in <a
-        href="https://nextjs.org/"
-        target="_blank"
-        rel="noopener noreferrer">Next.js</a
-      >, replacing the older <a
-        href="https://emberjs.com/"
-        target="_blank"
-        rel="noopener noreferrer">Ember</a
-      >
-      setup, which required rethinking how settings were structured, implemented,
-      and migrated.
+      The concept of an organisation layer introduces a new level of complexity,
+      with no existing structure to support organisation-specific settings.
     </li>
   </ul>
-  <p>This created frustration for both customers and internal teams.</p>
 
   <h2>Goals</h2>
   <ul>
@@ -58,14 +64,29 @@ import settingsSidebarTweaksImage from "../../images/settings-sidebar-tweaks@2x.
     <li>Build a scalable system for future features.</li>
   </ul>
   <h2>Process</h2>
+
   <h3>Research</h3>
   <p>
     Collaborated with the Head of Product to conduct a comprehensive audit of
-    all existing settings across user roles and project types. We identified key
-    gaps, overlaps, and usability issues that were creating friction. To guide
-    our approach, we also reviewed how tools in adjacent industries—such as
-    Netlify and Vercel—organised their settings, drawing inspiration from proven
-    patterns.
+    all existing settings across user roles and project types. This was also to
+    decide which settings to port over from the Vero 1.0 to Vero 2.0 and which
+    to deprecate.
+  </p>
+
+  <figure class="-mx-10">
+    <Image
+      class="rounded-4xl bg-yellow-50"
+      src={featureAuditImage}
+      alt="Feature audit"
+    />
+
+    <figcaption>Feature comparistion table of the two products</figcaption>
+  </figure>
+
+  <p>
+    To guide our design approach, we also reviewed how tools in adjacent
+    industries—such as Netlify and Vercel—organised their settings, drawing
+    inspiration from proven patterns.
   </p>
 
   <div class="-mx-10 grid grid-cols-2 gap-10">
@@ -134,6 +155,11 @@ import settingsSidebarTweaksImage from "../../images/settings-sidebar-tweaks@2x.
     <figcaption>Inline settings vs full-screen settings</figcaption>
   </figure>
 
+  <p>
+    I explored ways to differentiate project-level and user-level settings, and
+    how multiple projects should be represented in the sidebar.
+  </p>
+
   <div class="-mx-10 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
     <figure class="col-span-1 !my-0 md:col-span-2">
       <Image
@@ -147,11 +173,11 @@ import settingsSidebarTweaksImage from "../../images/settings-sidebar-tweaks@2x.
     <figure class="col-span-1 !my-0">
       <Image
         class="rounded-3xl bg-cyan-50"
-        src={colorPickerStatesImage}
-        alt="Color picker state"
+        src={nestedProjectsImage}
+        alt="Nested projects"
       />
 
-      <figcaption>Color picker state mockups</figcaption>
+      <figcaption>Nested projects</figcaption>
     </figure>
   </div>
 
@@ -169,21 +195,11 @@ import settingsSidebarTweaksImage from "../../images/settings-sidebar-tweaks@2x.
 
   <p>
     I refined the settings UI to balance usability, visual consistency, and
-    technical constraints. While the new settings section was build for Next.js
-    , the broader app still ran on Ember, so I ensured the new designs aligned
-    visually with the legacy UI.
-  </p>
-
-  <p>
-    I made small improvements during implementation—like adjusting spacing,
-    clarifying navigation states—to create a more consistent, scalable
-    experience.
-  </p>
-  <p>
-    Some features were stripped back based on business goals. Less critical
-    settings were trimmed back or hidden to focus on core functionality and
-    deliver a faster, more reliable launch. This allowed us to move faster while
-    focusing on the functionality that mattered most to our users.
+    technical constraints. To align with business goals, less critical settings
+    were trimmed or hidden, allowing us to prioritize core functionality for a
+    faster, more reliable launch. During implementation, I made incremental
+    improvements—like refining spacing and navigation groupings—to ensure a more
+    consistent and scalable experience.
   </p>
 
   <div class="-mx-10 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
@@ -230,6 +246,6 @@ import settingsSidebarTweaksImage from "../../images/settings-sidebar-tweaks@2x.
         alt="Settings sidebar tweaks"
       />
     </div>
-    <figcaption>Settings sidebar tweaks</figcaption>
+    <figcaption>Settings sidebar tweaks post-launch</figcaption>
   </figure>
 </CaseStudyLayout>

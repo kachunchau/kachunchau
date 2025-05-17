@@ -3,18 +3,14 @@ import { Image } from "astro:assets";
 
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
 import CaseStudyCallout from "../../components/CaseStudyCallout.astro";
-import netlifyImage from "../../images/netlify@2x.png";
-import vercelImage from "../../images/vercel@2x.png";
-import inlineFullScreenImage from "../../images/inline-full-screen@2x.png";
-import colorPickerStatesImage from "../../images/color-picker-states@2x.png";
-import settingsSidebarsImage from "../../images/settings-sidebars@2x.png";
-import dataFeedsImage from "../../images/data-feeds@2x.png";
-import teamMembersImage from "../../images/team-members@2x.png";
+import manualTestImage from "../../images/manual-test@2x.png";
+import pickAWinnerImage from "../../images/pick-a-winner@2x.png";
 ---
 
 <CaseStudyLayout
   title="Redesigning A/B Testing for newsletter-style campaigns"
   headline="Redesigning A/B Testing for newsletter-style campaigns"
+  draft={true}
 >
   <CaseStudyCallout
     description="I designed the A/B testing experience for Vero 2.0, bringing back a critical feature from the legacy platform. The goal was to modernise the flow, integrate it into the new design system, and ensure it supported complex campaign logic. I worked closely with engineers to polish the UI, maintain consistency, and test functionality."
@@ -79,15 +75,23 @@ import teamMembersImage from "../../images/team-members@2x.png";
     that covered core functionality but allowed for future iteration.
   </p>
 
-  <!-- <h2>Release and iterate</h2>
+  <figure class="-mx-10">
+    <Image
+      class="rounded-4xl bg-cyan-50"
+      src={manualTestImage}
+      alt="Manual test"
+    />
 
-  <p>
-    After release, we received feedback that the sidebar in the settings
-    section felt visually disconnected from the rest of the app—due to
-    differences in width and styling compared to the non-settings sidebar.
-  </p>
-  <p>
-    We responded by standardising the layout and aligning the styles of
-    the settings sidebar to improve visual consistency.
-  </p> -->
+    <figcaption>Manual test</figcaption>
+  </figure>
+
+  <figure class="-mx-10">
+    <Image
+      class="rounded-4xl bg-yellow-50"
+      src={pickAWinnerImage}
+      alt="Pick a winner"
+    />
+
+    <figcaption>Pick a winner</figcaption>
+  </figure>
 </CaseStudyLayout>

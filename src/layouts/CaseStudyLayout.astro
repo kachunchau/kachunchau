@@ -5,23 +5,26 @@ import Masthead from "../components/Masthead.astro";
 interface Props {
   title: string;
   headline: string;
+  draft?: boolean;
 }
 
-const { title, headline } = Astro.props;
+const { title, headline, draft = false } = Astro.props;
 ---
 
 <Layout title={title}>
   <Masthead>
+    {
+      draft && (
+        <div class="mb-6 inline-block rounded-lg px-2.5 py-0.5 text-base text-yellow-500 ring ring-yellow-200 dark:text-cyan-50 dark:ring-white/15">
+          Early draft
+        </div>
+      )
+    }
     <h1
-      class="font-bricolage text-4xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.04em]"
+      class="font-bricolage text-4xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.03em]"
     >
       {headline}
     </h1>
-    <p
-      class="mt-5 inline-block rounded-full bg-orange-100 px-3 py-0.5 text-base text-orange-500"
-    >
-      WIP - Early Look
-    </p>
   </Masthead>
 
   <div class="bg-white dark:bg-transparent">
