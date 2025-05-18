@@ -1,0 +1,110 @@
+---
+title: "Public-facing sites"
+description: "Ensuring visual consistency across all of Vero's touch points"
+headline: "Ensuring visual consistency across all of Vero's touch points"
+order: 3
+slug: "public-facing-sites"
+---
+
+import { Image } from "astro:assets";
+
+import CaseStudyCallout from "../components/CaseStudyCallout.astro";
+import repackagingWireframesImage from "../images/repackaging-wireframes@2x.png";
+import repackagingMockupImage from "../images/repackaging-mockups@2x.png";
+import stylesExplorationImage from "../images/styles-exploration@2x.png";
+import helpCenterStylesImage from "../images/help-center-styles@2x.png";
+import helpCenterStyles2Image from "../images/help-center-styles-2@2x.png";
+import landingPagesImage from "../images/landing-pages@2x.png";
+
+<CaseStudyCallout description="Vero's brand lacked visual consistency across their marketing and product touch points. This involved adapting the refreshed design system ensuring everything felt intentional. The work helped unify Vero's visual identity and set a stronger foundation for future design consistency." />
+
+## The Problem
+
+- Core areas—like the marketing site, login/signup, blog, and help docs—felt
+  disconnected and outdated.
+- No consistent pattern library for all of Vero's marketing touch points.
+- There was no unified approach to applying brand visuals across social media
+  platforms.
+
+## Goals
+
+- Collaborate on a full redesign of the Vero brand and design system, and lead
+  the implementation and adaptation of the new visual identity across all Vero
+  touch points to ensure a cohesive and modern brand experience.
+- Build and maintain a pattern library for all of Vero touch points using
+  Nunjucks templating.
+- Continuously evolve the pattern library to reflect the ongoing brand refresh
+  and fix visual inconsistencies across components.
+
+  These are just a collection of things I've done on the public facing sites
+  over the past few years.
+
+<figure class="-mx-10">
+  <Image
+    class="rounded-4xl bg-yellow-50"
+    src={repackagingWireframesImage}
+    alt="Repacking wireframes"
+  />
+  <figcaption>
+    Wireframes for repackaging the Cloud and Connect platforms
+  </figcaption>
+</figure>
+
+<figure class="-mx-10">
+  <Image
+    class="rounded-4xl bg-cyan-50"
+    src={repackagingMockupImage}
+    alt="Repacking mockup"
+  />
+  <figcaption>
+    Exploration for the repackaged Cloud and Connect platforms
+  </figcaption>
+</figure>
+
+<div class="-mx-10 grid grid-cols-3 gap-10">
+  <figure class="col-span-1 !my-0 md:col-span-2">
+    <Image
+      class="rounded-3xl bg-yellow-50"
+      src={helpCenterStylesImage}
+      alt="Help center styles"
+    />
+
+    <figcaption>Help Center home</figcaption>
+
+  </figure>
+
+  <figure class="col-span-1 !my-0">
+    <Image
+      class="rounded-3xl bg-yellow-50"
+      src={helpCenterStyles2Image}
+      alt="Help center styles 2"
+    />
+
+    <figcaption>Iconography exploration for the category page</figcaption>
+
+  </figure>
+</div>
+
+Most recently we had some feedback re: the home page. That it wasn't marketer
+friendly for a marketing software. I explored different styles for the hero
+section to quickly share to the internal team.
+
+<figure class="-mx-10">
+  <Image
+    class="rounded-4xl bg-cyan-50"
+    src={stylesExplorationImage}
+    alt="Styles exploration"
+  />
+  <figcaption>
+    Styles exploration for a more marketer friendly home page
+  </figcaption>
+</figure>
+
+<figure class="-mx-10">
+  <Image
+    class="rounded-4xl bg-yellow-50"
+    src={landingPagesImage}
+    alt="Landing pages"
+  />
+  <figcaption>Landing pages throughout the years</figcaption>
+</figure>
