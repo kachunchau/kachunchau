@@ -1,0 +1,45 @@
+{
+  "$ref": "#/definitions/work",
+  "definitions": {
+    "work": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "headline": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "gradient": {
+          "type": "string"
+        },
+        "aligment": {
+          "type": "string"
+        },
+        "draft": {
+          "type": "boolean"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "headline",
+        "slug"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

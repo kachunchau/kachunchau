@@ -1,4 +1,6 @@
 ---
+import { getCollection } from "astro:content";
+import type { ImageMetadata } from "astro";
 import Layout from "../layouts/Layout.astro";
 import Masthead from "../components/Masthead.astro";
 import CaseStudyCard from "../components/CaseStudyCard.astro";
@@ -18,6 +20,18 @@ import vero1SidebarImage from "../images/vero-1-sidebar@2x.png";
 import templateIconsImage from "../images/template-icons@2x.png";
 import vero2CalloutsImage from "../images/vero-2-callouts@2x.png";
 import bluboltStoresImage from "../images/blubolt-stores@2x.png";
+
+const caseStudies = await getCollection("work");
+const sortedCaseStudies = caseStudies.sort(
+  (a, b) => (a.data.order || 0) - (b.data.order || 0)
+);
+
+// Import all case study images
+const caseStudyImages: Record<string, ImageMetadata> = {
+  settings: settingsImage,
+  "ab-testing": abTestingImage,
+  "public-facing-sites": publicFacingSitesImage,
+};
 ---
 
 <Layout title="Ka-Chun Chau — UI Designer">
@@ -67,31 +81,19 @@ import bluboltStoresImage from "../images/blubolt-stores@2x.png";
   >
     <main class="mx-auto max-w-7xl px-10 py-20 md:px-20 md:py-32 xl:px-0">
       <div class="space-y-16 md:space-y-26">
-        <CaseStudyCard
-          title="Settings"
-          description="Full redesign of the settings section for Vero 2.0."
-          src={settingsImage}
-          alt="Full redesign of the settings section for Vero 2.0"
-          href="/work/settings"
-        />
-
-        <CaseStudyCard
-          title="AB Testing"
-          description="Redesigning A/B Testing for newsletter-style campaigns."
-          src={abTestingImage}
-          alt="Redesigning A/B Testing for newsletter-style campaigns"
-          href="/work/ab-testing"
-          aligment="left"
-          gradient="secondary"
-        />
-
-        <CaseStudyCard
-          title="Public-facing sites"
-          description="Ensuring visual consistency across all of Vero's touch points."
-          src={publicFacingSitesImage}
-          alt="Ensuring visual consistency across all of Vero's touch points"
-          href="/work/public-facing-sites"
-        />
+        {
+          sortedCaseStudies.map((caseStudy) => (
+            <CaseStudyCard
+              title={caseStudy.data.title}
+              description={caseStudy.data.description}
+              src={caseStudyImages[caseStudy.data.slug]}
+              alt={caseStudy.data.title}
+              href={`/work/${caseStudy.data.slug}`}
+              gradient={caseStudy.data.gradient as "primary" | "secondary"}
+              aligment={caseStudy.data.aligment as "right" | "left"}
+            />
+          ))
+        }
 
         <h2
           class="mt-20 mb-4 font-medium text-slate-400 md:mt-32 md:mb-6 md:text-xl"

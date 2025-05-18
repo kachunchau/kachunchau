@@ -1,0 +1,72 @@
+---
+title: "AB Testing"
+description: "Redesigning A/B Testing for newsletter-style campaigns"
+headline: "Redesigning A/B Testing for newsletter-style campaigns"
+order: 2
+slug: "ab-testing"
+gradient: "secondary"
+aligment: "left"
+draft: true
+---
+
+import { Image } from "astro:assets";
+
+import CaseStudyCallout from "../components/CaseStudyCallout.astro";
+import manualTestImage from "../images/manual-test@2x.png";
+import pickAWinnerImage from "../images/pick-a-winner@2x.png";
+
+<CaseStudyCallout
+  description="I designed the A/B testing experience for Vero 2.0, bringing back a critical
+feature from the legacy platform. The goal was to modernise the flow,
+integrate it into the new design system, and ensure it supported complex
+campaign logic. I worked closely with engineers to polish the UI, maintain
+consistency, and test functionality."
+/>
+
+## The Problem
+
+- Vero 2.0 initially launched without A/B testing, putting a key customer at
+  risk of churning if the feature wasn't delivered quickly.
+- The challenge was to migrate this functionality quickly from the legacy
+  platform to Vero 2.0 while also improving the overall UX to better fit the
+  new campaign builder model.
+
+## Goals
+
+- Independently design the UI and UX for a modernised A/B testing experience.
+- Drawing inspiration from the legacy platform while fitting the feature into
+  the new design system and component patterns..
+- Identify and account for edge cases to support complex campaign logic and
+  ensure a reliable user experience.
+- Identify and account for edge cases to support complex campaign logic and
+  Identify and account for edge cases to support complex campaign logic and
+  ensure a reliable user experience.
+
+## Process
+
+### Research
+
+Benchmarked how similar tools (like Mailchimp, Customer.io, and Braze) handled
+A/B testing, especially how they explained traffic split, metrics, and variant
+selection.
+p>
+
+### Exploring designs
+
+Shared early mockups internally to validate direction and ensure feasibility
+under technical constraints and tight timelines.
+
+###Refining design
+
+Worked closely with product and engineering to scope a realistic MVP version
+that covered core functionality but allowed for future iteration.
+
+<figure class="-mx-10">
+  <Image src={manualTestImage} alt="Manual test" />
+  <figcaption>Manual test</figcaption>
+</figure>
+
+<figure class="-mx-10">
+  <Image src={pickAWinnerImage} alt="Pick a winner" />
+  <figcaption>Pick a winner</figcaption>
+</figure>

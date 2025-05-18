@@ -1,0 +1,182 @@
+---
+title: "Settings"
+description: "Full redesign of the settings section for Vero 2.0"
+headline: "Full redesign of the settings section for Vero 2.0"
+order: 1
+slug: "settings"
+---
+
+import { Image } from "astro:assets";
+
+import CaseStudyCallout from "../components/CaseStudyCallout.astro";
+import featureAuditImage from "../images/feature-audit@2x.png";
+import netlifyImage from "../images/netlify@2x.png";
+import vercelImage from "../images/vercel@2x.png";
+import accountProfileModalTypeImage from "../images/account-profile-modal-type@2x.png";
+import inlineFullScreenImage from "../images/inline-full-screen@2x.png";
+import nestedProjectsImage from "../images/nested-projects@2x.png";
+import settingsSidebarsImage from "../images/settings-sidebars@2x.png";
+import dataFeedsImage from "../images/data-feeds@2x.png";
+import teamMembersImage from "../images/team-members@2x.png";
+import switcherNewProjectImage from "../images/switcher-new-project@2x.png";
+import settingsSidebarTweaksImage from "../images/settings-sidebar-tweaks@2x.png";
+
+<CaseStudyCallout description="In Vero 2.0, the settings experience was confusing and spread out. Users had trouble managing accounts, projects, and preferences without getting lost. I led the redesign of the entire settings system to make it easier to use, more consistent, and ready to scale." />
+
+## The Problem
+
+To understand the key challenges, I collaborated with the Head of Product, who provided problem statements grounded in strategic product goals and insights gathered from internal teams and user feedback channels. These formed the foundation for my design exploration and decision-making.
+
+### Identified Problems
+
+- The settings section was fragmented, making it hard to manage projects, accounts, and user preferences.
+- There was no clear distinction between user-level and project-level settings, causing confusion around which settings affected what.
+- As more settings from Vero 1.0 are integrated into Vero 2.0, the lack of hierarchical clarity is becoming increasingly problematic.
+- Users can't customise their user profile by adding an image.
+- There was no clear structure or consistent design.
+- The concept of an organisation layer introduces a new level of complexity, with no existing structure to support organisation-specific settings.
+
+## Goals
+
+- Organize all settings into a clear, logical structure.
+- Improve navigation and clarity.
+- Use consistent design patterns for every setting type.
+- Build a scalable system for future features.
+
+## Process
+
+### Research
+
+Collaborated with the Head of Product to conduct a comprehensive audit of all existing settings across user roles and project types. This was also to decide which settings to port over from the Vero 1.0 to Vero 2.0 and which to deprecate.
+
+<figure className="-mx-10">
+  <Image
+    className="rounded-4xl bg-yellow-50"
+    src={featureAuditImage}
+    alt="Feature audit"
+  />
+  <figcaption>Feature comparistion table of the two products</figcaption>
+</figure>
+
+To guide our design approach, we also reviewed how tools in adjacent industries—such as Netlify and Vercel—organised their settings, drawing inspiration from proven patterns.
+
+<div className="-mx-10 grid grid-cols-2 gap-10">
+  <figure className="!my-0">
+    <Image
+      className="rounded-3xl outline outline-black/5"
+      src={netlifyImage}
+      alt="Screenshot of Netlify for competitor analysis"
+    />
+    <figcaption>Screenshot of Netlify for competitor analysis</figcaption>
+  </figure>
+
+  <figure className="!my-0">
+    <Image
+      className="rounded-3xl outline outline-black/5"
+      src={vercelImage}
+      alt="Screenshot of Vercel for competitor analysis"
+    />
+    <figcaption>Screenshot of Vercel for competitor analysis</figcaption>
+  </figure>
+</div>
+
+### Exploring designs
+
+We have a Sketch library our our components and I explored different mid to hi-fidelity mockups—testing different ways to group and present the settings sidebar. I shared these iterations regularly internally to gather feedback early. This collaborative process helped me evaluate trade-offs due to balancing business goals or technical constraints.
+
+- **Modal vs inline for profile settings:** Should profiles open in a modal for quick access, or be embedded inline within the settings view?
+- **Inline vs full-screen views:** Should settings open up full-screen so the new settings could also be used in Vero 1.0?
+
+<figure className="-mx-10">
+  <Image
+    className="rounded-4xl bg-cyan-50"
+    src={accountProfileModalTypeImage}
+    alt="Account profile modal type"
+  />
+  <figcaption>
+    Srolling vs tabbed navigation in the account & profile modal
+  </figcaption>
+</figure>
+
+<figure className="-mx-10">
+  <Image
+    className="rounded-4xl bg-yellow-50"
+    src={inlineFullScreenImage}
+    alt="Inline settings vs full-screen settings"
+  />
+  <figcaption>Inline settings vs full-screen settings</figcaption>
+</figure>
+
+I explored ways to differentiate project-level and user-level settings, and how multiple projects should be represented in the sidebar.
+
+<div className="-mx-10 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
+  <figure className="col-span-1 !my-0 md:col-span-2">
+    <Image
+      className="rounded-3xl bg-cyan-50"
+      src={settingsSidebarsImage}
+      alt="Settings sidebar exploration"
+    />
+    <figcaption>Settings sidebar exploration</figcaption>
+  </figure>
+  <figure className="col-span-1 !my-0">
+    <Image
+      className="rounded-3xl bg-cyan-50"
+      src={nestedProjectsImage}
+      alt="Nested projects"
+    />
+    <figcaption>Nested projects</figcaption>
+  </figure>
+</div>
+
+<figure className="-mx-10">
+  <Image
+    className="rounded-4xl bg-yellow-50"
+    src={switcherNewProjectImage}
+    alt="Switcher new project"
+  />
+  <figcaption>Adding a new project from the switcher</figcaption>
+</figure>
+
+### Refining design
+
+I refined the settings UI to balance usability, visual consistency, and technical constraints. To align with business goals, less critical settings were trimmed or hidden, allowing us to prioritize core functionality for a faster, more reliable launch. During implementation, I made incremental improvements—like refining spacing and navigation groupings—to ensure a more consistent and scalable experience.
+
+<div className="-mx-10 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
+  <figure className="col-span-1 !my-0">
+    <div className="overflow-hidden rounded-3xl bg-cyan-50">
+      <Image
+        className="rounded-3xl drop-shadow-xl"
+        src={dataFeedsImage}
+        alt="Data feeds"
+      />
+    </div>
+    <figcaption>Data feeds</figcaption>
+  </figure>
+  <figure className="col-span-1 !my-0 md:col-span-2">
+    <div className="overflow-hidden rounded-3xl bg-cyan-50">
+      <Image
+        className="rounded-3xl drop-shadow-xl"
+        src={teamMembersImage}
+        alt="Team members"
+      />
+    </div>
+    <figcaption>Team members</figcaption>
+  </figure>
+</div>
+
+## Release and iterate
+
+After release, we received feedback that the sidebar in the settings section felt visually disconnected from the rest of the app—due to differences in width and styling compared to the non-settings sidebar.
+
+We responded by standardising the layout and aligning the styles of the settings sidebar to improve visual consistency.
+
+<figure className="-mx-10">
+  <div className="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      className="drop-shadow-xl"
+      src={settingsSidebarTweaksImage}
+      alt="Settings sidebar tweaks"
+    />
+  </div>
+  <figcaption>Settings sidebar tweaks post-launch</figcaption>
+</figure>
