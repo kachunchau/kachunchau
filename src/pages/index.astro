@@ -7,31 +7,21 @@ import CaseStudyCard from "../components/CaseStudyCard.astro";
 import WorkGrid from "../components/WorkGrid.astro";
 import WorkCard from "../components/WorkCard.astro";
 import Button from "../components/Button.astro";
-import VeroLogo from "../images/vero.svg";
-import settingsImage from "../images/settings@2x.png";
-import abTestingImage from "../images/ab-testing@2x.png";
-import publicFacingSitesImage from "../images/public-facing-sites@2x.png";
-import htmlBlockImage from "../images/html-block@2x.png";
-import smsImage from "../images/sms@2x.png";
-import triggersImage from "../images/triggers@2x.png";
-import helpCenterImage from "../images/help-center@2x.png";
-import vero2SidebarImage from "../images/vero-2-sidebar@2x.png";
-import vero1SidebarImage from "../images/vero-1-sidebar@2x.png";
-import templateIconsImage from "../images/template-icons@2x.png";
-import vero2CalloutsImage from "../images/vero-2-callouts@2x.png";
-import bluboltStoresImage from "../images/blubolt-stores@2x.png";
+import VeroLogo from "@images/vero.svg";
+import htmlBlockImage from "@images/html-block@2x.png";
+import smsImage from "@images/sms@2x.png";
+import triggersImage from "@images/triggers@2x.png";
+import helpCenterImage from "@images/help-center@2x.png";
+import vero2SidebarImage from "@images/vero-2-sidebar@2x.png";
+import vero1SidebarImage from "@images/vero-1-sidebar@2x.png";
+import templateIconsImage from "@images/template-icons@2x.png";
+import vero2CalloutsImage from "@images/vero-2-callouts@2x.png";
+import bluboltStoresImage from "@images/blubolt-stores@2x.png";
 
 const caseStudies = await getCollection("work");
 const sortedCaseStudies = caseStudies.sort(
   (a, b) => (a.data.order || 0) - (b.data.order || 0)
 );
-
-// Import all case study images
-const caseStudyImages: Record<string, ImageMetadata> = {
-  settings: settingsImage,
-  "ab-testing": abTestingImage,
-  "public-facing-sites": publicFacingSitesImage,
-};
 ---
 
 <Layout title="Ka-Chun Chau — UI Designer">
@@ -86,11 +76,11 @@ const caseStudyImages: Record<string, ImageMetadata> = {
             <CaseStudyCard
               title={caseStudy.data.title}
               description={caseStudy.data.description}
-              src={caseStudyImages[caseStudy.data.slug]}
+              imgSrc={caseStudy.data.cover}
               alt={caseStudy.data.title}
               href={`/work/${caseStudy.data.slug}`}
               gradient={caseStudy.data.gradient as "primary" | "secondary"}
-              aligment={caseStudy.data.aligment as "right" | "left"}
+              aligment={caseStudy.data.alignment as "right" | "left"}
             />
           ))
         }

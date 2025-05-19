@@ -7,7 +7,7 @@ interface Props {
   title?: string;
   description?: string;
   alt?: string;
-  src: ImageMetadata;
+  imgSrc: ImageMetadata;
   gradient?: "primary" | "secondary";
   aligment?: "right" | "left";
   href?: string;
@@ -18,7 +18,7 @@ const {
   title,
   description,
   alt,
-  src,
+  imgSrc,
   gradient = "primary",
   aligment = "right",
   href = "#none",
@@ -83,8 +83,8 @@ const aligmentStyles = {
   </div>
 
   <Image
-    class="w-180 max-w-none rounded-4xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025] md:w-210 lg:w-320"
-    src={src}
+    class="w-180 max-w-none overflow-hidden rounded-4xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025] md:w-210 lg:w-320"
+    src={imgSrc}
     alt={alt || "Case study image"}
   />
 </a>

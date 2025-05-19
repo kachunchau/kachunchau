@@ -16,13 +16,16 @@
         "slug": {
           "type": "string"
         },
+        "cover": {
+          "type": "string"
+        },
         "order": {
           "type": "number"
         },
         "gradient": {
           "type": "string"
         },
-        "aligment": {
+        "alignment": {
           "type": "string"
         },
         "draft": {
@@ -36,7 +39,8 @@
         "title",
         "description",
         "headline",
-        "slug"
+        "slug",
+        "cover"
       ],
       "additionalProperties": false
     }
