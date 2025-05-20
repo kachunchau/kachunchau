@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import type { ImageMetadata } from "astro";
 import Layout from "../layouts/Layout.astro";
 import Masthead from "../components/Masthead.astro";
 import CaseStudyCard from "../components/CaseStudyCard.astro";
@@ -29,16 +28,14 @@ const sortedCaseStudies = caseStudies.sort(
     <h1
       class="font-bricolage text-5xl font-light -tracking-[0.025em] text-balance md:text-7xl md:tracking-[-0.03em] xl:text-8xl xl:tracking-[-0.04em] dark:text-white"
     >
-      <span class="font-medium">Hey</span>, I'm KC, a <span class="font-medium"
-        >UI Designer</span
-      > &amp;
+      Hey there, I'm KC, a <span class="font-medium">UI Designer</span> &amp;
       <span class="font-medium">Developer</span>
     </h1>
 
     <p
       class="mt-6 max-w-[800px] text-xl tracking-[-0.01em] text-pretty text-slate-400 md:mt-8 md:text-2xl/normal dark:text-cyan-50"
     >
-      I'm from Northern Ireland, now based in Melbourne, Australia. For the past
+      I'm from Northern Ireland now based in Melbourne, Australia. For the past
       7 years I've worked at
       <a
         class="group relative inline-block pl-12"
@@ -62,6 +59,16 @@ const sortedCaseStudies = caseStudies.sort(
     >
       👋 Get in touch
     </Button>
+
+    <div
+      class="mt-5 flex flex-initial items-center gap-2.5 text-base text-emerald-400"
+    >
+      <div class="flex flex-none items-center justify-center">
+        <span class="size-2 rounded-full bg-emerald-400"></span>
+      </div>
+
+      <span class="truncate">Currently open to new opportunities</span>
+    </div>
   </Masthead>
 
   <div
