@@ -125,16 +125,14 @@ const sortedCaseStudies = caseStudies.sort(
             src={helpCenterImage}
             alt="Help Center redesign"
           />
-        </WorkGrid>
-
-        <WorkGrid className="-mt-6 items-start md:-mt-16">
           <WorkCard
+            className="self-start"
             title="Vero 2.0 sidebar"
             src={vero2SidebarImage}
             alt="Vero 2.0 sidebar redesign"
           />
           <div
-            class="col-span-full flex flex-col gap-8 md:col-span-1 md:gap-10"
+            class="col-span-full flex flex-col gap-8 self-start md:col-span-1 md:gap-10"
           >
             <WorkCard
               title="Template icons"
@@ -150,6 +148,7 @@ const sortedCaseStudies = caseStudies.sort(
             />
           </div>
           <WorkCard
+            className="self-start"
             title="Vero 1.0 sidebar"
             src={vero1SidebarImage}
             alt="Vero 1.0 sidebar redesign"
