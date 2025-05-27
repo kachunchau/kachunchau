@@ -4,6 +4,9 @@
     "work": {
       "type": "object",
       "properties": {
+        "company": {
+          "type": "string"
+        },
         "title": {
           "type": "string"
         },

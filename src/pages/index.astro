@@ -80,19 +80,22 @@ const sortedCaseStudies = caseStudies.sort(
   >
     <main class="mx-auto max-w-7xl px-10 py-20 md:px-20 md:py-32 xl:px-0">
       <div class="space-y-16 md:space-y-26">
-        {
-          sortedCaseStudies.map((caseStudy) => (
-            <CaseStudyCard
-              title={caseStudy.data.title}
-              description={caseStudy.data.description}
-              imgSrc={caseStudy.data.cover}
-              alt={caseStudy.data.title}
-              href={`/work/${caseStudy.data.slug}`}
-              gradient={caseStudy.data.gradient as "primary" | "secondary"}
-              aligment={caseStudy.data.alignment as "right" | "left"}
-            />
-          ))
-        }
+        <div class="space-y-8 md:space-y-10">
+          {
+            sortedCaseStudies.map((caseStudy) => (
+              <CaseStudyCard
+                company={caseStudy.data.company}
+                title={caseStudy.data.title}
+                description={caseStudy.data.description}
+                imgSrc={caseStudy.data.cover}
+                alt={caseStudy.data.title}
+                href={`/work/${caseStudy.data.slug}`}
+                gradient={caseStudy.data.gradient as "primary" | "secondary"}
+                aligment={caseStudy.data.alignment as "right" | "left"}
+              />
+            ))
+          }
+        </div>
 
         <h2
           class="mt-20 mb-4 font-medium text-slate-400 md:mt-32 md:mb-6 md:text-xl"

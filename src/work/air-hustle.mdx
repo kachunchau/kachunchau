@@ -1,0 +1,111 @@
+---
+title: "Air Hustle"
+description: "Designing the UI for a Flight Deals Aggregator"
+company: "Self-directed"
+headline: "Designing the UI for a Flight Deals Aggregator"
+order: 2
+slug: "air-hustle"
+cover: "@images/splendid-flights@2x.png"
+gradient: "secondary"
+alignment: "left"
+draft: true
+---
+
+import { Image } from "astro:assets";
+
+import CaseStudyCallout from "../components/CaseStudyCallout.astro";
+import userPersonasImage from "@images/user-personas@2x.png";
+import saraJourneyImage from "@images/sara-journey@2x.png";
+import marcusJourneyImage from "@images/marcus-journey@2x.png";
+import leoJourneyImage from "@images/leo-journey@2x.png";
+import userFlowImage from "@images/user-flow@2x.png";
+
+<CaseStudyCallout description="Self-initiated UX/UI case study focuses on designing the user flow and interface for a flight deals aggregator site. Inspired by platforms like Kayak and Skyscanner, the goal was to create a clear, efficient search experience that supports users in finding flight deals and seamlessly redirects them to third-party booking sites." />
+
+## The Problem
+
+- Confusing pricing structures (e.g., hidden baggage or seat fees).
+- Overwhelming flight comparison interfaces.
+- Pressure from countdown timers and “only 2 seats left!” tactics.
+- Not clear if Wi-Fi or power is included
+- Unclear if fare includes lounge access.
+- Inflexible booking tools for open-ended travel.
+- Visa or travel restriction info not surfaced during booking.
+
+## Goals
+
+- Keep UI simple and easy to use.
+- Avoid sales pressure tactics.
+- Show price up front.
+- Have options to show flights for power users.
+
+## Process
+
+### Research
+
+To better understand user needs and pain points, I developed three user personas based on distinct travel behaviors. While these were created using assumed data for this case study, in a real-world scenario, they would be informed by qualitative and quantitative user research.
+
+<figure class="-mx-16">
+  <Image
+    class="rounded-4xl bg-cyan-50"
+    src={userPersonasImage}
+    alt="Repacking wireframes"
+  />
+  <figcaption>User personas</figcaption>
+</figure>
+
+I then mapped each persona's journey through the search and booking process to identify key frustrations, motivations, and opportunities for improvement.
+
+<figure class="-mx-16">
+  <Image
+    class="rounded-4xl bg-yellow-50"
+    src={saraJourneyImage}
+    alt="Repacking wireframes"
+  />
+  <figcaption>Sara's journey map</figcaption>
+</figure>
+
+<figure class="-mx-16">
+  <Image
+    class="rounded-4xl bg-cyan-50"
+    src={marcusJourneyImage}
+    alt="Repacking wireframes"
+  />
+  <figcaption>Marcus's journey map</figcaption>
+</figure>
+
+<figure class="-mx-16">
+  <Image
+    class="rounded-4xl bg-yellow-50"
+    src={leoJourneyImage}
+    alt="Repacking wireframes"
+  />
+  <figcaption>Leo's journey map</figcaption>
+</figure>
+
+After mapping the user journeys, I created a user flow to visualize the key steps users take from landing on the site to selecting a deal and being redirected to a third-party booking platform.
+
+<figure class="-mx-16">
+  <Image
+    class="rounded-4xl bg-yellow-50"
+    src={userFlowImage}
+    alt="Repacking wireframes"
+  />
+  <figcaption>User flow</figcaption>
+</figure>
+
+A common theme between the users is that the fights tend to have hidden baggage or seat fees so I will try to add transparent pricing or tooltips to reveal the prices.
+
+### Exploring designs
+
+To begin visualising the UI, I created wireframes in Whimsical.
+
+See [wireframes](https://whimsical.com/wireframe-VvcyisSJE6Cz18RwmH4GLG)
+
+These wireframes were kept simple, emphasising layout. The goal at this stage was to quickly try out layouts for key elements such as the search bar, filters, and flight results, without getting distracted by styling details. Inspired by established platforms like Kayak and Skyscanner. These early wireframes helped identify opportunities to improve usability and guided the next phase of iterative design.
+
+### Refining designs
+
+Although this project didn't involve live user testing, I based design decisions on heuristics, competitor patterns (like Kayak and Skyscanner), and common usability principles.
+
+[https://sketch.com/s/6d9d8d80-49fb-494b-93f6-49abdc8e0fe5](https://sketch.com/s/6d9d8d80-49fb-494b-93f6-49abdc8e0fe5)
