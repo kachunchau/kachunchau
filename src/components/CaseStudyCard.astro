@@ -4,6 +4,7 @@ import type { ImageMetadata } from "astro";
 
 interface Props {
   className?: string;
+  company?: string;
   title?: string;
   description?: string;
   alt?: string;
@@ -15,6 +16,7 @@ interface Props {
 
 const {
   className,
+  company = "Vero",
   title,
   description,
   alt,
@@ -50,8 +52,8 @@ const aligmentStyles = {
   >
     <div class:list={["w-78 self-end", aligmentStyles[aligment]]}>
       <span
-        class="inline-block text-xs tracking-widest text-slate-400 uppercase md:text-sm"
-        >Vero</span
+        class="inline-block text-xs font-semibold tracking-widest text-slate-400 uppercase md:text-sm"
+        >{company}</span
       >
       <h3
         class="font-bricolage mt-0.5 text-xl font-semibold -tracking-[0.025em] text-cyan-950 md:mt-2 md:text-4xl"
