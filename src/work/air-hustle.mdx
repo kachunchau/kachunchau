@@ -1,8 +1,8 @@
 ---
 title: "Air Hustle"
-description: "Designing the UI for a Flight Deals Aggregator"
-company: "Self-directed"
-headline: "Designing the UI for a Flight Deals Aggregator"
+description: "Designing the UI for a made up flight deals aggregator"
+company: "Self-initiated"
+headline: "Designing the UI for a made up flight deals aggregator"
 order: 2
 slug: "air-hustle"
 cover: "@images/splendid-flights@2x.png"
@@ -19,6 +19,9 @@ import saraJourneyImage from "@images/sara-journey@2x.png";
 import marcusJourneyImage from "@images/marcus-journey@2x.png";
 import leoJourneyImage from "@images/leo-journey@2x.png";
 import userFlowImage from "@images/user-flow@2x.png";
+import dmSansImage from "@images/dm-sans@2x.png";
+import fromSearchImage from "@images/from-search@2x.png";
+import flightCardImage from "@images/flight-card@2x.png";
 
 <CaseStudyCallout description="Self-initiated UX/UI case study focuses on designing the user flow and interface for a flight deals aggregator site. Inspired by platforms like Kayak and Skyscanner, the goal was to create a clear, efficient search experience that supports users in finding flight deals and seamlessly redirects them to third-party booking sites." />
 
@@ -45,7 +48,7 @@ import userFlowImage from "@images/user-flow@2x.png";
 
 To better understand user needs and pain points, I developed three user personas based on distinct travel behaviors. While these were created using assumed data for this case study, in a real-world scenario, they would be informed by qualitative and quantitative user research.
 
-<figure class="-mx-16">
+<figure>
   <Image
     class="rounded-4xl bg-cyan-50"
     src={userPersonasImage}
@@ -56,41 +59,51 @@ To better understand user needs and pain points, I developed three user personas
 
 I then mapped each persona's journey through the search and booking process to identify key frustrations, motivations, and opportunities for improvement.
 
-<figure class="-mx-16">
-  <Image
-    class="rounded-4xl bg-yellow-50"
-    src={saraJourneyImage}
-    alt="Repacking wireframes"
-  />
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={saraJourneyImage}
+      alt="Repacking wireframes"
+    />
+  </div>
+
   <figcaption>Sara's journey map</figcaption>
 </figure>
 
-<figure class="-mx-16">
-  <Image
-    class="rounded-4xl bg-cyan-50"
-    src={marcusJourneyImage}
-    alt="Repacking wireframes"
-  />
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={marcusJourneyImage}
+      alt="Repacking wireframes"
+    />
+  </div>
+
   <figcaption>Marcus's journey map</figcaption>
 </figure>
 
-<figure class="-mx-16">
-  <Image
-    class="rounded-4xl bg-yellow-50"
-    src={leoJourneyImage}
-    alt="Repacking wireframes"
-  />
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={leoJourneyImage}
+      alt="Repacking wireframes"
+    />
+  </div>
   <figcaption>Leo's journey map</figcaption>
 </figure>
 
 After mapping the user journeys, I created a user flow to visualize the key steps users take from landing on the site to selecting a deal and being redirected to a third-party booking platform.
 
-<figure class="-mx-16">
-  <Image
-    class="rounded-4xl bg-yellow-50"
-    src={userFlowImage}
-    alt="Repacking wireframes"
-  />
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={userFlowImage}
+      alt="Repacking wireframes"
+    />
+  </div>
   <figcaption>User flow</figcaption>
 </figure>
 
@@ -100,12 +113,59 @@ A common theme between the users is that the fights tend to have hidden baggage 
 
 To begin visualising the UI, I created wireframes in Whimsical.
 
-See [wireframes](https://whimsical.com/wireframe-VvcyisSJE6Cz18RwmH4GLG)
+<iframe
+  class="aspect-video w-full"
+  style="border:none"
+  width="1280"
+  height="640"
+  src="https://whimsical.com/embed/VvcyisSJE6Cz18RwmH4GLG"
+></iframe>
 
 These wireframes were kept simple, emphasising layout. The goal at this stage was to quickly try out layouts for key elements such as the search bar, filters, and flight results, without getting distracted by styling details. Inspired by established platforms like Kayak and Skyscanner. These early wireframes helped identify opportunities to improve usability and guided the next phase of iterative design.
 
+### Typography
+
+DM Sans has a simple, geometric, and modern style that feels fresh and approachable—perfect for flight deals aggregator where it has a mix of users. It has a nice balance between being professional and welcoming, which helps build trust without feeling too corporate or cold.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={dmSansImage}
+      alt="Typography choice"
+    />
+  </div>
+  <figcaption>From search suggestions</figcaption>
+</figure>
+
 ### Refining designs
+
+To make the from search more intuitive, I added location-based auto-suggestions using the user's IP address so users can quickly select a location. Additionally, I included recent searches to support power users with faster access to frequently used locations.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={fromSearchImage}
+      alt="From search dropdown"
+    />
+  </div>
+  <figcaption>From search suggestions</figcaption>
+</figure>
+
+I structured the exploration flight cards with the F-shaped scanning pattern in mind, placing key details where users' eyes naturally land first.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={flightCardImage}
+      alt="Flight card"
+    />
+  </div>
+  <figcaption>Exploration flight cards</figcaption>
+</figure>
 
 Although this project didn't involve live user testing, I based design decisions on heuristics, competitor patterns (like Kayak and Skyscanner), and common usability principles.
 
-[https://sketch.com/s/6d9d8d80-49fb-494b-93f6-49abdc8e0fe5](https://sketch.com/s/6d9d8d80-49fb-494b-93f6-49abdc8e0fe5)
+See [full mockups](https://sketch.com/s/6d9d8d80-49fb-494b-93f6-49abdc8e0fe5).
