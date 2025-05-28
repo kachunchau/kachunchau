@@ -20,6 +20,8 @@ import marcusJourneyImage from "@images/marcus-journey@2x.png";
 import leoJourneyImage from "@images/leo-journey@2x.png";
 import userFlowImage from "@images/user-flow@2x.png";
 import dmSansImage from "@images/dm-sans@2x.png";
+import ogSearchImage from "@images/og-search@2x.png";
+import newSearchImage from "@images/new-search@2x.png";
 import fromSearchImage from "@images/from-search@2x.png";
 import flightCardImage from "@images/flight-card@2x.png";
 
@@ -139,6 +141,38 @@ DM Sans has a simple, geometric, and modern style that feels fresh and approacha
 </figure>
 
 ### Refining designs
+
+Since search is the most important feature of a flight deals site, I made it more prominent by visually separating it from the background, breaking it out of the hero and adding a shadow for emphasis.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={ogSearchImage}
+      alt="Original search design"
+    />
+  </div>
+  <figcaption>Original search design</figcaption>
+</figure>
+
+Reviewing the design:
+
+- The search look cluttered due to the spacing between inputs
+- The return date toggle appeared visually off
+- The to/from switch icon resembled a refresh symbol
+
+I made some tweaks with the above feedback in mind. As this is a self-initiated project, I haven't done formal user testing, but my decisions are based on usability best practices.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={newSearchImage}
+      alt="Tweaked search design"
+    />
+  </div>
+  <figcaption>Tweaked search design</figcaption>
+</figure>
 
 To make the from search more intuitive, I added location-based auto-suggestions using the user's IP address so users can quickly select a location. Additionally, I included recent searches to support power users with faster access to frequently used locations.
 
