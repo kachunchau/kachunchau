@@ -17,7 +17,7 @@ const { caseStudy } = Astro.props;
 const { Content } = await render(caseStudy);
 ---
 
-<Layout title={caseStudy.data.title}>
+<Layout title={`${caseStudy.data.title} | KC — UI Design & Code`}>
   <Masthead>
     {
       caseStudy.data.draft && (
