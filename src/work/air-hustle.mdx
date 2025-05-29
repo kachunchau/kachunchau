@@ -23,7 +23,10 @@ import dmSansImage from "@images/dm-sans@2x.png";
 import ogSearchImage from "@images/og-search@2x.png";
 import newSearchImage from "@images/new-search@2x.png";
 import fromSearchImage from "@images/from-search@2x.png";
-import flightCardImage from "@images/flight-card@2x.png";
+import toSearchImage from "@images/to-search@2x.png";
+import explorationflightCardImage from "@images/flight-card@2x.png";
+import resultsImage from "@images/results@2x.png";
+import moreDetailsImage from "@images/more-details@2x.png";
 
 <CaseStudyCallout description="Self-initiated UX/UI case study focuses on designing the user flow and interface for a flight deals aggregator site. Inspired by platforms like Kayak and Skyscanner, the goal was to create a clear, efficient search experience that supports users in finding flight deals and seamlessly redirects them to third-party booking sites." />
 
@@ -32,8 +35,7 @@ import flightCardImage from "@images/flight-card@2x.png";
 - Confusing pricing structures (e.g., hidden baggage or seat fees).
 - Overwhelming flight comparison interfaces.
 - Pressure from countdown timers and “only 2 seats left!” tactics.
-- Not clear if Wi-Fi or power is included
-- Unclear if fare includes lounge access.
+- Hidden information (does flight have wi-fi etc).
 - Inflexible booking tools for open-ended travel.
 - Visa or travel restriction info not surfaced during booking.
 
@@ -174,7 +176,7 @@ I made some tweaks with the above feedback in mind. As this is a self-initiated 
   <figcaption>Tweaked search design</figcaption>
 </figure>
 
-To make the from search more intuitive, I added location-based auto-suggestions using the user's IP address so users can quickly select a location. Additionally, I included recent searches to support power users with faster access to frequently used locations.
+To make the search more intuitive, I added location-based auto-suggestions using the user's IP address so users can quickly select a location. Additionally, I included recent searches to support power users with faster access to frequently used locations. While populating the from destination with popular destinations for people unsure where to go.
 
 <figure>
   <div class="overflow-hidden rounded-4xl bg-cyan-50">
@@ -187,19 +189,63 @@ To make the from search more intuitive, I added location-based auto-suggestions 
   <figcaption>From search suggestions</figcaption>
 </figure>
 
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={toSearchImage}
+      alt="To search dropdown"
+    />
+  </div>
+  <figcaption>To search suggestions</figcaption>
+</figure>
+
 I structured the exploration flight cards with the F-shaped scanning pattern in mind, placing key details where users' eyes naturally land first.
 
 <figure>
   <div class="overflow-hidden rounded-4xl bg-yellow-50">
     <Image
       class="!m-0 drop-shadow-xl"
-      src={flightCardImage}
+      src={explorationflightCardImage}
       alt="Flight card"
     />
   </div>
   <figcaption>Exploration flight cards</figcaption>
 </figure>
 
+I've kept the search minimal on the results page to maximize space for flight listings, but it will expand when clicked.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image class="!m-0 drop-shadow-xl" src={resultsImage} alt="Flight card" />
+  </div>
+  <figcaption>Flight results with the search minimised</figcaption>
+</figure>
+
+Due to the UI being quite busy on these results pages I added a button to reveal more details for the flights to highlight any hidden costs, such as seat selection fees or checked baggage charges.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={moreDetailsImage}
+      alt="Flight card"
+    />
+  </div>
+  <figcaption>More details for flights</figcaption>
+</figure>
+
 Although this project didn't involve live user testing, I based design decisions on heuristics, competitor patterns (like Kayak and Skyscanner), and common usability principles.
 
-See [full mockups](https://sketch.com/s/6d9d8d80-49fb-494b-93f6-49abdc8e0fe5).
+See the full mockups below:
+
+<div class="relative left-0 w-full" style="height: 896px;">
+  <iframe
+    class="aspect-video"
+    src="https://www.sketch.com/embed/s/6d9d8d80-49fb-494b-93f6-49abdc8e0fe5"
+    style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+    allowfullscreen
+  ></iframe>
+</div>
+
+{/* See [full mockups](https://sketch.com/s/6d9d8d80-49fb-494b-93f6-49abdc8e0fe5). */}
