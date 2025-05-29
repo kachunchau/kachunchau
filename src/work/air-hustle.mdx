@@ -25,6 +25,7 @@ import newSearchImage from "@images/new-search@2x.png";
 import fromSearchImage from "@images/from-search@2x.png";
 import toSearchImage from "@images/to-search@2x.png";
 import explorationflightCardImage from "@images/flight-card@2x.png";
+import resultsImage from "@images/results@2x.png";
 import moreDetailsImage from "@images/more-details@2x.png";
 
 <CaseStudyCallout description="Self-initiated UI case study focuses on designing the user flow and interface for a flight deals aggregator site. Inspired by platforms like Kayak and Skyscanner, the goal was to create a clear, efficient search experience that supports users in finding flight deals and seamlessly redirects them to third-party booking sites." />
@@ -214,6 +215,13 @@ I structured the exploration flight cards with the F-shaped scanning pattern in 
 
 I've kept the search minimal on the results page to maximize space for flight listings, but it will expand when clicked.
 
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-yellow-50">
+    <Image class="!m-0 drop-shadow-xl" src={resultsImage} alt="Results card" />
+  </div>
+  <figcaption>Flight results with the search minimised</figcaption>
+</figure>
+
 Due to the UI being quite busy on these results pages I added a button to reveal more details for the flights to highlight any hidden costs, such as seat selection fees or checked baggage charges.
 
 <figure>
@@ -221,7 +229,7 @@ Due to the UI being quite busy on these results pages I added a button to reveal
     <Image
       class="!m-0 drop-shadow-xl"
       src={moreDetailsImage}
-      alt="Flight card"
+      alt="Flight card with expanded detail view"
     />
   </div>
   <figcaption>More details for flights</figcaption>
