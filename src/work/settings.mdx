@@ -59,6 +59,62 @@ Collaborated with the Head of Product to conduct a comprehensive audit of all ex
   <figcaption>Feature comparistion table of the two products</figcaption>
 </figure>
 
+Due to time and resource constraints, I took a Lean UX approach—quickly creating lightweight personas based on known user behaviors and context. This allowed for fast, informed design decisions without delaying the process.
+
+{(() => {
+const userPersonas = [
+{
+name: "Emily",
+age: 29,
+occupation: "Product Manager",
+goal: "Quickly find and adjust both personal and project settings to manage her team efficiently.",
+painPoint: "Gets confused when settings for different scopes (user vs. project) are mixed together without clear separation.",
+behaviour: "Frequently switches between projects, values a clean, organized interface."
+},
+{
+name: "David",
+age: 34,
+occupation: "Developer",
+goal: "Access technical settings swiftly without distractions or extra clicks..",
+painPoint: "Finds overly complex or cluttered settings frustrating and time-consuming.",
+behaviour: "Uses settings sparingly but expects them to be precise and streamlined."
+},
+{
+name: "Nina",
+age: 24,
+occupation: "Marketing Analyst",
+goal: "Navigate and update her profile and notification preferences without confusion.",
+painPoint: "Struggles with unclear terminology or ambiguous labels in the settings interface.",
+behaviour: "Uses settings occasionally, prefers intuitive UI that requires little guidance."
+}
+];
+
+const displayNames = {
+painPoint: "Pain Points",
+};
+
+return (
+
+<div className=" grid gap-8 md:gap-10 max-w-3xl md:mx-16">
+  {userPersonas.map((persona, index) => (
+    <div className="bg-slate-50 ring-slate-100 ring-1 overflow-hidden rounded-2xl" key={index}>
+      <div className="font-semibold px-4 py-2">{persona.name}</div>
+      {Object.entries(persona).map(
+        ([key, value]) =>
+          key !== "name" && (
+            <div className="grid even:bg-white grid-cols-5" key={key}>
+              <span className="px-4 col-span-2 py-2 capitalize font-medium">{displayNames[key] || key}: </span>
+              <span className="col-span-3 px-4 py-2">{value}</span>
+            </div>
+          ),
+      )}
+    </div>
+
+))}
+
+</div>
+); })()}
+
 To guide our design approach, we also reviewed how tools in adjacent industries—such as Netlify and Vercel—organised their settings, drawing inspiration from proven patterns.
 
 <div class="grid grid-cols-2 gap-10">
