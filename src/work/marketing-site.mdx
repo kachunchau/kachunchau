@@ -1,0 +1,80 @@
+---
+title: "Marketing Site"
+description: "Refining Vero's marketing site for a cohesive visual identity"
+headline: "Refining Vero's marketing site for a cohesive visual identity"
+order: 3
+slug: "marketing-site"
+cover: "@images/marketing-site@2x.png"
+---
+
+import { Image } from "astro:assets";
+
+import homeHeroImage from "@images/home-hero@2x.png";
+import homeResultsImage from "@images/home-results@2x.png";
+import homeIntegrationsImage from "@images/home-integrations@2x.png";
+import supportImage from "@images/support@2x.png";
+import connectHeroImage from "@images/connect-hero@2x.png";
+import integrationsHeroImage from "@images/integrations-hero@2x.png";
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-teal-50">
+    <Image class="!m-0 drop-shadow-xl" src={homeHeroImage} alt="Current home design" />
+  </div>
+
+  <figcaption>Current home design</figcaption>
+</figure>
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-teal-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={homeResultsImage}
+      alt="Results section"
+    />
+  </div>
+  <figcaption>Results section</figcaption>
+</figure>
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-teal-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={homeIntegrationsImage}
+      alt="Help center styles"
+    />
+  </div>
+  <figcaption>Home integrations section</figcaption>
+</figure>
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-teal-50">
+    <Image
+      class="!my-0 drop-shadow-xl"
+      src={supportImage}
+      alt="Styles exploration"
+    />
+  </div>
+  <figcaption>Support</figcaption>
+</figure>
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-teal-50">
+    <Image
+      class="!my-0 drop-shadow-xl"
+      src={connectHeroImage}
+      alt="Styles exploration"
+    />
+  </div>
+  <figcaption>Connect hero</figcaption>
+</figure>
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-teal-50">
+    <Image
+      class="!my-0 drop-shadow-xl"
+      src={integrationsHeroImage}
+      alt="Styles exploration"
+    />
+  </div>
+  <figcaption>Integrations hero</figcaption>
+</figure>
