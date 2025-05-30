@@ -14,6 +14,7 @@ draft: true
 import { Image } from "astro:assets";
 
 import CaseStudyCallout from "../components/CaseStudyCallout.astro";
+import notionPersonasImage from "@images/notion-personas@2x.png";
 import userPersonasImage from "@images/user-personas@2x.png";
 import saraJourneyImage from "@images/sara-journey@2x.png";
 import marcusJourneyImage from "@images/marcus-journey@2x.png";
@@ -34,7 +35,7 @@ import moreDetailsImage from "@images/more-details@2x.png";
 
 - Confusing pricing structures (e.g., hidden baggage or seat fees).
 - Overwhelming flight comparison interfaces.
-- Pressure from countdown timers and “only 2 seats left!” tactics.
+- Pressure from countdown timers and "only 2 seats left!" tactics.
 - Hidden information (does flight have wi-fi etc).
 - Inflexible booking tools for open-ended travel.
 - Visa or travel restriction info not surfaced during booking.
@@ -55,10 +56,19 @@ To better understand user needs and pain points, I developed three user personas
 <figure>
   <Image
     class="rounded-4xl bg-cyan-50"
-    src={userPersonasImage}
-    alt="Repacking wireframes"
+    src={notionPersonasImage}
+    alt="Storing personas in Notion"
   />
-  <figcaption>User personas</figcaption>
+  <figcaption>User personas in Notion</figcaption>
+</figure>
+
+<figure>
+  <Image
+    class="rounded-4xl bg-yellow-50"
+    src={userPersonasImage}
+    alt="Inside each persona"
+  />
+  <figcaption>Each persona</figcaption>
 </figure>
 
 With the personas in place, I created a user flow to visualise the key steps users take from landing on the site to selecting a deal and being redirected to a third-party booking platform.
