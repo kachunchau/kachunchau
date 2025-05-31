@@ -2,15 +2,15 @@
 import Header from "./Header.astro";
 
 interface Props {
-  variant?: "white" | "transparent";
+  variant?: "gradient" | "white";
   size?: "default" | "compact";
 }
 
-const { variant = "white", size = "default" } = Astro.props;
+const { variant = "gradient", size = "default" } = Astro.props;
 
 const variantStyles = {
-  white: "bg-linear-to-b from-cyan-50 to-50% to-white dark:bg-none",
-  transparent: "bg-transparent",
+  gradient: "bg-linear-to-b to-cyan-50 from-white dark:bg-none",
+  white: "bg-white dark:bg-transparent",
 };
 
 const sizeStyles = {

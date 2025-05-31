@@ -20,11 +20,8 @@ const navLinks = [
 ];
 ---
 
-<header
-  class="mx-auto flex max-w-6xl items-center gap-4 px-10 py-5 md:px-20 md:py-10 xl:mx-auto xl:px-0"
-  transition:persist
->
-  <nav class="flex flex-1 items-center gap-3 md:gap-6">
+<header class="flex items-center gap-4 px-10 py-8 md:px-8" transition:persist>
+  <nav class="flex flex-1 items-center gap-4 md:gap-6">
     <Image
       class="size-9 rounded-full md:size-10"
       src={meImage}
@@ -34,12 +31,12 @@ const navLinks = [
       height={40}
     />
 
-    <ul class="flex">
+    <ul class="flex gap-3 md:gap-5">
       {
         navLinks.map((item) => (
           <li>
             <a
-              class="inline-block rounded-full px-3 py-1.5 text-base font-medium whitespace-nowrap backdrop-blur-md hover:text-teal-400 md:px-4 md:text-xl"
+              class="inline-block text-base font-semibold whitespace-nowrap hover:text-teal-400 md:text-xl"
               href={item.href}
             >
               {item.label}
@@ -72,10 +69,10 @@ const navLinks = [
 
       if (isActive) {
         link.setAttribute("aria-current", "page");
-        link.classList.add("bg-teal-400/10", "text-teal-400");
+        link.classList.add("text-teal-400");
       } else {
         link.removeAttribute("aria-current");
-        link.classList.remove("bg-teal-400/10", "text-teal-400");
+        link.classList.remove("text-teal-400");
       }
     });
   };
