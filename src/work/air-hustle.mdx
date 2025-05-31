@@ -29,7 +29,9 @@ import explorationflightCardImage from "@images/flight-card@2x.png";
 import resultsImage from "@images/results@2x.png";
 import moreDetailsImage from "@images/more-details@2x.png";
 
-<CaseStudyCallout description="Self-initiated UI case study focuses on designing the user flow and interface for a flight deals aggregator site. Inspired by platforms like Kayak and Skyscanner, the goal was to create a clear, efficient search experience that supports users in finding flight deals and seamlessly redirects them to third-party booking sites." />
+## Overview
+
+Self-initiated UI case study focuses on designing the user flow and interface for a flight deals aggregator site. Inspired by platforms like Kayak and Skyscanner, the goal was to create a clear, efficient search experience that supports users in finding flight deals and seamlessly redirects them to third-party booking sites.
 
 ## The Problem
 
@@ -55,7 +57,7 @@ To better understand user needs and pain points, I developed three user personas
 
 <figure>
   <Image
-    class="rounded-4xl bg-teal-50"
+    class="rounded-4xl bg-cyan-50"
     src={notionPersonasImage}
     alt="Storing personas in Notion"
   />
@@ -63,7 +65,7 @@ To better understand user needs and pain points, I developed three user personas
 </figure>
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="drop-shadow-xl"
       src={userPersonasImage}
@@ -76,7 +78,7 @@ To better understand user needs and pain points, I developed three user personas
 With the personas in place, I created a user flow to visualise the key steps users take from landing on the site to selecting a deal and being redirected to a third-party booking platform.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={userFlowImage}
@@ -89,7 +91,7 @@ With the personas in place, I created a user flow to visualise the key steps use
 I then mapped each persona's journey through the search and booking process to identify key frustrations, motivations, and opportunities for improvement.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={saraJourneyImage}
@@ -101,7 +103,7 @@ I then mapped each persona's journey through the search and booking process to i
 </figure>
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={marcusJourneyImage}
@@ -113,7 +115,7 @@ I then mapped each persona's journey through the search and booking process to i
 </figure>
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={leoJourneyImage}
@@ -130,7 +132,7 @@ A common theme between the users is that the fights tend to have hidden baggage 
 DM Sans has a simple, geometric, and modern style that feels fresh and approachable—perfect for flight deals aggregator where it has a mix of users. It has a nice balance between being professional and welcoming, which helps build trust without feeling too corporate or cold.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={dmSansImage}
@@ -159,7 +161,7 @@ These wireframes were kept simple, emphasising layout. The goal at this stage wa
 Since search is the most important feature of a flight deals site, I made it more prominent by visually separating it from the background, breaking it out of the hero and adding a shadow for emphasis.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={ogSearchImage}
@@ -178,7 +180,7 @@ Reviewing the design:
 I made some tweaks with the above feedback in mind. As this is a self-initiated project, I haven't done formal user testing, but my decisions are based on usability best practices.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={newSearchImage}
@@ -191,7 +193,7 @@ I made some tweaks with the above feedback in mind. As this is a self-initiated 
 To make the search more intuitive, I added location-based auto-suggestions using the user's IP address so users can quickly select a location. Additionally, I included recent searches to support power users with faster access to frequently used locations. While populating the from destination with popular destinations for people unsure where to go.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={fromSearchImage}
@@ -202,7 +204,7 @@ To make the search more intuitive, I added location-based auto-suggestions using
 </figure>
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={toSearchImage}
@@ -215,7 +217,7 @@ To make the search more intuitive, I added location-based auto-suggestions using
 I structured the exploration flight cards with the F-shaped scanning pattern in mind, placing key details where users' eyes naturally land first.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={explorationflightCardImage}
@@ -228,7 +230,7 @@ I structured the exploration flight cards with the F-shaped scanning pattern in 
 I've kept the search minimal on the results page to maximize space for flight listings, but it will expand when clicked.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image class="!m-0 drop-shadow-xl" src={resultsImage} alt="Results card" />
   </div>
   <figcaption>Flight results with the search minimised</figcaption>
@@ -237,7 +239,7 @@ I've kept the search minimal on the results page to maximize space for flight li
 Due to the UI being quite busy on these results pages I added a button to reveal more details for the flights to highlight any hidden costs, such as seat selection fees or checked baggage charges.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-teal-50">
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
     <Image
       class="!m-0 drop-shadow-xl"
       src={moreDetailsImage}
