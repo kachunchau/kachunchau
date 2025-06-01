@@ -37,7 +37,7 @@ const sortedCaseStudies = caseStudies.sort(
       class="mt-6 max-w-[800px] text-xl tracking-[-0.01em] text-pretty text-slate-400 md:mt-8 md:text-2xl/normal dark:text-cyan-50"
     >
       I'm from Northern Ireland now based in Melbourne, Australia. For the past
-      7 years I've worked at
+      6.5 years I've worked at
       <a
         class="group relative inline-block pl-12"
         href="https://www.getvero.com/"
@@ -50,15 +50,11 @@ const sortedCaseStudies = caseStudies.sort(
           class="font-normal text-slate-300 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
           >↗</span
         >
-      </a> as a Product Designer &amp; Digital Designer.
+      </a> as a Product &amp; Digital Designer.
     </p>
 
-    <Button
-      class="mt-7 md:mt-11"
-      href="mailto:kachun@kachunchau.com"
-      variant="solid"
-    >
-      👋 Get in touch
+    <Button class="group mt-7 md:mt-10" href="mailto:kachun@kachunchau.com">
+      Get in touch
     </Button>
 
     <div
@@ -72,11 +68,7 @@ const sortedCaseStudies = caseStudies.sort(
     </div>
   </Masthead>
 
-  <div
-    class:list={[
-      "border-t border-transparent text-cyan-50 dark:border-white/10",
-    ]}
-  >
+  <div class:list={["border-t border-slate-200 dark:border-white/10"]}>
     <main class="mx-auto max-w-7xl px-10 py-20 md:px-20 md:py-32 xl:px-0">
       <div class="space-y-16 md:space-y-26">
         <div class="space-y-8 md:space-y-10">
@@ -89,7 +81,12 @@ const sortedCaseStudies = caseStudies.sort(
                 imgSrc={caseStudy.data.cover}
                 alt={caseStudy.data.title}
                 href={`/work/${caseStudy.data.slug}`}
-                gradient={caseStudy.data.gradient as "primary" | "secondary"}
+                gradient={
+                  caseStudy.data.gradient as
+                    | "primary"
+                    | "secondary"
+                    | "tertiary"
+                }
                 aligment={caseStudy.data.alignment as "right" | "left"}
               />
             ))
@@ -97,7 +94,7 @@ const sortedCaseStudies = caseStudies.sort(
         </div>
 
         <h2
-          class="mt-20 mb-4 font-medium text-slate-400 md:mt-32 md:mb-6 md:text-xl"
+          class="font-bricolage mt-20 mb-6 text-3xl font-semibold -tracking-[0.025em] md:mt-32 md:mb-10 md:text-4xl"
         >
           Small things
         </h2>
@@ -107,7 +104,7 @@ const sortedCaseStudies = caseStudies.sort(
             className="col-span-full md:col-span-2"
             title="HTML Block"
             src={htmlBlockImage}
-            alt="Mastodon logo"
+            alt="HTML Block"
           />
           <WorkCard
             className="col-span-full md:col-span-1"
@@ -128,10 +125,12 @@ const sortedCaseStudies = caseStudies.sort(
             alt="Help Center redesign"
           />
           <WorkCard
-            className="self-start"
+            className="self-start drop-shadow-none dark:drop-shadow-none"
             title="Vero 2.0 sidebar"
             src={vero2SidebarImage}
             alt="Vero 2.0 sidebar redesign"
+            imgColor="bg-white"
+            imgShadow={false}
           />
           <div
             class="col-span-full flex flex-col gap-8 self-start md:col-span-1 md:gap-10"
@@ -140,20 +139,20 @@ const sortedCaseStudies = caseStudies.sort(
               title="Template icons"
               src={templateIconsImage}
               alt="Template icons"
-              imgColor="bg-sky-50"
             />
             <WorkCard
               title="Upgrade callouts"
               src={vero2CalloutsImage}
               alt="Upgrade callouts"
-              imgColor="bg-sky-50"
+              imgShadow={false}
             />
           </div>
           <WorkCard
-            className="self-start"
+            className="self-start drop-shadow-none dark:drop-shadow-none"
             title="Vero 1.0 sidebar"
             src={vero1SidebarImage}
             alt="Vero 1.0 sidebar redesign"
+            imgShadow={false}
           />
         </WorkGrid>
       </div>

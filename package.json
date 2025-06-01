@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/mdx": "^4.3.0",
     "@fontsource-variable/bricolage-grotesque": "^5.2.7",
     "@fontsource-variable/figtree": "^5.2.7",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.5",
-    "astro": "^5.7.10",
+    "astro": "^5.8.1",
     "tailwindcss": "^4.1.5",
     "typescript": "^5.5.4"
   },
