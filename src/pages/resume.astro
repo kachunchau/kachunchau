@@ -59,92 +59,90 @@ const experiences = [
     >
   </Masthead>
 
-  <div class="border-t border-slate-200 dark:border-white/10">
-    <main
-      class="mx-auto grid max-w-6xl gap-8 px-10 py-20 md:gap-10 md:px-20 md:py-32 lg:grid-cols-3 xl:px-0"
-    >
-      <div class="col-span-1 space-y-20 md:space-y-32 lg:col-span-2">
-        <section>
-          <h2
-            class="mb-1 text-sm font-semibold tracking-wider text-slate-400 uppercase md:text-base"
-          >
-            Experience
-          </h2>
+  <main
+    class="mx-auto grid max-w-6xl gap-8 border-t border-slate-200/70 px-10 py-20 md:gap-10 md:px-20 md:py-32 lg:grid-cols-3 xl:px-0 dark:border-white/10"
+  >
+    <div class="col-span-1 space-y-20 md:space-y-32 lg:col-span-2">
+      <section>
+        <h2
+          class="mb-1 text-sm font-semibold tracking-wider text-slate-400 uppercase md:text-base"
+        >
+          Experience
+        </h2>
 
-          <ul class="divide-y divide-slate-100 dark:divide-white/10">
-            {
-              experiences.map((experience) => (
-                <li class="flex flex-col items-start gap-2 py-8 md:flex-row md:items-center md:justify-between md:gap-5">
-                  {experience.company === "Riot HQ" ? (
-                    <Image
-                      class="flex-none"
-                      src={riotLogo}
-                      alt={experience.company}
-                      width={48}
-                      height={48}
-                    />
-                  ) : experience.logo ? (
-                    <experience.logo
-                      class:list={[
-                        "flex-none",
-                        experience.company === "Frank" ? "dark:fill-white" : "",
-                      ]}
-                      width={48}
-                      height={48}
-                    />
-                  ) : null}
-                  <div class="flex flex-1 flex-col items-start">
-                    <div class="flex items-center gap-2 overflow-hidden text-xl md:gap-3 md:text-2xl">
-                      <a
-                        class="flex-none font-medium"
-                        href={experience.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {experience.company}{" "}
-                        <span class="font-light text-slate-300">↗</span>
-                      </a>
-                      <span class="flex-initial truncate font-medium text-slate-400">
-                        {experience.title}
-                      </span>
-                    </div>
-
-                    <div class="text-lg whitespace-nowrap text-slate-400">
-                      {experience.date}
-                    </div>
+        <ul class="divide-y divide-slate-100 dark:divide-white/10">
+          {
+            experiences.map((experience) => (
+              <li class="flex flex-col items-start gap-2 py-8 md:flex-row md:items-center md:justify-between md:gap-5">
+                {experience.company === "Riot HQ" ? (
+                  <Image
+                    class="flex-none"
+                    src={riotLogo}
+                    alt={experience.company}
+                    width={48}
+                    height={48}
+                  />
+                ) : experience.logo ? (
+                  <experience.logo
+                    class:list={[
+                      "flex-none",
+                      experience.company === "Frank" ? "dark:fill-white" : "",
+                    ]}
+                    width={48}
+                    height={48}
+                  />
+                ) : null}
+                <div class="flex flex-1 flex-col items-start">
+                  <div class="flex items-center gap-2 overflow-hidden text-xl md:gap-3 md:text-2xl">
+                    <a
+                      class="flex-none font-medium"
+                      href={experience.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {experience.company}{" "}
+                      <span class="font-light text-slate-300">↗</span>
+                    </a>
+                    <span class="flex-initial truncate font-medium text-slate-400">
+                      {experience.title}
+                    </span>
                   </div>
-                </li>
-              ))
-            }
-          </ul>
-        </section>
 
-        <section>
-          <h2
-            class="mb-1 text-sm font-semibold tracking-wider text-slate-400 uppercase md:text-base"
-          >
-            Education
-          </h2>
-
-          <ul class="divide-y divide-white/10">
-            <li class="flex items-start gap-6 py-8">
-              <div class="flex flex-1 flex-col items-start">
-                <h2 class="text-xl md:text-2xl">
-                  <span class="font-medium">University of Ulster </span>
-                  <span class="font-light text-slate-200">/</span>
-                  <span class="font-medium text-slate-400"
-                    >BSc (Hons) Interactive Multimedia Design</span
-                  >
-                </h2>
-
-                <div class="text-lg whitespace-nowrap text-slate-400">
-                  2007 - 2011
+                  <div class="text-lg whitespace-nowrap text-slate-400">
+                    {experience.date}
+                  </div>
                 </div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2
+          class="mb-1 text-sm font-semibold tracking-wider text-slate-400 uppercase md:text-base"
+        >
+          Education
+        </h2>
+
+        <ul class="divide-y divide-white/10">
+          <li class="flex items-start gap-6 py-8">
+            <div class="flex flex-1 flex-col items-start">
+              <h2 class="text-xl md:text-2xl">
+                <span class="font-medium">University of Ulster </span>
+                <span class="font-light text-slate-200">/</span>
+                <span class="font-medium text-slate-400"
+                  >BSc (Hons) Interactive Multimedia Design</span
+                >
+              </h2>
+
+              <div class="text-lg whitespace-nowrap text-slate-400">
+                2007 - 2011
               </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </main>
-  </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
 </Layout>
