@@ -2,28 +2,23 @@
 import Header from "./Header.astro";
 
 interface Props {
-  variant?: "gradient" | "white";
-  size?: "default" | "compact";
+  variant?: "gradient" | "white" | "transparent";
 }
 
-const { variant = "gradient", size = "default" } = Astro.props;
+const { variant = "transparent" } = Astro.props;
 
 const variantStyles = {
   gradient: "bg-linear-to-b to-cyan-50 from-white dark:bg-none",
   white: "bg-white dark:bg-transparent",
-};
-
-const sizeStyles = {
-  default: "max-w-6xl md:px-20 xl:px-0",
-  compact: " max-w-2xl md:px-0 ",
+  transparent: "",
 };
 ---
 
-<div class={`${variantStyles[variant]}`}>
+<div class={`pt-10 md:pt-8 ${variantStyles[variant]}`}>
   <Header />
 
   <div
-    class={`mx-auto px-10 pt-30 pb-20 md:pt-40 md:pb-32 ${sizeStyles[size]}`}
+    class={`mx-auto px-10 pt-30 pb-20 xl:pt-56 md:pt-48 md:pb-32 max-w-6xl md:px-20 xl:px-0`}
   >
     <slot />
   </div>

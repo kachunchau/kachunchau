@@ -9,7 +9,7 @@ interface Props {
   description?: string;
   alt?: string;
   imgSrc: ImageMetadata;
-  gradient?: "primary" | "secondary";
+  gradient?: "primary" | "secondary" | "tertiary";
   aligment?: "right" | "left";
   href?: string;
 }
@@ -29,6 +29,7 @@ const {
 const gradientStyles = {
   primary: "from-cyan-100 to-yellow-50",
   secondary: "from-yellow-50 to-cyan-100 ",
+  tertiary: "from-blue-100 to to-rose-50",
 };
 
 const aligmentStyles = {
@@ -39,7 +40,7 @@ const aligmentStyles = {
 
 <a
   class:list={[
-    "group relative flex max-h-150 min-h-100 flex-col justify-end overflow-hidden rounded-4xl bg-linear-120 shadow-2xl",
+    "group relative flex max-h-150 min-h-100 flex-col justify-end overflow-hidden rounded-4xl bg-linear-120 dark:shadow-2xl",
     className,
     gradientStyles[gradient],
   ]}
@@ -52,11 +53,11 @@ const aligmentStyles = {
   >
     <div class:list={["w-78 self-end", aligmentStyles[aligment]]}>
       <span
-        class="inline-block text-xs font-semibold tracking-widest text-slate-400 uppercase md:text-sm"
+        class="inline-block text-xs font-medium tracking-widest text-slate-400 uppercase md:text-sm"
         >{company}</span
       >
       <h3
-        class="font-bricolage mt-0.5 text-xl font-semibold -tracking-[0.025em] text-cyan-950 md:mt-2 md:text-4xl"
+        class="font-bricolage mt-0.5 text-2xl font-semibold -tracking-[0.025em] text-cyan-950 md:mt-2 md:text-4xl"
       >
         {title}
       </h3>

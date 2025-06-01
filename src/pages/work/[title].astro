@@ -18,23 +18,23 @@ const { Content } = await render(caseStudy);
 ---
 
 <Layout title={`${caseStudy.data.title} | KC — UI Design & Code`}>
-  <Masthead variant="white">
+  <Masthead>
+    <h1
+      class="font-bricolage text-4xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.03em] xl:text-7xl"
+    >
+      {caseStudy.data.headline}
+    </h1>
+
     {
       caseStudy.data.draft && (
-        <div class="mb-6 inline-block rounded-lg px-2.5 py-0.5 text-base text-yellow-500 ring ring-yellow-200 dark:text-cyan-50 dark:ring-white/15">
+        <div class="mt-6 inline-block rounded-lg bg-yellow-200 px-2.5 py-0.5 text-base font-medium text-yellow-600 ring ring-yellow-200 dark:text-cyan-50 dark:ring-white/15">
           Early draft
         </div>
       )
     }
-
-    <h1
-      class="font-bricolage text-4xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.03em] xl:text-8xl"
-    >
-      {caseStudy.data.headline}
-    </h1>
   </Masthead>
 
-  <div class="bg-linear-to-b from-white from-95% to-teal-50 dark:bg-none">
+  <div>
     <main class="mx-auto max-w-7xl px-10 pb-20 md:px-20 md:pb-32 xl:px-0">
       <div
         class="prose prose-xl prose-cyan prose-ul:list-disc prose-ol:max-w-3xl prose-ul:max-w-3xl prose-p:max-w-3xl prose-p:text-pretty prose-headings:text-balance prose-headings:font-semibold prose-h3:text-xl prose-h3:md:text-2xl prose-h2:font-bricolage prose-h2:-tracking-[0.03em] md:prose-headings:mx-16 md:prose-p:mx-16 md:prose-ul:mx-16 md:prose-ol:mx-16 max-w-none"

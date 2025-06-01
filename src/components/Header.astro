@@ -20,7 +20,7 @@ const navLinks = [
 ];
 ---
 
-<header class="flex items-center gap-4 px-10 py-8 md:px-8" transition:persist>
+<header class="flex items-center gap-4 px-10 md:px-8" transition:persist>
   <nav class="flex flex-1 items-center gap-4 md:gap-6">
     <Image
       class="size-9 rounded-full md:size-10"
@@ -31,12 +31,12 @@ const navLinks = [
       height={40}
     />
 
-    <ul class="flex gap-3 md:gap-5">
+    <ul class="flex gap-2 md:gap-4">
       {
         navLinks.map((item) => (
           <li>
             <a
-              class="inline-block text-base font-semibold whitespace-nowrap hover:text-teal-400 md:text-xl"
+              class="inline-block text-base font-medium whitespace-nowrap transition duration-300 ease-in-out hover:text-teal-600 md:text-xl"
               href={item.href}
             >
               {item.label}

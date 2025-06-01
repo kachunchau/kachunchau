@@ -10,6 +10,7 @@ interface Props {
   alt?: string;
   src: ImageMetadata;
   imgColor?: string;
+  imgShadow?: boolean;
   variant?: "gradient" | "simple";
 }
 
@@ -20,40 +21,36 @@ const {
   description,
   alt,
   src,
-  imgColor = "bg-teal-50",
-  variant = "gradient",
+  imgColor = "bg-slate-50",
+  imgShadow = true,
 } = Astro.props;
-
-const variantStyles = {
-  gradient:
-    "bg-radial-[170%_115%_at_50%_49%] backdrop-blur-lg from-white/5 from-40% to-teal-400/30",
-  simple: "bg-white/5",
-};
 ---
 
-<div
-  class:list={[
-    "group relative rounded-4xl p-2 shadow-2xl inset-ring inset-ring-white/5",
-    variantStyles[variant],
-    className,
-  ]}
->
-  <div class:list={["overflow-clip rounded-3xl", imgColor]}>
+<div class:list={["group space-y-4 md:space-y-4", className]}>
+  <div
+    class:list={[
+      "overflow-hidden rounded-4xl ring ring-slate-200 dark:shadow-2xl dark:ring-white/5",
+      imgColor,
+    ]}
+  >
     <Image
-      class="rounded-[inherit] drop-shadow-xl"
+      class:list={[
+        "transform-gpu rounded-[inherit]",
+        imgShadow !== false && "drop-shadow-xl",
+      ]}
       src={src}
       alt={alt || "Work card image"}
     />
   </div>
 
-  <div class="px-4 pt-4 pb-3">
+  <div class="md:px-4">
     <span
-      class="inline-block text-sm font-medium tracking-widest text-slate-400 uppercase"
+      class="inline-block text-xs font-medium tracking-widest text-slate-400 uppercase md:text-sm"
       >{company}</span
     >
     {
       title && (
-        <h3 class="font-bricolage text-xl font-semibold -tracking-[0.025em] text-cyan-50 md:mt-0.5 md:text-2xl">
+        <h3 class="font-bricolage 0 text-xl font-semibold -tracking-[0.025em] md:mt-0.5 md:text-2xl">
           {title}
         </h3>
       )
