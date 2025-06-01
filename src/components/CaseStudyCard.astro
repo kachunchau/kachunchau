@@ -40,7 +40,7 @@ const aligmentStyles = {
 
 <a
   class:list={[
-    "group relative flex max-h-150 min-h-100 flex-col justify-end overflow-hidden rounded-4xl bg-linear-120 dark:shadow-2xl",
+    "group relative flex min-h-90 flex-col justify-end overflow-hidden rounded-4xl bg-linear-120 sm:h-104 md:h-120 lg:h-150 dark:shadow-2xl",
     className,
     gradientStyles[gradient],
   ]}
@@ -51,13 +51,13 @@ const aligmentStyles = {
       "absolute inset-6 z-10 flex flex-col items-stretch md:inset-10 lg:inset-15",
     ]}
   >
-    <div class:list={["w-78 self-end", aligmentStyles[aligment]]}>
+    <div class:list={["w-1/2 self-end lg:w-78", aligmentStyles[aligment]]}>
       <span
         class="inline-block text-xs font-medium tracking-widest text-slate-400 uppercase md:text-sm"
         >{company}</span
       >
       <h3
-        class="font-bricolage mt-0.5 text-2xl font-semibold -tracking-[0.025em] text-cyan-950 md:mt-2 md:text-4xl"
+        class="font-bricolage text-2xl font-semibold -tracking-[0.025em] text-cyan-950 md:mt-2 md:text-4xl"
       >
         {title}
       </h3>
@@ -86,7 +86,7 @@ const aligmentStyles = {
   </div>
 
   <Image
-    class="w-180 max-w-none transform-gpu rounded-4xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025] md:w-210 lg:w-320"
+    class="w-auto max-w-none transform-gpu rounded-b-4xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025] lg:w-320 lg:rounded-4xl"
     src={imgSrc}
     alt={alt || "Case study image"}
   />
