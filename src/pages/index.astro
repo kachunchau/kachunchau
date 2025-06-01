@@ -68,94 +68,91 @@ const sortedCaseStudies = caseStudies.sort(
     </div>
   </Masthead>
 
-  <div class:list={["border-t border-slate-200 dark:border-white/10"]}>
-    <main class="mx-auto max-w-7xl px-10 py-20 md:px-20 md:py-32 xl:px-0">
-      <div class="space-y-16 md:space-y-26">
-        <div class="space-y-8 md:space-y-10">
-          {
-            sortedCaseStudies.map((caseStudy) => (
-              <CaseStudyCard
-                company={caseStudy.data.company}
-                title={caseStudy.data.title}
-                description={caseStudy.data.description}
-                imgSrc={caseStudy.data.cover}
-                alt={caseStudy.data.title}
-                href={`/work/${caseStudy.data.slug}`}
-                gradient={
-                  caseStudy.data.gradient as
-                    | "primary"
-                    | "secondary"
-                    | "tertiary"
-                }
-                aligment={caseStudy.data.alignment as "right" | "left"}
-              />
-            ))
-          }
-        </div>
-
-        <h2
-          class="font-bricolage mt-20 mb-6 text-3xl font-semibold -tracking-[0.025em] md:mt-32 md:mb-10 md:text-4xl"
-        >
-          Small things
-        </h2>
-
-        <WorkGrid>
-          <WorkCard
-            className="col-span-full md:col-span-2"
-            title="HTML Block"
-            src={htmlBlockImage}
-            alt="HTML Block"
-          />
-          <WorkCard
-            className="col-span-full md:col-span-1"
-            title="SMS Channel"
-            src={smsImage}
-            alt="SMS Channel"
-          />
-          <WorkCard
-            className="col-span-full md:col-span-1"
-            title="Triggers"
-            src={triggersImage}
-            alt="Triggers"
-          />
-          <WorkCard
-            className="col-span-full md:col-span-2"
-            title="Help Center"
-            src={helpCenterImage}
-            alt="Help Center redesign"
-          />
-          <WorkCard
-            className="self-start drop-shadow-none dark:drop-shadow-none"
-            title="Vero 2.0 sidebar"
-            src={vero2SidebarImage}
-            alt="Vero 2.0 sidebar redesign"
-            imgColor="bg-white"
-            imgShadow={false}
-          />
-          <div
-            class="col-span-full flex flex-col gap-8 self-start md:col-span-1 md:gap-10"
-          >
-            <WorkCard
-              title="Template icons"
-              src={templateIconsImage}
-              alt="Template icons"
+  <main
+    class="mx-auto max-w-7xl border-t border-slate-200/70 px-10 py-20 md:px-20 md:py-32 xl:px-0 dark:border-white/10"
+  >
+    <div class="space-y-20 md:space-y-32">
+      <div class="space-y-8 md:space-y-10">
+        {
+          sortedCaseStudies.map((caseStudy) => (
+            <CaseStudyCard
+              company={caseStudy.data.company}
+              title={caseStudy.data.title}
+              description={caseStudy.data.description}
+              imgSrc={caseStudy.data.cover}
+              alt={caseStudy.data.title}
+              href={`/work/${caseStudy.data.slug}`}
+              gradient={
+                caseStudy.data.gradient as "primary" | "secondary" | "tertiary"
+              }
+              aligment={caseStudy.data.alignment as "right" | "left"}
             />
-            <WorkCard
-              title="Upgrade callouts"
-              src={vero2CalloutsImage}
-              alt="Upgrade callouts"
-              imgShadow={false}
-            />
-          </div>
-          <WorkCard
-            className="self-start drop-shadow-none dark:drop-shadow-none"
-            title="Vero 1.0 sidebar"
-            src={vero1SidebarImage}
-            alt="Vero 1.0 sidebar redesign"
-            imgShadow={false}
-          />
-        </WorkGrid>
+          ))
+        }
       </div>
-    </main>
-  </div>
+
+      <h2
+        class="font-bricolage mb-6 text-3xl font-semibold -tracking-[0.025em] md:mb-10 md:text-4xl"
+      >
+        Small things
+      </h2>
+
+      <WorkGrid>
+        <WorkCard
+          className="col-span-full md:col-span-2"
+          title="HTML Block"
+          src={htmlBlockImage}
+          alt="HTML Block"
+        />
+        <WorkCard
+          className="col-span-full md:col-span-1"
+          title="SMS Channel"
+          src={smsImage}
+          alt="SMS Channel"
+        />
+        <WorkCard
+          className="col-span-full md:col-span-1"
+          title="Triggers"
+          src={triggersImage}
+          alt="Triggers"
+        />
+        <WorkCard
+          className="col-span-full md:col-span-2"
+          title="Help Center"
+          src={helpCenterImage}
+          alt="Help Center redesign"
+        />
+        <WorkCard
+          className="self-start drop-shadow-none dark:drop-shadow-none"
+          title="Vero 2.0 sidebar"
+          src={vero2SidebarImage}
+          alt="Vero 2.0 sidebar redesign"
+          imgColor="bg-white"
+          imgShadow={false}
+        />
+        <div
+          class="col-span-full flex flex-col gap-8 self-start md:col-span-1 md:gap-10"
+        >
+          <WorkCard
+            title="Template icons"
+            src={templateIconsImage}
+            alt="Template icons"
+          />
+          <WorkCard
+            title="Upgrade callouts"
+            src={vero2CalloutsImage}
+            alt="Upgrade callouts"
+            imgShadow={false}
+          />
+        </div>
+        <WorkCard
+          className="self-start drop-shadow-none dark:drop-shadow-none"
+          title="Vero 1.0 sidebar"
+          src={vero1SidebarImage}
+          alt="Vero 1.0 sidebar redesign"
+          imgShadow={false}
+        />
+      </WorkGrid>
+    </div>
+  </main>
 </Layout>
