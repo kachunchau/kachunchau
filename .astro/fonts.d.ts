@@ -1,4 +1,4 @@
 declare module 'astro:assets' {
 	/** @internal */
-	export type FontFamily = (["--font-figree"])[number];
+	export type FontFamily = (["--font-bricolage-grotesque"])[number];
 }
