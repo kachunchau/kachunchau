@@ -25,13 +25,16 @@ const { Content } = await render(caseStudy);
       {caseStudy.data.headline}
     </h1>
 
-    {
-      caseStudy.data.draft && (
-        <div class="mt-6 inline-block rounded-lg bg-yellow-200 px-2.5 py-0.5 text-base font-medium text-yellow-600 ring ring-yellow-300 dark:bg-cyan-50 dark:text-cyan-950 dark:ring-transparent">
-          Early draft
-        </div>
-      )
-    }
+    <div class="mt-4 grid grid-cols-3 gap-2 md:mt-8">
+      <div class="space-y-1 md:space-y-1.5">
+        <h2 class="font-medium text-slate-400 md:text-lg">Company</h2>
+        <p class="md:text-lg">{caseStudy.data.company || "Vero"}</p>
+      </div>
+      <div class="space-y-1 md:space-y-1.5">
+        <h2 class="font-medium text-slate-400 md:text-lg">Role</h2>
+        <p class="md:text-lg">{caseStudy.data.role}</p>
+      </div>
+    </div>
   </Masthead>
 
   <main

@@ -9,12 +9,12 @@ const work = defineCollection({
       title: z.string(),
       description: z.string(),
       headline: z.string(),
+      role: z.string().optional(),
       slug: z.string(),
       cover: image(),
       order: z.number().optional(),
       gradient: z.string().optional(),
       alignment: z.string().optional(),
-      draft: z.boolean().optional(),
     }),
 });
 
