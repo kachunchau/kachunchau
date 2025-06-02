@@ -16,6 +16,9 @@
         "headline": {
           "type": "string"
         },
+        "role": {
+          "type": "string"
+        },
         "slug": {
           "type": "string"
         },
@@ -30,9 +33,6 @@
         },
         "alignment": {
           "type": "string"
-        },
-        "draft": {
-          "type": "boolean"
         },
         "$schema": {
           "type": "string"
