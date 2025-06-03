@@ -13,14 +13,14 @@ const experiences = [
     title: "Product & Digital Designer",
     company: "Vero",
     href: "https://getvero.com",
-    date: "2018 - Present",
+    date: "Sep 2018 - May 2025",
     logo: VeroLogo,
   },
   {
-    title: "Designer",
+    title: "UX/UI Designer",
     company: "blubolt",
     href: "https://blubolt.com",
-    date: "2014 - 2017",
+    date: "Jul 2014 - Oct 2017",
     logo: BluboltLogo,
   },
   {
@@ -34,13 +34,13 @@ const experiences = [
     title: "Designer & Front-end Developer",
     company: "Riot HQ",
     href: "https://riothq.com",
-    date: "2012 - 2014",
+    date: "Mar 2012 - Feb 2014",
   },
   {
     title: "Front-end Developer",
     company: "Frank",
     href: "https://bigmotive.com",
-    date: "2011 - 2012",
+    date: "Jul 2011 - Feb 2012",
     logo: FrankLogo,
   },
 ];
@@ -80,6 +80,7 @@ const experiences = [
                     class="flex-none"
                     src={riotLogo}
                     alt={experience.company}
+                    densities={[1, 2]}
                     width={48}
                     height={48}
                   />
@@ -93,23 +94,27 @@ const experiences = [
                     height={48}
                   />
                 ) : null}
-                <div class="flex flex-1 flex-col items-start">
-                  <div class="flex items-center gap-2 overflow-hidden text-xl md:gap-3 md:text-2xl">
+                <div class="flex flex-1 flex-col items-stretch">
+                  <div class="flex items-center gap-2 overflow-hidden md:gap-3">
                     <a
-                      class="flex-none font-medium"
+                      class="flex basis-2/5 items-center gap-2"
                       href={experience.href}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {experience.company}{" "}
-                      <span class="font-light text-slate-300">↗</span>
+                      <span class="text-xl font-medium -tracking-[0.025em] md:text-2xl">
+                        {experience.company}
+                      </span>
+                      <span class="text-lg font-medium text-slate-300 md:text-xl">
+                        ↗
+                      </span>
                     </a>
-                    <span class="flex-initial truncate font-medium text-slate-400">
+                    <span class="truncate text-xl text-slate-400 md:text-2xl">
                       {experience.title}
                     </span>
                   </div>
 
-                  <div class="text-lg whitespace-nowrap text-slate-400">
+                  <div class="text-base whitespace-nowrap text-slate-400 md:text-xl">
                     {experience.date}
                   </div>
                 </div>
