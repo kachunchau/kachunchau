@@ -21,11 +21,11 @@ const navLinks = [
 ---
 
 <header
-  class="flex items-center gap-4 border-b border-slate-200 px-5 py-4 md:px-8 md:py-7 dark:border-white/10"
+  class="flex items-center gap-4 border-b border-slate-200/60 px-5 py-4 md:px-7 md:py-6 dark:border-white/10"
   transition:persist
 >
-  <nav class="flex flex-1 items-center gap-4 md:gap-6">
-    <Image
+  <nav class="flex flex-1 items-center gap-4 md:gap-7">
+    <!-- <Image
       class="size-9 rounded-full md:size-10"
       src={meImage}
       alt="Me"
@@ -33,14 +33,20 @@ const navLinks = [
       width={40}
       height={40}
       loading="eager"
-    />
+    /> -->
 
-    <ul class="flex gap-3 md:gap-4">
+    <div
+      class="font-bricolage flex size-10 items-center justify-center rounded-xl bg-cyan-950 text-2xl font-bold text-cyan-50 md:size-12 md:text-3xl dark:bg-cyan-50 dark:text-cyan-950"
+    >
+      K
+    </div>
+
+    <ul class="flex gap-3 md:gap-5">
       {
         navLinks.map((item) => (
           <li>
             <a
-              class="inline-block text-base font-medium whitespace-nowrap transition duration-300 ease-in-out hover:text-teal-600 md:text-xl"
+              class="inline-block rounded-full text-base font-medium whitespace-nowrap transition duration-300 ease-in-out hover:text-teal-600 md:text-xl"
               href={item.href}
             >
               {item.label}
