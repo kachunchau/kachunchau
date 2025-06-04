@@ -10,7 +10,7 @@ import riotLogo from "../images/riot@2x.png";
 
 const experiences = [
   {
-    title: "Product & Digital Designer",
+    title: "Marketing UX/UI Designer → Product Designer",
     company: "Vero",
     href: "https://getvero.com",
     date: "Sep 2018 - May 2025",
@@ -31,7 +31,7 @@ const experiences = [
     logo: SkySportsLogo,
   },
   {
-    title: "Designer & Front-end Developer",
+    title: "UX/UI Designer & Front-end Developer",
     company: "Riot HQ",
     href: "https://riothq.com",
     date: "Mar 2012 - Feb 2014",
@@ -49,7 +49,7 @@ const experiences = [
 <Layout title="Ka-Chun Chau — UI Designer">
   <Masthead>
     <h1
-      class="font-bricolage text-5xl font-light -tracking-[0.025em] text-balance md:text-6xl md:tracking-[-0.03em]"
+      class="font-bricolage text-5xl font-light -tracking-wide text-balance md:text-6xl md:tracking-[-0.03em] xl:text-7xl"
     >
       Resume
     </h1>
@@ -61,12 +61,12 @@ const experiences = [
   </Masthead>
 
   <main
-    class="mx-auto grid max-w-6xl gap-8 border-t border-slate-200/70 px-8 py-20 md:gap-10 md:px-20 md:py-32 lg:grid-cols-3 xl:px-0 xl:pb-48 dark:border-white/10"
+    class="mx-auto max-w-6xl gap-8 px-8 pb-20 md:gap-10 md:px-20 md:pb-32 xl:px-0 xl:pb-48"
   >
-    <div class="col-span-1 space-y-20 md:space-y-32 lg:col-span-2">
+    <div class="max-w-5xl space-y-20 md:space-y-32">
       <section>
         <h2
-          class="mb-1 text-sm font-semibold tracking-wider text-slate-400 uppercase md:text-base"
+          class="font-bricolage mb-1 text-2xl font-semibold -tracking-wide md:text-3xl"
         >
           Experience
         </h2>
@@ -74,7 +74,7 @@ const experiences = [
         <ul class="divide-y divide-slate-100 dark:divide-white/10">
           {
             experiences.map((experience) => (
-              <li class="flex flex-col items-start gap-2 py-8 md:flex-row md:items-center md:justify-between md:gap-5">
+              <li class="flex flex-col items-stretch gap-2 py-8 md:justify-between md:gap-3">
                 {experience.company === "Riot HQ" ? (
                   <Image
                     class="flex-none"
@@ -94,27 +94,18 @@ const experiences = [
                     height={48}
                   />
                 ) : null}
-                <div class="flex flex-1 flex-col items-stretch">
-                  <div class="flex items-center gap-2 overflow-hidden md:gap-3">
-                    <a
-                      class="flex basis-2/5 items-center gap-2"
-                      href={experience.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span class="text-xl font-medium -tracking-[0.025em] md:text-2xl">
-                        {experience.company}
-                      </span>
-                      <span class="text-lg font-medium text-slate-300 md:text-xl">
-                        ↗
-                      </span>
-                    </a>
-                    <span class="truncate text-xl text-slate-400 md:text-2xl">
+                <div class="flex flex-col items-stretch gap-0.5">
+                  <div class="flex items-center gap-3 overflow-hidden">
+                    <span class="col-span-1 flex items-center gap-2 text-xl font-semibold md:text-2xl">
+                      {experience.company}
+                    </span>
+                    <span class="size-1.5 rounded-full bg-slate-300" />
+                    <span class="col-span-2 truncate text-xl font-semibold md:text-2xl">
                       {experience.title}
                     </span>
                   </div>
 
-                  <div class="text-base whitespace-nowrap text-slate-400 md:text-xl">
+                  <div class="truncate text-xl text-slate-400">
                     {experience.date}
                   </div>
                 </div>
@@ -133,18 +124,19 @@ const experiences = [
 
         <ul class="divide-y divide-white/10">
           <li class="flex items-start gap-6 py-8">
-            <div class="flex flex-1 flex-col items-start">
-              <h2 class="text-xl md:text-2xl">
-                <span class="font-medium">University of Ulster </span>
-                <span class="font-light text-slate-200">/</span>
-                <span class="font-medium text-slate-400"
+            <div class="flex flex-1 flex-col items-stretch gap-0.5">
+              <h2 class="flex items-center gap-3 text-xl md:text-2xl">
+                <span class="col-span-1 font-semibold"
+                  >University of Ulster
+                </span>
+                <span class="size-1.5 rounded-full bg-slate-300"></span>
+
+                <span class="col-span-2 font-semibold"
                   >BSc (Hons) Interactive Multimedia Design</span
                 >
               </h2>
 
-              <div class="text-lg whitespace-nowrap text-slate-400">
-                2007 - 2011
-              </div>
+              <div class="truncate text-xl text-slate-400">2007 - 2011</div>
             </div>
           </li>
         </ul>
