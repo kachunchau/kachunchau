@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import ThemeToggle from "../components/ThemeToggle.astro";
-
 import meImage from "@images/me@2x.png";
+import Logo from "@images/logo.svg";
 
 const navLinks = [
   {
@@ -24,7 +24,7 @@ const navLinks = [
   class="flex items-center gap-4 border-b border-slate-200/60 px-5 py-4 md:px-7 md:py-6 dark:border-white/10"
   transition:persist
 >
-  <nav class="flex flex-1 items-center gap-4 md:gap-7">
+  <nav class="flex flex-1 items-center gap-4 md:gap-6">
     <!-- <Image
       class="size-9 rounded-full md:size-10"
       src={meImage}
@@ -36,9 +36,9 @@ const navLinks = [
     /> -->
 
     <div
-      class="font-bricolage flex size-10 items-center justify-center rounded-xl bg-cyan-950 text-2xl font-bold text-cyan-50 md:size-12 md:text-3xl dark:bg-cyan-50 dark:text-cyan-950"
+      class="flex size-10 items-center justify-center rounded-xl bg-cyan-950 md:size-12 dark:bg-cyan-50"
     >
-      K
+      <Logo class:list={`fill-cyan-50 dark:fill-cyan-950`} />
     </div>
 
     <ul class="flex gap-3 md:gap-5">
