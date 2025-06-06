@@ -19,6 +19,9 @@
         "role": {
           "type": "string"
         },
+        "timeframe": {
+          "type": "string"
+        },
         "slug": {
           "type": "string"
         },

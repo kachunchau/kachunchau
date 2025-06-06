@@ -13,3 +13,51 @@
 }
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@layer base {
+  .tippy-box[data-theme="base"] {
+    background-color: var(--color-cyan-950) !important;
+    color: var(--color-cyan-50) !important;
+    font-weight: var(--font-weight-medium) !important;
+
+    @variant dark {
+      background-color: var(--color-cyan-50) !important;
+      color: var(--colour-cyan-950) !important;
+    }
+  }
+
+  .tippy-box[data-theme="base"][data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: var(--color-cyan-950) !important;
+
+    @variant dark {
+      border-top-color: var(--color-cyan-50) !important;
+    }
+  }
+  .tippy-box[data-theme="base"][data-placement^="bottom"]
+    > .tippy-arrow::before {
+    border-bottom-color: var(--color-cyan-950) !important;
+
+    @variant dark {
+      border-bottom-color: var(--color-cyan-50) !important;
+    }
+  }
+  .tippy-box[data-theme="base"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: var(--color-cyan-950) !important;
+
+    @variant dark {
+      border-left-color: var(--color-cyan-50) !important;
+    }
+  }
+  .tippy-box[data-theme="base"][data-placement^="right"]
+    > .tippy-arrow::before {
+    border-right-color: var(--color-cyan-950) !important;
+
+    @variant dark {
+      border-right-color: var(--color-cyan-50) !important;
+    }
+  }
+
+  .tippy-box[data-theme="base"] > .tippy-arrow::before {
+    transform: scale(0.5);
+  }
+}
