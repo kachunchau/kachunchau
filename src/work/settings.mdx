@@ -2,7 +2,8 @@
 title: "Settings"
 description: "Full redesign of the settings section for Vero 2.0"
 headline: "Full redesign of the settings section for Vero 2.0"
-role: "UX, UI"
+role: "Collaborated on UX, Led UI"
+timeframe: "6 weeks"
 order: 2
 slug: "settings"
 cover: "@images/settings@2x.png"
@@ -31,12 +32,9 @@ In Vero 2.0, the settings experience was confusing and spread out. Users had tro
 
 ## The Problem
 
-To understand the key challenges, I collaborated
-with the Head of Product, who provided problem statements grounded in strategic product
-goals and insights gathered from internal teams and user feedback channels. These
-formed the foundation for my design exploration and decision-making.
+To understand the key challenges, I collaborated with the Head of Product, who provided product goals and insights gathered from the customer success teams and user feedback.
 
-### Identified Problems
+### Pain Points
 
 - The settings section was fragmented, making it hard to manage projects,
   accounts, and user preferences.
@@ -59,7 +57,9 @@ formed the foundation for my design exploration and decision-making.
 
 ### Research
 
-I collaborated with the Head of Product to conduct a comprehensive audit of all existing settings across user roles and project types. This was also to decide which settings to port over from the Vero 1.0 to Vero 2.0 and which to deprecate.
+We collaborated closely with the Customer Support and Success teams to surface insights from real user conversations. Their frontline experience helped us identify recurring pain points and edge cases that might not have been obvious. The Head of Product synthesised this feedback in a shared Notion workspace, which served as a central reference throughout the redesign.
+
+The Head of Product conducted a comprehensive audit of all existing settings across user roles and project types. This was also to decide which settings to port over from the Vero 1.0 to Vero 2.0 and which to deprecate.
 
 <figure>
   <Image
@@ -108,6 +108,8 @@ fast, informed design decisions without delaying the process.
   <figcaption>Nina's user persona</figcaption>
 </figure>
 
+### Competitive analysis
+
 To guide our design approach, we also reviewed how tools in adjacent
 industries—such as Netlify and Vercel—organised their settings, drawing
 inspiration from proven patterns.
@@ -134,7 +136,7 @@ inspiration from proven patterns.
 
 ### Exploring Designs
 
-We have a Sketch library our our components and I explored different mid to hi-fidelity mockups—testing different ways to group and present the settings sidebar. I shared these iterations regularly internally to gather feedback early. This collaborative process helped me evaluate trade-offs due to balancing business goals or technical constraints.
+Having a Sketch component library allowed me to quickly explore mid to high-fidelity mockups, testing different ways to group and present the settings sidebar. I also explored key interaction states, including different layouts and behaviours for modals and dropdowns, to ensure consistency and usability across various settings types.
 
 - **Modal vs inline for profile settings:** Should profiles open in a modal for quick access, or be
   embedded inline within the settings view?
@@ -182,6 +184,12 @@ multiple projects should be represented in the sidebar.
   </figure>
 </div>
 
+I shared these mockups internally to gather feedback early. This collaborative process helped me evaluate trade-offs due to balancing business goals and technical constraints.
+
+### Concepts Not Pursued
+
+To align with business goals, some features were moved to phase 2, allowing us to prioritise core features for a faster launch. One of these decisions included removing the 'add new project' feature, enabling us to deliver a leaner MVP within the 8-week timeframe.
+
 <figure>
   <Image
     class="rounded-4xl bg-cyan-50"
@@ -193,7 +201,7 @@ multiple projects should be represented in the sidebar.
 
 ### Refining Design
 
-I refined the settings UI to balance usability, visual consistency, and technical constraints. To align with business goals, less critical settings were trimmed or hidden, allowing us to prioritize core functionality for a faster, more reliable launch. During implementation, I made incremental improvements—like refining spacing and navigation groupings—to ensure a more consistent and scalable experience.
+I refined the mockups to balance usability, visual consistency, and technical constraints. During implementation once the bulk of the engineering work was done I jumped in to the code to do some design polish like refining spacing to ensure a more consistent and scalable experience.
 
 <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
   <figure class="col-span-1">
@@ -224,7 +232,7 @@ Post-release feedback revealed that the sidebar in the settings section felt vis
 aligning the styles of the settings sidebar to improve visual consistency.
 
 <figure>
-  <div class="overflow-hidden rounded-4xl bg-cyan-50">
+  <div class="rounded-4xl overflow-hidden bg-cyan-50">
     <Image
       class="drop-shadow-xl"
       src={settingsSidebarTweaksImage}
@@ -233,3 +241,7 @@ aligning the styles of the settings sidebar to improve visual consistency.
   </div>
   <figcaption>Settings sidebar tweaks post-launch</figcaption>
 </figure>
+
+## What I learned
+
+As a result of relasing the redesign settings, support requests related to user and project settings decreased, contributing to less customer frustration.

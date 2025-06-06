@@ -1,0 +1,23 @@
+---
+import "tippy.js/dist/tippy.css";
+---
+
+<script>
+  import tippy from "tippy.js";
+
+  // Set global options for all tooltips
+  tippy.setDefaultProps({
+    theme: "base",
+    arrow: true,
+    placement: "bottom",
+  });
+
+  document.addEventListener("astro:page-load", () => {
+    const tips = document.querySelectorAll("[data-tip]");
+    tips.forEach((t) => {
+      tippy(t, {
+        content: t.attributes.getNamedItem("data-tip")?.textContent || "",
+      });
+    });
+  });
+</script>

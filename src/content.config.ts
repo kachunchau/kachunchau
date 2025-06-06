@@ -10,6 +10,7 @@ const work = defineCollection({
       description: z.string(),
       headline: z.string(),
       role: z.string().optional(),
+      timeframe: z.string().optional(),
       slug: z.string(),
       cover: image(),
       order: z.number().optional(),
