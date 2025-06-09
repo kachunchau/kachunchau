@@ -19,6 +19,7 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Font cssVariable="--font-bricolage-grotesque" preload />
     <title>
       {
         title
@@ -31,9 +32,29 @@ const { title, description } = Astro.props;
       content={description ? description : "I'm KC, a UI Designer & Developer."}
     />
     <meta name="generator" content={Astro.generator} />
-    <Tooltip />
-    <Font cssVariable="--font-bricolage-grotesque" preload />
+    <meta
+      property="og:title"
+      content={title
+        ? `Ka-Chun Chau | ${title}`
+        : "Ka-Chun Chau | UI Designer & Developer"}
+    />
+    <meta
+      property="og:description"
+      content={description ? description : "I'm KC, a UI Designer & Developer."}
+    />
+    <meta property="og:type" content="website" />
     <ClientRouter />
+    <Tooltip />
+    {
+      import.meta.env.DEV && (
+        <script
+          defer
+          type="text/partytown"
+          src="https://cloud.umami.is/script.js"
+          data-website-id="f8499b20-2a06-48e8-a865-0fa6785a2e87"
+        />
+      )
+    }
   </head>
   <body
     class="min-h-screen bg-slate-950 text-cyan-950 antialiased transition-colors duration-300 [text-rendering:optimizeLegibility] dark:text-cyan-50"
