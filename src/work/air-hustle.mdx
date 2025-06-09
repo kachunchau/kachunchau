@@ -3,6 +3,9 @@ title: "Air Hustle"
 description: "Designing the experience for a flight deals aggregator"
 company: "Self-initiated"
 headline: "Designing the experience for a flight deals aggregator"
+team:
+  - name: KC
+    position: Product Designer
 role: "Led UX, Led UI"
 order: 1
 slug: "air-hustle"
@@ -26,16 +29,17 @@ import newSearchImage from "@images/new-search@2x.png";
 import fromSearchImage from "@images/from-search@2x.png";
 import toSearchImage from "@images/to-search@2x.png";
 import explorationflightCardImage from "@images/flight-card@2x.png";
+import filterImage from "@images/filter@2x.png";
 import resultsImage from "@images/results@2x.png";
 import moreDetailsImage from "@images/more-details@2x.png";
 
 ## Overview
 
-Self-initiated UI case study focuses on designing the user flow and interface for a flight deals aggregator site. Inspired by platforms like Kayak and Skyscanner, the goal was to create a clear, efficient search experience that supports users in finding flight deals and seamlessly redirects them to third-party booking sites.
+A self-initiated UX/UI case study focused on simplifying the flight deals search experience. Inspired by Kayak and Skyscanner, the goal was to reduce friction and help users quickly find deals and book via third-party booking sites.
 
 ## The Problem
 
-For this self-initiated case study, I explored user frustrations with a travel deals aggregator site. Through personal experience and a review of existing platforms, I uncovered common friction points travelers face when searching for and booking flights on aggregator platforms.
+Finding affordable flights online can be frustrating. Many aggregator sites are cluttered with upsells, hidden fees, and too much information. Air Hustle aims to fix this with a clear, trustworthy platform for budget-conscious travellers who value price, simplicity, and transparency.
 
 ### Identified pain points
 
@@ -229,6 +233,19 @@ I structured the exploration flight cards with the F-shaped scanning pattern in 
     />
   </div>
   <figcaption>Exploration flight cards</figcaption>
+</figure>
+
+The fly anywhere filter menu helps users easily explore destinations that match their travel interests.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={filterImage}
+      alt="Fly anywhere filter"
+    />
+  </div>
+  <figcaption>Fly anywhere filters</figcaption>
 </figure>
 
 I've kept the search minimal on the results page to maximize space for flight listings, but it will expand when clicked.

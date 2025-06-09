@@ -16,6 +16,25 @@
         "headline": {
           "type": "string"
         },
+        "team": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "position": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "position"
+            ],
+            "additionalProperties": false
+          }
+        },
         "role": {
           "type": "string"
         },
