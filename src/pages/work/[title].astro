@@ -7,6 +7,19 @@ import roryImage from "@images/rory@2x.png";
 import meImage from "@images/me@2x.png";
 import andrewImage from "@images/andrew@2x.png";
 import yihaoImage from "@images/yihao@2x.png";
+import type { ImageMetadata } from "astro";
+
+interface TeamMember {
+  name: string;
+  position: string;
+}
+
+const teamMemberImages: Record<string, ImageMetadata> = {
+  KC: meImage,
+  Rory: roryImage,
+  Andrew: andrewImage,
+  Yihao: yihaoImage,
+};
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -24,86 +37,35 @@ const { Content } = await render(caseStudy);
 <Layout title={caseStudy.data.title} description={caseStudy.data.description}>
   <Masthead>
     <h1
-      class="font-bricolage text-balance text-5xl font-light -tracking-wide md:text-6xl md:tracking-[-0.03em] xl:text-7xl"
+      class="font-bricolage text-5xl font-light -tracking-wide text-balance md:text-6xl md:tracking-[-0.03em] xl:text-7xl"
     >
       {caseStudy.data.headline}
     </h1>
 
     <div class="mt-4 flex items-start gap-8 md:mt-8 md:gap-24">
-      {
-        caseStudy.data.title !== "Air Hustle" && (
-          <div class="space-y-1 md:space-y-1.5">
-            <h2 class="font-medium text-slate-400 md:text-lg">Team</h2>
-            <ul class="flex -space-x-0.5">
-              {caseStudy.data.title === "Marketing Site" ? (
+      <div class="space-y-1 md:space-y-1.5">
+        <h2 class="font-medium text-slate-400 md:text-lg">Team</h2>
+        <ul class="flex -space-x-0.5">
+          {
+            caseStudy.data.team?.map((member: TeamMember) => {
+              return (
                 <li class="cursor-help">
                   <Image
                     class="size-7 rounded-full"
-                    data-tip="Product Designer"
-                    src={meImage}
-                    alt="Me"
+                    data-tip={member.position}
+                    src={teamMemberImages[member.name]}
+                    alt={member.name}
                     densities={[1, 2]}
                     width={40}
                     height={40}
                     loading="eager"
                   />
                 </li>
-              ) : (
-                <>
-                  <li class="cursor-help">
-                    <Image
-                      class="size-7 rounded-full"
-                      data-tip="Head of Product"
-                      src={roryImage}
-                      alt="Rory"
-                      densities={[1, 2]}
-                      width={40}
-                      height={40}
-                      loading="eager"
-                    />
-                  </li>
-                  <li class="cursor-help">
-                    <Image
-                      class="size-7 rounded-full"
-                      data-tip="Product Designer"
-                      src={meImage}
-                      alt="Me"
-                      densities={[1, 2]}
-                      width={40}
-                      height={40}
-                      loading="eager"
-                    />
-                  </li>
-                  <li class="cursor-help">
-                    <Image
-                      class="size-7 rounded-full"
-                      data-tip="Front-end Engineer"
-                      src={andrewImage}
-                      alt="Andrew"
-                      densities={[1, 2]}
-                      width={40}
-                      height={40}
-                      loading="eager"
-                    />
-                  </li>
-                  <li class="cursor-help">
-                    <Image
-                      class="size-7 rounded-full"
-                      data-tip="Front-end Engineer"
-                      src={yihaoImage}
-                      alt="Yihao"
-                      densities={[1, 2]}
-                      width={40}
-                      height={40}
-                      loading="eager"
-                    />
-                  </li>
-                </>
-              )}
-            </ul>
-          </div>
-        )
-      }
+              );
+            })
+          }
+        </ul>
+      </div>
       <div class="space-y-1 md:space-y-1.5">
         <h2 class="font-medium text-slate-400 md:text-lg">Role</h2>
         <p class="md:text-lg">{caseStudy.data.role}</p>

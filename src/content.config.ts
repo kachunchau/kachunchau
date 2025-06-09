@@ -9,6 +9,14 @@ const work = defineCollection({
       title: z.string(),
       description: z.string(),
       headline: z.string(),
+      team: z
+        .array(
+          z.object({
+            name: z.string(),
+            position: z.string(),
+          }),
+        )
+        .optional(),
       role: z.string().optional(),
       timeframe: z.string().optional(),
       slug: z.string(),
