@@ -4,12 +4,21 @@ import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
 
+import yeskunallumami from "@yeskunall/astro-umami";
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [mdx(), partytown()],
+  integrations: [
+    mdx(),
+    partytown(),
+    yeskunallumami({
+      id: "f8499b20-2a06-48e8-a865-0fa6785a2e87",
+      withPartytown: true,
+    }),
+  ],
   experimental: {
     fonts: [
       {
