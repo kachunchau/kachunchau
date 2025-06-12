@@ -45,16 +45,6 @@ const { title, description } = Astro.props;
     <meta property="og:type" content="website" />
     <ClientRouter />
     <Tooltip />
-    {
-      import.meta.env.DEV && (
-        <script
-          defer
-          type="text/partytown"
-          src="https://cloud.umami.is/script.js"
-          data-website-id="f8499b20-2a06-48e8-a865-0fa6785a2e87"
-        />
-      )
-    }
   </head>
   <body
     class="min-h-screen bg-slate-950 text-cyan-950 antialiased transition-colors duration-300 [text-rendering:optimizeLegibility] dark:text-cyan-50"
