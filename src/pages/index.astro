@@ -16,7 +16,9 @@ import vero1SidebarImage from "@images/vero-1-sidebar@2x.png";
 import templateIconsImage from "@images/template-icons@2x.png";
 import vero2CalloutsImage from "@images/vero-2-callouts@2x.png";
 
-const caseStudies = await getCollection("work");
+const caseStudies = await getCollection("work", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
 const sortedCaseStudies = caseStudies.sort(
   (a, b) => (a.data.order || 0) - (b.data.order || 0)
 );
