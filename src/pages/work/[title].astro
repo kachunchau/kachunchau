@@ -23,7 +23,9 @@ const teamMemberImages: Record<string, ImageMetadata> = {
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const caseStudies = await getCollection("work");
+  const caseStudies = await getCollection("work", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
   return caseStudies.map((caseStudy) => ({
     params: { title: caseStudy.data.slug },
     props: { caseStudy },
