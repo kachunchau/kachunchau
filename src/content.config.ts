@@ -19,6 +19,7 @@ const work = defineCollection({
         .optional(),
       role: z.string().optional(),
       timeframe: z.string().optional(),
+      draft: z.boolean().optional(),
       slug: z.string(),
       cover: image(),
       href: z.boolean().optional(),
