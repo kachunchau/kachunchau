@@ -67,7 +67,7 @@ const aligmentStyles = {
     </div>
 
     {
-      href !== "#none" && (
+      href !== "#none" ? (
         <div
           class:list={[
             "group/link z-10 mt-auto flex h-10 items-center rounded-full transition-all duration-300 ease-in-out group-hover:gap-1 group-hover:px-4 group-hover:ring-2 group-hover:ring-cyan-950/25 hover:bg-cyan-950 hover:ring-cyan-950 md:h-11 md:group-hover:gap-3 md:group-hover:px-5.5",
@@ -81,6 +81,10 @@ const aligmentStyles = {
             →
           </span>
         </div>
+      ) : (
+        <div class:list={["mt-auto", aligmentStyles[aligment]]}>
+          <span class="text-slate-400 md:text-xl">Coming soon</span>
+        </div>
       )
     }
   </div>
@@ -89,5 +93,6 @@ const aligmentStyles = {
     class="w-auto max-w-none transform-gpu rounded-b-4xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025] lg:w-320 lg:rounded-4xl"
     src={imgSrc}
     alt={alt || "Case study image"}
+    densities={[1, 2]}
   />
 </a>
