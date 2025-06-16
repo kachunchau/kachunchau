@@ -47,6 +47,9 @@
         "cover": {
           "type": "string"
         },
+        "href": {
+          "type": "boolean"
+        },
         "order": {
           "type": "number"
         },

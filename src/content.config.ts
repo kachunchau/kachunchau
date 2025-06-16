@@ -21,6 +21,7 @@ const work = defineCollection({
       timeframe: z.string().optional(),
       slug: z.string(),
       cover: image(),
+      href: z.boolean().optional(),
       order: z.number().optional(),
       gradient: z.string().optional(),
       alignment: z.string().optional(),

@@ -76,7 +76,11 @@ const sortedCaseStudies = caseStudies.sort(
               description={caseStudy.data.description}
               imgSrc={caseStudy.data.cover}
               alt={caseStudy.data.title}
-              href={`/work/${caseStudy.data.slug}`}
+              href={
+                caseStudy.data.href === false
+                  ? undefined
+                  : `/work/${caseStudy.data.slug}`
+              }
               gradient={
                 caseStudy.data.gradient as "primary" | "secondary" | "tertiary"
               }
