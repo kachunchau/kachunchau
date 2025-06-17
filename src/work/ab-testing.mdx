@@ -22,7 +22,7 @@ alignment: "left"
 
 import { Image } from "astro:assets";
 
-import CaseStudyCallout from "../components/CaseStudyCallout.astro";
+import variantsImage from "@images/variants@2x.png";
 import manualTestImage from "@images/manual-test@2x.png";
 import pickAWinnerImage from "@images/pick-a-winner@2x.png";
 
@@ -56,21 +56,27 @@ Shipping A/B Testing, helped accelerate Vero's go-to-market strategy, ticks of a
 
 ### Research
 
-Researched how similar tools (like Mailchimp, Customer.io, and Braze) handled
-A/B testing, especially how they explained traffic split, metrics, and variant
-selection.
+Due to time constraints, I quickly researched how comparable platforms — Mailchimp, Drip, Campaign Monitor, and Braze handle A/B testing to identify common patterns and potential gaps. A few common insights emerged:
+
+- A/B testing features are often hidden or buried in advanced settings, making them easy to overlook or use incorrectly.
+- No **auto-pick winner option** — the user must manually select a winner, and if they forget, it can delay the final send.
+- Some platforms only support testing two variants, limiting experimentation flexibility.
+
+This quick research helped shape the foundation of the design.
 
 ### Exploring designs
 
-Shared early mockups internally to validate direction and ensure feasibility
-under technical constraints and tight timelines.
+I shared early mockups internally to validate direction and ensure feasibility
+under technical constraints and tight timelines. During this process, I realised that placing all variants within the same message panel created significant visual clutter, making it difficult to distinguish between variants once their 10.
 
-### Refining design
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
+    <Image class="drop-shadow-xl" src={variantsImage} alt="Variants" />
+  </div>
+  <figcaption>Showing the variants in the same message panel</figcaption>
+</figure>
 
-Worked closely with product and engineering to scope a realistic MVP version
-that covered core functionality but allowed for future iteration.
-
-Since it was quite difficult to tell the variants apart, I added a coloured highlight to differentiate them based on their status.
+To mitigate the issue, I placed each variant in its own panel and added coloured highlights to indicate the status of the variant.
 
 <figure>
   <Image
@@ -89,6 +95,10 @@ Since it was quite difficult to tell the variants apart, I added a coloured high
   />
   <figcaption>Pick a winner</figcaption>
 </figure>
+
+## Release and Iterate
+
+We shipped the redesigned A/B testing feature within weeks, retaining the customer who had flagged it as a deal-breaker.
 
 ## What I learned
 
