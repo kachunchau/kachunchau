@@ -23,6 +23,7 @@ import marcusJourneyImage from "@images/marcus-journey@2x.png";
 import leoJourneyImage from "@images/leo-journey@2x.png";
 import userFlowImage from "@images/user-flow@2x.png";
 import dmSansImage from "@images/dm-sans@2x.png";
+import airHustleStyleGuideImage from "@images/air-hustle-style-guide@2x.png";
 import ogSearchImage from "@images/og-search@2x.png";
 import newSearchImage from "@images/new-search@2x.png";
 import fromSearchImage from "@images/from-search@2x.png";
@@ -135,21 +136,6 @@ I then mapped each persona's journey through the search and booking process to i
 
 A common theme between the users is that the fights tend to have hidden baggage or seat fees so I will try to add transparent pricing or tooltips to reveal the prices.
 
-### Typography
-
-DM Sans has a simple, geometric, and modern style that feels fresh and approachable—perfect for flight deals aggregator where it has a mix of users. It has a nice balance between being professional and welcoming, which helps build trust without feeling too corporate or cold.
-
-<figure>
-  <div class="overflow-hidden rounded-4xl bg-cyan-50">
-    <Image
-      class="!m-0 drop-shadow-xl"
-      src={dmSansImage}
-      alt="Typography choice"
-    />
-  </div>
-  <figcaption>From search suggestions</figcaption>
-</figure>
-
 ### Exploring Designs
 
 To begin visualising the UI, I created wireframes in Whimsical.
@@ -163,6 +149,38 @@ To begin visualising the UI, I created wireframes in Whimsical.
 ></iframe>
 
 These wireframes were kept simple, emphasising layout. The goal at this stage was to quickly try out layouts for key elements such as the search bar, filters, and flight results, without getting distracted by styling details. Inspired by established platforms like Kayak and Skyscanner. These early wireframes helped identify opportunities to improve usability and guided the next phase of iterative design.
+
+### Style Guide
+
+For typography, I used DM Sans for its simple, geometric, and modern style. It feels fresh and approachable an ideal fit for a flight deals aggregator with a diverse user base. It has a nice balance between being professional and welcoming, which helps build trust without feeling too corporate or cold.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={dmSansImage}
+      alt="Typography choice"
+    />
+  </div>
+  <figcaption>DM Sans</figcaption>
+</figure>
+
+I chose blue as the primary color because it's non-intrusive and calming—making it a solid foundation for interfaces that users interact with regularly. It's also colorblind-friendly, which helps improve accessibility for a broader range of users.
+
+To allow more flexibility, I included a typographic scale in the style guide rather than assigning fixed weights to headings.
+
+<figure>
+  <div class="overflow-hidden rounded-4xl bg-cyan-50">
+    <Image
+      class="!m-0 drop-shadow-xl"
+      src={airHustleStyleGuideImage}
+      alt="Typography choice"
+    />
+  </div>
+  <figcaption>Style guide</figcaption>
+</figure>
+
+I developed high-fidelity mockups from the wireframes, applying a 4px vertical spacing system for visual consistency. I also ensured buttons were at least 40px tall to meet accessibility standards and support ease of interaction across devices.
 
 ### Refining Designs
 
