@@ -72,7 +72,7 @@ const sortedCaseStudies = caseStudies.sort(
     <div class="space-y-20 md:space-y-32">
       <div class="space-y-8 md:space-y-10">
         {
-          sortedCaseStudies.map((caseStudy) => (
+          sortedCaseStudies.map((caseStudy, index) => (
             <CaseStudyCard
               company={caseStudy.data.company}
               title={caseStudy.data.title}
@@ -88,6 +88,7 @@ const sortedCaseStudies = caseStudies.sort(
                 caseStudy.data.gradient as "primary" | "secondary" | "tertiary"
               }
               aligment={caseStudy.data.alignment as "right" | "left"}
+              index={index}
             />
           ))
         }
