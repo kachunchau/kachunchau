@@ -12,6 +12,7 @@ interface Props {
   gradient?: "primary" | "secondary" | "tertiary";
   aligment?: "right" | "left";
   href?: string;
+  index?: number;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   gradient = "primary",
   aligment = "right",
   href = "#none",
+  index,
 } = Astro.props;
 
 const gradientStyles = {
@@ -60,6 +62,7 @@ const aligmentStyles = {
         class="font-bricolage text-2xl font-semibold -tracking-wide text-cyan-950 md:mt-2 md:text-4xl"
       >
         {title}
+        {index}
       </h2>
       <p class="mt-0.5 text-base text-cyan-950 md:mt-2 md:text-xl">
         {description}.
@@ -92,7 +95,8 @@ const aligmentStyles = {
   <Image
     class="w-auto max-w-none transform-gpu rounded-b-4xl drop-shadow-xl transition-all duration-300 ease-in-out group-hover:scale-[1.025] lg:w-320 lg:rounded-4xl"
     src={imgSrc}
-    alt={alt || "Case study image"}
     densities={[1, 2]}
+    alt={alt || "Case study image"}
+    {...index === 0 && { priority: true }}
   />
 </a>

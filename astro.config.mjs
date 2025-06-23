@@ -16,6 +16,10 @@ export default defineConfig({
       id: "f8499b20-2a06-48e8-a865-0fa6785a2e87",
     }),
   ],
+  image: {
+    responsiveStyles: true,
+    layout: "constrained",
+  },
   experimental: {
     fonts: [
       {
