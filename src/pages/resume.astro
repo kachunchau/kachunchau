@@ -74,26 +74,27 @@ const experiences = [
         <ul class="divide-y divide-slate-100 dark:divide-white/10">
           {
             experiences.map((experience) => (
-              <li class="flex flex-col items-stretch gap-2 py-8 md:justify-between md:gap-3">
-                {experience.company === "Riot HQ" ? (
-                  <Image
-                    class="flex-none"
-                    src={riotLogo}
-                    alt={experience.company}
-                    densities={[1, 2]}
-                    width={48}
-                    height={48}
-                  />
-                ) : experience.logo ? (
-                  <experience.logo
-                    class:list={[
-                      "flex-none",
-                      experience.company === "Frank" ? "dark:fill-white" : "",
-                    ]}
-                    width={48}
-                    height={48}
-                  />
-                ) : null}
+              <li class="flex flex-col items-stretch gap-2 py-8 sm:flex-row sm:gap-4">
+                <div class="size-12 flex-none">
+                  {experience.company === "Riot HQ" ? (
+                    <Image
+                      src={riotLogo}
+                      alt={experience.company}
+                      densities={[1, 2]}
+                      width={48}
+                      height={48}
+                    />
+                  ) : experience.logo ? (
+                    <experience.logo
+                      class:list={[
+                        experience.company === "Frank" ? "dark:fill-white" : "",
+                      ]}
+                      width={48}
+                      height={48}
+                    />
+                  ) : null}
+                </div>
+
                 <div class="flex flex-col items-stretch gap-0.5">
                   <div class="flex items-center gap-3 overflow-hidden">
                     <span class="col-span-1 flex items-center gap-2 text-xl font-semibold md:text-2xl">
