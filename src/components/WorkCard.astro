@@ -6,9 +6,9 @@ interface Props {
   className?: string;
   company?: string;
   title?: string;
-  description?: string;
   alt?: string;
   src: ImageMetadata;
+  href?: string;
   imgColor?: string;
   imgShadow?: boolean;
   variant?: "gradient" | "simple";
@@ -18,9 +18,9 @@ const {
   className,
   company = "Vero",
   title,
-  description,
   alt,
   src,
+  href,
   imgColor = "bg-slate-50",
   imgShadow = true,
 } = Astro.props;
@@ -53,14 +53,17 @@ const {
       title && (
         <h3 class="font-bricolage 0 text-xl font-semibold -tracking-wide md:mt-0.5 md:text-2xl">
           {title}
+          {href && (
+            <a
+              class="ml-1 inline-block"
+              href={href}
+              target="_blank"
+              rel="noreferer noopener"
+            >
+              ↗
+            </a>
+          )}
         </h3>
-      )
-    }
-    {
-      description && (
-        <p class="mt-1 text-base text-slate-400 md:mt-2 md:text-xl">
-          {description}
-        </p>
       )
     }
   </div>
