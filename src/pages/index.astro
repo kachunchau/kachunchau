@@ -8,13 +8,13 @@ import WorkCard from "../components/WorkCard.astro";
 import Button from "../components/Button.astro";
 import VeroLogo from "@images/vero.svg";
 import htmlBlockImage from "@images/html-block@2x.png";
+import marketingSiteImage from "@images/marketing-site@2x.png";
 import smsImage from "@images/sms@2x.png";
 import triggersImage from "@images/triggers@2x.png";
 import helpCenterImage from "@images/help-center@2x.png";
 import vero2SidebarImage from "@images/vero-2-sidebar@2x.png";
 import vero1SidebarImage from "@images/vero-1-sidebar@2x.png";
 import templateIconsImage from "@images/template-icons@2x.png";
-import vero2CalloutsImage from "@images/vero-2-callouts@2x.png";
 
 const caseStudies = await getCollection("work");
 // const caseStudies = await getCollection("work", ({ data }) => {
@@ -103,9 +103,10 @@ const sortedCaseStudies = caseStudies.sort(
       <WorkGrid>
         <WorkCard
           className="col-span-full md:col-span-2"
-          title="HTML Block"
-          src={htmlBlockImage}
-          alt="HTML Block"
+          title="Marketing Site"
+          src={marketingSiteImage}
+          href="https://getvero.com"
+          alt="Marketing Site"
         />
         <WorkCard
           className="col-span-full md:col-span-1"
@@ -123,6 +124,7 @@ const sortedCaseStudies = caseStudies.sort(
           className="col-span-full md:col-span-2"
           title="Help Center"
           src={helpCenterImage}
+          href="https://help.getvero.com"
           alt="Help Center redesign"
         />
         <WorkCard
@@ -141,12 +143,13 @@ const sortedCaseStudies = caseStudies.sort(
             src={templateIconsImage}
             alt="Template icons"
           />
-          <WorkCard
+          <WorkCard title="HTML Block" src={htmlBlockImage} alt="HTML Block" />
+          <!-- <WorkCard
             title="Upgrade callouts"
             src={vero2CalloutsImage}
             alt="Upgrade callouts"
             imgShadow={false}
-          />
+          /> -->
         </div>
         <WorkCard
           className="self-start drop-shadow-none dark:drop-shadow-none"
