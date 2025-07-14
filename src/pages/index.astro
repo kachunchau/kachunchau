@@ -15,7 +15,6 @@ import triggersImage from "@images/triggers@2x.png";
 import helpCenterImage from "@images/help-center@2x.png";
 import vero2SidebarImage from "@images/vero-2-sidebar@2x.png";
 import vero1SidebarImage from "@images/vero-1-sidebar@2x.png";
-import templateIconsImage from "@images/template-icons@2x.png";
 
 const caseStudies = await getCollection("work");
 // const caseStudies = await getCollection("work", ({ data }) => {
@@ -62,16 +61,16 @@ const sortedCaseStudies = caseStudies.sort(
       class="mt-5 flex flex-initial items-center gap-2.5 text-base text-emerald-400"
     >
       <div class="flex flex-none items-center justify-center">
-        <span class="size-2 rounded-full bg-emerald-400"></span>
+        <span class="size-2.5 animate-pulse rounded-full bg-emerald-400"></span>
       </div>
 
-      <span class="truncate">Currently open to new opportunities</span>
+      <span class="truncate text-lg">Currently open to new opportunities</span>
     </div>
   </Masthead>
 
   <main class="mx-auto max-w-7xl px-8 pb-20 md:px-20 md:pb-32 xl:px-0 xl:pb-48">
     <div class="space-y-20 md:space-y-32">
-      <div class="space-y-8 md:space-y-10">
+      <div class="space-y-8 md:space-y-14">
         {
           sortedCaseStudies.map((caseStudy, index) => (
             <CaseStudyCard
@@ -98,7 +97,7 @@ const sortedCaseStudies = caseStudies.sort(
       <h2
         class="font-bricolage mb-6 text-3xl font-semibold -tracking-wide md:mb-10 md:text-4xl"
       >
-        Other things
+        Other work
       </h2>
 
       <WorkGrid>
@@ -146,18 +145,7 @@ const sortedCaseStudies = caseStudies.sort(
         <div
           class="col-span-full flex flex-col gap-8 self-start md:col-span-1 md:gap-10"
         >
-          <WorkCard
-            title="Template icons"
-            src={templateIconsImage}
-            alt="Template icons"
-          />
           <WorkCard title="HTML Block" src={htmlBlockImage} alt="HTML Block" />
-          <!-- <WorkCard
-            title="Upgrade callouts"
-            src={vero2CalloutsImage}
-            alt="Upgrade callouts"
-            imgShadow={false}
-          /> -->
         </div>
         <WorkCard
           className="self-start drop-shadow-none dark:drop-shadow-none"
