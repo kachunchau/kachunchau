@@ -7,7 +7,6 @@ import WorkGrid from "../components/WorkGrid.astro";
 import WorkCard from "../components/WorkCard.astro";
 import Button from "../components/Button.astro";
 import VeroLogo from "@images/vero.svg";
-import htmlBlockImage from "@images/html-block@2x.png";
 import veroComponentsImage from "@images/vero-components@2x.png";
 import marketingSiteImage from "@images/marketing-site@2x.png";
 import smsImage from "@images/sms@2x.png";
@@ -70,7 +69,7 @@ const sortedCaseStudies = caseStudies.sort(
 
   <main class="mx-auto max-w-7xl px-8 pb-20 md:px-20 md:pb-32 xl:px-0 xl:pb-48">
     <div class="space-y-20 md:space-y-32">
-      <div class="space-y-8 md:space-y-14">
+      <div class="space-y-8 md:space-y-16">
         {
           sortedCaseStudies.map((caseStudy, index) => (
             <CaseStudyCard
@@ -133,26 +132,6 @@ const sortedCaseStudies = caseStudies.sort(
           src={helpCenterImage}
           href="https://help.getvero.com"
           alt="Help Center redesign"
-        />
-        <WorkCard
-          className="self-start drop-shadow-none dark:drop-shadow-none"
-          title="Vero 2.0 sidebar redesign"
-          src={vero2SidebarImage}
-          alt="Vero 2.0 sidebar redesign"
-          imgColor="bg-white"
-          imgShadow={false}
-        />
-        <div
-          class="col-span-full flex flex-col gap-8 self-start md:col-span-1 md:gap-10"
-        >
-          <WorkCard title="HTML Block" src={htmlBlockImage} alt="HTML Block" />
-        </div>
-        <WorkCard
-          className="self-start drop-shadow-none dark:drop-shadow-none"
-          title="Vero 1.0 sidebar redesign"
-          src={vero1SidebarImage}
-          alt="Vero 1.0 sidebar redesign"
-          imgShadow={false}
         />
       </WorkGrid>
     </div>
