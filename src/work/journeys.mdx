@@ -18,23 +18,42 @@ timeframe: "6 weeks"
 slug: "journeys"
 order: 4
 cover: "@images/journeys@2x.png"
-href: false
-draft: true
 ---
 
 import { Image } from "astro:assets";
 
 ## Overview
 
+Redesign and build of Vero's multi-message journey builder to support event-triggered campaigns, real-time reporting, and improved editing experience over 6 weeks. I led the UI design in a team of 5 (Head of Product, Product Designer, and 3 Engineers) where the UX has already been done by the Head of Product.
+
 ## The Problem
 
+Users want to send automated multi-message campaigns triggered by events in
+Vero 2.0. They want to be able to easily visualise the logic of the multi-message
+campaign and be able to analyse and report on how their customers travel
+through the steps of the campaign and easily update the campaign with changes.
+
 ## Goals
+
+- Multi-message event triggered campaigns in Vero 2.0.
+- Improved editing experience with no saving issues
+- Visual reporting on the canvas showing how many customers reached each
+  node.
+- Able to migrate some customer campaigns to Vero 2.0 (if not using ab/testing
+  or languages).
 
 ## Process
 
 ### Exploring Designs
 
-### Concepts Not Pursued
+<div class="relative left-0 h-224 w-full">
+  <iframe
+    class="aspect-video"
+    src="https://www.sketch.com/embed/s/b0b317c0-6957-4fa7-be6d-85606e5c3f3a"
+    style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+    allowfullscreen
+  ></iframe>
+</div>
 
 ## Release and iterate
 
@@ -45,6 +64,6 @@ While I was made redundant shortly before the public launch of Journeys, I worke
 - Finalised Sketch flows and handoff docs.
 - Component specs for node types and edge states.
 - Error and loading states for reporting metrics.
-- Guidance on post-MVP enhancements (eg node-level reporting, versioning, etc).
+- Guidance on post launch features (eg node-level reporting, versioning etc).
 
 The team planned to roll out Journeys with campaign-level reporting (entries, exits, completions, and “here now” states), with phased support for draft saving and version control. While I wasn't there for the final release, I was proud to have helped shape and build the foundation for what shipped.
