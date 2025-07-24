@@ -3,6 +3,8 @@ import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import Masthead from "../../components/Masthead.astro";
+import airHustleHeroImage from "@images/air-hustle-hero@2x.png";
+import settingsHeroImage from "@images/settings-hero@2x.png";
 import roryImage from "@images/rory@2x.png";
 import meImage from "@images/me@2x.png";
 import andrewImage from "@images/andrew@2x.png";
@@ -23,6 +25,11 @@ const teamMemberImages: Record<string, ImageMetadata> = {
   Ellis: ellisImage,
 };
 
+const heroImages: Record<string, ImageMetadata> = {
+  "Air Hustle": airHustleHeroImage,
+  Settings: settingsHeroImage,
+};
+
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
   const caseStudies = await getCollection("work", ({ data }) => {
@@ -35,13 +42,15 @@ export async function getStaticPaths() {
 }
 // 2. For your template, you can get the entry directly from the prop
 const { caseStudy } = Astro.props;
+
 const { Content } = await render(caseStudy);
+const heroImage = heroImages[caseStudy.data.title];
 ---
 
 <Layout title={caseStudy.data.title} description={caseStudy.data.description}>
-  <Masthead>
+  <Masthead imgSrc={heroImage} imgColor={caseStudy.data.gradient}>
     <h1
-      class="font-bricolage text-5xl font-light -tracking-wide text-balance md:text-6xl md:tracking-[-0.03em] xl:text-7xl"
+      class="font-bricolage text-5xl font-light -tracking-wide text-balance md:text-6xl md:tracking-[-0.03em] xl:text-8xl xl:tracking-[-0.045em]"
     >
       {caseStudy.data.headline}
     </h1>
