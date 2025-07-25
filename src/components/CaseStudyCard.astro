@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
+import { gradients } from "./styleMaps";
 
 interface Props {
   className?: string;
@@ -9,7 +10,7 @@ interface Props {
   description?: string;
   alt?: string;
   imgSrc: ImageMetadata;
-  gradient?: "primary" | "secondary" | "tertiary";
+  gradient?: "primary" | "primary-rev" | "secondary";
   aligment?: "right" | "left";
   href?: string;
   index?: number;
@@ -28,12 +29,6 @@ const {
   index,
 } = Astro.props;
 
-const gradientStyles = {
-  primary: "from-cyan-100 to-yellow-50",
-  secondary: "from-yellow-50 to-cyan-100 ",
-  tertiary: "from-rose-50 to to-blue-100",
-};
-
 const aligmentStyles = {
   right: "self-end text-right left-0",
   left: "self-start right-0",
@@ -44,7 +39,7 @@ const aligmentStyles = {
   class:list={[
     "group relative flex min-h-90 flex-col justify-end overflow-hidden rounded-4xl bg-linear-120 sm:h-104 md:h-120 lg:h-150 dark:shadow-2xl",
     className,
-    gradientStyles[gradient],
+    gradients[gradient],
   ]}
   href={href !== "#none" ? href : undefined}
 >

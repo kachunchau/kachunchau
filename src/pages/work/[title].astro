@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
+import { gradients } from "../../components/styleMaps";
 import Layout from "../../layouts/Layout.astro";
 import Masthead from "../../components/Masthead.astro";
 import airHustleHeroImage from "@images/air-hustle-hero@2x.png";
@@ -45,10 +46,13 @@ const { caseStudy } = Astro.props;
 
 const { Content } = await render(caseStudy);
 const heroImage = heroImages[caseStudy.data.title];
+const heroGradient =
+  gradients[caseStudy.data.gradient as keyof typeof gradients] ??
+  gradients.primary;
 ---
 
 <Layout title={caseStudy.data.title} description={caseStudy.data.description}>
-  <Masthead imgSrc={heroImage} imgColor={caseStudy.data.gradient}>
+  <Masthead imgSrc={heroImage} heroGradient={heroGradient}>
     <h1
       class="font-bricolage text-5xl font-light -tracking-wide text-balance md:text-6xl md:tracking-[-0.03em] xl:text-8xl xl:tracking-[-0.045em]"
     >
