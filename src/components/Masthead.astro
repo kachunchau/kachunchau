@@ -5,20 +5,10 @@ import Header from "./Header.astro";
 
 interface Props {
   imgSrc?: ImageMetadata;
-  imgColor?: String;
+  heroGradient?: string;
 }
 
-const { imgSrc, imgColor } = Astro.props as {
-  imgSrc: any;
-  imgColor?: "primary" | "secondary" | "tertiary";
-};
-
-const imgStyles: Record<"primary" | "secondary" | "tertiary", string> = {
-  primary: "bg-cyan-100",
-  secondary: "bg-blue-100",
-  tertiary: "bg-blue-100",
-};
-const bgClass = imgStyles[imgColor ?? "primary"];
+const { imgSrc, heroGradient } = Astro.props;
 ---
 
 <Header />
@@ -32,7 +22,9 @@ const bgClass = imgStyles[imgColor ?? "primary"];
 
   {
     imgSrc && (
-      <div class={`mx-auto max-w-7xl overflow-hidden rounded-4xl ${bgClass}`}>
+      <div
+        class={`mx-auto max-w-7xl overflow-hidden rounded-4xl bg-linear-120 ${heroGradient}`}
+      >
         <Image
           class="drop-shadow-2xl"
           src={imgSrc}
