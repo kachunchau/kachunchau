@@ -13,15 +13,13 @@ export default defineConfig({
     responsiveStyles: true,
     layout: "constrained",
   },
-  experimental: {
-    fonts: [
-      {
-        name: "Bricolage Grotesque",
-        cssVariable: "--font-bricolage-grotesque",
-        provider: fontProviders.fontsource(),
-        weights: [300, 600],
-        fallbacks: ["ui-sans-serif", "system-ui", "sans-serif"],
-      },
+  fonts:
+    [{
+      provider: fontProviders.fontsource(),
+      name: "Bricolage Grotesque",
+      cssVariable: "--font-bricolage-grotesque",
+      weights: [300, 600],
+      fallbacks: ["ui-sans-serif", "system-ui", "sans-serif"],
+    },
     ],
-  },
 });

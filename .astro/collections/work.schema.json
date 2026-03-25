@@ -1,77 +1,73 @@
 {
-  "$ref": "#/definitions/work",
-  "definitions": {
-    "work": {
-      "type": "object",
-      "properties": {
-        "company": {
-          "type": "string"
-        },
-        "title": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "headline": {
-          "type": "string"
-        },
-        "team": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "position": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "name",
-              "position"
-            ],
-            "additionalProperties": false
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "company": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "team": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
           }
         },
-        "role": {
-          "type": "string"
-        },
-        "timeframe": {
-          "type": "string"
-        },
-        "draft": {
-          "type": "boolean"
-        },
-        "slug": {
-          "type": "string"
-        },
-        "cover": {
-          "type": "string"
-        },
-        "href": {
-          "type": "boolean"
-        },
-        "order": {
-          "type": "number"
-        },
-        "gradient": {
-          "type": "string"
-        },
-        "alignment": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "title",
-        "description",
-        "headline",
-        "slug",
-        "cover"
-      ],
-      "additionalProperties": false
+        "required": [
+          "name",
+          "position"
+        ]
+      }
+    },
+    "role": {
+      "type": "string"
+    },
+    "timeframe": {
+      "type": "string"
+    },
+    "draft": {
+      "type": "boolean"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "cover": {
+      "type": "string"
+    },
+    "href": {
+      "type": "boolean"
+    },
+    "order": {
+      "type": "number"
+    },
+    "gradient": {
+      "type": "string"
+    },
+    "alignment": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "title",
+    "description",
+    "headline",
+    "slug",
+    "cover"
+  ]
 }
