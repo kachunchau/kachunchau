@@ -18,108 +18,103 @@ const caseStudies = await getCollection("work");
 //   return import.meta.env.PROD ? data.draft !== true : true;
 // });
 const sortedCaseStudies = caseStudies.sort(
-    (a, b) => (a.data.order || 0) - (b.data.order || 0),
+  (a, b) => (a.data.order || 0) - (b.data.order || 0),
 );
 ---
 
 <Layout>
-    <Masthead>
-        <h1
-            class="font-bricolage text-5xl font-light -tracking-wide text-balance md:text-7xl md:tracking-[-0.03em] xl:text-8xl xl:tracking-[-0.045em] dark:text-white"
-        >
-            Hey there&mdash;I'm KC, a <span
-                class="font-semibold whitespace-nowrap">UI Designer</span
-            > &amp;
-            <span class="font-semibold">Developer</span>
-        </h1>
-
-        <p
-            class="mt-6 max-w-[800px] text-xl tracking-[-0.01em] text-pretty text-slate-400 md:mt-8 md:text-2xl/normal xl:text-3xl/snug dark:text-cyan-50"
-        >
-            I'm from Northern Ireland now based in Melbourne, Australia.
-            Currently working at
-            <a href="https://jetstar.com/"> Jetstar </a> as a UX/UI Designer.
-        </p>
-
-        <Button class="group mt-7 md:mt-10" href="mailto:kachun@kachunchau.com">
-            Get in touch
-        </Button>
-    </Masthead>
-
-    <main
-        class="mx-auto max-w-7xl px-8 pb-20 md:px-20 md:pb-32 xl:px-0 xl:pb-48"
+  <Masthead>
+    <h1
+      class="font-bricolage text-5xl font-light -tracking-wide text-balance md:text-7xl md:tracking-[-0.03em] xl:text-8xl xl:tracking-[-0.045em] dark:text-white"
     >
-        <div class="space-y-20 md:space-y-32">
-            <div class="space-y-8 md:space-y-16">
-                {
-                    sortedCaseStudies.map((caseStudy, index) => (
-                        <CaseStudyCard
-                            company={caseStudy.data.company}
-                            title={caseStudy.data.title}
-                            description={caseStudy.data.description}
-                            imgSrc={caseStudy.data.cover}
-                            alt={caseStudy.data.title}
-                            href={
-                                caseStudy.data.href === false
-                                    ? undefined
-                                    : `/work/${caseStudy.data.slug}`
-                            }
-                            gradient={
-                                caseStudy.data.gradient as
-                                    | "primary"
-                                    | "primary-rev"
-                                    | "secondary"
-                            }
-                            aligment={
-                                caseStudy.data.alignment as "right" | "left"
-                            }
-                            index={index}
-                        />
-                    ))
-                }
-            </div>
+      Hey there&mdash;I'm KC, a <span class="font-semibold whitespace-nowrap"
+        >UI Designer</span
+      > &amp;
+      <span class="font-semibold">Developer</span>
+    </h1>
 
-            <h2
-                class="font-bricolage mb-6 text-3xl font-semibold -tracking-wide md:mb-10 md:text-4xl"
-            >
-                Other work
-            </h2>
+    <p
+      class="mt-6 max-w-[800px] text-xl tracking-[-0.01em] text-pretty text-slate-400 md:mt-8 md:text-2xl/normal xl:text-3xl/snug dark:text-cyan-50"
+    >
+      Currently working at
+      <a href="https://jetstar.com/"> Jetstar </a> as a UX/UI Designer.
+    </p>
 
-            <WorkGrid>
-                <WorkCard
-                    className="col-span-full"
-                    title="Component snapshot for Vero's design system"
-                    src={veroComponentsImage}
-                    alt="Component snapshot for Vero's design system"
-                    imgColor="bg-slate-100"
-                />
-                <WorkCard
-                    className="col-span-full md:col-span-2"
-                    title="Marketing Site"
-                    src={marketingSiteImage}
-                    href="https://getvero.com"
-                    alt="Marketing Site"
-                />
-                <WorkCard
-                    className="col-span-full md:col-span-1"
-                    title="SMS Channel"
-                    src={smsImage}
-                    alt="SMS Channel"
-                />
-                <WorkCard
-                    className="col-span-full md:col-span-1"
-                    title="Triggers"
-                    src={triggersImage}
-                    alt="Triggers"
-                />
-                <WorkCard
-                    className="col-span-full md:col-span-2"
-                    title="Help Center"
-                    src={helpCenterImage}
-                    href="https://help.getvero.com"
-                    alt="Help Center redesign"
-                />
-            </WorkGrid>
-        </div>
-    </main>
+    <Button class="group mt-7 md:mt-10" href="mailto:kachun@kachunchau.com">
+      Get in touch
+    </Button>
+  </Masthead>
+
+  <main class="mx-auto max-w-7xl px-8 pb-20 md:px-20 md:pb-32 xl:px-0 xl:pb-48">
+    <div class="space-y-20 md:space-y-32">
+      <div class="space-y-8 md:space-y-16">
+        {
+          sortedCaseStudies.map((caseStudy, index) => (
+            <CaseStudyCard
+              company={caseStudy.data.company}
+              title={caseStudy.data.title}
+              description={caseStudy.data.description}
+              imgSrc={caseStudy.data.cover}
+              alt={caseStudy.data.title}
+              href={
+                caseStudy.data.href === false
+                  ? undefined
+                  : `/work/${caseStudy.data.slug}`
+              }
+              gradient={
+                caseStudy.data.gradient as
+                  | "primary"
+                  | "primary-rev"
+                  | "secondary"
+              }
+              aligment={caseStudy.data.alignment as "right" | "left"}
+              index={index}
+            />
+          ))
+        }
+      </div>
+
+      <h2
+        class="font-bricolage mb-6 text-3xl font-semibold -tracking-wide md:mb-10 md:text-4xl"
+      >
+        Other work
+      </h2>
+
+      <WorkGrid>
+        <WorkCard
+          className="col-span-full"
+          title="Component snapshot for Vero's design system"
+          src={veroComponentsImage}
+          alt="Component snapshot for Vero's design system"
+          imgColor="bg-slate-100"
+        />
+        <WorkCard
+          className="col-span-full md:col-span-2"
+          title="Marketing Site"
+          src={marketingSiteImage}
+          href="https://getvero.com"
+          alt="Marketing Site"
+        />
+        <WorkCard
+          className="col-span-full md:col-span-1"
+          title="SMS Channel"
+          src={smsImage}
+          alt="SMS Channel"
+        />
+        <WorkCard
+          className="col-span-full md:col-span-1"
+          title="Triggers"
+          src={triggersImage}
+          alt="Triggers"
+        />
+        <WorkCard
+          className="col-span-full md:col-span-2"
+          title="Help Center"
+          src={helpCenterImage}
+          href="https://help.getvero.com"
+          alt="Help Center redesign"
+        />
+      </WorkGrid>
+    </div>
+  </main>
 </Layout>
